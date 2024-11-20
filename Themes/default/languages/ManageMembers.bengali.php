@@ -1,140 +1,140 @@
 <?php
- // সংস্করণ: 2.1.0;  সদস্যদের পরিচালনা করুন
+// Version: 2.1.0; ManageMembers
 
- বিশ্বব্যাপী $প্রসঙ্গ;
+global $context;
 
- $txt['groups'] = 'গ্রুপ';
- $txt['viewing_groups'] = 'মেম্বার গ্রুপ দেখা';
+$txt['groups'] = 'Groups';
+$txt['viewing_groups'] = 'Viewing Membergroups';
 
- $txt['membergroups_title'] = 'সদস্যগোষ্ঠী পরিচালনা করুন';
- $txt['membergroups_description'] = 'মেম্বারগ্রুপ হল সদস্যদের গ্রুপ যাদের অনুরূপ অনুমতি সেটিংস, চেহারা, বা অ্যাক্সেসের অধিকার রয়েছে।  কিছু সদস্য গোষ্ঠী একজন ব্যবহারকারীর করা পোস্টের পরিমাণের উপর ভিত্তি করে।  আপনি কাউকে তাদের প্রোফাইল নির্বাচন করে এবং তাদের অ্যাকাউন্ট সেটিংস পরিবর্তন করে সদস্যগোষ্ঠীতে নিয়োগ করতে পারেন।';
- $txt['membergroups_modify'] = 'পরিবর্তন';
+$txt['membergroups_title'] = 'Manage Membergroups';
+$txt['membergroups_description'] = 'Membergroups are groups of members that have similar permission settings, appearance, or access rights. Some membergroups are based on the amount of posts a user has made. You can assign someone to a membergroup by selecting their profile and changing their account settings.';
+$txt['membergroups_modify'] = 'Modify';
 
- $txt['membergroups_add_group'] = 'গ্রুপ যোগ করুন';
- $txt['membergroups_regular'] = 'নিয়মিত গ্রুপ';
- $txt['membergroups_post'] = 'পোস্ট কাউন্ট ভিত্তিক গ্রুপ';
- $txt['membergroups_guests_na'] = 'n/a';
+$txt['membergroups_add_group'] = 'Add group';
+$txt['membergroups_regular'] = 'Regular groups';
+$txt['membergroups_post'] = 'Post count based groups';
+$txt['membergroups_guests_na'] = 'n/a';
 
- $txt['membergroups_group_name'] = 'সদস্যগোষ্ঠীর নাম';
- $txt['membergroups_new_board'] = 'দৃশ্যমান বোর্ড';
- $txt['membergroups_new_board_desc'] = 'সদস্যগোষ্ঠী দেখতে পারে এমন বোর্ড';
- $txt['membergroups_new_board_post_groups'] = '<em>দ্রষ্টব্য: সাধারণত, পোস্ট গ্রুপের অ্যাক্সেসের প্রয়োজন হয় না কারণ সদস্য যে গ্রুপে থাকবেন তারা তাদের অ্যাক্সেস দেবে।</em>';
- $txt['membergroups_new_as_inherit'] = 'এর থেকে উত্তরাধিকারী';
- $txt['membergroups_new_as_type'] = 'টাইপ অনুসারে';
- $txt['membergroups_new_as_copy'] = 'অফ ভিত্তিক';
- $txt['membergroups_new_copy_none'] = '(কোনটিই নয়)';
- $txt['membergroups_can_edit_later'] = 'আপনি এগুলি পরে সম্পাদনা করতে পারেন।';
- $txt['membergroups_can_manage_access'] = 'এই গ্রুপটি সব বোর্ড দেখতে পারে কারণ তাদের বোর্ড পরিচালনা করার ক্ষমতা আছে।';
+$txt['membergroups_group_name'] = 'Membergroup name';
+$txt['membergroups_new_board'] = 'Visible Boards';
+$txt['membergroups_new_board_desc'] = 'Boards the membergroup can see';
+$txt['membergroups_new_board_post_groups'] = '<em>Note: normally, post groups don\'t need access because the group the member is in will give them access.</em>';
+$txt['membergroups_new_as_inherit'] = 'inherit from';
+$txt['membergroups_new_as_type'] = 'by type';
+$txt['membergroups_new_as_copy'] = 'based off of';
+$txt['membergroups_new_copy_none'] = '(none)';
+$txt['membergroups_can_edit_later'] = 'You can edit them later.';
+$txt['membergroups_can_manage_access'] = 'This group can see all boards because they have the power to manage boards.';
 
- $txt['membergroups_cannot_delete_paid'] = 'এই গোষ্ঠীটি মুছে ফেলা যাবে না, এটি বর্তমানে নিম্নলিখিত অর্থ প্রদানের সদস্যতা(গুলি) দ্বারা ব্যবহার করা হচ্ছে: %1$s';
+$txt['membergroups_cannot_delete_paid'] = 'This group cannot be deleted, it is currently in use by the following paid subscription(s): %1$s';
 
- $txt['membergroups_edit_group'] = 'সদস্যগোষ্ঠী সম্পাদনা করুন';
- $txt['membergroups_edit_name'] = 'গ্রুপের নাম';
- $txt['membergroups_edit_inherit_permissions'] = 'অনুমতি ইনহেরিট করুন';
- $txt['membergroups_edit_inherit_permissions_desc'] = '&quot;না' নির্বাচন করুন;  গ্রুপের নিজস্ব অনুমতি সেট করতে সক্ষম করা।';
- $txt['membergroups_edit_inherit_permissions_no'] = 'না - অনন্য অনুমতি ব্যবহার করুন';
- $txt['membergroups_edit_inherit_permissions_from'] = 'এর থেকে ইনহেরিট';
- $txt['membergroups_edit_hidden'] = 'দৃশ্যমানতা';
- $txt['membergroups_edit_hidden_no'] = 'দৃশ্যমান';
- $txt['membergroups_edit_hidden_boardindex'] = 'দৃশ্যমান - গ্রুপ কী ছাড়াও';
- $txt['membergroups_edit_hidden_all'] = 'অদৃশ্য';
- // নিচের স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করবেন না।
- $txt['membergroups_edit_hidden_warning'] = 'আপনি কি নিশ্চিত যে আপনি একটি ব্যবহারকারীর প্রাথমিক গোষ্ঠী হিসাবে এই গোষ্ঠীর অ্যাসাইনমেন্টকে অস্বীকৃতি জানাতে চান?\\n\\nএটি করলে কেবলমাত্র অতিরিক্ত গোষ্ঠীগুলিতে অ্যাসাইনমেন্ট সীমাবদ্ধ থাকবে এবং সমস্ত বর্তমান &quot;প্রাথমিক&quot; আপডেট হবে।  সদস্যদের এটিকে শুধুমাত্র একটি অতিরিক্ত গোষ্ঠী হিসাবে রাখতে হবে।\\n\\nএটি বর্তমানে মডারেটের জন্য নির্ধারিত যেকোন বোর্ড থেকে মডারেটর হিসাবে গ্রুপটিকে সরিয়ে দেবে।';
- $txt['membergroups_edit_desc'] = 'গ্রুপের বিবরণ';
- $txt['membergroups_edit_group_type'] = 'গ্রুপ টাইপ';
- $txt['membergroups_edit_select_group_type'] = 'গোষ্ঠীর ধরন নির্বাচন করুন';
- $txt['membergroups_group_type_private'] = 'ব্যক্তিগত <span class="smalltext">(সদস্যতা বরাদ্দ করা আবশ্যক)</span>';
- $txt['membergroups_group_type_protected'] = 'সুরক্ষিত <span class="smalltext">(শুধুমাত্র প্রশাসকরা পরিচালনা এবং বরাদ্দ করতে পারেন)</span>';
- $txt['membergroups_group_type_request'] = 'অনুরোধযোগ্য <span class="smalltext">(ব্যবহারকারী সদস্যতার অনুরোধ করতে পারে)</span>';
- $txt['membergroups_group_type_free'] = 'ফ্রি <span class="smalltext">(ব্যবহারকারী ইচ্ছামত গ্রুপ ছেড়ে যেতে এবং যোগ দিতে পারে)</span>';
- $txt['membergroups_group_type_post'] = 'পোস্ট ভিত্তিক <span class="smalltext">(পোস্টের সংখ্যার উপর ভিত্তি করে সদস্যপদ)</span>';
- $txt['membergroups_min_posts'] = 'প্রয়োজনীয় পোস্ট';
- $txt['membergroups_online_color'] = 'অনলাইন তালিকায় রঙ';
- $txt['membergroups_icon_count'] = 'আইকন ছবির সংখ্যা';
- $txt['membergroups_icon_image'] = 'আইকন ইমেজ ফাইলের নাম';
- $txt['membergroups_icon_image_note'] = 'আপনি ফোরামের ডিফল্ট থিম ডিরেক্টরিতে কাস্টম ছবি আপলোড করতে পারেন যাতে সেগুলিকে এখানে নির্বাচন করা যায়।  বিভিন্ন থিমে বিভিন্ন ছবি ব্যবহার করা যেতে পারে, শুধু তাদের একই নাম দিন।';
- $txt['membergroups_icon_image_size'] = 'সর্বোচ্চ আকার অনুমোদিত 128x32px';
- $txt['membergroups_max_messages'] = 'সর্বোচ্চ ব্যক্তিগত বার্তা';
- $txt['membergroups_max_messages_note'] = '0 = সীমাহীন';
- $txt['membergroups_tfa_force'] = 'এই সদস্যগোষ্ঠীর জন্য দুই-ফ্যাক্টর-অথেন্টিকেশন (2FA) বল করুন';
- $txt['membergroups_tfa_force_note'] = 'আপনি এটি সক্রিয় করার আগে আপনার ব্যবহারকারীদের সতর্ক করতে ভুলবেন না!';
- $txt['membergroups_edit_save'] = 'সংরক্ষণ করুন';
- $txt['membergroups_delete'] = 'মুছুন';
- $txt['membergroups_confirm_delete'] = 'আপনি কি নিশ্চিত যে আপনি এই গ্রুপটি মুছে ফেলতে চান?';
- $txt['membergroups_confirm_delete_mod'] = 'এই গোষ্ঠীটিকে এক বা একাধিক বোর্ড মডারেট করার জন্য নিযুক্ত করা হয়েছে।  আপনি কি নিশ্চিত আপনি এটি মুছে ফেলতে চান?';
- $txt['membergroups_swap_mod'] = 'এই গোষ্ঠীটিকে এক বা একাধিক বোর্ড মডারেট করার জন্য নিযুক্ত করা হয়েছে।  এটিকে একটি পোস্ট গ্রুপে পরিবর্তন করার ফলে সেই গ্রুপটি সেই বোর্ডের মডারেটর হিসাবে বাদ পড়বে।';
+$txt['membergroups_edit_group'] = 'Edit Membergroup';
+$txt['membergroups_edit_name'] = 'Group name';
+$txt['membergroups_edit_inherit_permissions'] = 'Inherit permissions';
+$txt['membergroups_edit_inherit_permissions_desc'] = 'Select &quot;No&quot; to enable group to have own permission set.';
+$txt['membergroups_edit_inherit_permissions_no'] = 'No - Use unique permissions';
+$txt['membergroups_edit_inherit_permissions_from'] = 'Inherit from';
+$txt['membergroups_edit_hidden'] = 'Visibility';
+$txt['membergroups_edit_hidden_no'] = 'Visible';
+$txt['membergroups_edit_hidden_boardindex'] = 'Visible - Apart from in group key';
+$txt['membergroups_edit_hidden_all'] = 'Invisible';
+// Do not use numeric entities in the below string.
+$txt['membergroups_edit_hidden_warning'] = 'Are you sure you want to disallow assignment of this group as a users primary group?\\n\\nDoing so will restrict assignment to additional groups only, and will update all current &quot;primary&quot; members to have it as an additional group only.\\n\\nIt will also remove the group as moderator from any boards it is currently assigned to moderate.';
+$txt['membergroups_edit_desc'] = 'Group description';
+$txt['membergroups_edit_group_type'] = 'Group type';
+$txt['membergroups_edit_select_group_type'] = 'Select Group type';
+$txt['membergroups_group_type_private'] = 'Private <span class="smalltext">(Membership must be assigned)</span>';
+$txt['membergroups_group_type_protected'] = 'Protected <span class="smalltext">(Only administrators can manage and assign)</span>';
+$txt['membergroups_group_type_request'] = 'Requestable <span class="smalltext">(User may request membership)</span>';
+$txt['membergroups_group_type_free'] = 'Free <span class="smalltext">(User may leave and join group at will)</span>';
+$txt['membergroups_group_type_post'] = 'Post Based <span class="smalltext">(Membership based on post count)</span>';
+$txt['membergroups_min_posts'] = 'Required posts';
+$txt['membergroups_online_color'] = 'Color in online list';
+$txt['membergroups_icon_count'] = 'Number of icon images';
+$txt['membergroups_icon_image'] = 'Icon image filename';
+$txt['membergroups_icon_image_note'] = 'You can upload custom images to the forum\'s default theme directory to be able to select them here. Different images can be used in different themes, just give them the same name.';
+$txt['membergroups_icon_image_size'] = 'Max size allowed 128x32px';
+$txt['membergroups_max_messages'] = 'Max personal messages';
+$txt['membergroups_max_messages_note'] = '0 = unlimited';
+$txt['membergroups_tfa_force'] = 'Force Two-Factor-Authentication (2FA) for this membergroup';
+$txt['membergroups_tfa_force_note'] = 'Be sure to warn your users before you activate this!';
+$txt['membergroups_edit_save'] = 'Save';
+$txt['membergroups_delete'] = 'Delete';
+$txt['membergroups_confirm_delete'] = 'Are you sure you want to delete this group?';
+$txt['membergroups_confirm_delete_mod'] = 'This group is assigned to moderate one or more boards. Are you sure you want to delete it?';
+$txt['membergroups_swap_mod'] = 'This group is assigned to moderate one or more boards. Changing it to a post group will result in that group being dropped as moderator of those boards.';
 
- $txt['membergroups_members_title'] = 'ভিউয়িং গ্রুপ';
- $txt['membergroups_members_group_members'] = 'গ্রুপ সদস্য';
- $txt['membergroups_members_no_members'] = 'এই গ্রুপটি বর্তমানে খালি';
- $txt['membergroups_members_add_title'] = 'এই গ্রুপে একজন সদস্য যোগ করুন';
- $txt['membergroups_members_add_desc'] = 'যোগ করার জন্য সদস্যদের তালিকা';
- $txt['membergroups_members_add'] = 'সদস্য যোগ করুন';
- $txt['membergroups_members_remove'] = 'গ্রুপ থেকে সরান';
- $txt['membergroups_members_last_active'] = 'শেষ সক্রিয়';
- $txt['membergroups_members_additional_only'] = 'শুধুমাত্র অতিরিক্ত গ্রুপ হিসেবে যোগ করুন।';
- $txt['membergroups_members_group_moderators'] = 'গ্রুপ মডারেটর';
- $txt['membergroups_members_description'] = 'বিবরণ';
- // নিচের জাভাস্ক্রিপ্ট এস্কেপিং ব্যবহার করুন।
- $txt['membergroups_members_deadmin_confirm'] = 'আপনি কি নিশ্চিত যে আপনি প্রশাসনিক গ্রুপ থেকে নিজেকে সরিয়ে দিতে চান?';
+$txt['membergroups_members_title'] = 'Viewing Group';
+$txt['membergroups_members_group_members'] = 'Group Members';
+$txt['membergroups_members_no_members'] = 'This group is currently empty';
+$txt['membergroups_members_add_title'] = 'Add a member to this group';
+$txt['membergroups_members_add_desc'] = 'List of Members to Add';
+$txt['membergroups_members_add'] = 'Add Members';
+$txt['membergroups_members_remove'] = 'Remove from Group';
+$txt['membergroups_members_last_active'] = 'Last Active';
+$txt['membergroups_members_additional_only'] = 'Add as additional group only.';
+$txt['membergroups_members_group_moderators'] = 'Group Moderators';
+$txt['membergroups_members_description'] = 'Description';
+// Use javascript escaping in the below.
+$txt['membergroups_members_deadmin_confirm'] = 'Are you sure you wish to remove yourself from the Administration group?';
 
- $txt['membergroups_postgroups'] = 'পোস্ট গ্রুপ';
- $txt['membergroups_settings'] = 'মেম্বারগ্রুপ সেটিংস';
- $txt['groups_manage_membergroups'] = 'সদস্যগোষ্ঠী পরিবর্তন করার অনুমতি দেওয়া গোষ্ঠী';
- $txt['membergroups_select_permission_type'] = 'অনুমতি প্রোফাইল নির্বাচন করুন';
- $txt['membergroups_images_url'] = 'থিম/ডিফল্ট/ছবি/মেম্বারিকনস/';
- $txt['membergroups_select_visible_boards'] = 'বোর্ড দেখান';
- $txt['membergroups_members_top'] = 'সদস্য';
- $txt['membergroups_name'] = 'নাম';
- $txt['membergroups_icons'] = 'আইকন';
+$txt['membergroups_postgroups'] = 'Post groups';
+$txt['membergroups_settings'] = 'Membergroup Settings';
+$txt['groups_manage_membergroups'] = 'Groups allowed to change membergroups';
+$txt['membergroups_select_permission_type'] = 'Select permission profile';
+$txt['membergroups_images_url'] = 'Themes/default/images/membericons/';
+$txt['membergroups_select_visible_boards'] = 'Show boards';
+$txt['membergroups_members_top'] = 'Members';
+$txt['membergroups_name'] = 'Name';
+$txt['membergroups_icons'] = 'Icons';
 
- $txt['admin_browse_approve'] = 'সদস্য যাদের অ্যাকাউন্ট অনুমোদনের জন্য অপেক্ষা করছে';
- $txt['admin_browse_approve_desc'] = 'এখান থেকে আপনি সমস্ত সদস্যদের পরিচালনা করতে পারবেন যারা তাদের অ্যাকাউন্ট অনুমোদিত হওয়ার অপেক্ষায় আছে।';
- $txt['admin_browse_activate'] = 'সদস্য যাদের অ্যাকাউন্ট সক্রিয়করণের জন্য অপেক্ষা করছে';
- $txt['admin_browse_activate_desc'] = 'এই স্ক্রীনে সেই সমস্ত সদস্যদের তালিকা রয়েছে যারা এখনও আপনার ফোরামে তাদের অ্যাকাউন্ট সক্রিয় করেনি।';
- $txt['admin_browse_awaiting_approval'] = 'অনুমোদনের অপেক্ষায় (%1$d)';
- $txt['admin_browse_awaiting_activate'] = 'অ্যাক্টিভেশনের অপেক্ষায় (%1$d)';
+$txt['admin_browse_approve'] = 'Members whose accounts are awaiting approval';
+$txt['admin_browse_approve_desc'] = 'From here you can manage all members who are waiting to have their accounts approved.';
+$txt['admin_browse_activate'] = 'Members whose accounts are awaiting activation';
+$txt['admin_browse_activate_desc'] = 'This screen lists all the members who have still not activated their accounts at your forum.';
+$txt['admin_browse_awaiting_approval'] = 'Awaiting Approval (%1$d)';
+$txt['admin_browse_awaiting_activate'] = 'Awaiting Activation (%1$d)';
 
- $txt['admin_browse_username'] = 'ব্যবহারকারীর নাম';
- $txt['admin_browse_email'] = 'ইমেল ঠিকানা';
- $txt['admin_browse_ip'] = 'আইপি ঠিকানা';
- $txt['admin_browse_registered'] = 'নিবন্ধিত';
- $txt['admin_browse_id'] = 'ID';
- $txt['admin_browse_with_selected'] = 'নির্বাচিত সহ';
- $txt['admin_browse_no_members_approval'] = 'বর্তমানে কোনো সদস্য অনুমোদনের অপেক্ষায় নেই।';
- $txt['admin_browse_no_members_activate'] = 'বর্তমানে কোনো সদস্য তাদের অ্যাকাউন্ট সক্রিয় করেনি।';
+$txt['admin_browse_username'] = 'Username';
+$txt['admin_browse_email'] = 'Email Address';
+$txt['admin_browse_ip'] = 'IP Address';
+$txt['admin_browse_registered'] = 'Registered';
+$txt['admin_browse_id'] = 'ID';
+$txt['admin_browse_with_selected'] = 'With selected';
+$txt['admin_browse_no_members_approval'] = 'No members currently await approval.';
+$txt['admin_browse_no_members_activate'] = 'No members currently have not activated their accounts.';
 
- // প্রধানগুলি ছাড়া নীচের স্ট্রিংগুলিতে সত্তাগুলি ব্যবহার করবেন না।  (lt, gt, quot.)
- $txt['admin_browse_warn'] = 'সব নির্বাচিত সদস্য?';
- $txt['admin_browse_outstanding_warn'] = 'সব প্রভাবিত সদস্য?';
- $txt['admin_browse_w_approve'] = 'অনুমোদন';
- $txt['admin_browse_w_activate'] = 'সক্রিয় করুন';
- $txt['admin_browse_w_delete'] = 'মুছুন';
- $txt['admin_browse_w_reject'] = 'প্রত্যাখ্যান করুন';
- $txt['admin_browse_w_remind'] = 'মনে করিয়ে দিন';
- $txt['admin_browse_w_approve_deletion'] = 'অনুমোদন (অ্যাকাউন্ট মুছুন)';
- $txt['admin_browse_w_email'] = 'এবং ইমেল পাঠান';
- $txt['admin_browse_no_email'] = '(কোন ইমেল নেই)';
- $txt['admin_browse_w_approve_require_activate'] = 'অনুমোদন এবং সক্রিয়করণের প্রয়োজন';
+// Don't use entities in the below strings, except the main ones. (lt, gt, quot.)
+$txt['admin_browse_warn'] = 'all selected members?';
+$txt['admin_browse_outstanding_warn'] = 'all affected members?';
+$txt['admin_browse_w_approve'] = 'Approve';
+$txt['admin_browse_w_activate'] = 'Activate';
+$txt['admin_browse_w_delete'] = 'Delete';
+$txt['admin_browse_w_reject'] = 'Reject';
+$txt['admin_browse_w_remind'] = 'Remind';
+$txt['admin_browse_w_approve_deletion'] = 'Approve (Delete Accounts)';
+$txt['admin_browse_w_email'] = 'and send email';
+$txt['admin_browse_no_email'] = '(no email)';
+$txt['admin_browse_w_approve_require_activate'] = 'Approve and require activation';
 
- $txt['admin_browse_filter_by'] = 'ফিল্টার করে';
- $txt['admin_browse_filter_show'] = 'প্রদর্শন';
- $txt['admin_browse_filter_type_0'] = 'অসক্রিয় করা নতুন অ্যাকাউন্ট';
- $txt['admin_browse_filter_type_2'] = 'অসক্রিয় ইমেল পরিবর্তন';
- $txt['admin_browse_filter_type_3'] = 'অনুমোদিত নতুন অ্যাকাউন্ট';
- $txt['admin_browse_filter_type_4'] = 'অনুমোদিত অ্যাকাউন্ট মুছে ফেলা';
- $txt['admin_browse_filter_type_5'] = 'অনুমোদিত কম বয়সী অ্যাকাউন্ট';
+$txt['admin_browse_filter_by'] = 'Filter By';
+$txt['admin_browse_filter_show'] = 'Displaying';
+$txt['admin_browse_filter_type_0'] = 'Unactivated new accounts';
+$txt['admin_browse_filter_type_2'] = 'Unactivated email changes';
+$txt['admin_browse_filter_type_3'] = 'Unapproved new accounts';
+$txt['admin_browse_filter_type_4'] = 'Unapproved account deletions';
+$txt['admin_browse_filter_type_5'] = 'Unapproved underage accounts';
 
- $txt['admin_browse_outstanding'] = 'অসামান্য সদস্য';
- $txt['admin_browse_outstanding_days_1'] = 'সকল সদস্যের সাথে যারা নিবন্ধন করেছেন তার বেশি সময় ধরে';
- $txt['admin_browse_outstanding_days_2'] = 'দিন আগে';
- $txt['admin_browse_outstanding_perform'] = 'নিম্নলিখিত ক্রিয়া সম্পাদন করুন';
- $txt['admin_browse_outstanding_go'] = 'কর্ম সম্পাদন করুন';
+$txt['admin_browse_outstanding'] = 'Outstanding Members';
+$txt['admin_browse_outstanding_days_1'] = 'With all members who registered longer than';
+$txt['admin_browse_outstanding_days_2'] = 'days ago';
+$txt['admin_browse_outstanding_perform'] = 'Perform the following action';
+$txt['admin_browse_outstanding_go'] = 'Perform Action';
 
- $txt['check_for_duplicate'] = 'ডুপ্লিকেটের জন্য চেক করুন';
- $txt['dont_check_for_duplicate'] = 'ডুপ্লিকেট চেক করবেন না';
- $txt['duplicates'] = 'ডুপ্লিকেট';
+$txt['check_for_duplicate'] = 'Check for duplicates';
+$txt['dont_check_for_duplicate'] = 'Don\'t check for duplicates';
+$txt['duplicates'] = 'Duplicates';
 
- $txt['not_activated'] = 'সক্রিয় করা হয়নি';
+$txt['not_activated'] = 'Not activated';
 
- ?>
+?>

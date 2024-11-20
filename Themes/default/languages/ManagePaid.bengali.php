@@ -1,211 +1,211 @@
 <?php
- // সংস্করণ: 2.1.0;  ম্যানেজ পেইড
+// Version: 2.1.0; ManagePaid
 
- বিশ্বব্যাপী $boardurl;
+global $boardurl;
 
- // কিছু পেমেন্ট গেটওয়ের ভাষা নির্দিষ্ট তথ্য প্রয়োজন।
- $txt['lang_paypal'] = 'মার্কিন';
+// Some payment gateways need language specific information.
+$txt['lang_paypal'] = 'US';
 
- // প্রতীক।
- $txt['usd_symbol'] = '$%1.2f';
- $txt['eur_symbol'] = '&euro;%1.2f';
- $txt['gbp_symbol'] = '&pound;%1.2f';
- $txt['cad_symbol'] = 'C$%1.2f';
- $txt['aud_symbol'] = 'A$%1.2f';
+// Symbols.
+$txt['usd_symbol'] = '$%1.2f';
+$txt['eur_symbol'] = '&euro;%1.2f';
+$txt['gbp_symbol'] = '&pound;%1.2f';
+$txt['cad_symbol'] = 'C$%1.2f';
+$txt['aud_symbol'] = 'A$%1.2f';
 
- $txt['usd'] = 'USD ($)';
- $txt['eur'] = 'EUR (&euro;)';
- $txt['gbp'] = 'GBP (&পাউন্ড;)';
- $txt['cad'] = 'CAD (C$)';
- $txt['aud'] = 'AUD (A$)';
- $txt['other'] = 'অন্য';
+$txt['usd'] = 'USD ($)';
+$txt['eur'] = 'EUR (&euro;)';
+$txt['gbp'] = 'GBP (&pound;)';
+$txt['cad'] = 'CAD (C$)';
+$txt['aud'] = 'AUD (A$)';
+$txt['other'] = 'Other';
 
- $txt['paid_username'] = 'ব্যবহারকারীর নাম';
+$txt['paid_username'] = 'Username';
 
- $txt['paid_subscriptions_desc'] = 'এই বিভাগ থেকে আপনি আপনার ফোরামে অর্থপ্রদানের সাবস্ক্রিপশন পদ্ধতি যোগ, অপসারণ এবং সম্পাদনা করতে পারেন।';
- $txt['paid_subs_settings'] = 'সেটিংস';
- $txt['paid_subs_settings_desc'] = 'এখান থেকে আপনি আপনার ব্যবহারকারীদের জন্য উপলব্ধ অর্থপ্রদান পদ্ধতি সম্পাদনা করতে পারেন।';
- $txt['paid_subs_view'] = 'সাবস্ক্রিপশন দেখুন';
- $txt['paid_subs_view_desc'] = 'এই বিভাগ থেকে আপনি আপনার উপলব্ধ সমস্ত সদস্যতা দেখতে পারেন।';
+$txt['paid_subscriptions_desc'] = 'From this section you can add, remove and edit paid subscription methods to your forum.';
+$txt['paid_subs_settings'] = 'Settings';
+$txt['paid_subs_settings_desc'] = 'From here you can edit the payment methods available to your users.';
+$txt['paid_subs_view'] = 'View Subscriptions';
+$txt['paid_subs_view_desc'] = 'From this section you can view all the subscriptions you have available.';
 
- // সেটিং টাইপ স্ট্রিং।
- $txt['paid_enabled'] = 'প্রদেয় সাবস্ক্রিপশন সক্ষম করুন';
- $txt['paid_enabled_desc'] = 'প্রদত্ত সাবস্ক্রিপশন ফোরামে ব্যবহার করার জন্য এটি অবশ্যই পরীক্ষা করা উচিত।';
- $txt['paid_email'] = 'বিজ্ঞপ্তি ইমেল পাঠান';
- $txt['paid_email_desc'] = 'সাবস্ক্রিপশন স্বয়ংক্রিয়ভাবে পরিবর্তন হলে অ্যাডমিনকে জানান।';
- $txt['paid_email_to'] = 'পত্রালাপের জন্য ইমেল';
- $txt['paid_email_to_desc'] = 'বিজ্ঞপ্তি পাঠানোর জন্য ইমেলে ঠিকানার কমা দ্বারা পৃথক করা তালিকা।';
- $txt['paidsubs_test'] = 'পরীক্ষা মোড সক্ষম করুন';
- $txt['paidsubs_test_desc'] = 'এটি প্রদত্ত সাবস্ক্রিপশনকে &quot;পরীক্ষা&quot;  মোড, যা যেখানেই সম্ভব, PayPal, Authorize.net ইত্যাদিতে স্যান্ডবক্স অর্থপ্রদানের পদ্ধতি ব্যবহার করবে। আপনি কী করছেন তা না জানলে সক্ষম করবেন না!';
- $txt['paidsubs_test_confirm'] = 'আপনি কি পরীক্ষা মোড সক্ষম করার বিষয়ে নিশ্চিত?';
- $txt['paid_email_no'] = 'কোনো বিজ্ঞপ্তি পাঠাবেন না';
- $txt['paid_email_error'] = 'সাবস্ক্রিপশন ব্যর্থ হলে জানান';
- $txt['paid_email_all'] = 'সমস্ত স্বয়ংক্রিয় সাবস্ক্রিপশন পরিবর্তন সম্পর্কে অবহিত করুন';
- $txt['paid_currency'] = 'মুদ্রা নির্বাচন করুন';
- $txt['paid_currency_code'] = 'মুদ্রা কোড';
- $txt['paid_currency_code_desc'] = 'পেমেন্ট ব্যবসায়ীদের দ্বারা ব্যবহৃত কোড';
- $txt['paid_currency_symbol'] = 'প্রদান পদ্ধতি দ্বারা ব্যবহৃত প্রতীক';
- $txt['paid_currency_symbol_desc'] = 'সংখ্যা কোথায় যায় তা নির্দিষ্ট করতে \'%1.2f\' ব্যবহার করুন।  যেমন $%1.2f, %1.2f EUR ইত্যাদি';
- $txt['paid_settings_save'] = 'সংরক্ষণ করুন';
+// Setting type strings.
+$txt['paid_enabled'] = 'Enable Paid Subscriptions';
+$txt['paid_enabled_desc'] = 'This must be checked for the paid subscriptions to be used on the forum.';
+$txt['paid_email'] = 'Send Notification emails';
+$txt['paid_email_desc'] = 'Inform the admin when a subscription automatically changes.';
+$txt['paid_email_to'] = 'Email for Correspondence';
+$txt['paid_email_to_desc'] = 'Comma-separated list of addresses to email to send notifications to.';
+$txt['paidsubs_test'] = 'Enable test mode';
+$txt['paidsubs_test_desc'] = 'This puts the paid subscriptions into &quot;test&quot; mode, which will, wherever possible, use sandbox payment methods in PayPal, Authorize.net etc. Do not enable unless you know what you are doing!';
+$txt['paidsubs_test_confirm'] = 'Are you sure you want to enable test mode?';
+$txt['paid_email_no'] = 'Do not send any notifications';
+$txt['paid_email_error'] = 'Inform when subscription fails';
+$txt['paid_email_all'] = 'Inform on all automatic subscription changes';
+$txt['paid_currency'] = 'Select Currency';
+$txt['paid_currency_code'] = 'Currency Code';
+$txt['paid_currency_code_desc'] = 'Code used by payment merchants';
+$txt['paid_currency_symbol'] = 'Symbol used by payment method';
+$txt['paid_currency_symbol_desc'] = 'Use \'%1.2f\' to specify where number goes. For example $%1.2f, %1.2f EUR etc';
+$txt['paid_settings_save'] = 'Save';
 
- $txt['paypal_email'] = 'পেপাল ইমেল ঠিকানা';
- $txt['paypal_email_desc'] = 'আপনি যদি পেপাল ব্যবহার করতে না চান তাহলে ফাঁকা রাখুন।';
- $txt['paypal_additional_emails'] = 'প্রাথমিক পেপ্যাল ​​ইমেল ঠিকানা';
- $txt['paypal_additional_emails_desc'] = 'যদি ভিন্ন (ব্যবসায়িক অ্যাকাউন্টের জন্য)';
- $txt['paypal_sandbox_email'] = 'পেপাল স্যান্ডবক্স ইমেল ঠিকানা';
- $txt['paypal_sandbox_email_desc'] = 'পরীক্ষা মোড নিষ্ক্রিয় থাকলে বা পেপ্যাল ​​ব্যবহার না করলে খালি রাখা যেতে পারে।';
- 
- // যুক্তি(গুলি): $boardurl
- $txt['paid_note'] = '<strong class="alert">দ্রষ্টব্য:</strong><br>
- SMF বর্তমানে <strong>PayPal</strong> কে ইনস্টল করা অর্থপ্রদানের পদ্ধতি হিসাবে সমর্থন করে।
- <ul class="bbc_list">
- 	 <li>আপনার পেপ্যাল ​​অ্যাকাউন্টে IPN সক্রিয় করার প্রয়োজন নেই;  কিন্তু আপনি যদি তা করেন, তাহলে ফোরাম আপনার অ্যাকাউন্টে করা সমস্ত অর্থপ্রদানের জন্য অর্থপ্রদানের বিজ্ঞপ্তি পাবে এবং এটি সদস্যতা সম্পর্কিত নয় এমন অর্থপ্রদানের জন্য অর্থপ্রদত্ত সাবস্ক্রিপশন ত্রুটি তৈরি করবে৷</li>
- 	 <li>পুনরাবৃত্ত অর্থপ্রদান ব্যবহার করার জন্য আপনার অবশ্যই একটি ব্যবসা বা প্রিমিয়ার অ্যাকাউন্ট থাকতে হবে।</li>
- 	 <li>বৈধকরণের উদ্দেশ্যে আপনাকে অবশ্যই আপনার প্রাথমিক পেপাল ইমেল ঠিকানা প্রদান করতে হবে।</li>
- </ul>
- <br>
- আপনি যদি একটি ভিন্ন পেমেন্ট গেটওয়ে ইনস্টল করেন, তাহলে আপনাকে অর্থপ্রদানের বিজ্ঞপ্তির জন্য একটি রিটার্ন URL সেট আপ করতে হতে পারে।  সব ধরনের পেমেন্টের জন্য, এই রিটার্ন URL এইভাবে সেট করা উচিত:
- <br><br>
- <ul class="bbc_list">
- 	 <li><strong>%1$s/subscriptions.php</strong></li>
- </ul>
- <br>
- আপনি সাধারণত এটি আপনার গ্রাহক প্যানেলে খুঁজে পেতে পারেন, সাধারণত &quot;রিটার্ন URL&quot;  অথবা &quot;কলব্যাক URL&quot;।';
+$txt['paypal_email'] = 'PayPal email address';
+$txt['paypal_email_desc'] = 'Leave blank if you do not wish to use PayPal.';
+$txt['paypal_additional_emails'] = 'Primary PayPal email address';
+$txt['paypal_additional_emails_desc'] = 'If different (for business account)';
+$txt['paypal_sandbox_email'] = 'PayPal sandbox email address';
+$txt['paypal_sandbox_email_desc'] = 'Can be left blank if test mode is disabled or not using PayPal.';
 
- // সাবস্ক্রিপশন স্ট্রিং দেখুন।
- $txt['paid_name'] = 'নাম';
- $txt['paid_status'] = 'স্থিতি';
- $txt['paid_cost'] = 'খরচ';
- $txt['paid_duration'] = 'সময়কাল';
- $txt['paid_active'] = 'সক্রিয়';
- $txt['paid_pending'] = 'পেন্ডিং পেমেন্ট';
- $txt['paid_finished'] = 'সমাপ্ত';
- $txt['paid_total'] = 'মোট';
- $txt['paid_is_active'] = 'সক্রিয়';
- $txt['paid_none_yet'] = 'আপনি এখনো কোনো সদস্যতা সেট আপ করেননি।';
- $txt['paid_payments_pending'] = 'পেমেন্ট মুলতুবি';
- $txt['paid_order'] = 'অর্ডার';
+// argument(s): $boardurl
+$txt['paid_note'] = '<strong class="alert">Note:</strong><br>
+SMF currently supports <strong>PayPal</strong> as the installed payment method.
+<ul class="bbc_list">
+	<li>It is not necessary to enable IPN in your PayPal account; but if you do, the forum will receive payment notifications for all payments made to your account, and this will generate Paid Subscriptions errors for payments that are not subscription related.</li>
+	<li>You must have a business or premier account to use recurring payments.</li>
+	<li>You must provide your primary PayPal email address for validation purposes.</li>
+</ul>
+<br>
+If you install a different payment gateway, you may need to set up a return URL for payment notification. For all payment types, this return URL should be set as:
+<br><br>
+<ul class="bbc_list">
+	<li><strong>%1$s/subscriptions.php</strong></li>
+</ul>
+<br>
+You can normally find it in your customer panels, usually under the term &quot;Return URL&quot; or &quot;Callback URL&quot;.';
 
- $txt['yes'] = 'হ্যাঁ';
- $txt['no'] = 'না';
+// View subscription strings.
+$txt['paid_name'] = 'Name';
+$txt['paid_status'] = 'Status';
+$txt['paid_cost'] = 'Cost';
+$txt['paid_duration'] = 'Duration';
+$txt['paid_active'] = 'Active';
+$txt['paid_pending'] = 'Pending Payment';
+$txt['paid_finished'] = 'Finished';
+$txt['paid_total'] = 'Total';
+$txt['paid_is_active'] = 'Activated';
+$txt['paid_none_yet'] = 'You haven\'t set up any subscriptions yet.';
+$txt['paid_payments_pending'] = 'Payments Pending';
+$txt['paid_order'] = 'Order';
 
- // সাবস্ক্রিপশন যোগ/সম্পাদনা/মুছুন।
- $txt['paid_add_subscription'] = 'সাবস্ক্রিপশন যোগ করুন';
- $txt['paid_edit_subscription'] = 'সাবস্ক্রিপশন সম্পাদনা করুন';
- $txt['paid_delete_subscription'] = 'সাবস্ক্রিপশন মুছুন';
+$txt['yes'] = 'Yes';
+$txt['no'] = 'No';
 
- $txt['paid_mod_name'] = 'সাবস্ক্রিপশন নাম';
- $txt['paid_mod_desc'] = 'বিবরণ';
- $txt['paid_mod_reminder'] = 'অনুস্মারক ইমেল পাঠান';
- $txt['paid_mod_reminder_desc'] = 'অনুস্মারক পাঠাতে সাবস্ক্রিপশনের মেয়াদ শেষ হওয়ার কয়েক দিন আগে।';
- $txt['paid_mod_email'] = 'সম্পূর্ণ হওয়ার পরে পাঠানোর জন্য ইমেল';
- $txt['paid_mod_email_desc'] = 'যেখানে {NAME} সদস্যদের নাম;  {FORUM} হল সম্প্রদায়ের নাম।  ইমেইল বিষয় প্রথম লাইন হতে হবে.  কোনো ইমেল বিজ্ঞপ্তির জন্য ফাঁকা।';
- $txt['paid_mod_cost_usd'] = 'খরচ (USD)';
- $txt['paid_mod_cost_eur'] = 'খরচ (EUR)';
- $txt['paid_mod_cost_gbp'] = 'খরচ (GBP)';
- $txt['paid_mod_cost_cad'] = 'খরচ (CAD)';
- $txt['paid_mod_cost_aud'] = 'খরচ (AUD)';
- $txt['paid_mod_cost_blank'] = 'এই মুদ্রা অফার না করার জন্য এটি ফাঁকা রাখুন।';
- $txt['paid_mod_span'] = 'সাবস্ক্রিপশনের দৈর্ঘ্য';
- $txt['paid_mod_span_days'] = 'দিন';
- $txt['paid_mod_span_weeks'] = 'সপ্তাহ';
- $txt['paid_mod_span_months'] = 'মাস';
- $txt['paid_mod_span_years'] = 'বছর';
- $txt['paid_mod_active'] = 'সক্রিয়';
- $txt['paid_mod_active_desc'] = 'নতুন সদস্যদের যোগদানের জন্য একটি সাবস্ক্রিপশন সক্রিয় থাকতে হবে।';
- $txt['paid_mod_prim_group'] = 'সাবস্ক্রিপশনের ভিত্তিতে প্রাথমিক গ্রুপ';
- $txt['paid_mod_prim_group_desc'] = 'প্রাথমিক গোষ্ঠী যাতে ব্যবহারকারীরা যখন সাবস্ক্রাইব করেন।';
- $txt['paid_mod_add_groups'] = 'সাবস্ক্রিপশনের উপর অতিরিক্ত গ্রুপ';
- $txt['paid_mod_add_groups_desc'] = 'সাবস্ক্রিপশনের পরে ব্যবহারকারীকে যুক্ত করার জন্য অতিরিক্ত গ্রুপ।';
- $txt['paid_mod_no_group'] = 'পরিবর্তন করবেন না';
- $txt['paid_mod_edit_note'] = 'উল্লেখ্য যে এই গ্রুপে বিদ্যমান গ্রাহক থাকায় গ্রুপ সেটিংস পরিবর্তন করা যাবে না!';
- $txt['paid_mod_delete_warning'] = '<strong>সতর্কতা</strong><br><br>যদি আপনি এই সদস্যতাটি মুছে দেন তবে বর্তমানে সদস্যতা নেওয়া সমস্ত ব্যবহারকারী সদস্যতা দ্বারা প্রদত্ত অ্যাক্সেসের অধিকার হারাবেন৷  আপনি যদি নিশ্চিত না হন যে আপনি এটি করতে চান তবে এটি বাঞ্ছনীয় যে আপনি কেবল একটি সদস্যতা মুছে ফেলার পরিবর্তে নিষ্ক্রিয় করুন৷<br>';
- $txt['paid_mod_repeatable'] = 'ব্যবহারকারীকে এই সদস্যতা স্বয়ংক্রিয়ভাবে পুনর্নবীকরণ করার অনুমতি দিন';
- $txt['paid_mod_fixed_price'] = 'নির্দিষ্ট মূল্য এবং সময়ের জন্য সদস্যতা';
- $txt['paid_mod_flexible_price'] = 'সাবস্ক্রিপশন মূল্য অর্ডারের সময়কালের উপর পরিবর্তিত হয়';
- $txt['paid_mod_price_breakdown'] = 'ফ্লেক্সিবল প্রাইস ব্রেকডাউন';
- $txt['paid_mod_price_breakdown_desc'] = 'এখানে সংজ্ঞায়িত করুন যে সাবস্ক্রিপশনের কত খরচ হওয়া উচিত তাদের সাবস্ক্রাইব করা সময়ের উপর নির্ভর করে।  উদাহরণস্বরূপ, এক মাসের জন্য সদস্যতা নিতে 12USD খরচ হতে পারে, কিন্তু এক বছরের জন্য মাত্র 100USD।  আপনি যদি একটি নির্দিষ্ট সময়ের জন্য মূল্য নির্ধারণ করতে না চান তবে এটি খালি রাখুন।';
- $txt['flexible'] = 'নমনীয়';
+// Add/Edit/Delete subscription.
+$txt['paid_add_subscription'] = 'Add Subscription';
+$txt['paid_edit_subscription'] = 'Edit Subscription';
+$txt['paid_delete_subscription'] = 'Delete Subscription';
 
- $txt['paid_per_day'] = 'প্রতিদিনের দাম';
- $txt['paid_per_week'] = 'প্রতি সপ্তাহে মূল্য';
- $txt['paid_per_month'] = 'প্রতি মাসে মূল্য';
- $txt['paid_per_year'] = 'প্রতি বছর মূল্য';
- $txt['day'] = 'দিন';
- $txt['week'] = 'সপ্তাহ';
- $txt['month'] = 'মাস';
- $txt['year'] = 'বছর';
+$txt['paid_mod_name'] = 'Subscription Name';
+$txt['paid_mod_desc'] = 'Description';
+$txt['paid_mod_reminder'] = 'Send Reminder email';
+$txt['paid_mod_reminder_desc'] = 'Days before subscription is due to expire to send reminder.';
+$txt['paid_mod_email'] = 'Email to Send upon Completion';
+$txt['paid_mod_email_desc'] = 'Where {NAME} is members name; {FORUM} is community name. Email subject should be on first line. Blank for no email notification.';
+$txt['paid_mod_cost_usd'] = 'Cost (USD)';
+$txt['paid_mod_cost_eur'] = 'Cost (EUR)';
+$txt['paid_mod_cost_gbp'] = 'Cost (GBP)';
+$txt['paid_mod_cost_cad'] = 'Cost (CAD)';
+$txt['paid_mod_cost_aud'] = 'Cost (AUD)';
+$txt['paid_mod_cost_blank'] = 'Leave this blank to not offer this currency.';
+$txt['paid_mod_span'] = 'Length of Subscription';
+$txt['paid_mod_span_days'] = 'Days';
+$txt['paid_mod_span_weeks'] = 'Weeks';
+$txt['paid_mod_span_months'] = 'Months';
+$txt['paid_mod_span_years'] = 'Years';
+$txt['paid_mod_active'] = 'Active';
+$txt['paid_mod_active_desc'] = 'A subscription must be active for new members to join.';
+$txt['paid_mod_prim_group'] = 'Primary Group upon Subscription';
+$txt['paid_mod_prim_group_desc'] = 'Primary group to put the user into when they subscribe.';
+$txt['paid_mod_add_groups'] = 'Additional Groups upon Subscription';
+$txt['paid_mod_add_groups_desc'] = 'Additional groups to add the user to after subscription.';
+$txt['paid_mod_no_group'] = 'Don\'t Change';
+$txt['paid_mod_edit_note'] = 'Note that as this group has existing subscribers the group settings cannot be changed!';
+$txt['paid_mod_delete_warning'] = '<strong>WARNING</strong><br><br>If you delete this subscription all users currently subscribed will lose any access rights granted by the subscription. Unless you are sure you want to do this it is recommended that you simply deactivate a subscription rather than delete it.<br>';
+$txt['paid_mod_repeatable'] = 'Allow user to auto-renew this subscription';
+$txt['paid_mod_fixed_price'] = 'Subscription for fixed price and period';
+$txt['paid_mod_flexible_price'] = 'Subscription price varies on duration ordered';
+$txt['paid_mod_price_breakdown'] = 'Flexible Price Breakdown';
+$txt['paid_mod_price_breakdown_desc'] = 'Define here how much the subscription should cost dependent on the period they subscribe for. For example, it could cost 12USD to subscribe for a month, but only 100USD for a year. If you don\'t want to define a price for a particular period of time leave it blank.';
+$txt['flexible'] = 'Flexible';
 
- // সাবস্ক্রাইব করা ব্যবহারকারীদের দেখুন।
- $txt['viewing_users_subscribed'] = 'ব্যবহারকারীদের দেখা';
- $txt['view_users_subscribed'] = 'সাবস্ক্রাইব করা ব্যবহারকারীদের দেখা: &quot;%1$s&quot;';
- $txt['no_subscribers'] = 'বর্তমানে এই সাবস্ক্রিপশনের কোনো সদস্য নেই।';
- $txt['add_subscriber'] = 'নতুন গ্রাহক যোগ করুন';
- $txt['edit_subscriber'] = 'সাবস্ক্রাইবার সম্পাদনা করুন';
- $txt['delete_selected'] = 'নির্বাচিত মুছুন';
- $txt['complete_selected'] = 'সম্পূর্ণ নির্বাচিত';
- 
- // @todo এই স্ট্রিংগুলি জাভাস্ক্রিপ্টের সাথে ব্যবহার করা হয়।  সংখ্যাসূচক সত্তা ব্যবহার করুন।
- $txt['delete_are_sure'] = 'আপনি কি নিশ্চিত যে আপনি নির্বাচিত সাবস্ক্রিপশনের সমস্ত রেকর্ড মুছে ফেলতে চান?';
- $txt['complete_are_sure'] = 'আপনি কি নিশ্চিত যে আপনি নির্বাচিত সদস্যতা সম্পূর্ণ করতে চান?';
+$txt['paid_per_day'] = 'Price per Day';
+$txt['paid_per_week'] = 'Price per Week';
+$txt['paid_per_month'] = 'Price per Month';
+$txt['paid_per_year'] = 'Price per Year';
+$txt['day'] = 'Day';
+$txt['week'] = 'Week';
+$txt['month'] = 'Month';
+$txt['year'] = 'Year';
 
- $txt['start_date'] = 'শুরু করার তারিখ';
- $txt['end_date'] = 'শেষ তারিখ';
- $txt['start_date_and_time'] = 'শুরু করার তারিখ এবং সময়';
- $txt['end_date_and_time'] = 'শেষ তারিখ এবং সময়';
- $txt['edit'] = 'সম্পাদনা';
- $txt['one_username'] = 'অনুগ্রহ করে শুধুমাত্র একটি ব্যবহারকারীর নাম লিখুন।';
- $txt['minute'] = 'মিনিট';
- $txt['error_member_not_found'] = 'প্রবেশ করা সদস্য খুঁজে পাওয়া যায়নি';
- $txt['member_already_subscribed'] = 'এই সদস্য ইতিমধ্যেই এই সাবস্ক্রিপশনে সদস্যতা নিয়েছেন।  তাদের বিদ্যমান সদস্যতা সম্পাদনা করুন.';
- $txt['search_sub'] = 'ব্যবহারকারী খুঁজুন';
+// View subscribed users.
+$txt['viewing_users_subscribed'] = 'Viewing Users';
+$txt['view_users_subscribed'] = 'Viewing users subscribed to: &quot;%1$s&quot;';
+$txt['no_subscribers'] = 'There are currently no subscribers to this subscription.';
+$txt['add_subscriber'] = 'Add new Subscriber';
+$txt['edit_subscriber'] = 'Edit Subscriber';
+$txt['delete_selected'] = 'Delete Selected';
+$txt['complete_selected'] = 'Complete selected';
 
- // পেমেন্ট করুন।
- $txt['paid_confirm_payment'] = 'পেমেন্ট নিশ্চিত করুন';
- $txt['paid_confirm_desc'] = 'পেমেন্ট করা চালিয়ে যেতে অনুগ্রহ করে নিচের বিশদ বিবরণ দেখুন এবং &quot;অর্ডার&quot;' চাপুন;
- $txt['paypal'] = 'PayPal';
- $txt['paid_confirm_paypal'] = '<a href="https://www.paypal.com">PayPal</a> ব্যবহার করে অর্থ প্রদান করতে অনুগ্রহ করে নীচের বোতামে ক্লিক করুন।  অর্থপ্রদানের জন্য আপনাকে পেপ্যাল ​​সাইটে নির্দেশিত করা হবে।';
- $txt['paid_paypal_order'] = 'পেপাল দিয়ে অর্ডার করুন';
- $txt['paid_done'] = 'পেমেন্ট সম্পূর্ণ';
- $txt['paid_done_desc'] = 'আপনার পেমেন্টের জন্য ধন্যবাদ।  একবার লেনদেন যাচাই করা হলে সাবস্ক্রিপশন সক্রিয় করা হবে।';
- $txt['paid_sub_return'] = 'সাবস্ক্রিপশনে ফিরে যান';
- $txt['paid_current_desc'] = 'নীচে আপনার সমস্ত বর্তমান এবং পূর্ববর্তী সদস্যতার একটি তালিকা রয়েছে৷  একটি বিদ্যমান সাবস্ক্রিপশন বাড়ানোর জন্য শুধুমাত্র উপরের তালিকা থেকে এটি নির্বাচন করুন।';
- $txt['paid_admin_add'] = 'এই সাবস্ক্রিপশন যোগ করুন';
+// @todo These strings are used in conjunction with JavaScript. Use numeric entities.
+$txt['delete_are_sure'] = 'Are you sure you want to delete all records of the selected subscriptions?';
+$txt['complete_are_sure'] = 'Are you sure you want to complete the selected subscriptions?';
 
- $txt['paid_not_set_currency'] = 'আপনি এখনও আপনার মুদ্রা সেটআপ করেননি।  অনুগ্রহ করে চালিয়ে যাওয়ার আগে <a href="%1$s">সেটিংস</a> বিভাগ থেকে তা করুন৷';
- $txt['paid_no_cost_value'] = 'আপনাকে অবশ্যই একটি খরচ এবং সদস্যতার দৈর্ঘ্য লিখতে হবে।';
- $txt['paid_invalid_duration'] = 'আপনাকে এই সদস্যতার জন্য একটি বৈধ সময়কাল লিখতে হবে।';
- $txt['paid_invalid_duration_D'] = 'যদি দিনে পরিমাপ করা সাবস্ক্রিপশনের দৈর্ঘ্য দেওয়া হয়, আপনি শুধুমাত্র 1 থেকে 90 দিন ব্যবহার করতে পারবেন।  আপনি যদি এত দীর্ঘ সাবস্ক্রিপশন চান তবে আপনার সপ্তাহ, মাস বা বছর ব্যবহার করা উচিত।';
- $txt['paid_invalid_duration_W'] = 'যদি সাবস্ক্রিপশনের দৈর্ঘ্য সপ্তাহে পরিমাপ করা হয়, আপনি শুধুমাত্র 1 থেকে 52 সপ্তাহ ব্যবহার করতে পারবেন।  আপনি যদি এত দীর্ঘ সাবস্ক্রিপশন চান তবে আপনাকে মাস বা বছর ব্যবহার করতে হবে।';
- $txt['paid_invalid_duration_M'] = 'যদি মাসগুলিতে পরিমাপ করা সাবস্ক্রিপশনের দৈর্ঘ্য রাখা হয়, আপনি শুধুমাত্র 1 থেকে 24 মাস ব্যবহার করতে পারবেন।  আপনি যদি এত দীর্ঘ সাবস্ক্রিপশন চান তবে আপনাকে বছর ব্যবহার করতে হবে।';
- $txt['paid_invalid_duration_Y'] = 'যদি বছরে পরিমাপ করা সাবস্ক্রিপশনের দৈর্ঘ্য রাখা হয়, আপনি শুধুমাত্র 1 থেকে 5 বছর ব্যবহার করতে পারবেন।';
- $txt['paid_all_freq_blank'] = 'আপনাকে অবশ্যই চারটি মেয়াদের মধ্যে অন্তত একটির জন্য একটি খরচ লিখতে হবে।';
- 
- // কিছু ত্রুটি স্ট্রিং।
- $txt['paid_no_data'] = 'স্ক্রিপ্টে কোনো বৈধ তথ্য পাঠানো হয়নি।';
+$txt['start_date'] = 'Start Date';
+$txt['end_date'] = 'End Date';
+$txt['start_date_and_time'] = 'Start Date and Time';
+$txt['end_date_and_time'] = 'End Date and Time';
+$txt['edit'] = 'EDIT';
+$txt['one_username'] = 'Please enter one username only.';
+$txt['minute'] = 'Minute';
+$txt['error_member_not_found'] = 'The member entered could not be found';
+$txt['member_already_subscribed'] = 'This member is already subscribed to this subscription. Please edit their existing subscription.';
+$txt['search_sub'] = 'Find User';
 
- $txt['paypal_could_not_connect'] = 'পেপাল সার্ভারের সাথে সংযোগ করা যায়নি';
- $txt['paid_sub_not_active'] = 'সেটি সাবস্ক্রিপশন কোনো নতুন ব্যবহারকারী নিচ্ছে না।';
- $txt['paid_disabled'] = 'প্রদেয় সাবস্ক্রিপশন বর্তমানে নিষ্ক্রিয়।';
- $txt['paid_unknown_transaction_type'] = 'অজানা প্রদত্ত সাবস্ক্রিপশন লেনদেনের ধরন।';
- $txt['paid_empty_member'] = 'প্রদেয় সাবস্ক্রিপশন হ্যান্ডলার সদস্য আইডি পুনরুদ্ধার করতে পারেনি';
- $txt['paid_could_not_find_member'] = 'প্রদেয় সাবস্ক্রিপশন হ্যান্ডলার আইডি সহ সদস্য খুঁজে পায়নি: %1$d';
- $txt['paid_count_not_find_subscription'] = 'প্রদত্ত সাবস্ক্রিপশন হ্যান্ডলার সদস্য আইডি: %1$s, সাবস্ক্রিপশন আইডি: %2$s'-এর সদস্যতা খুঁজে পায়নি;
- $txt['paid_count_not_find_subscription_log'] = 'প্রদেয় সাবস্ক্রিপশন হ্যান্ডলার সদস্য আইডির জন্য সদস্যতা লগ এন্ট্রি খুঁজে পায়নি: %1$s, সদস্যতা আইডি: %2$s';
- $txt['paid_count_not_find_outstanding_payment'] = 'সদস্য আইডির জন্য বকেয়া পেমেন্ট এন্ট্রি খুঁজে পাওয়া যায়নি: %1$s, সাবস্ক্রিপশন আইডি: %2$s তাই উপেক্ষা করা হচ্ছে';
- $txt['paid_admin_not_setup_gateway'] = 'দুঃখিত, প্রশাসক এখনও প্রদত্ত সাবস্ক্রিপশন সেট আপ শেষ করেননি৷  পরে আবার চেক করুন.';
- $txt['paid_make_recurring'] = 'এটিকে একটি পুনরাবৃত্ত অর্থ প্রদান করুন';
+// Make payment.
+$txt['paid_confirm_payment'] = 'Confirm Payment';
+$txt['paid_confirm_desc'] = 'To continue through to payment please check the details below and hit &quot;Order&quot;';
+$txt['paypal'] = 'PayPal';
+$txt['paid_confirm_paypal'] = 'To pay using <a href="https://www.paypal.com">PayPal</a> please click the button below. You will be directed to the PayPal site for payment.';
+$txt['paid_paypal_order'] = 'Order with PayPal';
+$txt['paid_done'] = 'Payment Complete';
+$txt['paid_done_desc'] = 'Thank you for your payment. Once the transaction has been verified the subscription will be activated.';
+$txt['paid_sub_return'] = 'Return to Subscriptions';
+$txt['paid_current_desc'] = 'Below is a list of all your current and previous subscriptions. To extend an existing subscription simply select it from the list above.';
+$txt['paid_admin_add'] = 'Add This Subscription';
 
- $txt['subscriptions'] = 'সাবস্ক্রিপশন';
- $txt['subscription'] = 'সাবস্ক্রিপশন';
- $txt['paid_subs_desc'] = 'নিচে এই ফোরামে উপলব্ধ সমস্ত সদস্যতার একটি তালিকা রয়েছে।';
- $txt['paid_subs_none'] = 'বর্তমানে কোনো প্রদত্ত সাবস্ক্রিপশন উপলব্ধ নেই।';
+$txt['paid_not_set_currency'] = 'You have not setup your currency yet. Please do so from the <a href="%1$s">Settings</a> section before continuing.';
+$txt['paid_no_cost_value'] = 'You must enter a cost and subscription length.';
+$txt['paid_invalid_duration'] = 'You must enter a valid duration for this subscription.';
+$txt['paid_invalid_duration_D'] = 'If putting in a subscription length measured in days, you can only use 1 to 90 days. If you want a subscription that long, you should use weeks, months or years.';
+$txt['paid_invalid_duration_W'] = 'If putting in a subscription length measured in weeks, you can only use 1 to 52 weeks. If you want a subscription that long, you should use months or years.';
+$txt['paid_invalid_duration_M'] = 'If putting in a subscription length measured in months, you can only use 1 to 24 months. If you want a subscription that long, you should use years.';
+$txt['paid_invalid_duration_Y'] = 'If putting in a subscription length measured in years, you can only use 1 to 5 years.';
+$txt['paid_all_freq_blank'] = 'You must enter a cost for at least one of the four durations.';
 
- $txt['paid_current'] = 'বিদ্যমান সদস্যতা';
- $txt['pending_payments'] = 'পেন্ডিং পেমেন্ট';
- $txt['pending_payments_desc'] = 'এই সদস্য এই সাবস্ক্রিপশনের জন্য নিম্নলিখিত অর্থপ্রদান করার চেষ্টা করেছে কিন্তু ফোরামের পক্ষ থেকে নিশ্চিতকরণ পাওয়া যায়নি।  আপনি যদি নিশ্চিত হন যে অর্থপ্রদান গৃহীত হয়েছে &quot;স্বীকার করুন&quot;  সদস্যতা কর্মের জন্য.  বিকল্পভাবে আপনি &quot;সরান&quot; ক্লিক করতে পারেন।  পেমেন্টের সমস্ত রেফারেন্স মুছে ফেলার জন্য।';
- $txt['pending_payments_value'] = 'মান';
- $txt['pending_payments_accept'] = 'স্বীকার করুন';
- $txt['pending_payments_remove'] = 'সরান';
+// Some error strings.
+$txt['paid_no_data'] = 'No valid data was sent to the script.';
 
- ?>
+$txt['paypal_could_not_connect'] = 'Could not connect to PayPal server';
+$txt['paid_sub_not_active'] = 'That subscription is not taking any new users.';
+$txt['paid_disabled'] = 'Paid subscriptions are currently disabled.';
+$txt['paid_unknown_transaction_type'] = 'Unknown Paid Subscriptions transaction type.';
+$txt['paid_empty_member'] = 'Paid subscription handler could not recover member ID';
+$txt['paid_could_not_find_member'] = 'Paid subscription handler could not find member with ID: %1$d';
+$txt['paid_count_not_find_subscription'] = 'Paid subscription handler could not find subscription for member ID: %1$s, subscription ID: %2$s';
+$txt['paid_count_not_find_subscription_log'] = 'Paid subscription handler could not find subscription log entry for member ID: %1$s, subscription ID: %2$s';
+$txt['paid_count_not_find_outstanding_payment'] = 'Could not find outstanding payment entry for member ID: %1$s, subscription ID: %2$s so ignoring';
+$txt['paid_admin_not_setup_gateway'] = 'Sorry, the admin has not yet finished setting up paid subscriptions. Please check back later.';
+$txt['paid_make_recurring'] = 'Make this a recurring payment';
+
+$txt['subscriptions'] = 'Subscriptions';
+$txt['subscription'] = 'Subscription';
+$txt['paid_subs_desc'] = 'Below is a list of all the subscriptions which are available on this forum.';
+$txt['paid_subs_none'] = 'There are currently no paid subscriptions available.';
+
+$txt['paid_current'] = 'Existing Subscriptions';
+$txt['pending_payments'] = 'Pending Payments';
+$txt['pending_payments_desc'] = 'This member has attempted to make the following payments for this subscription but the confirmation has not been received by the forum. If you are sure the payment has been received click &quot;accept&quot; to action to subscription. Alternatively you can click &quot;Remove&quot; to remove all reference to the payment.';
+$txt['pending_payments_value'] = 'Value';
+$txt['pending_payments_accept'] = 'Accept';
+$txt['pending_payments_remove'] = 'Remove';
+
+?>

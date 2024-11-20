@@ -1,167 +1,167 @@
 <?php
- // সংস্করণ: 2.1.0;  অনুসন্ধান করুন
+// Version: 2.1.0; Search
 
- $txt['set_parameters'] = 'সার্চ প্যারামিটার সেট করুন';
- $txt['choose_board'] = 'অনুসন্ধান করার জন্য বোর্ড বাছুন, অথবা সব অনুসন্ধান করুন';
- $txt['all_words'] = 'সমস্ত শব্দ মেলে';
- $txt['any_words'] = 'যেকোন শব্দের সাথে মিল করুন';
- $txt['by_user'] = 'ব্যবহারকারীর দ্বারা';
+$txt['set_parameters'] = 'Set Search Parameters';
+$txt['choose_board'] = 'Choose boards to search in, or search all';
+$txt['all_words'] = 'Match all words';
+$txt['any_words'] = 'Match any words';
+$txt['by_user'] = 'By user';
 
- $txt['search_post_age'] = 'বার্তার বয়স';
- $txt['search_between'] = 'এর মধ্যে';
- $txt['search_and'] = 'এবং';
- $txt['search_options'] = 'বিকল্প';
- $txt['search_show_complete_messages'] = 'মেসেজ হিসেবে ফলাফল দেখান';
- $txt['search_subject_only'] = 'শুধুমাত্র বিষয়ের বিষয়ে অনুসন্ধান করুন';
- $txt['search_relevance'] = 'প্রাসঙ্গিকতা';
- $txt['search_date_posted'] = 'পোস্টের তারিখ';
- $txt['search_order'] = 'অনুসন্ধান আদেশ';
- $txt['search_orderby_relevant_first'] = 'প্রথমে সবচেয়ে প্রাসঙ্গিক ফলাফল';
- $txt['search_orderby_large_first'] = 'প্রথমে সবচেয়ে বড় বিষয়';
- $txt['search_orderby_small_first'] = 'প্রথমে ক্ষুদ্রতম বিষয়';
- $txt['search_orderby_recent_first'] = 'সবচেয়ে সাম্প্রতিক বিষয় প্রথমে';
- $txt['search_orderby_old_first'] = 'প্রথম প্রাচীনতম বিষয়';
- $txt['search_visual_verification_label'] = 'যাচাই';
- $txt['search_visual_verification_desc'] = 'অনুগ্রহ করে অনুসন্ধান ব্যবহার করতে উপরের ছবিতে কোডটি লিখুন।';
+$txt['search_post_age'] = 'Message age';
+$txt['search_between'] = 'between';
+$txt['search_and'] = 'and';
+$txt['search_options'] = 'Options';
+$txt['search_show_complete_messages'] = 'Show results as messages';
+$txt['search_subject_only'] = 'Search in topic subjects only';
+$txt['search_relevance'] = 'Relevance';
+$txt['search_date_posted'] = 'Date Posted';
+$txt['search_order'] = 'Search order';
+$txt['search_orderby_relevant_first'] = 'Most relevant results first';
+$txt['search_orderby_large_first'] = 'Largest topics first';
+$txt['search_orderby_small_first'] = 'Smallest topics first';
+$txt['search_orderby_recent_first'] = 'Most recent topics first';
+$txt['search_orderby_old_first'] = 'Oldest topics first';
+$txt['search_visual_verification_label'] = 'Verification';
+$txt['search_visual_verification_desc'] = 'Please enter the code in the image above to use search.';
 
- $txt['search_specific_topic'] = 'শুধুমাত্র বিষয়ের পোস্ট অনুসন্ধান করা';
+$txt['search_specific_topic'] = 'Searching only posts in the topic';
 
- $txt['mods_cat_search'] = 'অনুসন্ধান';
- $txt['groups_search_posts'] = 'সার্চ ফাংশনে অ্যাক্সেস সহ সদস্যগোষ্ঠী';
- $txt['search_results_per_page'] = 'প্রতি পৃষ্ঠায় অনুসন্ধান ফলাফলের সংখ্যা';
- $txt['search_weight_frequency'] = 'একটি বিষয়ের মধ্যে মিলিত বার্তার সংখ্যার জন্য আপেক্ষিক অনুসন্ধান ওজন';
- $txt['search_weight_age'] = 'শেষ ম্যাচিং বার্তার বয়সের জন্য আপেক্ষিক অনুসন্ধান ওজন';
- $txt['search_weight_length'] = 'বিষয় দৈর্ঘ্যের জন্য আপেক্ষিক অনুসন্ধান ওজন';
- $txt['search_weight_subject'] = 'একটি মিলে যাওয়া বিষয়ের জন্য আপেক্ষিক অনুসন্ধান ওজন';
- $txt['search_weight_first_message'] = 'প্রথম বার্তার মিলের জন্য আপেক্ষিক অনুসন্ধান ওজন';
- $txt['search_weight_sticky'] = 'একটি স্টিকি বিষয়ের জন্য আপেক্ষিক অনুসন্ধান ওজন';
+$txt['mods_cat_search'] = 'Search';
+$txt['groups_search_posts'] = 'Membergroups with access to the search function';
+$txt['search_results_per_page'] = 'Number of search results per page';
+$txt['search_weight_frequency'] = 'Relative search weight for number of matching messages within a topic';
+$txt['search_weight_age'] = 'Relative search weight for age of last matching message';
+$txt['search_weight_length'] = 'Relative search weight for topic length';
+$txt['search_weight_subject'] = 'Relative search weight for a matching subject';
+$txt['search_weight_first_message'] = 'Relative search weight for a first message match';
+$txt['search_weight_sticky'] = 'Relative search weight for a sticky topic';
 
- $txt['search_settings_desc'] = 'এখানে আপনি সার্চ ফাংশনের মৌলিক সেটিংস পরিবর্তন করতে পারেন।';
- $txt['search_settings_title'] = 'সার্চ সেটিংস';
+$txt['search_settings_desc'] = 'Here you can changes the basic settings of the search function.';
+$txt['search_settings_title'] = 'Search Settings';
 
- $txt['search_weights_desc'] = 'এখানে আপনি প্রাসঙ্গিক রেটিং এর পৃথক উপাদান পরিবর্তন করতে পারেন।  ';
- $txt['search_weights_title'] = 'অনুসন্ধান - ওজন';
- $txt['search_weights_total'] = 'মোট';
- $txt['search_weights_save'] = 'সংরক্ষণ করুন';
+$txt['search_weights_desc'] = 'Here you can change the individual components of the relevance rating. ';
+$txt['search_weights_title'] = 'Search - weights';
+$txt['search_weights_total'] = 'Total';
+$txt['search_weights_save'] = 'Save';
 
- $txt['search_method_desc'] = 'এখানে আপনি সার্চ চালানোর উপায় সেট করতে পারেন।';
- $txt['search_method_title'] = 'অনুসন্ধান - পদ্ধতি';
- $txt['search_method_save'] = 'সংরক্ষণ করুন';
- $txt['search_method_messages_table_space'] = 'ডাটাবেসে ফোরাম বার্তা দ্বারা ব্যবহৃত স্থান';
- $txt['search_method_messages_index_space'] = 'ডাটাবেসে বার্তা সূচী করতে ব্যবহৃত স্থান';
- $txt['search_method_kilobytes'] = 'KB';
- $txt['search_method_fulltext_index'] = 'সম্পূর্ণ পাঠ্য সূচক';
- $txt['search_method_no_index_exists'] = 'বর্তমানে বিদ্যমান নেই';
- $txt['search_method_fulltext_create'] = 'একটি ফুলটেক্সট সূচক তৈরি করুন';
- $txt['search_method_fulltext_cannot_create'] = 'তৈরি করা যাবে না কারণ আপনার MySQL ইঞ্জিন এবং সংস্করণের জন্য ফুলটেক্সট অনুসন্ধান সমর্থিত নয়';
- $txt['search_method_index_already_exists'] = 'ইতিমধ্যে তৈরি';
- $txt['search_method_fulltext_remove'] = 'পূর্ণ পাঠ্য সূচী সরান';
- $txt['search_method_index_partial'] = 'আংশিকভাবে তৈরি';
- $txt['search_index_custom_resume'] = 'রিজুমে';
- // এই স্ট্রিংটি একটি জাভাস্ক্রিপ্ট নিশ্চিতকরণ পপআপে ব্যবহৃত হয়;  সত্তা ব্যবহার করবেন না।
- $txt['search_method_fulltext_warning'] = 'পূর্ণ পাঠ্য অনুসন্ধান ব্যবহার করতে সক্ষম হওয়ার জন্য, আপনাকে প্রথমে একটি পূর্ণ পাঠ্য সূচক তৈরি করতে হবে।';
+$txt['search_method_desc'] = 'Here you can set the way search is powered.';
+$txt['search_method_title'] = 'Search - method';
+$txt['search_method_save'] = 'Save';
+$txt['search_method_messages_table_space'] = 'Space used by forum messages in the database';
+$txt['search_method_messages_index_space'] = 'Space used to index messages in the database';
+$txt['search_method_kilobytes'] = 'KB';
+$txt['search_method_fulltext_index'] = 'Fulltext index';
+$txt['search_method_no_index_exists'] = 'doesn\'t currently exist';
+$txt['search_method_fulltext_create'] = 'create a fulltext index';
+$txt['search_method_fulltext_cannot_create'] = 'cannot be created because fulltext search is not supported for your MySQL engine and version';
+$txt['search_method_index_already_exists'] = 'already created';
+$txt['search_method_fulltext_remove'] = 'remove fulltext index';
+$txt['search_method_index_partial'] = 'partially created';
+$txt['search_index_custom_resume'] = 'resume';
+// This string is used in a javascript confirmation popup; don't use entities.
+$txt['search_method_fulltext_warning'] = 'In order to be able to use fulltext search, you\\'ll have to create a fulltext index first.';
 
- $txt['search_index'] = 'অনুসন্ধান সূচক';
- $txt['search_index_none'] = 'কোনও সূচক নেই';
- $txt['search_index_custom'] = 'কাস্টম ইনডেক্স';
- $txt['search_index_sphinx'] = 'Sphinx';
- $txt['search_index_sphinx_desc'] = 'অ্যাডমিন প্যানেল শুধুমাত্র সার্চ ইনডেক্সের মধ্যে পরিবর্তন করতে দেয়।  আরও স্ফিংক্স সেটিংস সামঞ্জস্য করতে, sphinx_config.php টুল ব্যবহার করুন।';
- $txt['search_index_label'] = 'সূচী';
- $txt['search_index_size'] = 'আকার';
- $txt['search_index_create_custom'] = 'কাস্টম ইনডেক্স তৈরি করুন';
- $txt['search_index_custom_remove'] = 'কাস্টম ইনডেক্স সরান';
- // এই স্ট্রিংটি একটি জাভাস্ক্রিপ্ট নিশ্চিতকরণ পপআপে ব্যবহৃত হয়;  সত্তা ব্যবহার করবেন না।
- $txt['search_index_custom_warning'] = 'একটি কাস্টম সূচক অনুসন্ধান ব্যবহার করতে সক্ষম হওয়ার জন্য, আপনাকে প্রথমে একটি কাস্টম সূচক তৈরি করতে হবে!';
+$txt['search_index'] = 'Search index';
+$txt['search_index_none'] = 'No index';
+$txt['search_index_custom'] = 'Custom index';
+$txt['search_index_sphinx'] = 'Sphinx';
+$txt['search_index_sphinx_desc'] = 'The admin panel only allows to switch between search indexes. To adjust further Sphinx settings, use the sphinx_config.php tool.';
+$txt['search_index_label'] = 'Index';
+$txt['search_index_size'] = 'Size';
+$txt['search_index_create_custom'] = 'create custom index';
+$txt['search_index_custom_remove'] = 'remove custom index';
+// This string is used in a javascript confirmation popup; don't use entities.
+$txt['search_index_custom_warning'] = 'In order to be able to use a custom index search, you\\'ll have to create a custom index first!';
 
- $txt['search_force_index'] = 'অনুসন্ধান সূচক ব্যবহার করতে বাধ্য করুন';
- $txt['search_match_words'] = 'শুধুমাত্র পুরো শব্দের মিল করুন';
- $txt['search_max_results'] = 'সর্বোচ্চ ফলাফল দেখানোর জন্য';
- $txt['search_max_results_disable'] = '(0: সীমা নেই)';
- $txt['search_floodcontrol_time'] = 'একই ব্যবহারকারীর অনুসন্ধানের মধ্যে সময় প্রয়োজন';
- $txt['search_floodcontrol_time_desc'] = '(0 সেকেন্ডে সীমা ছাড়াই)';
+$txt['search_force_index'] = 'Force the use of a search index';
+$txt['search_match_words'] = 'Match whole words only';
+$txt['search_max_results'] = 'Maximum results to show';
+$txt['search_max_results_disable'] = '(0: no limit)';
+$txt['search_floodcontrol_time'] = 'Time required between searches from same user';
+$txt['search_floodcontrol_time_desc'] = '(0 for no limit, in seconds)';
 
- $txt['search_create_index'] = 'সূচী তৈরি করুন';
- $txt['search_create_index_why'] = 'কেন একটি অনুসন্ধান সূচক তৈরি করুন?';
- $txt['search_create_index_start'] = 'তৈরি করুন';
- $txt['search_predefined'] = 'প্রাক-সংজ্ঞায়িত প্রোফাইল';
- $txt['search_predefined_small'] = 'ছোট আকারের সূচক';
- $txt['search_predefined_moderate'] = 'মধ্যম আকারের সূচক';
- $txt['search_predefined_large'] = 'বড় আকারের সূচক';
- $txt['search_create_index_continue'] = 'চালিয়ে যান';
- $txt['search_create_index_not_ready'] = 'SMF বর্তমানে আপনার বার্তাগুলির একটি অনুসন্ধান সূচক তৈরি করছে৷  আপনার সার্ভার ওভারলোড এড়াতে, প্রক্রিয়াটি সাময়িকভাবে বিরাম দেওয়া হয়েছে৷  এটি স্বয়ংক্রিয়ভাবে কয়েক সেকেন্ডের মধ্যে চলতে হবে।  যদি তা না হয়, অনুগ্রহ করে নিচে চালিয়ে যান ক্লিক করুন।';
- $txt['search_create_index_progress'] = 'প্রগতি';
- $txt['search_create_index_done'] = 'কাস্টম সার্চ ইনডেক্স সফলভাবে তৈরি হয়েছে।';
- $txt['search_create_index_done_link'] = 'চালিয়ে যান';
- $txt['search_double_index'] = 'আপনি বর্তমানে বার্তা টেবিলে দুটি সূচী তৈরি করেছেন।  সেরা পারফরম্যান্সের জন্য দুটি সূচকের একটি অপসারণ করার পরামর্শ দেওয়া হয়।';
+$txt['search_create_index'] = 'Create index';
+$txt['search_create_index_why'] = 'Why create a search index?';
+$txt['search_create_index_start'] = 'Create';
+$txt['search_predefined'] = 'Pre-defined profile';
+$txt['search_predefined_small'] = 'Small sized index';
+$txt['search_predefined_moderate'] = 'Moderate sized index';
+$txt['search_predefined_large'] = 'Large sized index';
+$txt['search_create_index_continue'] = 'Continue';
+$txt['search_create_index_not_ready'] = 'SMF is currently creating a search index of your messages. To avoid overloading your server, the process has been temporarily paused. It should automatically continue in a few seconds. If it doesn\'t, please click continue below.';
+$txt['search_create_index_progress'] = 'Progress';
+$txt['search_create_index_done'] = 'Custom search index successfully created.';
+$txt['search_create_index_done_link'] = 'Continue';
+$txt['search_double_index'] = 'You have currently created two indexes on the messages table. For best performance it is advisable to remove one of the two indexes.';
 
- $txt['search_error_indexed_chars'] = 'সূচীকৃত অক্ষরের অবৈধ সংখ্যা।  একটি দরকারী সূচকের জন্য কমপক্ষে 3টি অক্ষর প্রয়োজন৷';
- $txt['search_error_max_percentage'] = 'অবৈধ শতাংশ শব্দ বাদ দিতে হবে।  কমপক্ষে 5% একটি মান ব্যবহার করুন।';
- $txt['error_string_too_long'] = 'সার্চ স্ট্রিং অবশ্যই %1$d অক্ষরের কম হতে হবে।';
+$txt['search_error_indexed_chars'] = 'Invalid number of indexed characters. At least 3 characters are needed for a useful index.';
+$txt['search_error_max_percentage'] = 'Invalid percentage of words to be skipped. Use a value of at least 5%.';
+$txt['error_string_too_long'] = 'Search string must be less than %1$d characters long.';
 
- $txt['search_adjust_query'] = 'অনুসন্ধান পরামিতি সামঞ্জস্য করুন';
- $txt['search_warning_ignored_word'] = 'নিম্নলিখিত শব্দটি আপনার অনুসন্ধানে উপেক্ষা করা হয়েছে কারণ এটি খুবই ছোট';
- $txt['search_warning_ignored_words'] = 'নিম্নলিখিত শব্দগুলি আপনার অনুসন্ধানে উপেক্ষা করা হয়েছে কারণ সেগুলি খুব ছোট';
- $txt['search_adjust_submit'] = 'অনুসন্ধান সংশোধন করুন';
- $txt['search_did_you_mean'] = 'আপনি হয়তো অনুসন্ধান করতে চেয়েছেন';
+$txt['search_adjust_query'] = 'Adjust Search Parameters';
+$txt['search_warning_ignored_word'] = 'The following term has been ignored in your search because it is too short';
+$txt['search_warning_ignored_words'] = 'The following terms have been ignored in your search because they are too short';
+$txt['search_adjust_submit'] = 'Revise Search';
+$txt['search_did_you_mean'] = 'You may have meant to search for';
 
- $txt['search_example'] = '<em>যেমন</em> অরওয়েল "অ্যানিমেল ফার্ম" -মুভি';
+$txt['search_example'] = '<em>e.g.</em> Orwell "Animal Farm" -movie';
 
- $txt['search_engines_description'] = 'এই এলাকা থেকে আপনি সার্চ ইঞ্জিনগুলিকে ট্র্যাক করতে চান এমন বিশদে সিদ্ধান্ত নিতে পারেন কারণ তারা আপনার ফোরামকে সূচী করে এবং সার্চ ইঞ্জিন লগগুলি পর্যালোচনা করে।';
- $txt['spider_mode'] = 'সার্চ ইঞ্জিন ট্র্যাকিং লেভেল';
- $txt['spider_mode_note'] = 'মনে রাখবেন যে প্রতিটি স্পাইডার অ্যাকশনের লগিং তখনই ঘটে যখন ট্র্যাকিং হয় "মধ্যম" বা "আক্রমনাত্মক" হিসাবে সেট করা হয়।  ট্র্যাকিং "আক্রমনাত্মক" হিসাবে সেট করা থাকলেই প্রতিটি মাকড়সার কর্মের বিবরণ লগ করা হয়৷';
- $txt['spider_mode_off'] = 'অক্ষম';
- $txt['spider_mode_standard'] = 'স্ট্যান্ডার্ড';
- $txt['spider_mode_high'] = 'মধ্যম';
- $txt['spider_mode_vhigh'] = 'আক্রমনাত্মক';
- $txt['spider_settings_desc'] = 'আপনি এই পৃষ্ঠা থেকে স্পাইডার ট্র্যাকিংয়ের জন্য সেটিংস পরিবর্তন করতে পারেন।  দ্রষ্টব্য, আপনি যদি হিট লগগুলির স্বয়ংক্রিয়ভাবে ছাঁটাই সক্ষম করতে চান তবে আপনি এটি <a href="%1$s">এখানে</a>' সেট আপ করতে পারেন;
+$txt['search_engines_description'] = 'From this area you can decide in what detail you wish to track search engines as they index your forum as well as review search engine logs.';
+$txt['spider_mode'] = 'Search Engine Tracking level';
+$txt['spider_mode_note'] = 'Note that logging of every spider action only occurs if tracking is set to either "moderate" or "aggressive". Detail of every spider\'s action is only logged if tracking is set to "aggressive".';
+$txt['spider_mode_off'] = 'Disabled';
+$txt['spider_mode_standard'] = 'Standard';
+$txt['spider_mode_high'] = 'Moderate';
+$txt['spider_mode_vhigh'] = 'Aggressive';
+$txt['spider_settings_desc'] = 'You can change settings for spider tracking from this page. Note, if you wish to enable automatic pruning of the hit logs you can set this up <a href="%1$s">here</a>';
 
- $txt['spider_group'] = 'গ্রুপ থেকে সীমাবদ্ধ অনুমতি প্রয়োগ করুন';
- $txt['spider_group_note'] = 'কিছু পৃষ্ঠার ইন্ডেক্সিং মাকড়সা বন্ধ করতে আপনাকে সক্ষম করতে।';
- $txt['spider_group_none'] = 'অক্ষম';
+$txt['spider_group'] = 'Apply restrictive permissions from group';
+$txt['spider_group_note'] = 'To enable you to stop spiders indexing some pages.';
+$txt['spider_group_none'] = 'Disabled';
 
- $txt['show_spider_online'] = 'অনলাইন তালিকায় মাকড়সা দেখান';
- $txt['show_spider_online_no'] = 'মোটেই না';
- $txt['show_spider_online_summary'] = 'মাকড়সার পরিমাণ দেখান';
- $txt['show_spider_online_detail'] = 'মাকড়সার নাম দেখান';
- $txt['show_spider_online_detail_admin'] = 'মাকড়সার নাম দেখান - শুধুমাত্র অ্যাডমিন';
+$txt['show_spider_online'] = 'Show spiders in the online list';
+$txt['show_spider_online_no'] = 'Not at all';
+$txt['show_spider_online_summary'] = 'Show spider quantity';
+$txt['show_spider_online_detail'] = 'Show spider names';
+$txt['show_spider_online_detail_admin'] = 'Show spider names - admin only';
 
- $txt['spider_name'] = 'মাকড়সার নাম';
- $txt['spider_last_seen'] = 'শেষ দেখা';
- $txt['spider_last_never'] = 'কখনও না';
- $txt['spider_agent'] = 'ইউজার এজেন্ট';
- $txt['spider_ip_info'] = 'আইপি ঠিকানা';
- $txt['spiders_add'] = 'নতুন স্পাইডার যোগ করুন';
- $txt['spiders_edit'] = 'এডিট স্পাইডার';
- $txt['spiders_remove_selected'] = 'নির্বাচিত সরান';
- $txt['spider_remove_selected_confirm'] = 'আপনি কি নিশ্চিত যে আপনি এই মাকড়সাগুলি সরাতে চান?-n-সকল সম্পর্কিত পরিসংখ্যানও মুছে ফেলা হবে!';
- $txt['spiders_no_entries'] = 'বর্তমানে কোনো মাকড়সা কনফিগার করা নেই।';
+$txt['spider_name'] = 'Spider Name';
+$txt['spider_last_seen'] = 'Last Seen';
+$txt['spider_last_never'] = 'Never';
+$txt['spider_agent'] = 'User Agent';
+$txt['spider_ip_info'] = 'IP Addresses';
+$txt['spiders_add'] = 'Add new Spider';
+$txt['spiders_edit'] = 'Edit Spider';
+$txt['spiders_remove_selected'] = 'Remove selected';
+$txt['spider_remove_selected_confirm'] = 'Are you sure you want to remove these spiders?-n-All associated statistics will also be deleted!';
+$txt['spiders_no_entries'] = 'There are currently no spiders configured.';
 
- $txt['add_spider_desc'] = 'এই পৃষ্ঠা থেকে আপনি একটি মাকড়সার শ্রেণীবদ্ধ করা প্যারামিটারগুলি সম্পাদনা করতে পারেন৷  যদি কোনও অতিথির ব্যবহারকারী এজেন্ট/আইপি ঠিকানা নীচে দেওয়া ঠিকানাগুলির সাথে মিলে যায় তবে এটি একটি সার্চ ইঞ্জিন স্পাইডার হিসাবে সনাক্ত করা হবে এবং ফোরামের পছন্দ অনুসারে ট্র্যাক করা হবে৷';
- $txt['spider_name_desc'] = 'যে নাম দিয়ে মাকড়সা উল্লেখ করা হবে।';
- $txt['spider_agent_desc'] = 'এই মাকড়সার সাথে যুক্ত ইউজার এজেন্ট।';
- $txt['spider_ip_info_desc'] = 'এই মাকড়সার সাথে যুক্ত IP ঠিকানাগুলির কমা দ্বারা পৃথক করা তালিকা।';
+$txt['add_spider_desc'] = 'From this page you can edit the parameters against which a spider is categorized. If a guest\'s user agent/IP address matches those entered below it will be detected as a search engine spider and tracked as per the forum preferences.';
+$txt['spider_name_desc'] = 'Name by which the spider will be referred.';
+$txt['spider_agent_desc'] = 'User agent associated with this spider.';
+$txt['spider_ip_info_desc'] = 'Comma separated list of IP addresses associated with this spider.';
 
- $txt['স্পাইডার'] = 'মাকড়সা';
- $txt['spider_time'] = 'সময়';
- $txt['spider_viewing'] = 'দেখা';
- $txt['spider_logs_empty'] = 'বর্তমানে কোনো স্পাইডার লগ এন্ট্রি নেই।';
- $txt['spider_logs_info'] = 'মনে রাখবেন যে প্রতিটি স্পাইডার অ্যাকশনের লগিং তখনই ঘটে যখন ট্র্যাকিং হয় "মধ্যম" বা "আক্রমনাত্মক" হিসাবে সেট করা হয়।  ট্র্যাকিং "আক্রমনাত্মক" হিসাবে সেট করা থাকলেই প্রতিটি মাকড়সার কর্মের বিবরণ লগ করা হয়৷';
- $txt['spider_disabled'] = 'অক্ষম';
- $txt['spider_log_empty_log'] = 'সাফ লগ';
- $txt['spider_log_empty_log_confirm'] = 'আপনি কি নিশ্চিত যে আপনি লগটি সম্পূর্ণরূপে সাফ করতে চান';
+$txt['spider'] = 'Spider';
+$txt['spider_time'] = 'Time';
+$txt['spider_viewing'] = 'Viewing';
+$txt['spider_logs_empty'] = 'There are currently no spider log entries.';
+$txt['spider_logs_info'] = 'Note that logging of every spider action only occurs if tracking is set to either "moderate" or "aggressive". Detail of every spider\'s action is only logged if tracking is set to "aggressive".';
+$txt['spider_disabled'] = 'Disabled';
+$txt['spider_log_empty_log'] = 'Clear Log';
+$txt['spider_log_empty_log_confirm'] = 'Are you sure you want to completely clear the log';
 
- $txt['spider_logs_delete'] = 'এন্ট্রি মুছুন';
- $txt['spider_logs_delete_older'] = 'এর থেকে পুরোনো সব এন্ট্রি মুছুন';
- $txt['spider_logs_delete_day'] = 'দিন।';
- $txt['spider_logs_delete_submit'] = 'মুছুন';
+$txt['spider_logs_delete'] = 'Delete Entries';
+$txt['spider_logs_delete_older'] = 'Delete all entries older than';
+$txt['spider_logs_delete_day'] = 'days.';
+$txt['spider_logs_delete_submit'] = 'Delete';
 
- $txt['spider_stats_delete_older'] = '%1$s দিনে দেখা যায়নি এমন মাকড়সা থেকে সমস্ত মাকড়সার পরিসংখ্যান মুছুন।';
+$txt['spider_stats_delete_older'] = 'Delete all spider statistics from spiders not seen in %1$s days.';
 
- // নিচের স্ট্রিং এ সত্তা ব্যবহার করবেন না।
- $txt['spider_logs_delete_confirm'] = 'আপনি কি নিশ্চিত যে আপনি সমস্ত লগ এন্ট্রি খালি করতে চান?';
+// Don't use entities in the below string.
+$txt['spider_logs_delete_confirm'] = 'Are you sure you wish to empty out all log entries?';
 
- $txt['spider_stats_select_month'] = 'মাসে ঝাঁপ দাও';
- $txt['spider_stats_page_hits'] = 'পৃষ্ঠা হিট';
- $txt['spider_stats_no_entries'] = 'বর্তমানে কোনো মাকড়সার পরিসংখ্যান উপলব্ধ নেই।';
+$txt['spider_stats_select_month'] = 'Jump to Month';
+$txt['spider_stats_page_hits'] = 'Page Hits';
+$txt['spider_stats_no_entries'] = 'There are currently no spider statistics available.';
 
- ?>
+?>

@@ -1,158 +1,158 @@
 <?php
- // সংস্করণ: 2.1.0;  থিম
+// Version: 2.1.0; Themes
 
- $txt['themeadmin_explain'] = 'থিমগুলি হল আপনার ফোরামের ভিন্ন চেহারা এবং অনুভূতি।  এই সেটিংস থিম নির্বাচন প্রভাবিত করে, এবং কোন থিম গেস্ট এবং অন্যান্য সদস্যরা ব্যবহার করেন৷';
+$txt['themeadmin_explain'] = 'Themes are the different looks and feels of your forum. These settings affect the selection of themes, and which themes guests and other members use.';
 
- $txt['theme_allow'] = 'সদস্যদের তাদের নিজস্ব থিম নির্বাচন করার অনুমতি দিন।';
- $txt['theme_guests'] = 'সামগ্রিক ফোরাম ডিফল্ট';
- $txt['theme_select'] = 'বাছাই করুন...';
- $txt['theme_reset'] = 'সবাইকে রিসেট করুন';
- $txt['theme_nochange'] = 'কোন পরিবর্তন নেই';
- $txt['theme_forum_default'] = 'ফোরাম ডিফল্ট';
+$txt['theme_allow'] = 'Allow members to select their own themes.';
+$txt['theme_guests'] = 'Overall forum default';
+$txt['theme_select'] = 'choose...';
+$txt['theme_reset'] = 'Reset everyone to';
+$txt['theme_nochange'] = 'No change';
+$txt['theme_forum_default'] = 'Forum Default';
 
- $txt['theme_remove'] = 'সরান';
- $txt['theme_enable'] = 'সক্ষম';
- $txt['theme_disable'] = 'অক্ষম করুন';
- $txt['theme_remove_confirm'] = 'আপনি কি নিশ্চিত যে আপনি এই থিমটি স্থায়ীভাবে সরাতে চান?';
- $txt['theme_enable_confirm'] = 'আপনি কি নিশ্চিত যে আপনি এই থিমটি সক্ষম করতে চান?';
- $txt['theme_disable_confirm'] = 'আপনি কি নিশ্চিত যে আপনি এই থিমটি নিষ্ক্রিয় করতে চান?';
- $txt['theme_confirmed_disabling'] = 'থিমটি সফলভাবে নিষ্ক্রিয় করা হয়েছে।';
- $txt['theme_confirmed_enabling'] = 'থিমটি সফলভাবে সক্ষম করা হয়েছে।';
- $txt['theme_confirmed_removing'] = 'থিমটি সফলভাবে মুছে ফেলা হয়েছে।';
+$txt['theme_remove'] = 'remove';
+$txt['theme_enable'] = 'enable';
+$txt['theme_disable'] = 'disable';
+$txt['theme_remove_confirm'] = 'Are you sure you want to permanently remove this theme?';
+$txt['theme_enable_confirm'] = 'Are you sure you want to enable this theme?';
+$txt['theme_disable_confirm'] = 'Are you sure you want to disable this theme?';
+$txt['theme_confirmed_disabling'] = 'The theme was successfully disabled.';
+$txt['theme_confirmed_enabling'] = 'The theme was successfully enabled.';
+$txt['theme_confirmed_removing'] = 'The theme was successfully removed.';
 
- $txt['theme_install'] = 'একটি নতুন থিম ইনস্টল করুন';
- $txt['theme_install_file'] = 'একটি সংরক্ষণাগার থেকে (যেমন .zip, .tar.gz)';
- $txt['theme_install_dir'] = 'সার্ভারের একটি ডিরেক্টরি থেকে';
- $txt['theme_install_error'] = 'এই থিম ডিরেক্টরিটি বিদ্যমান নেই, বা এতে কোনো থিম নেই।';
- $txt['theme_install_write_error'] = 'থিম ডিরেক্টরিটি চালিয়ে যাওয়ার জন্য অবশ্যই লেখার যোগ্য হতে হবে।';
- $txt['theme_install_go'] = 'ইনস্টল';
- $txt['theme_install_new'] = 'ডিফল্ট নামের একটি কপি তৈরি করুন';
- $txt['theme_install_new_confirm'] = 'আপনি কি নিশ্চিত যে আপনি এই নতুন থিমটি ইনস্টল করতে চান?';
- $txt['theme_install_writable'] = 'সতর্কতা - আপনার থিম ডিরেক্টরি বর্তমানে লেখার যোগ্য নয় বলে আপনি একটি নতুন থিম তৈরি বা ইনস্টল করতে পারবেন না।';
- $txt['theme_installed'] = 'সফলভাবে ইনস্টল করা হয়েছে';
- $txt['theme_installed_message'] = 'সফলভাবে ইনস্টল করা হয়েছে।';
- $txt['theme_updated_message'] = 'সফলভাবে আপডেট করা হয়েছে।';
- $txt['theme_install_no_action'] = 'এটি একটি বৈধ ইন্সটল অ্যাকশন নয়।';
- $txt['theme_install_error_title'] = 'থিম ইনস্টল করার সময় একটি ত্রুটি ঘটেছে।';
- $txt['theme_install_error_file_1'] = 'আপলোড করা ফাইলটি php.ini-এ upload_max_filesize নির্দেশকে ছাড়িয়ে গেছে।';
- $txt['theme_install_error_file_2'] = 'আপলোড করা ফাইলটি HTML ফর্মে নির্দিষ্ট করা MAX_FILE_SIZE নির্দেশকে ছাড়িয়ে গেছে।';
- $txt['theme_install_error_file_3'] = 'আপলোড করা ফাইলটি শুধুমাত্র আংশিকভাবে আপলোড করা হয়েছে।';
- $txt['theme_install_error_file_4'] = 'কোন ফাইল আপলোড করা হয়নি।';
- $txt['theme_install_error_file_6'] = 'একটি অস্থায়ী আপলোড ফোল্ডার অনুপস্থিত।';
- $txt['theme_install_error_file_7'] = 'ডিস্কে ফাইল লিখতে ব্যর্থ।';
- $txt['theme_install_invalid_dir'] = 'আপনি আপনার আসল থিমের জন্য একটি পাথ যোগ করেননি, আপনি ডিফল্ট থিম পুনরায় যোগ করতে পারবেন না';
- $txt['theme_install_already_dir'] = 'আপনার উল্লেখ করা নামটি ইতিমধ্যেই অন্য থিম ব্যবহার করেছে, অনুগ্রহ করে একটি ভিন্ন নাম ব্যবহার করে দেখুন।';
- $txt['theme_install_invalid_id'] = 'এটি একটি বৈধ থিম আইডি নয়।';
+$txt['theme_install'] = 'Install a New Theme';
+$txt['theme_install_file'] = 'From an archive (e.g. .zip, .tar.gz)';
+$txt['theme_install_dir'] = 'From a directory on the server';
+$txt['theme_install_error'] = 'That theme directory doesn\'t exist, or doesn\'t contain a theme.';
+$txt['theme_install_write_error'] = 'The Themes directory must be writable to continue.';
+$txt['theme_install_go'] = 'Install';
+$txt['theme_install_new'] = 'Create a copy of Default named';
+$txt['theme_install_new_confirm'] = 'Are you sure you want to install this new theme?';
+$txt['theme_install_writable'] = 'Warning - you cannot create or install a new theme as your themes directory is not currently writable.';
+$txt['theme_installed'] = 'Installed successfully';
+$txt['theme_installed_message'] = 'was installed successfully.';
+$txt['theme_updated_message'] = 'was updated successfully.';
+$txt['theme_install_no_action'] = 'This isn\'t a valid install action.';
+$txt['theme_install_error_title'] = 'An error occurred while installing the theme.';
+$txt['theme_install_error_file_1'] = 'The uploaded file exceeds the upload_max_filesize directive in php.ini.';
+$txt['theme_install_error_file_2'] = 'The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form.';
+$txt['theme_install_error_file_3'] = 'The uploaded file was only partially uploaded.';
+$txt['theme_install_error_file_4'] = 'No file was uploaded.';
+$txt['theme_install_error_file_6'] = 'Missing a temporary upload folder.';
+$txt['theme_install_error_file_7'] = 'Failed to write file to disk.';
+$txt['theme_install_invalid_dir'] = 'You did not add a path for your actual theme, you cannot re-add the default theme';
+$txt['theme_install_already_dir'] = 'The name you specified is already been used by another theme, please try a different name.';
+$txt['theme_install_invalid_id'] = 'This is not a valid theme ID.';
 
- $txt['theme_pick'] = 'একটি থিম বেছে নিন...';
- $txt['theme_preview'] = 'প্রিভিউ থিম';
- $txt['theme_set'] = 'এই থিমটি ব্যবহার করুন';
- $txt['theme_user'] = 'ব্যক্তি এই থিমটি ব্যবহার করছে।';
- $txt['theme_users'] = 'লোকেরা এই থিমটি ব্যবহার করছে।';
- $txt['theme_pick_variant'] = 'ভেরিয়েন্ট নির্বাচন করুন';
+$txt['theme_pick'] = 'Choose a theme...';
+$txt['theme_preview'] = 'Preview theme';
+$txt['theme_set'] = 'Use this theme';
+$txt['theme_user'] = 'person is using this theme.';
+$txt['theme_users'] = 'people are using this theme.';
+$txt['theme_pick_variant'] = 'Select Variant';
 
- $txt['theme_edit'] = 'থিম সম্পাদনা করুন';
- $txt['theme_edit_style'] = 'স্টাইলশীট পরিবর্তন করুন।  (রঙ, ফন্ট, ইত্যাদি)';
- $txt['theme_edit_index'] = 'সূচী টেমপ্লেট পরিবর্তন করুন।  (মূল টেমপ্লেট)';
- $txt['theme_edit_no_save'] = 'এই ফাইলটি সংরক্ষণ করা যাবে না কারণ এটি লেখার যোগ্য নয়।  অনুগ্রহ করে নিশ্চিত করুন যে নিম্নলিখিত ফাইলটি 777 বা যথাযথ অনুমতি আছে';
- $txt['theme_edit_save'] = 'পরিবর্তনগুলি সংরক্ষণ করুন';
+$txt['theme_edit'] = 'Edit Theme';
+$txt['theme_edit_style'] = 'Modify the stylesheets. (colors, fonts, etc.)';
+$txt['theme_edit_index'] = 'Modify the index template. (the main template)';
+$txt['theme_edit_no_save'] = 'This file cannot be saved because it is not writable. Please make sure the following file is 777 or has the proper permissions';
+$txt['theme_edit_save'] = 'Save Changes';
 
- $txt['theme_global_description'] = 'এটি ডিফল্ট থিম, যার মানে আপনার থিম অ্যাডমিনিস্ট্রেটর' সেটিংস এবং আপনি যে বোর্ড দেখছেন তার সাথে পরিবর্তন হবে।';
+$txt['theme_global_description'] = 'This is the default theme, which means your theme will change along with the administrators\' settings and the board you are viewing.';
 
- $txt['theme_url_config'] = 'থিম URL এবং কনফিগারেশন';
- $txt['theme_variants'] = 'থিম ভেরিয়েন্ট';
- $txt['theme_options'] = 'থিম বিকল্প এবং পছন্দ';
- $txt['actual_theme_name'] = 'এই থিমের নাম:';
- $txt['actual_theme_dir'] = 'এই থিমের ডিরেক্টরি: ';
- $txt['actual_theme_url'] = 'এই থিমের URL:';
- $txt['actual_images_url'] = 'এই থিমের ছবির URL: ';
- $txt['current_theme_style'] = 'এই থিমের স্টাইল:';
+$txt['theme_url_config'] = 'Theme URLs and Configuration';
+$txt['theme_variants'] = 'Theme Variants';
+$txt['theme_options'] = 'Theme Options and Preferences';
+$txt['actual_theme_name'] = 'This theme\'s name: ';
+$txt['actual_theme_dir'] = 'This theme\'s directory: ';
+$txt['actual_theme_url'] = 'This theme\'s URL: ';
+$txt['actual_images_url'] = 'This theme\'s images URL: ';
+$txt['current_theme_style'] = 'This theme\'s style: ';
 
- $txt['theme_variants_default'] = 'ডিফল্ট থিম ভেরিয়েন্ট';
- $txt['theme_variants_user_disable'] = 'ব্যবহারকারী ভেরিয়েন্ট নির্বাচন অক্ষম করুন';
+$txt['theme_variants_default'] = 'Default theme variant';
+$txt['theme_variants_user_disable'] = 'Disable user variant selection';
 
- $txt['site_slogan'] = 'সাইট স্লোগান';
- $txt['site_slogan_desc'] = 'এখানে একটি স্লোগানের জন্য আপনার নিজের লেখা যোগ করুন।  এটি SMF লোগো প্রতিস্থাপন করবে।';
+$txt['site_slogan'] = 'Site slogan';
+$txt['site_slogan_desc'] = 'Add your own text for a slogan here. It will replace the SMF logo.';
 
- $txt['enable_random_news'] = 'ফোরাম হেডারে এলোমেলো সংবাদ লাইন সক্ষম করুন';
- $txt['show_group_key'] = 'বোর্ড সূচকে গ্রুপ কী দেখান';
- $txt['allow_no_censored'] = 'ব্যবহারকারীদের শব্দ সেন্সরিং বন্ধ করার অনুমতি দিন';
- $txt['who_display_viewing'] = 'কে বোর্ড এবং বিষয় দেখছে দেখান';
- $txt['who_display_viewing_off'] = 'দেখাবেন না';
- $txt['who_display_viewing_numbers'] = 'শুধু সংখ্যা দেখান';
- $txt['who_display_viewing_names'] = 'সদস্যদের নাম দেখান';
- $txt['enable_single_post'] = 'একক পোস্ট সক্ষম করুন';
- $txt['enable_multiple_posts'] = 'একাধিক পোস্ট সক্ষম করুন';
- $txt['show_stats_index'] = 'বোর্ড ইনডেক্সে পরিসংখ্যান দেখান';
- $txt['latest_members'] = 'বোর্ড ইনডেক্সে সর্বশেষ সদস্য দেখান';
- $txt['news_fader'] = 'বোর্ড ইনডেক্সে নিউজ ফ্যাডার দেখান';
- $txt['member_list_bar'] = 'বোর্ড ইনডেক্সে সদস্যদের তালিকা বার দেখান';
- $txt['header_logo_url'] = 'লোগো ছবির URL';
- $txt['header_logo_url_desc'] = 'ফোরামের নাম বা ডিফল্ট লোগো দেখানোর জন্য ফাঁকা ছেড়ে দিন।';
- $txt['number_recent_posts'] = 'বোর্ড ইনডেক্সে প্রদর্শিত সাম্প্রতিক পোস্টের সংখ্যা';
+$txt['enable_random_news'] = 'Enable random news line in the forum header';
+$txt['show_group_key'] = 'Show group key on board index';
+$txt['allow_no_censored'] = 'Allow users to turn off word censoring';
+$txt['who_display_viewing'] = 'Show who is viewing boards and topics';
+$txt['who_display_viewing_off'] = 'Don\'t show';
+$txt['who_display_viewing_numbers'] = 'Show only numbers';
+$txt['who_display_viewing_names'] = 'Show member names';
+$txt['enable_single_post'] = 'Enable single post';
+$txt['enable_multiple_posts'] = 'Enable multiple posts';
+$txt['show_stats_index'] = 'Show statistics on board index';
+$txt['latest_members'] = 'Show latest member on board index';
+$txt['news_fader'] = 'Show news fader on board index';
+$txt['member_list_bar'] = 'Show members list bar on board index';
+$txt['header_logo_url'] = 'Logo image URL';
+$txt['header_logo_url_desc'] = 'Leave blank to show forum name or default logo.';
+$txt['number_recent_posts'] = 'Number of recent posts to display on board index';
 
- $txt['theme_adding_title'] = 'থিম প্রাপ্ত করা';
- $txt['theme_adding'] = 'আপনি সবসময় আপনার ফোরামের জন্য SMF থিম এলাকা থেকে নতুন থিম খুঁজে পেতে পারেন - <strong><a href="https://custom.simplemachines.org/themes/" target="_blank"  rel="noopener">https://custom.simplemachines.org/themes/</a></strong>।  আপনি সেগুলিকে ওয়েবসাইটে ব্রাউজ করতে পারেন, মন্তব্যগুলি পড়তে পারেন এবং সেগুলিকে আপনার কম্পিউটারে ডাউনলোড করতে পারেন এবং তারপরে সেখান থেকে আপনার ফোরামে আপলোড করতে পারেন৷<br><br>যদি আপনি থিম নিয়ে কোনো প্রশ্ন করেন, প্রতিটি থিম simplemachines.org-এ প্রকাশিত  এটি সম্পর্কে একটি উত্সর্গীকৃত বিষয় আছে যেখানে সমর্থন এবং মন্তব্য নির্দেশিত করা উচিত।';
+$txt['theme_adding_title'] = 'Obtaining Themes';
+$txt['theme_adding'] = 'You can always find new themes for your forum from the SMF themes area - <strong><a href="https://custom.simplemachines.org/themes/" target="_blank" rel="noopener">https://custom.simplemachines.org/themes/</a></strong>. You can browse them on the website, read the comments, and download them to your computer and then upload them to your forum from there.<br><br>If you run into any questions with themes, each theme published on simplemachines.org has a dedicated topic about it where support and comments should be directed to.';
 
- $txt['theme_options_defaults'] = 'এগুলি কিছু সদস্য নির্দিষ্ট সেটিংসের জন্য ডিফল্ট মান।  এই পরিবর্তন শুধুমাত্র নতুন সদস্য এবং গেস্ট প্রভাবিত করবে.';
- $txt['theme_options_title'] = 'ডিফল্ট বিকল্প পরিবর্তন বা রিসেট করুন';
+$txt['theme_options_defaults'] = 'These are the default values for some member specific settings. Changing these will only affect new members and guests.';
+$txt['theme_options_title'] = 'Change or reset default options';
 
- $txt['themeadmin_title'] = 'থিম এবং লেআউট সেটিংস';
- $txt['themeadmin_description'] = 'এখানে আপনি আপনার থিমগুলির জন্য সেটিংস পরিবর্তন করতে পারেন, থিম নির্বাচন আপডেট করতে পারেন, সদস্য বিকল্পগুলি পুনরায় সেট করতে পারেন এবং এর মতো৷';
- $txt['themeadmin_admin_desc'] = 'এই পৃষ্ঠাটি আপনাকে ডিফল্ট থিম পরিবর্তন করতে, সদস্যদের সবাইকে একটি নির্দিষ্ট থিম ব্যবহার করতে রিসেট করতে এবং থিম নির্বাচন সম্পর্কিত অন্যান্য সেটিংস বেছে নিতে দেয়।  এছাড়াও আপনি এখান থেকে থিম ইনস্টল করতে পারবেন৷<br><br>লেআউট বিকল্পগুলির জন্য আপনার থিমের থিম সেটিংস দেখতে ভুলবেন না৷';
- $txt['themeadmin_list_desc'] = 'এখান থেকে, আপনি বর্তমানে ইনস্টল করা থিমগুলির তালিকা দেখতে পারেন, তাদের পাথ এবং সেটিংস পরিবর্তন করতে পারেন এবং আনইনস্টল করতে পারেন।';
- $txt['themeadmin_reset_desc'] = 'নিচে আপনি আপনার সমস্ত সদস্যদের জন্য বর্তমান থিম-নির্দিষ্ট বিকল্পগুলি পরিবর্তন করার জন্য একটি ইন্টারফেস দেখতে পাবেন।  আপনি শুধুমাত্র সেই থিমগুলি দেখতে পাবেন যেগুলির নিজস্ব সেটিংস রয়েছে৷';
- $txt['themeadmin_edit_desc'] = 'আপনার ইনস্টল করা থিমের স্টাইলশীট এবং সোর্স কোড পরিবর্তন করুন।  আরও তথ্যের জন্য অনুগ্রহ করে ডকুমেন্টেশনের সাথে পরামর্শ করুন।';
- $txt['themeadmin_install_title'] = 'থিমগুলি পরিচালনা এবং ইনস্টল করুন';
+$txt['themeadmin_title'] = 'Themes and Layout settings';
+$txt['themeadmin_description'] = 'Here you can modify the settings for your themes, update theme selections, reset member options, and the like.';
+$txt['themeadmin_admin_desc'] = 'This page allows you to change the default theme, reset members to all use a certain theme, and choose other settings related to theme selection. You are also able to install themes from here.<br><br>Don\'t forget to look at the theme settings for your themes for layout options.';
+$txt['themeadmin_list_desc'] = 'From here, you can view the list of themes you currently have installed, change their paths and settings, and uninstall them.';
+$txt['themeadmin_reset_desc'] = 'Below you will see an interface to change the current theme-specific options for all your members. You will only see those themes that have their own set of settings.';
+$txt['themeadmin_edit_desc'] = 'Modify the stylesheet and source code of your installed themes. Please consult the documentation for more information.';
+$txt['themeadmin_install_title'] = 'Manage and Install themes';
 
- $txt['themeadmin_list_heading'] = 'থিম সেটিংস ওভারভিউ';
- $txt['themeadmin_list_tip'] = 'মনে রাখবেন, লেআউট সেটিংস একটি থিম এবং অন্য থিমের মধ্যে আলাদা হতে পারে।  তাদের বিকল্পগুলি সেট করতে, তাদের ডিরেক্টরি বা URL সেটিংস পরিবর্তন করতে বা অন্যান্য বিকল্পগুলি খুঁজতে নীচের একটি থিমের সেটিংস আইকনে ক্লিক করুন৷';
- $txt['themeadmin_list_theme_dir'] = 'থিম ডিরেক্টরি (টেমপ্লেট)';
- $txt['themeadmin_list_invalid'] = '(সতর্কতা! এই পথটি সঠিক নয়।)';
- $txt['themeadmin_list_theme_url'] = 'উপরের ডিরেক্টরিতে URL';
- $txt['themeadmin_list_images_url'] = 'ইমেজ ডিরেক্টরির URL';
- $txt['themeadmin_list_reset'] = 'থিম URL এবং ডিরেক্টরি রিসেট করুন';
- $txt['themeadmin_list_reset_dir'] = 'থিম ডিরেক্টরির বেস পাথ';
- $txt['themeadmin_list_reset_url'] = 'একই ডিরেক্টরির ভিত্তি URL';
- $txt['themeadmin_list_reset_go'] = 'সমস্ত থিম রিসেট করার চেষ্টা';
+$txt['themeadmin_list_heading'] = 'Theme Settings overview';
+$txt['themeadmin_list_tip'] = 'Remember, the layout settings may be different between one theme and another. Click on the settings icon for a theme below to set their options, change their directory or URL settings, or to find other options.';
+$txt['themeadmin_list_theme_dir'] = 'Theme directory (templates)';
+$txt['themeadmin_list_invalid'] = '(Warning! this path is not correct.)';
+$txt['themeadmin_list_theme_url'] = 'URL to above directory';
+$txt['themeadmin_list_images_url'] = 'URL to images directory';
+$txt['themeadmin_list_reset'] = 'Reset Theme URLs and Directories';
+$txt['themeadmin_list_reset_dir'] = 'Base path to Themes directory';
+$txt['themeadmin_list_reset_url'] = 'Base URL to the same directory';
+$txt['themeadmin_list_reset_go'] = 'Attempt to reset all themes';
 
- $txt['themeadmin_reset_tip'] = 'আপনার সদস্যদের দ্বারা নির্বাচন করার জন্য প্রতিটি থিমের নিজস্ব কাস্টম বিকল্প থাকতে পারে।  এর মধ্যে অবতার, স্বাক্ষর, লেআউট বিকল্প এবং অন্যান্য অনুরূপ বিকল্পগুলির মতো জিনিসগুলি অন্তর্ভুক্ত রয়েছে।  এখানে আপনি ডিফল্টগুলি পরিবর্তন করতে পারেন বা প্রত্যেকের বিকল্পগুলি পুনরায় সেট করতে পারেন৷<br><br>দয়া করে মনে রাখবেন যে কিছু থিম ডিফল্ট বিকল্পগুলি ব্যবহার করতে পারে, সেক্ষেত্রে তাদের নিজস্ব বিকল্প থাকবে না৷';
- $txt['themeadmin_reset_defaults'] = 'এই থিমের জন্য অতিথি এবং নতুন ব্যবহারকারীর বিকল্পগুলি কনফিগার করুন';
- $txt['themeadmin_reset_defaults_current'] = 'বর্তমানে সেট করা বিকল্পগুলি';
- $txt['themeadmin_reset_members'] = 'এই থিম ব্যবহার করে সকল সদস্যের জন্য বর্তমান বিকল্প পরিবর্তন করুন';
- $txt['themeadmin_reset_remove'] = 'সকল সদস্যকে অপসারণ করুন' অপশন এবং ডিফল্ট ব্যবহার করুন';
- $txt['themeadmin_reset_remove_current'] = 'সদস্যরা বর্তমানে তাদের নিজস্ব বিকল্প ব্যবহার করছেন।';
- // নিচের স্ট্রিং এ সত্তা ব্যবহার করবেন না।
- $txt['themeadmin_reset_remove_confirm'] = 'আপনি কি নিশ্চিত যে আপনি সমস্ত থিম অপশন মুছে ফেলতে চান?-n-এটি কিছু কাস্টম প্রোফাইল ফিল্ডও রিসেট করতে পারে।';
- $txt['themeadmin_reset_options_info'] = 'নীচের বিকল্পগুলি <em>সকলের জন্য</em> বিকল্পগুলি পুনরায় সেট করবে৷  একটি বিকল্প পরিবর্তন করতে, &quot;পরিবর্তন করুন&quot;  এর পাশের বাক্সে, এবং তারপর এটির জন্য একটি মান নির্বাচন করুন।  ডিফল্ট ব্যবহার করতে, &quot;ডিফল্ট&quot; নির্বাচন করুন।  অন্যথায়, &quot;পরিবর্তন করবেন না&quot;  এটি যেমন আছে তেমন রাখা।';
- $txt['themeadmin_reset_options_change'] = 'পরিবর্তন';
- $txt['themeadmin_reset_options_none'] = 'পরিবর্তন করবেন না';
- $txt['themeadmin_reset_options_default'] = 'ডিফল্ট';
- $txt['themeadmin_reset_options_title'] = 'ব্যবহারকারীর বিকল্প পরিবর্তন বা রিসেট করুন';
+$txt['themeadmin_reset_tip'] = 'Each theme may have its own custom options for selection by your members. These include things like avatars, signatures, layout options and other similar options. Here you can change the defaults or reset everyone\'s options.<br><br>Please note that some themes may use the default options, in which case they will not have their own options.';
+$txt['themeadmin_reset_defaults'] = 'Configure guest and new user options for this theme';
+$txt['themeadmin_reset_defaults_current'] = 'options currently set.';
+$txt['themeadmin_reset_members'] = 'Change current options for all members using this theme';
+$txt['themeadmin_reset_remove'] = 'Remove all members\' options and use the defaults';
+$txt['themeadmin_reset_remove_current'] = 'members currently using their own options.';
+// Don't use entities in the below string.
+$txt['themeadmin_reset_remove_confirm'] = 'Are you sure you want to remove all theme options?-n-This may reset some custom profile fields as well.';
+$txt['themeadmin_reset_options_info'] = 'The options below will reset options for <em>everyone</em>. To change an option, select &quot;change&quot; in the box next to it, and then select a value for it. To use the default, select &quot;default&quot;. Otherwise, use &quot;don\'t change&quot; to keep it as-is.';
+$txt['themeadmin_reset_options_change'] = 'Change';
+$txt['themeadmin_reset_options_none'] = 'Don\'t change';
+$txt['themeadmin_reset_options_default'] = 'Default';
+$txt['themeadmin_reset_options_title'] = 'Change or reset user options';
 
- $txt['themeadmin_edit_browse'] = 'এই থিমের টেমপ্লেট এবং ফাইল ব্রাউজ করুন।';
- $txt['themeadmin_edit_style'] = 'এই থিমের স্টাইলশীট সম্পাদনা করুন।';
- $txt['themeadmin_edit_copy_template'] = 'এই থিমের উপর ভিত্তি করে একটি টেমপ্লেট কপি করুন।';
- $txt['themeadmin_edit_exists'] = 'ইতিমধ্যেই বিদ্যমান';
- $txt['themeadmin_edit_do_copy'] = 'কপি';
- $txt['themeadmin_edit_copy_warning'] = 'যখন SMF-এর একটি টেমপ্লেট বা ভাষা ফাইলের প্রয়োজন হয় যা বর্তমান থিমে নেই, তখন এটি যে থিমটির উপর ভিত্তি করে বা ডিফল্ট থিম তাতে দেখায়।<br>যদি না আপনি একটি টেমপ্লেট পরিবর্তন করতে চান  , এটা কপি না করাই ভালো।';
- $txt['themeadmin_edit_copy_confirm'] = 'আপনি কি নিশ্চিত যে আপনি এই টেমপ্লেটটি অনুলিপি করতে চান?';
- $txt['themeadmin_edit_overwrite_confirm'] = 'আপনি কি নিশ্চিত যে আপনি এই টেমপ্লেটটি ইতিমধ্যেই বিদ্যমান টেমপ্লেটটি অনুলিপি করতে চান?\nএটি আপনার করা যেকোনো পরিবর্তনকে ওভাররাইট করবে';
- $txt['themeadmin_edit_no_copy'] = '<em>(কপি করা যাবে না)</em>';
- $txt['themeadmin_browsing_theme'] = 'থিমে ফাইল ব্রাউজ করা হচ্ছে: %1$s';
- $txt['themeadmin_edit_filename'] = 'ফাইলের নাম';
- $txt['themeadmin_edit_modified'] = 'শেষ সংশোধিত';
- $txt['themeadmin_edit_size'] = 'আকার';
- $txt['themeadmin_edit_bytes'] = 'B';
- $txt['themeadmin_edit_kilobytes'] = 'কেবি';
- $txt['themeadmin_edit_error'] = 'আপনি যে ফাইলটি সংরক্ষণ করার চেষ্টা করেছেন তা নিম্নলিখিত ত্রুটি তৈরি করেছে:';
- $txt['themeadmin_edit_on_line'] = 'লাইনে শুরু';
- $txt['themeadmin_edit_preview'] = 'প্রিভিউ';
- $txt['themeadmin_selectable'] = 'ব্যবহারকারী নির্বাচন করতে সক্ষম থিম';
- $txt['themeadmin_themelist_link'] = 'থিমের তালিকা দেখান';
+$txt['themeadmin_edit_browse'] = 'Browse the templates and files in this theme.';
+$txt['themeadmin_edit_style'] = 'Edit this theme\'s stylesheets.';
+$txt['themeadmin_edit_copy_template'] = 'Copy a template from the theme this is based on.';
+$txt['themeadmin_edit_exists'] = 'already exists';
+$txt['themeadmin_edit_do_copy'] = 'copy';
+$txt['themeadmin_edit_copy_warning'] = 'When SMF needs a template or language file which is not in the current theme, it looks in the theme it is based on, or the default theme.<br>Unless you need to modify a template, it\'s better not to copy it.';
+$txt['themeadmin_edit_copy_confirm'] = 'Are you sure you want to copy this template?';
+$txt['themeadmin_edit_overwrite_confirm'] = 'Are you sure you want to copy this template over the one that already exists?\\nThis will OVERWRITE any changes you\\'ve made';
+$txt['themeadmin_edit_no_copy'] = '<em>(can\'t copy)</em>';
+$txt['themeadmin_browsing_theme'] = 'Browsing files in theme: %1$s';
+$txt['themeadmin_edit_filename'] = 'Filename';
+$txt['themeadmin_edit_modified'] = 'Last Modified';
+$txt['themeadmin_edit_size'] = 'Size';
+$txt['themeadmin_edit_bytes'] = 'B';
+$txt['themeadmin_edit_kilobytes'] = 'KB';
+$txt['themeadmin_edit_error'] = 'The file you tried to save generated the following error:';
+$txt['themeadmin_edit_on_line'] = 'Beginning on line';
+$txt['themeadmin_edit_preview'] = 'Preview';
+$txt['themeadmin_selectable'] = 'Themes that the user is able to select';
+$txt['themeadmin_themelist_link'] = 'Show the list of themes';
 
- // ওপেন গ্রাফ
- $txt['og_image'] = 'ওপেন গ্রাফ ইমেজ';
- $txt['og_image_desc'] = 'প্রস্তাবিত আকার: 175x175px।  <a href="https://ogp.me/" target="_blank" class="bbc_link">ওপেন গ্রাফ</a> সোশ্যাল মিডিয়া শেয়ার করার জন্য ব্যবহার করা হয়৷';
+// Open Graph
+$txt['og_image'] = 'Open Graph image';
+$txt['og_image_desc'] = 'Suggested size: 175x175px. <a href="https://ogp.me/" target="_blank" class="bbc_link">Open Graph</a> is used for social media sharing.';
 
- ?>
+?>

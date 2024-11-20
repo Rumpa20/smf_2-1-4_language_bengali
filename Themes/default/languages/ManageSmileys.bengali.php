@@ -53,48 +53,48 @@ $txt['smiley_setorder_explain'] = 'Change the order of the smileys here.';
 $txt['smiley_addsmiley_explain'] = 'Here you can add a new smiley - either from an existing file or by uploading new ones.';
 
 $txt['smiley_set_select_default'] = 'Default Smiley set';
-$txt['smiley_set_new'] = 'নতুন স্মাইলি সেট তৈরি করুন';
- $txt['smiley_set_modify_existing'] = 'বিদ্যমান স্মাইলি সেট পরিবর্তন করুন';
- $txt['smiley_set_modify'] = 'সংশোধন';
- $txt['smiley_set_import_info'] = 'যেসব স্মাইলি ফাইলের নাম বিদ্যমান স্মাইলির সাথে মিলে যায় সেগুলো স্বয়ংক্রিয়ভাবে আমদানি করা হবে।';
- $txt['smiley_set_unused'] = 'এই স্মাইলি সেটের জন্য ফোল্ডারে অব্যবহৃত স্মাইলি ছবি রয়েছে৷  এই ফাইলগুলি ব্যবহার করতে, নিম্নলিখিতগুলির মধ্যে একটি করুন:
- 	 <ul class="bbc_list">
- 		 আপনার বিদ্যমান স্মাইলিগুলি ব্যবহার করতে <li><a href="%1$s" class="bbc_link">সম্পাদনা করুন</a>৷</li>
- 		 তাদের জন্য নতুন স্মাইলি <li><a href="%2$s" class="bbc_link">তৈরি করুন</a>।</li>
- 		 স্বয়ংক্রিয়ভাবে নতুন স্মাইলি হিসাবে সেগুলি <li><a href="%3$s" class="bbc_link">আমদানি করুন</a>৷</li>
- 	 </ul>';
+$txt['smiley_set_new'] = 'Create new Smiley set';
+$txt['smiley_set_modify_existing'] = 'Modify existing Smiley set';
+$txt['smiley_set_modify'] = 'Modify';
+$txt['smiley_set_import_info'] = 'Smiley files whose names match with one of the existing smileys will be imported automatically.';
+$txt['smiley_set_unused'] = 'There are unused smiley images in the folder for this smiley set. To use these files, do one of the following:
+	<ul class="bbc_list">
+		<li><a href="%1$s" class="bbc_link">Edit</a> your existing smileys to use them.</li>
+		<li><a href="%2$s" class="bbc_link">Create</a> new smileys for them.</li>
+		<li><a href="%3$s" class="bbc_link">Import</a> them as new smileys automatically.</li>
+	</ul>';
 
- $txt['smileys_location'] = 'অবস্থান';
- $txt['smileys_location_form'] = 'পোস্ট ফর্ম';
- $txt['smileys_location_hidden'] = 'লুকানো';
- $txt['smileys_location_popup'] = 'আরো';
- $txt['smileys_modify'] = 'সংশোধন';
- $txt['smileys_not_found_in_set'] = 'সেট(গুলি) এ স্মাইলি পাওয়া যায়নি';
- $txt['smileys_default_description'] = '(একটি বিবরণ সন্নিবেশ করান)';
- $txt['smiley_new'] = 'নতুন স্মাইলি যোগ করুন';
- $txt['smiley_modify_existing'] = 'স্মাইলি পরিবর্তন করুন';
- $txt['smiley_preview'] = 'প্রিভিউ';
- $txt['smiley_preview_using_set'] = 'স্মাইলি সেট ব্যবহার করে প্রিভিউ';
- $txt['smileys_confirm'] = 'আপনি কি নিশ্চিত যে আপনি এই স্মাইলিগুলি সরাতে চান?\\nদ্রষ্টব্য: এটি \\\'ছবিগুলি সরিয়ে ফেলবে না, শুধুমাত্র পছন্দগুলি।';
- $txt['smileys_location_form_description'] = 'একটি নতুন ফোরাম বার্তা বা ব্যক্তিগত বার্তা পোস্ট করার সময় এই স্মাইলিগুলি পাঠ্য এলাকার উপরে প্রদর্শিত হবে।';
- $txt['smileys_location_popup_description'] = 'এই স্মাইলিগুলি একটি পপআপে দেখানো হবে, যা ব্যবহারকারী \'আরও\' বোতামে ক্লিক করার পরে দেখানো হয়।';
- $txt['smileys_move_select_destination'] = 'স্মাইলি গন্তব্য নির্বাচন করুন';
- $txt['smileys_move_select_smiley'] = 'সরানোর জন্য স্মাইলি নির্বাচন করুন';
- $txt['smileys_move_here'] = 'স্মাইলি এই অবস্থানে সরান';
- $txt['smileys_no_entries'] = 'বর্তমানে কোনো স্মাইলি কনফিগার করা নেই।';
+$txt['smileys_location'] = 'Location';
+$txt['smileys_location_form'] = 'Post form';
+$txt['smileys_location_hidden'] = 'Hidden';
+$txt['smileys_location_popup'] = 'More';
+$txt['smileys_modify'] = 'Modify';
+$txt['smileys_not_found_in_set'] = 'Smiley not found in set(s)';
+$txt['smileys_default_description'] = '(Insert a description)';
+$txt['smiley_new'] = 'Add new smiley';
+$txt['smiley_modify_existing'] = 'Modify smiley';
+$txt['smiley_preview'] = 'Preview';
+$txt['smiley_preview_using_set'] = 'Preview using smiley set';
+$txt['smileys_confirm'] = 'Are you sure you want to remove these smileys?\\nNote: This won\\'t remove the images, just the choices.';
+$txt['smileys_location_form_description'] = 'These smileys will appear above the text area, when posting a new forum message or Personal Message.';
+$txt['smileys_location_popup_description'] = 'These smileys will be shown in a popup, that is shown after a user has clicked \'more\' button.';
+$txt['smileys_move_select_destination'] = 'Select smiley destination';
+$txt['smileys_move_select_smiley'] = 'Select smiley to move';
+$txt['smileys_move_here'] = 'Move smiley to this location';
+$txt['smileys_no_entries'] = 'There are currently no smileys configured.';
 
- $txt['icons_edit_icons_explain'] = 'এখান থেকে আপনি পরিবর্তন করতে পারেন কোন বার্তা আইকনগুলি আপনার বোর্ড জুড়ে উপলব্ধ।  আপনি আইকন যোগ, সম্পাদনা এবং অপসারণ করতে পারেন, সেইসাথে নির্দিষ্ট বোর্ডগুলিতে তাদের ব্যবহার সীমাবদ্ধ করতে পারেন।';
- $txt['icons_edit_icons_all_boards'] = 'সমস্ত বোর্ডে উপলব্ধ';
- $txt['icons_board'] = 'বোর্ড';
- $txt['icons_confirm'] = 'আপনি কি নিশ্চিত যে আপনি এই আইকনগুলি সরাতে চান?\\n\\nমনে রাখবেন এটি শুধুমাত্র নতুন পোস্টারগুলিকে আইকনগুলি ব্যবহার করা থেকে বিরত রাখবে, ছবিগুলি থাকবে৷';
- $txt['icons_add_new'] = 'নতুন আইকন যোগ করুন';
+$txt['icons_edit_icons_explain'] = 'From here you can change which message icons are available throughout your board. You can add, edit and remove icons, as well as limit their use to certain boards.';
+$txt['icons_edit_icons_all_boards'] = 'Available in all boards';
+$txt['icons_board'] = 'Board';
+$txt['icons_confirm'] = 'Are you sure you wish to remove these icons?\\n\\nNote this will only stop new posters from using the icons, the images will remain.';
+$txt['icons_add_new'] = 'Add new icon';
 
- $txt['icons_edit_icon'] = 'বার্তা আইকন সম্পাদনা করুন';
- $txt['icons_new_icon'] = 'নতুন বার্তা আইকন';
- $txt['icons_location_first_icon'] = 'প্রথম আইকন হিসেবে';
- $txt['icons_location_after'] = 'পরে';
- // আর্গুমেন্ট(গুলি): সমর্থিত ফাইল এক্সটেনশন
- $txt['icons_extension_must_be'] = 'ফাইল এক্সটেনশন অবশ্যই "%1$s" হতে হবে;
- $txt['icons_no_entries'] = 'বর্তমানে কোনো বার্তা আইকন কনফিগার করা নেই।';
+$txt['icons_edit_icon'] = 'Edit message icon';
+$txt['icons_new_icon'] = 'New message icon';
+$txt['icons_location_first_icon'] = 'As first icon';
+$txt['icons_location_after'] = 'After';
+// argument(s): the supported file extension
+$txt['icons_extension_must_be'] = 'File extension must be "%1$s"';
+$txt['icons_no_entries'] = 'There are currently no message icons configured.';
 
- ?>
+?>

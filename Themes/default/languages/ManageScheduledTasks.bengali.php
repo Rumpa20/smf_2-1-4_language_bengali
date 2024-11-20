@@ -1,70 +1,70 @@
 <?php
- // সংস্করণ: 2.1.0;  নির্ধারিত কাজগুলি পরিচালনা করুন
+// Version: 2.1.0; ManageScheduledTasks
 
- $txt['scheduled_tasks_title'] = 'নির্ধারিত কাজ';
- $txt['scheduled_tasks_header'] = 'সমস্ত নির্ধারিত কাজ';
- $txt['scheduled_tasks_name'] = 'টাস্কের নাম';
- $txt['scheduled_tasks_next_time'] = 'পরবর্তী ডিউ';
- $txt['scheduled_tasks_regularity'] = 'নিয়মিত';
- $txt['scheduled_tasks_enabled'] = 'সক্ষম';
- $txt['scheduled_tasks_run_now'] = 'এখনই চালান';
- $txt['scheduled_tasks_save_changes'] = 'পরিবর্তনগুলি সংরক্ষণ করুন';
- $txt['scheduled_tasks_time_offset'] = '<strong>দ্রষ্টব্য:</strong> নীচে দেওয়া সমস্ত সময় হল <em>সার্ভারের সময়</em> এবং SMF-এর মধ্যে অফসেট সেট আপ করার সময়কে বিবেচনায় নেয় না।';
- $txt['scheduled_tasks_were_run'] = 'সব নির্বাচিত কাজ সম্পন্ন হয়েছে';
- $txt['scheduled_tasks_were_run_errors'] = 'নির্বাচিত সমস্ত কাজ সম্পন্ন হয়েছে কিন্তু কিছু ত্রুটি ছিল:';
+$txt['scheduled_tasks_title'] = 'Scheduled Tasks';
+$txt['scheduled_tasks_header'] = 'All Scheduled Tasks';
+$txt['scheduled_tasks_name'] = 'Task Name';
+$txt['scheduled_tasks_next_time'] = 'Next Due';
+$txt['scheduled_tasks_regularity'] = 'Regularity';
+$txt['scheduled_tasks_enabled'] = 'Enabled';
+$txt['scheduled_tasks_run_now'] = 'Run now';
+$txt['scheduled_tasks_save_changes'] = 'Save Changes';
+$txt['scheduled_tasks_time_offset'] = '<strong>Note:</strong> All times given below are <em>server time</em> and do not take into account any time offsets set up within SMF.';
+$txt['scheduled_tasks_were_run'] = 'All selected tasks were completed';
+$txt['scheduled_tasks_were_run_errors'] = 'All selected tasks were completed but some had errors:';
 
- $txt['scheduled_tasks_na'] = 'N/A';
- $txt['scheduled_task_auto_optimize'] = 'অপ্টিমাইজ ডাটাবেস';
- $txt['scheduled_task_desc_auto_optimize'] = 'ফ্র্যাগমেন্টেশন সমস্যা সমাধানের জন্য ডাটাবেস অপ্টিমাইজ করুন।';
- $txt['scheduled_task_daily_maintenance'] = 'দৈনিক রক্ষণাবেক্ষণ';
- $txt['scheduled_task_desc_daily_maintenance'] = 'ফোরামে প্রয়োজনীয় দৈনিক রক্ষণাবেক্ষণ চালায় - নিষ্ক্রিয় করা উচিত নয়।';
- $txt['scheduled_task_daily_digest'] = 'দৈনিক বিজ্ঞপ্তির সারাংশ';
- $txt['scheduled_task_desc_daily_digest'] = 'বিজ্ঞপ্তি গ্রাহকদের জন্য দৈনিক ডাইজেস্ট ইমেল করে।';
- $txt['scheduled_task_weekly_digest'] = 'সাপ্তাহিক বিজ্ঞপ্তির সারাংশ';
- $txt['scheduled_task_desc_weekly_digest'] = 'বিজ্ঞপ্তি গ্রাহকদের জন্য সাপ্তাহিক ডাইজেস্ট ইমেল করে।';
- $txt['scheduled_task_fetchSMfiles'] = 'সাধারণ মেশিন ফাইল আনুন';
- $txt['scheduled_task_desc_fetchSMfiles'] = 'আপডেট এবং অন্যান্য তথ্যের বিজ্ঞপ্তি সহ জাভাস্ক্রিপ্ট ফাইল পুনরুদ্ধার করে।';
- $txt['scheduled_task_birthdayemails'] = 'জন্মদিনের ইমেল পাঠান';
- $txt['scheduled_task_desc_birthdayemails'] = 'সদস্যদের জন্মদিনের শুভেচ্ছা জানিয়ে ইমেল পাঠায়।';
- $txt['scheduled_task_weekly_maintenance'] = 'সাপ্তাহিক রক্ষণাবেক্ষণ';
- $txt['scheduled_task_desc_weekly_maintenance'] = 'ফোরামে অপরিহার্য সাপ্তাহিক রক্ষণাবেক্ষণ চালায় - নিষ্ক্রিয় করা উচিত নয়।';
- $txt['scheduled_task_paid_subscriptions'] = 'প্রদেয় সাবস্ক্রিপশন চেক';
- $txt['scheduled_task_desc_paid_subscriptions'] = 'কোনও প্রয়োজনীয় অর্থপ্রদানের সাবস্ক্রিপশন অনুস্মারক পাঠায় এবং মেয়াদোত্তীর্ণ সদস্য সদস্যতা সরিয়ে দেয়।';
- $txt['scheduled_task_remove_topic_redirect'] = 'সরানো সরান: পুনঃনির্দেশের বিষয়';
- $txt['scheduled_task_desc_remove_topic_redirect'] = 'সরানো নোটিশ তৈরি করার সময় নির্দিষ্ট করা "চালানো:" বিষয়ের বিজ্ঞপ্তি মুছে দেয়।';
- $txt['scheduled_task_remove_temp_attachments'] = 'অস্থায়ী সংযুক্তি ফাইলগুলি সরান';
- $txt['scheduled_task_desc_remove_temp_attachments'] = 'একটি পোস্টে একটি ফাইল সংযুক্ত করার সময় তৈরি করা অস্থায়ী ফাইলগুলি মুছে দেয় যা আগে কোনো কারণে পুনঃনামকরণ বা মুছে ফেলা হয়নি।';
+$txt['scheduled_tasks_na'] = 'N/A';
+$txt['scheduled_task_auto_optimize'] = 'Optimize Database';
+$txt['scheduled_task_desc_auto_optimize'] = 'Optimize the database to resolve fragmentation issues.';
+$txt['scheduled_task_daily_maintenance'] = 'Daily Maintenance';
+$txt['scheduled_task_desc_daily_maintenance'] = 'Runs essential daily maintenance on the forum - should not be disabled.';
+$txt['scheduled_task_daily_digest'] = 'Daily Notification summary';
+$txt['scheduled_task_desc_daily_digest'] = 'Emails out the daily digest for notification subscribers.';
+$txt['scheduled_task_weekly_digest'] = 'Weekly Notification summary';
+$txt['scheduled_task_desc_weekly_digest'] = 'Emails out the weekly digest for notification subscribers.';
+$txt['scheduled_task_fetchSMfiles'] = 'Fetch Simple Machines files';
+$txt['scheduled_task_desc_fetchSMfiles'] = 'Retrieves javascript files containing notifications of updates and other information.';
+$txt['scheduled_task_birthdayemails'] = 'Send Birthday emails';
+$txt['scheduled_task_desc_birthdayemails'] = 'Sends out emails wishing members a happy birthday.';
+$txt['scheduled_task_weekly_maintenance'] = 'Weekly Maintenance';
+$txt['scheduled_task_desc_weekly_maintenance'] = 'Runs essential weekly maintenance on the forum - should not be disabled.';
+$txt['scheduled_task_paid_subscriptions'] = 'Paid Subscription Checks';
+$txt['scheduled_task_desc_paid_subscriptions'] = 'Sends out any necessary paid subscription reminders and removes expired member subscriptions.';
+$txt['scheduled_task_remove_topic_redirect'] = 'Remove MOVED: redirection topics';
+$txt['scheduled_task_desc_remove_topic_redirect'] = 'Deletes "MOVED:" topic notifications as specified when the moved notice was created.';
+$txt['scheduled_task_remove_temp_attachments'] = 'Remove temporary attachment files';
+$txt['scheduled_task_desc_remove_temp_attachments'] = 'Deletes temporary files created while attaching a file to a post that for any reason weren\'t renamed or deleted before.';
 
- $txt['scheduled_task_reg_starting'] = '%1$s থেকে শুরু';
- $txt['scheduled_task_reg_repeating'] = 'প্রতি %1$d %2$s পুনরাবৃত্তি';
- $txt['scheduled_task_reg_unit_m'] = 'মিনিট(গুলি)';
- $txt['scheduled_task_reg_unit_h'] = 'ঘন্টা(গুলি)';
- $txt['scheduled_task_reg_unit_d'] = 'দিন(গুলি)';
- $txt['scheduled_task_reg_unit_w'] = 'সপ্তাহ(গুলি)';
+$txt['scheduled_task_reg_starting'] = 'Starting at %1$s';
+$txt['scheduled_task_reg_repeating'] = 'repeating every %1$d %2$s';
+$txt['scheduled_task_reg_unit_m'] = 'minute(s)';
+$txt['scheduled_task_reg_unit_h'] = 'hour(s)';
+$txt['scheduled_task_reg_unit_d'] = 'day(s)';
+$txt['scheduled_task_reg_unit_w'] = 'week(s)';
 
- $txt['scheduled_task_edit'] = 'নির্ধারিত টাস্ক সম্পাদনা করুন';
- $txt['scheduled_task_edit_repeat'] = 'প্রতিটি টাস্ক পুনরাবৃত্তি করুন';
- $txt['scheduled_task_edit_interval'] = 'ব্যবধান';
- $txt['scheduled_task_edit_start_time'] = 'শুরু সময়';
- $txt['scheduled_task_edit_start_time_desc'] = 'দিনের প্রথম দৃষ্টান্ত শুরু হওয়ার সময় (ঘন্টা: মিনিট)';
- $txt['scheduled_task_time_offset'] = 'মনে রাখবেন যে শুরুর সময় বর্তমান সার্ভার সময়ের বিপরীতে অফসেট হওয়া উচিত।  বর্তমান সার্ভারের সময় হল: %1$s';
+$txt['scheduled_task_edit'] = 'Edit Scheduled Task';
+$txt['scheduled_task_edit_repeat'] = 'Repeat task every';
+$txt['scheduled_task_edit_interval'] = 'Interval';
+$txt['scheduled_task_edit_start_time'] = 'Start time';
+$txt['scheduled_task_edit_start_time_desc'] = 'Time the first instance of the day should start (hours:minutes)';
+$txt['scheduled_task_time_offset'] = 'Note the start time should be the offset against the current server time. Current server time is: %1$s';
 
- $txt['scheduled_view_log'] = 'দেখুন লগ';
- $txt['scheduled_log_empty'] = 'বর্তমানে কোনো টাস্ক লগ এন্ট্রি নেই।';
- $txt['scheduled_log_time_run'] = 'টাইম রান';
- $txt['scheduled_log_time_taken'] = 'সময় নেওয়া হয়েছে';
- $txt['scheduled_log_time_taken_seconds'] = '%1$d সেকেন্ড';
- $txt['scheduled_log_empty_log'] = 'সাফ লগ';
- $txt['scheduled_log_empty_log_confirm'] = 'আপনি কি নিশ্চিত যে আপনি লগটি পুরোপুরি সাফ করতে চান?';
+$txt['scheduled_view_log'] = 'View Log';
+$txt['scheduled_log_empty'] = 'There are currently no task log entries.';
+$txt['scheduled_log_time_run'] = 'Time Run';
+$txt['scheduled_log_time_taken'] = 'Time taken';
+$txt['scheduled_log_time_taken_seconds'] = '%1$d seconds';
+$txt['scheduled_log_empty_log'] = 'Clear Log';
+$txt['scheduled_log_empty_log_confirm'] = 'Are you sure you want to completely clear the log?';
 
- $txt['scheduled_task_remove_old_drafts'] = 'পুরানো খসড়া সরান';
- $txt['scheduled_task_desc_remove_old_drafts'] = 'অ্যাডমিন প্যানেলের খসড়া সেটিংসে সংজ্ঞায়িত দিনের সংখ্যার চেয়ে পুরনো ড্রাফ্ট মুছে দেয়।';
+$txt['scheduled_task_remove_old_drafts'] = 'Remove old drafts';
+$txt['scheduled_task_desc_remove_old_drafts'] = 'Deletes drafts older than the number of days defined in the draft settings in the admin panel.';
 
- $txt['scheduled_task_prune_log_topics'] = 'বোর্ডগুলিকে পঠিত হিসাবে চিহ্নিত করুন';
- $txt['scheduled_task_desc_prune_log_topics'] = 'বোর্ডগুলিকে <a href="%1$s?action=admin;area=logs;sa=settings#markread_title"> এ সংজ্ঞায়িত দিনের সংখ্যার চেয়ে নিষ্ক্রিয় ব্যবহারকারীদের জন্য পঠিত হিসাবে চিহ্নিত করে  অ্যাডমিন প্যানেলে লগ সেটিংস পড়ুন</a>।';
+$txt['scheduled_task_prune_log_topics'] = 'Mark Boards as Read';
+$txt['scheduled_task_desc_prune_log_topics'] = 'Marks boards as read for users inactive longer than the number of days defined in the <a href="%1$s?action=admin;area=logs;sa=settings#markread_title">Read Logs settings</a> in the admin panel.';
 
- $txt['cron_is_real_cron'] = 'নির্ধারিত কাজ চালানোর জাভাস্ক্রিপ্ট-ভিত্তিক পদ্ধতি নিষ্ক্রিয় করুন।';
- $txt['cron_is_real_cron_desc'] = '<strong>এই বাক্সটি চেক করবেন না</strong> যদি না আপনি <strong><u>নিশ্চিত</u></strong> হন যে আপনি আপনার সার্ভারকে বলার জন্য অন্য একটি পদ্ধতি কনফিগার করেছেন  নিয়মিত SMF এর cron.php চালান।';
- $txt['cron_not_working'] = 'গত ২৪ ঘণ্টায় কোনো নির্ধারিত কাজ চালানো হয়নি।  নির্ধারিত কাজ চালানোর জাভাস্ক্রিপ্ট-ভিত্তিক পদ্ধতি পুনরায় সক্রিয় করা।';
+$txt['cron_is_real_cron'] = 'Disable JavaScript-based method of running scheduled tasks.';
+$txt['cron_is_real_cron_desc'] = '<strong>Do not check this box</strong> unless you are <strong><u>sure</u></strong> that you have configured another method to tell your server to run SMF\'s cron.php on a regular basis.';
+$txt['cron_not_working'] = 'No scheduled tasks have been run in the last 24 hours. Re-enabling JavaScript-based method of running scheduled tasks.';
 
- ?>
+?>

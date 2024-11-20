@@ -1,54 +1,54 @@
 <?php
- // সংস্করণ: 2.1.0;  মেইল পরিচালনা করুন
+// Version: 2.1.0; ManageMail
 
- $txt['mailqueue_desc'] = 'এই পৃষ্ঠা থেকে আপনি আপনার মেইল ​​সেটিংস কনফিগার করতে পারেন, সেইসাথে বর্তমান মেল সারি দেখতে এবং পরিচালনা করতে পারেন।';
+$txt['mailqueue_desc'] = 'From this page you can configure your mail settings, as well as view and administer the current mail queue.';
 
- $txt['mail_type'] = 'মেইলের ধরন';
- $txt['mail_type_default'] = '(PHP ডিফল্ট)';
- $txt['smtp_host'] = 'SMTP সার্ভার';
- $txt['smtp_port'] = 'SMTP পোর্ট';
- $txt['smtp_username'] = 'SMTP ব্যবহারকারীর নাম';
- $txt['smtp_password'] = 'SMTP পাসওয়ার্ড';
+$txt['mail_type'] = 'Mail type';
+$txt['mail_type_default'] = '(PHP default)';
+$txt['smtp_host'] = 'SMTP server';
+$txt['smtp_port'] = 'SMTP port';
+$txt['smtp_username'] = 'SMTP username';
+$txt['smtp_password'] = 'SMTP password';
 
- $txt['mail_limit'] = 'প্রতি মিনিটে পাঠানোর জন্য সর্বাধিক ইমেল';
- $txt['mail_quantity'] = 'প্রতি পৃষ্ঠা লোড পাঠানোর জন্য সর্বাধিক ইমেল';
+$txt['mail_limit'] = 'Maximum emails to send per minute';
+$txt['mail_quantity'] = 'Maximum amount of emails to send per page load';
 
- $txt['mailqueue_stats'] = 'মেইল কিউ পরিসংখ্যান';
- $txt['mailqueue_oldest'] = 'প্রাচীনতম মেল';
- $txt['mailqueue_oldest_not_available'] = 'N/A';
- $txt['mailqueue_size'] = 'সারির দৈর্ঘ্য';
+$txt['mailqueue_stats'] = 'Mail queue statistics';
+$txt['mailqueue_oldest'] = 'Oldest Mail';
+$txt['mailqueue_oldest_not_available'] = 'N/A';
+$txt['mailqueue_size'] = 'Queue length';
 
- $txt['mailqueue_age'] = 'বয়স';
- $txt['mailqueue_priority'] = 'অগ্রাধিকার';
- $txt['mailqueue_recipient'] = 'প্রাপক';
- $txt['mailqueue_subject'] = 'বিষয়';
- $txt['mailqueue_clear_list'] = 'এখনই মেল সারি পাঠান';
- $txt['mailqueue_no_items'] = 'মেইল সারি বর্তমানে খালি';
- $txt['personal_message'] = 'ব্যক্তিগত বার্তা';
- // নিচের স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করবেন না।
- $txt['mailqueue_clear_list_warning'] = 'আপনি কি নিশ্চিত যে আপনি এখন পুরো মেইল ​​সারি পাঠাতে চান?  এটি আপনার সেট করা যেকোনো সীমাকে ওভাররাইড করবে।';
+$txt['mailqueue_age'] = 'Age';
+$txt['mailqueue_priority'] = 'Priority';
+$txt['mailqueue_recipient'] = 'Recipient';
+$txt['mailqueue_subject'] = 'Subject';
+$txt['mailqueue_clear_list'] = 'Send mail queue now';
+$txt['mailqueue_no_items'] = 'The mail queue is currently empty';
+$txt['personal_message'] = 'Personal Message';
+// Do not use numeric entities in below string.
+$txt['mailqueue_clear_list_warning'] = 'Are you sure you wish to send the whole mail queue now? This will override any limits you have set.';
 
- $txt['mq_day'] = '%1.1f দিন';
- $txt['mq_days'] = '%1.1f দিন';
- $txt['mq_hour'] = '%1.1f ঘন্টা';
- $txt['mq_hours'] = '%1.1f ঘন্টা';
- $txt['mq_minute'] = '%1$d মিনিট';
- $txt['mq_minutes'] = '%1$d মিনিট';
- $txt['mq_second'] = '%1$d সেকেন্ড';
- $txt['mq_seconds'] = '%1$d সেকেন্ড';
+$txt['mq_day'] = '%1.1f Day';
+$txt['mq_days'] = '%1.1f Days';
+$txt['mq_hour'] = '%1.1f Hour';
+$txt['mq_hours'] = '%1.1f Hours';
+$txt['mq_minute'] = '%1$d Minute';
+$txt['mq_minutes'] = '%1$d Minutes';
+$txt['mq_second'] = '%1$d Second';
+$txt['mq_seconds'] = '%1$d Seconds';
 
- $txt['mq_mpriority_5'] = 'খুব কম';
- $txt['mq_mpriority_4'] = 'নিম্ন';
- $txt['mq_mpriority_3'] = 'স্বাভাবিক';
- $txt['mq_mpriority_2'] = 'উচ্চ';
- $txt['mq_mpriority_1'] = 'খুব উচ্চ';
+$txt['mq_mpriority_5'] = 'Very Low';
+$txt['mq_mpriority_4'] = 'Low';
+$txt['mq_mpriority_3'] = 'Normal';
+$txt['mq_mpriority_2'] = 'High';
+$txt['mq_mpriority_1'] = 'Very High';
 
- $txt['birthday_email'] = 'ব্যবহার করার জন্য জন্মদিনের বার্তা';
- $txt['birthday_body'] = 'ইমেল বডি';
- $txt['birthday_subject'] = 'ইমেল বিষয়';
+$txt['birthday_email'] = 'Birthday message to use';
+$txt['birthday_body'] = 'Email body';
+$txt['birthday_subject'] = 'Email subject';
 
- $txt['mailtest_header'] = 'ইমেল পরীক্ষা';
- $txt['mailtest_result_success'] = 'সফলভাবে একটি পরীক্ষা বার্তা পাঠানো হয়েছে';
- $txt['mailtest_result_failure'] = 'একটি পরীক্ষা বার্তা পাঠাতে অক্ষম, আরও তথ্যের জন্য <a href="%1$s">ত্রুটির লগ</a> চেক করুন৷';
+$txt['mailtest_header'] = 'Email Test';
+$txt['mailtest_result_success'] = 'Successfully sent a test message';
+$txt['mailtest_result_failure'] = 'Unable to send a test message, check the <a href="%1$s">error log</a> for more information.';
 
- ?>
+?>

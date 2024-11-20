@@ -1,103 +1,103 @@
 <?php
- // সংস্করণ: 2.1.0;  ম্যানেজবোর্ড
+// Version: 2.1.0; ManageBoards
 
- $txt['boards_and_cats'] = 'বোর্ড এবং বিভাগ পরিচালনা করুন';
- $txt['order'] = 'অর্ডার';
- $txt['full_name'] = 'পূর্ণ নাম';
- $txt['name_on_display'] = 'এই নামটি প্রদর্শিত হবে।';
- $txt['boards_and_cats_desc'] = 'এখানে আপনার বিভাগ এবং বোর্ড সম্পাদনা করুন।  <em>&quot;ব্যবহারকারীর নাম&quot;, &quot;ব্যবহারকারীর নাম&quot;</em> হিসাবে একাধিক মডারেটর তালিকাভুক্ত করুন।  (এগুলি অবশ্যই ব্যবহারকারীর নাম হতে হবে এবং *নাম* প্রদর্শনের নাম হতে হবে)<br>একটি নতুন বোর্ড তৈরি করতে, বোর্ড যুক্ত করুন বোতামে ক্লিক করুন।  নতুন বোর্ডটিকে বর্তমান বোর্ডের একটি সাব-বোর্ড করতে, বোর্ড তৈরি করার সময় অর্ডার ড্রপ ডাউন মেনু থেকে "সাব-বোর্ড অফ..." নির্বাচন করুন।';
- $txt['parent_members_only'] = 'নিয়মিত সদস্য';
- $txt['parent_guests_only'] = 'অতিথি';
- $txt['cat_delete_confirm'] = 'আপনি কি সত্যিই এই বিভাগটি মুছে ফেলতে চান?';
- $txt['board_delete_confirm'] = 'আপনি কি সত্যিই এই বোর্ডটি মুছে ফেলতে চান?';
+$txt['boards_and_cats'] = 'Manage Boards and Categories';
+$txt['order'] = 'Order';
+$txt['full_name'] = 'Full name';
+$txt['name_on_display'] = 'This is the name that will be displayed.';
+$txt['boards_and_cats_desc'] = 'Edit your categories and boards here. List multiple moderators as <em>&quot;username&quot;, &quot;username&quot;</em>. (these must be usernames and *not* display names)<br>To create a new board, click the Add Board button. To make the new board a sub-board of a current board, select "Sub-board of..." from the Order drop down menu when creating the board.';
+$txt['parent_members_only'] = 'Regular Members';
+$txt['parent_guests_only'] = 'Guests';
+$txt['cat_delete_confirm'] = 'Do you really want to delete this category?';
+$txt['board_delete_confirm'] = 'Do you really want to delete this board?';
 
- $txt['cat_edit'] = 'বিভাগ সম্পাদনা করুন';
- $txt['collapse_enable'] = 'কলাপসিবল';
- $txt['collapse_desc'] = 'ব্যবহারকারীদের এই বিভাগটি ভেঙে ফেলার অনুমতি দিন';
- $txt['cat_modify'] = '(সংশোধন)';
+$txt['cat_edit'] = 'Edit Category';
+$txt['collapse_enable'] = 'Collapsible';
+$txt['collapse_desc'] = 'Allow users to collapse this category';
+$txt['cat_modify'] = '(modify)';
 
- $txt['mboards_order_after'] = 'পরে';
- $txt['mboards_order_inside'] = 'ভিতরে';
- $txt['mboards_order_first'] = 'প্রথম স্থানে';
+$txt['mboards_order_after'] = 'After ';
+$txt['mboards_order_inside'] = 'Inside ';
+$txt['mboards_order_first'] = 'In first place';
 
- $txt['mboards_new_board'] = 'বোর্ড যোগ করুন';
- $txt['mboards_new_cat_name'] = 'নতুন বিভাগ';
- $txt['mboards_add_cat_button'] = 'বিভাগ যোগ করুন';
- $txt['mboards_new_board_name'] = 'নতুন বোর্ড';
+$txt['mboards_new_board'] = 'Add Board';
+$txt['mboards_new_cat_name'] = 'New Category';
+$txt['mboards_add_cat_button'] = 'Add Category';
+$txt['mboards_new_board_name'] = 'New Board';
 
- $txt['mboards_name'] = 'নাম';
- $txt['mboards_modify'] = 'সংশোধন';
- $txt['mboards_permissions'] = 'অনুমতি';
- // নিচের স্ট্রিং এ সত্তা ব্যবহার করবেন না।
- $txt['mboards_permissions_confirm'] = 'আপনি কি নিশ্চিত যে আপনি স্থানীয় অনুমতি ব্যবহার করার জন্য এই বোর্ডটি পরিবর্তন করতে চান?';
+$txt['mboards_name'] = 'Name';
+$txt['mboards_modify'] = 'modify';
+$txt['mboards_permissions'] = 'permissions';
+// Don't use entities in the below string.
+$txt['mboards_permissions_confirm'] = 'Are you sure you want to switch this board to use local permissions?';
 
- $txt['mboards_delete_cat'] = 'বিভাগ মুছুন';
- $txt['mboards_delete_board'] = 'বোর্ড মুছুন';
+$txt['mboards_delete_cat'] = 'Delete Category';
+$txt['mboards_delete_board'] = 'Delete Board';
 
- $txt['mboards_delete_cat_contains'] = 'এই বিভাগটি মুছে ফেলার ফলে প্রতিটি বোর্ডের মধ্যে সমস্ত বিষয়, পোস্ট এবং সংযুক্তি সহ নীচের বোর্ডগুলিও মুছে যাবে';
- $txt['mboards_delete_option1'] = 'বিভাগ এবং এর মধ্যে থাকা সমস্ত বোর্ড মুছুন।';
- $txt['mboards_delete_option2'] = 'বিভাগ মুছুন এবং এর মধ্যে থাকা সমস্ত বোর্ড সরান';
- $txt['mboards_delete_board_contains'] = 'এই বোর্ডটি মুছে ফেলার ফলে প্রতিটি বোর্ডের মধ্যে সমস্ত বিষয়, পোস্ট এবং সংযুক্তি সহ নীচের সাব-বোর্ডগুলিও সরে যাবে';
- $txt['mboards_delete_board_option1'] = 'বোর্ড মুছুন এবং ক্যাটাগরি লেভেলের মধ্যে থাকা সাব-বোর্ডগুলি সরান।';
- $txt['mboards_delete_board_option2'] = 'বোর্ড মুছুন এবং এর মধ্যে থাকা সমস্ত সাব-বোর্ড সরান';
- $txt['mboards_delete_what_do'] = 'আপনি এই বোর্ডগুলির সাথে কি করতে চান দয়া করে নির্বাচন করুন';
- $txt['mboards_delete_confirm'] = 'নিশ্চিত করুন';
- $txt['mboards_delete_cancel'] = 'বাতিল';
+$txt['mboards_delete_cat_contains'] = 'Deleting this category will also delete the below boards, including all topics, posts and attachments within each board';
+$txt['mboards_delete_option1'] = 'Delete category and all boards contained within.';
+$txt['mboards_delete_option2'] = 'Delete category and move all boards contained within to';
+$txt['mboards_delete_board_contains'] = 'Deleting this board will also move the sub-boards below, including all topics, posts and attachments within each board';
+$txt['mboards_delete_board_option1'] = 'Delete board and move sub-boards contained within to category level.';
+$txt['mboards_delete_board_option2'] = 'Delete board and move all sub-boards contained within to';
+$txt['mboards_delete_what_do'] = 'Please select what you would like to do with these boards';
+$txt['mboards_delete_confirm'] = 'Confirm';
+$txt['mboards_delete_cancel'] = 'Cancel';
 
- $txt['mboards_category'] = 'বিভাগ';
- $txt['mboards_description'] = 'বিবরণ';
- $txt['mboards_description_desc'] = 'আপনার বোর্ডের একটি সংক্ষিপ্ত বিবরণ।  HTML অনুমোদিত নয়, আপনি নিম্নলিখিত BBC ট্যাগগুলি ব্যবহার করতে পারেন: {allowed_tags}';
- $txt['mboards_cat_description_desc'] = 'আপনার বিভাগের একটি সংক্ষিপ্ত বিবরণ।  HTML অনুমোদিত নয়, আপনি নিম্নলিখিত BBC ট্যাগগুলি ব্যবহার করতে পারেন: {allowed_tags}';
- $txt['mboards_groups'] = 'অনুমোদিত গোষ্ঠী';
- $txt['mboards_groups_desc'] = 'গ্রুপগুলিকে এই বোর্ড অ্যাক্সেস করার অনুমতি দেওয়া হয়েছে।<br><em>দ্রষ্টব্য: সদস্য যদি কোনো গ্রুপে থাকে বা পোস্ট গ্রুপে চেক করা থাকে, তাহলে তাদের এই বোর্ডে অ্যাক্সেস থাকবে।</em>';
- $txt['mboards_groups_regular_members'] = 'এই গ্রুপে এমন সব সদস্য রয়েছে যাদের কোনো প্রাথমিক গ্রুপ সেট নেই।';
- $txt['mboards_groups_post_group'] = 'এই গ্রুপটি একটি পোস্ট গণনা ভিত্তিক গ্রুপ।';
- $txt['mboards_moderators'] = 'মডারেটর';
- $txt['mboards_moderators_desc'] = 'অতিরিক্ত সদস্যদের এই বোর্ডে মডারেশন সুবিধা থাকতে হবে।  উল্লেখ্য যে প্রশাসকদের এখানে তালিকাভুক্ত করতে হবে না।';
- $txt['mboards_moderator_groups'] = 'মডারেটর গ্রুপ';
- $txt['mboards_moderator_groups_desc'] = 'যে গোষ্ঠীর সদস্যদের এই বোর্ডে মডারেশন সুবিধা রয়েছে।  মনে রাখবেন যে এটি এমন গোষ্ঠীর মধ্যে সীমাবদ্ধ যা পোস্ট-ভিত্তিক নয় এবং "লুকানো" নয়।';
- $txt['mboards_count_posts'] = 'পোস্ট গণনা';
- $txt['mboards_count_posts_desc'] = 'নতুন উত্তর দেয় এবং বিষয়গুলি সদস্যদের বাড়ায়\' পোস্টের সংখ্যা।';
- $txt['mboards_unchanged'] = 'অপরিবর্তিত';
- $txt['mboards_theme'] = 'বোর্ড থিম';
- $txt['mboards_theme_desc'] = 'এটি আপনাকে শুধুমাত্র এই বোর্ডের ভিতরে আপনার ফোরামের চেহারা পরিবর্তন করতে দেয়।';
- $txt['mboards_theme_default'] = '(সামগ্রিক ফোরাম ডিফল্ট।)';
- $txt['mboards_override_theme'] = 'সদস্যের থিম ওভাররাইড করুন';
- $txt['mboards_override_theme_desc'] = 'এই বোর্ডের থিমটি ব্যবহার করুন এমনকি সদস্য যদি ডিফল্ট ব্যবহার করা বেছে না নেন।';
+$txt['mboards_category'] = 'Category';
+$txt['mboards_description'] = 'Description';
+$txt['mboards_description_desc'] = 'A short description of your board. HTML is not allowed, you can use the following BBC tags: {allowed_tags}';
+$txt['mboards_cat_description_desc'] = 'A short description of your category. HTML is not allowed, you can use the following BBC tags: {allowed_tags}';
+$txt['mboards_groups'] = 'Allowed Groups';
+$txt['mboards_groups_desc'] = 'Groups allowed to access this board.<br><em>Note: if the member is in any group or post group checked, they will have access to this board.</em>';
+$txt['mboards_groups_regular_members'] = 'This group contains all members that have no primary group set.';
+$txt['mboards_groups_post_group'] = 'This group is a post count based group.';
+$txt['mboards_moderators'] = 'Moderators';
+$txt['mboards_moderators_desc'] = 'Additional members to have moderation privileges on this board. Note that administrators don\'t have to be listed here.';
+$txt['mboards_moderator_groups'] = 'Moderator Groups';
+$txt['mboards_moderator_groups_desc'] = 'Groups whose members have moderation privileges on this board. Note that this is limited to groups which are not post-based and not "hidden".';
+$txt['mboards_count_posts'] = 'Count posts';
+$txt['mboards_count_posts_desc'] = 'Makes new replies and topics raise members\' post counts.';
+$txt['mboards_unchanged'] = 'Unchanged';
+$txt['mboards_theme'] = 'Board Theme';
+$txt['mboards_theme_desc'] = 'This allows you to change the look of your forum only inside this board.';
+$txt['mboards_theme_default'] = '(overall forum default.)';
+$txt['mboards_override_theme'] = 'Override Member\'s Theme';
+$txt['mboards_override_theme_desc'] = 'Use this board\'s theme even if the member didn\'t choose to use the defaults.';
 
- $txt['mboards_redirect'] = 'একটি ওয়েব ঠিকানায় পুনঃনির্দেশিত';
- $txt['mboards_redirect_desc'] = 'যে কেউ এই বোর্ডে ক্লিক করে অন্য ওয়েব ঠিকানায় রিডাইরেক্ট করতে এই বিকল্পটি সক্রিয় করুন।';
- $txt['mboards_redirect_url'] = 'ব্যবহারকারীদের পুনঃনির্দেশিত করার ঠিকানা';
- $txt['mboards_redirect_url_desc'] = 'উদাহরণস্বরূপ: &quot;https://www.simplemachines.org&quot;.';
- $txt['mboards_redirect_reset'] = 'পুনঃনির্দেশ গণনা পুনরায় সেট করুন';
- $txt['mboards_redirect_reset_desc'] = 'এটি নির্বাচন করলে এই বোর্ডের পুনঃনির্দেশের সংখ্যা শূন্যে রিসেট হবে।';
- $txt['mboards_current_redirects'] = 'বর্তমানে: %1$s';
+$txt['mboards_redirect'] = 'Redirect to a web address';
+$txt['mboards_redirect_desc'] = 'Enable this option to redirect anyone who clicks on this board to another web address.';
+$txt['mboards_redirect_url'] = 'Address to redirect users to';
+$txt['mboards_redirect_url_desc'] = 'For example: &quot;https://www.simplemachines.org&quot;.';
+$txt['mboards_redirect_reset'] = 'Reset redirect count';
+$txt['mboards_redirect_reset_desc'] = 'Selecting this will reset the redirection count for this board to zero.';
+$txt['mboards_current_redirects'] = 'Currently: %1$s';
 
- $txt['mboards_order_before'] = 'আগে';
- $txt['mboards_order_child_of'] = 'সাব-বোর্ড অফ';
- $txt['mboards_order_in_category'] = 'বিভাগে';
- $txt['mboards_current_position'] = 'বর্তমান অবস্থান';
- $txt['no_valid_parent'] = 'বোর্ড %1$s-এর কোনো বৈধ অভিভাবক নেই।  এটি ঠিক করতে 'ত্রুটি খুঁজুন এবং মেরামত' ফাংশনটি ব্যবহার করুন।';
+$txt['mboards_order_before'] = 'Before';
+$txt['mboards_order_child_of'] = 'Sub-board of';
+$txt['mboards_order_in_category'] = 'In category';
+$txt['mboards_current_position'] = 'Current Position';
+$txt['no_valid_parent'] = 'Board %1$s does not have a valid parent. Use the \'find and repair errors\' function to fix this.';
 
- $txt['mboards_recycle_disabled_delete'] = 'দ্রষ্টব্য: এই বোর্ডটি মুছে ফেলার আগে আপনাকে অবশ্যই একটি বিকল্প রিসাইকেল বিন বোর্ড নির্বাচন করতে হবে বা পুনর্ব্যবহার অক্ষম করতে হবে।';
+$txt['mboards_recycle_disabled_delete'] = 'Note: You must select an alternative recycle bin board or disable recycling before you can delete this board.';
 
- $txt['mboards_settings_desc'] = 'সাধারণ বোর্ড এবং বিভাগ সেটিংস সম্পাদনা করুন।';
- $txt['groups_manage_boards'] = 'সদস্যগোষ্ঠীকে বোর্ড এবং বিভাগ পরিচালনা করার অনুমতি দেওয়া হয়েছে';
- $txt['mboards_settings_submit'] = 'সংরক্ষণ করুন';
- $txt['recycle_enable'] = 'মুছে ফেলা বিষয়গুলির পুনর্ব্যবহার সক্ষম করুন';
- $txt['recycle_board'] = 'রিসাইকেল করা বিষয়ের জন্য বোর্ড';
- $txt['redirect_board_desc'] = 'একটি বোর্ড যা ব্যবহারকারীরা এটিতে গেলে পুনঃনির্দেশ করে';
- $txt['recycle_board_unselected_notice'] = 'আপনি বিষয়গুলির পুনঃব্যবহার করার জন্য একটি বোর্ড নির্দিষ্ট না করেই সক্ষম করেছেন।
- $txt['boardindex_max_depth'] = 'নতুন পোস্ট ইত্যাদি পরীক্ষা করার জন্য সাব-বোর্ডের সর্বোচ্চ গভীরতা';
- $txt['countChildPosts'] = 'অভিভাবকের মোট সংখ্যায় সাব-বোর্ডের পোস্ট গণনা করুন';
- $txt['allow_ignore_boards'] = 'বোর্ডগুলিকে উপেক্ষা করার অনুমতি দিন';
- $txt['deny_boards_access'] = 'সদস্যগোষ্ঠীর উপর ভিত্তি করে বোর্ড অ্যাক্সেস অস্বীকার করার বিকল্পটি সক্রিয় করুন';
- $txt['boardsaccess_option_desc'] = 'প্রতিটি অনুমতির জন্য আপনি \'Allow\' (A), \'Disallow\' (X), অথবা <span class="alert">\'অস্বীকার\' (D) বেছে নিতে পারেন  </span>.<br><br>আপনি যদি অ্যাক্সেস অস্বীকার করেন, সেই গ্রুপের যেকোন সদস্য - (মডারেটর সহ) -কে অ্যাক্সেস অস্বীকার করা হবে৷<br>এই কারণে, আপনাকে অস্বীকার সেট করা উচিত  সাবধানে, শুধুমাত্র যখন <strong>প্রয়োজনীয়</strong>।  অননুমোদন, অন্যদিকে, অস্বীকার করে যদি না অন্যথায় মঞ্জুর করা হয়।';
+$txt['mboards_settings_desc'] = 'Edit general board and category settings.';
+$txt['groups_manage_boards'] = 'Membergroups allowed to manage boards and categories';
+$txt['mboards_settings_submit'] = 'Save';
+$txt['recycle_enable'] = 'Enable recycling of deleted topics';
+$txt['recycle_board'] = 'Board for recycled topics';
+$txt['redirect_board_desc'] = 'A board that redirects users if they visit it';
+$txt['recycle_board_unselected_notice'] = 'You have enabled the recycling of topics without specifying a board to place them in. This feature will not be enabled until you specify a board to place recycled topics into.';
+$txt['boardindex_max_depth'] = 'Maximum depth of sub-boards to check for new posts, etc.';
+$txt['countChildPosts'] = 'Count sub-board\'s posts in parent\'s totals';
+$txt['allow_ignore_boards'] = 'Allow boards to be ignored';
+$txt['deny_boards_access'] = 'Enable the option to deny board access based on membergroup';
+$txt['boardsaccess_option_desc'] = 'For each permission you can choose \'Allow\' (A), \'Disallow\' (X), or <span class="alert">\'Deny\' (D)</span>.<br><br>If you deny access, any member - (including moderators) - in that group will be denied access.<br>For this reason, you should set deny carefully, only when <strong>necessary</strong>. Disallow, on the other hand, denies unless otherwise granted.';
 
- $txt['mboards_select_destination'] = 'বোর্ডের জন্য গন্তব্য নির্বাচন করুন \'<strong>%1$s</strong>\';
- $txt['mboards_cancel_moving'] = 'সরানো বাতিল করুন';
- $txt['mboards_move'] = 'সরানো';
+$txt['mboards_select_destination'] = 'Select destination for board \'<strong>%1$s</strong>\'';
+$txt['mboards_cancel_moving'] = 'Cancel moving';
+$txt['mboards_move'] = 'move';
 
- $txt['mboards_no_cats'] = 'বর্তমানে কোনো বিভাগ বা বোর্ড কনফিগার করা নেই।';
+$txt['mboards_no_cats'] = 'There are currently no categories or boards configured.';
 
- ?>
+?>

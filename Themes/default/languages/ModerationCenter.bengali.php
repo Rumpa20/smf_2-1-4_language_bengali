@@ -1,178 +1,178 @@
 <?php
- // সংস্করণ: 2.1.0;  মডারেশন সেন্টার
+// Version: 2.1.0; ModerationCenter
 
- $txt['moderation_center'] = 'মডারেশন সেন্টার';
- $txt['mc_main'] = 'প্রধান';
- $txt['mc_logs'] = 'লগ';
- $txt['mc_posts'] = 'পোস্ট';
- $txt['mc_groups'] = 'গ্রুপ';
- $txt['mc_members'] = 'সদস্য';
+$txt['moderation_center'] = 'Moderation Center';
+$txt['mc_main'] = 'Main';
+$txt['mc_logs'] = 'Logs';
+$txt['mc_posts'] = 'Posts';
+$txt['mc_groups'] = 'Groups';
+$txt['mc_members'] = 'Members';
 
- $txt['mc_view_groups'] = 'মেম্বার গ্রুপ দেখুন';
+$txt['mc_view_groups'] = 'View Membergroups';
 
- $txt['mc_description'] = 'এটি আপনার &quot;মডারেশন সেন্টার&quot;।  এখান থেকে আপনি অ্যাডমিনিস্ট্রেটর দ্বারা নিজের জন্য নির্ধারিত সমস্ত মডারেশন ক্রিয়া সম্পাদন করতে পারেন৷  এই হোম পেজে আপনার সম্প্রদায়ের সাম্প্রতিক সব ঘটনার সারসংক্ষেপ রয়েছে।';
- $txt['mc_group_requests'] = 'সদস্যগোষ্ঠীর অনুরোধ';
- $txt['mc_group_requests_active'] = 'সক্রিয় অনুরোধ';
- $txt['mc_group_requests_closed'] = 'পুরানো অনুরোধ';
- $txt['mc_unapproved_posts'] = 'অনুমোদিত পোস্ট';
- $txt['mc_watched_users'] = 'সম্প্রতি দেখা সদস্যরা';
- $txt['mc_watched_topics'] = 'দেখা বিষয়';
- $txt['mc_scratch_board'] = 'মডারেটর স্ক্র্যাচ বোর্ড';
- $txt['mc_latest_news'] = 'সাধারণ মেশিনের সর্বশেষ খবর';
- $txt['mc_recent_reports'] = 'সাম্প্রতিক বিষয়ের প্রতিবেদন';
- $txt['mc_recent_user_reports'] = 'সাম্প্রতিক প্রোফাইল রিপোর্ট';
- $txt['mc_warnings'] = 'সতর্কতা';
- $txt['mc_notes'] = 'মডারেটর নোট';
+$txt['mc_description'] = 'This is your &quot;Moderation Center&quot;. From here you can perform all the moderation actions assigned to yourself by the Administrator. This home page contains a summary of all the latest happenings in your community.';
+$txt['mc_group_requests'] = 'Membergroup Requests';
+$txt['mc_group_requests_active'] = 'Active Requests';
+$txt['mc_group_requests_closed'] = 'Old Requests';
+$txt['mc_unapproved_posts'] = 'Unapproved Posts';
+$txt['mc_watched_users'] = 'Recent Watched Members';
+$txt['mc_watched_topics'] = 'Watched Topics';
+$txt['mc_scratch_board'] = 'Moderator Scratch Board';
+$txt['mc_latest_news'] = 'Simple Machines Latest News';
+$txt['mc_recent_reports'] = 'Recent Topic Reports';
+$txt['mc_recent_user_reports'] = 'Recent Profile Reports';
+$txt['mc_warnings'] = 'Warnings';
+$txt['mc_notes'] = 'Moderator Notes';
 
- $txt['mc_notes_delete_own'] = 'আপনি শুধুমাত্র আপনার নিজের নোট মুছতে পারবেন।';
- $txt['mc_cannot_connect_sm'] = 'আপনি simplemachines.org এর সর্বশেষ সংবাদ ফাইলের সাথে সংযোগ করতে অক্ষম।';
+$txt['mc_notes_delete_own'] = 'You are only allowed to delete your own notes.';
+$txt['mc_cannot_connect_sm'] = 'You are unable to connect to simplemachines.org\'s latest news file.';
 
- $txt['mc_recent_reports_none'] = 'কোনও অসামান্য রিপোর্ট নেই।';
- $txt['mc_watched_users_none'] = 'বর্তমানে সেখানে কোনো ঘড়ি নেই।';
- $txt['mc_group_requests_none'] = 'গ্রুপ মেম্বারশিপের জন্য কোনো খোলা অনুরোধ নেই।';
- $txt['mc_reported_users_none'] = 'কোনও পেন্ডিং প্রোফাইল রিপোর্ট নেই।';
+$txt['mc_recent_reports_none'] = 'There are no outstanding reports.';
+$txt['mc_watched_users_none'] = 'There are not currently any watches in place.';
+$txt['mc_group_requests_none'] = 'There are no open requests for group membership.';
+$txt['mc_reported_users_none'] = 'There are no pending profile reports.';
 
- $txt['mc_seen'] = '%1$s শেষবার দেখা গেছে %2$s';
- $txt['mc_seen_never'] = '%1$s কখনো দেখা যায়নি';
- $txt['mc_groupr_by'] = 'দ্বারা';
- $txt['mc_post_report'] = '%1$s by %2$s';
+$txt['mc_seen'] = '%1$s last seen %2$s';
+$txt['mc_seen_never'] = '%1$s never seen';
+$txt['mc_groupr_by'] = 'by';
+$txt['mc_post_report'] = '%1$s by %2$s';
 
- $txt['mc_reported_posts_desc'] = 'এখানে আপনি সম্প্রদায়ের সদস্যদের দ্বারা উত্থাপিত সমস্ত পোস্ট প্রতিবেদন পর্যালোচনা করতে পারেন।';
- $txt['mc_reportedp_active'] = 'সক্রিয় প্রতিবেদন';
- $txt['mc_reportedp_closed'] = 'পুরানো রিপোর্ট';
- $txt['mc_reportedp_by'] = 'দ্বারা';
- $txt['mc_reportedp_reported_by'] = 'প্রতিবেদিত';
- $txt['mc_reportedp_last_reported'] = 'শেষ রিপোর্ট করা';
- $txt['mc_reportedp_none_found'] = 'কোন রিপোর্ট পাওয়া যায়নি';
- $txt['mc_reportedp_comment_none_found'] = 'কোন মডারেটর মন্তব্য পাওয়া যায়নি';
- $txt['mc_reportedp_comment_edit'] = 'সম্পাদনা';
- $txt['mc_reportedp_comment_delete'] = 'মুছুন';
- $txt['mc_reportedp_details'] = 'বিশদ বিবরণ';
- $txt['mc_reportedp_close'] = 'বন্ধ';
- $txt['mc_reportedp_open'] = 'খোলা';
- $txt['mc_reportedp_ignore'] = 'উপেক্ষা করুন';
- $txt['mc_reportedp_unignore'] = 'আন-ইগনোর';
- $txt['mc_reportedp_delete'] = 'বার্তা মুছুন';
- $txt['mc_reportedp_new_comment'] = 'একটি নতুন মন্তব্য যোগ করুন';
- $txt['mc_reportedp_delete_confirm'] = 'আপনি কি নিশ্চিত যে আপনি এই বার্তাটি মুছে ফেলতে চান?';
- $txt['mc_reportedp_ban'] = 'এই ব্যবহারকারীকে নিষিদ্ধ করুন';
- // নিচের স্ট্রিং-এ সংখ্যাসূচক এন্ট্রি ব্যবহার করবেন না।
- $txt['mc_reportedp_ignore_confirm'] = 'আপনি যদি &quot;ঠিক আছে&quot; বেছে নেন, তাহলে এই ফোরামটি এই পোস্টের প্রতিবেদন করার জন্য ভবিষ্যতের সমস্ত প্রচেষ্টাকে নীরবে উপেক্ষা করবে;  মডারেটররা এই পোস্ট সম্পর্কে ভবিষ্যতে কোনো প্রতিবেদন দেখতে পাবেন না।  আপনি কি নিশ্চিত যে আপনি এটি করতে চান?';
- $txt['mc_reportedp_close_selected'] = 'নির্বাচিত বন্ধ করুন';
+$txt['mc_reported_posts_desc'] = 'Here you can review all the post reports raised by members of the community.';
+$txt['mc_reportedp_active'] = 'Active Reports';
+$txt['mc_reportedp_closed'] = 'Old Reports';
+$txt['mc_reportedp_by'] = 'by';
+$txt['mc_reportedp_reported_by'] = 'Reported By';
+$txt['mc_reportedp_last_reported'] = 'Last Reported';
+$txt['mc_reportedp_none_found'] = 'No Reports Found';
+$txt['mc_reportedp_comment_none_found'] = 'No Moderator comment found';
+$txt['mc_reportedp_comment_edit'] = 'Edit';
+$txt['mc_reportedp_comment_delete'] = 'Delete';
+$txt['mc_reportedp_details'] = 'Details';
+$txt['mc_reportedp_close'] = 'Close';
+$txt['mc_reportedp_open'] = 'Open';
+$txt['mc_reportedp_ignore'] = 'Ignore';
+$txt['mc_reportedp_unignore'] = 'Un-Ignore';
+$txt['mc_reportedp_delete'] = 'Delete message';
+$txt['mc_reportedp_new_comment'] = 'Add a new comment';
+$txt['mc_reportedp_delete_confirm'] = 'Are you sure you wish to delete this message?';
+$txt['mc_reportedp_ban'] = 'Ban this user';
+// Do not use numeric entries in the below string.
+$txt['mc_reportedp_ignore_confirm'] = 'If you choose &quot;OK&quot;, then this forum will silently ignore all future attempts to report this post; moderators will not see any future reports about this post. Are you sure you wish to do this?';
+$txt['mc_reportedp_close_selected'] = 'Close Selected';
 
- $txt['mc_groupr_group'] = 'সদস্যগোষ্ঠী';
- $txt['mc_groupr_member'] = 'সদস্য';
- $txt['mc_groupr_reason'] = 'কারণ';
- $txt['mc_groupr_no_reason'] = 'কোনো কারণ দেওয়া হয়নি';
- $txt['mc_groupr_none_found'] = 'বর্তমানে কোনো অসামান্য সদস্যগোষ্ঠীর অনুরোধ নেই।';
- $txt['mc_groupr_approved'] = 'অনুরোধ অনুমোদিত';
- $txt['mc_groupr_rejected'] = 'অনুরোধ প্রত্যাখ্যান';
- $txt['mc_groupr_submit'] = 'জমা দিন';
- $txt['mc_groupr_reason_desc'] = '%1$s এর &quot;%2$s&quot;'তে যোগদানের অনুরোধ প্রত্যাখ্যান করার কারণ
- $txt['mc_groups_reason_title'] = 'প্রত্যাখ্যানের কারণ';
- $txt['with_selected'] = 'নির্বাচিত সহ';
- $txt['mc_groupr_approve'] = 'অনুরোধ অনুমোদন করুন';
- $txt['mc_groupr_reject'] = 'অনুরোধ প্রত্যাখ্যান (কোন কারণ নেই)';
- $txt['mc_groupr_reject_w_reason'] = 'কারণ সহ অনুরোধ প্রত্যাখ্যান করুন';
- // নিচের স্ট্রিং-এ সংখ্যাসূচক এন্ট্রি ব্যবহার করবেন না।
- $txt['mc_groupr_warning'] = 'আপনি কি নিশ্চিত যে আপনি এটি করতে চান?';
+$txt['mc_groupr_group'] = 'Membergroups';
+$txt['mc_groupr_member'] = 'Member';
+$txt['mc_groupr_reason'] = 'Reason';
+$txt['mc_groupr_no_reason'] = 'No reason given';
+$txt['mc_groupr_none_found'] = 'There are currently no outstanding membergroup requests.';
+$txt['mc_groupr_approved'] = 'Request approved';
+$txt['mc_groupr_rejected'] = 'Request rejected';
+$txt['mc_groupr_submit'] = 'Submit';
+$txt['mc_groupr_reason_desc'] = 'Reason to reject %1$s\'s request to join &quot;%2$s&quot;';
+$txt['mc_groups_reason_title'] = 'Reasons for rejection';
+$txt['with_selected'] = 'With selected';
+$txt['mc_groupr_approve'] = 'Approve request';
+$txt['mc_groupr_reject'] = 'Reject request (No Reason)';
+$txt['mc_groupr_reject_w_reason'] = 'Reject request with reason';
+// Do not use numeric entries in the below string.
+$txt['mc_groupr_warning'] = 'Are you sure you wish to do this?';
 
- $txt['mc_unapproved_attachments_none_found'] = 'বর্তমানে অনুমোদনের অপেক্ষায় কোনো সংযুক্তি নেই';
- $txt['mc_unapproved_attachments_desc'] = 'এখান থেকে আপনি মডারেশনের অপেক্ষায় থাকা যেকোনো সংযুক্তি অনুমোদন বা মুছে দিতে পারেন।';
- $txt['mc_unapproved_replies_none_found'] = 'বর্তমানে অনুমোদনের অপেক্ষায় কোনো পোস্ট নেই';
- $txt['mc_unapproved_topics_none_found'] = 'বর্তমানে অনুমোদনের অপেক্ষায় কোনো বিষয় নেই';
- $txt['mc_unapproved_posts_desc'] = 'এখান থেকে আপনি মডারেশনের অপেক্ষায় থাকা যেকোনো পোস্ট অনুমোদন বা মুছে দিতে পারেন।';
- $txt['mc_unapproved_replies'] = 'উত্তর';
- $txt['mc_unapproved_topics'] = 'বিষয়';
- $txt['mc_unapproved_by'] = 'দ্বারা';
- $txt['mc_unapproved_sure'] = 'আপনি কি নিশ্চিত আপনি এটি করতে চান?';
- $txt['mc_unapproved_attach_name'] = 'সংযুক্তি নাম';
- $txt['mc_unapproved_attach_size'] = 'ফাইল আকার';
- $txt['mc_unapproved_attach_poster'] = 'পোস্টার';
- $txt['mc_viewmodreport'] = '%2$s দ্বারা %1$s-এর জন্য মডারেশন রিপোর্ট';
- $txt['mc_modreport_summary'] = 'এই পোস্টের বিষয়ে %1$dটি রিপোর্ট(গুলি) হয়েছে।  শেষ রিপোর্টটি ছিল %2$s।';
- $txt['mc_modreport_whoreported_title'] = 'সদস্য যারা এই পোস্টটি রিপোর্ট করেছেন';
- $txt['mc_modreport_whoreported_data'] = '%2$s-এ %1$s দ্বারা রিপোর্ট করা হয়েছে।  তারা নিম্নলিখিত বার্তাটি রেখে গেছে:';
- $txt['mc_modreport_modactions'] = 'অন্যান্য মডারেটরদের দ্বারা নেওয়া পদক্ষেপ';
- $txt['mc_modreport_mod_comments'] = 'মডারেটরের মন্তব্য';
- $txt['mc_modreport_no_mod_comment'] = 'বর্তমানে কোনো মডারেটরের মন্তব্য নেই';
- $txt['mc_modreport_add_mod_comment'] = 'মন্তব্য যোগ করুন';
- $txt['mc_modreport_edit_mod_comment'] = 'মন্তব্য সম্পাদনা করুন';
- 
- $txt['mc_viewmemberreport'] = '%1$s এর প্রোফাইলের জন্য রিপোর্ট করুন';
- $txt['mc_memberreport_summary'] = 'এই প্রোফাইলের বিষয়ে %1$dটি রিপোর্ট(গুলি) হয়েছে।  শেষ রিপোর্টটি ছিল %2$s।';
- $txt['mc_memberreport_whoreported_title'] = 'সদস্য যারা এই প্রোফাইল রিপোর্ট করেছেন।';
+$txt['mc_unapproved_attachments_none_found'] = 'There are currently no attachments awaiting approval';
+$txt['mc_unapproved_attachments_desc'] = 'From here you can approve or delete any attachments awaiting moderation.';
+$txt['mc_unapproved_replies_none_found'] = 'There are currently no posts awaiting approval';
+$txt['mc_unapproved_topics_none_found'] = 'There are currently no topics awaiting approval';
+$txt['mc_unapproved_posts_desc'] = 'From here you can approve or delete any posts awaiting moderation.';
+$txt['mc_unapproved_replies'] = 'Replies';
+$txt['mc_unapproved_topics'] = 'Topics';
+$txt['mc_unapproved_by'] = 'by';
+$txt['mc_unapproved_sure'] = 'Are you sure you want to do this?';
+$txt['mc_unapproved_attach_name'] = 'Attachment name';
+$txt['mc_unapproved_attach_size'] = 'Filesize';
+$txt['mc_unapproved_attach_poster'] = 'Poster';
+$txt['mc_viewmodreport'] = 'Moderation report for %1$s by %2$s';
+$txt['mc_modreport_summary'] = 'There have been %1$d report(s) concerning this post. The last report was %2$s.';
+$txt['mc_modreport_whoreported_title'] = 'Members who have reported this post';
+$txt['mc_modreport_whoreported_data'] = 'Reported by %1$s on %2$s. They left the following message:';
+$txt['mc_modreport_modactions'] = 'Actions taken by other moderators';
+$txt['mc_modreport_mod_comments'] = 'Moderator Comments';
+$txt['mc_modreport_no_mod_comment'] = 'There are not currently any moderator comments';
+$txt['mc_modreport_add_mod_comment'] = 'Add Comment';
+$txt['mc_modreport_edit_mod_comment'] = 'Edit Comment';
 
- $txt['show_notice'] = 'নোটিস টেক্সট';
- $txt['show_notice_subject'] = 'বিষয়';
- $txt['show_notice_text'] = 'টেক্সট';
+$txt['mc_viewmemberreport'] = 'Report for profile of %1$s';
+$txt['mc_memberreport_summary'] = 'There have been %1$d report(s) concerning this profile. The last report was %2$s.';
+$txt['mc_memberreport_whoreported_title'] = 'Members who have reported this profile.';
 
- $txt['mc_watched_users_title'] = 'দেখা সদস্যরা';
- $txt['mc_watched_users_desc'] = 'এখানে আপনি সমস্ত সদস্যদের একটি ট্র্যাক রাখতে পারেন যাদের একটি &quot;ওয়াচ&quot; নিয়োগ করা হয়েছে।  মডারেশন টিম দ্বারা।';
- $txt['mc_watched_users_post'] = 'পোস্ট দ্বারা দেখুন';
- $txt['mc_watched_users_warning'] = 'সতর্কতা স্তর';
- $txt['mc_watched_users_last_login'] = 'শেষ লগইন';
- $txt['mc_watched_users_last_post'] = 'শেষ পোস্ট';
- $txt['mc_watched_users_no_posts'] = 'প্রেক্ষিত সদস্যদের থেকে কোনো পোস্ট নেই।';
- // নিচের দুটি স্ট্রিং-এ সত্তা ব্যবহার করবেন না।
- $txt['mc_watched_users_delete_post'] = 'আপনি কি এই পোস্টটি মুছে দেওয়ার বিষয়ে নিশ্চিত?';
- $txt['mc_watched_users_delete_posts'] = 'আপনি কি নিশ্চিত যে আপনি এই পোস্টগুলি মুছে দিতে চান?';
- $txt['mc_watched_users_posted'] = 'পোস্ট করা';
- $txt['mc_watched_users_member'] = 'সদস্য';
+$txt['show_notice'] = 'Notice Text';
+$txt['show_notice_subject'] = 'Subject';
+$txt['show_notice_text'] = 'Text';
 
- $txt['mc_warnings_description'] = 'এই বিভাগ থেকে আপনি দেখতে পারেন যে ফোরামের সদস্যদের কোন সতর্কবার্তা জারি করা হয়েছে।  আপনি কোনো সদস্যকে সতর্কবার্তা পাঠানোর সময় ব্যবহৃত বিজ্ঞপ্তি টেমপ্লেট যোগ ও সংশোধন করতে পারেন।';
- $txt['mc_warning_log'] = 'লগ';
- $txt['mc_warning_templates'] = 'কাস্টম টেমপ্লেট';
- $txt['mc_warning_log_title'] = 'সতর্কতামূলক লগ দেখা হচ্ছে';
- $txt['mc_warning_templates_title'] = 'কাস্টম সতর্কতা টেমপ্লেট';
+$txt['mc_watched_users_title'] = 'Watched Members';
+$txt['mc_watched_users_desc'] = 'Here you can keep a track of all members who have been assigned a &quot;watch&quot; by the moderation team.';
+$txt['mc_watched_users_post'] = 'View by Post';
+$txt['mc_watched_users_warning'] = 'Warning Level';
+$txt['mc_watched_users_last_login'] = 'Last login';
+$txt['mc_watched_users_last_post'] = 'Last post';
+$txt['mc_watched_users_no_posts'] = 'There are no posts from watched members.';
+// Don't use entities in the two strings below.
+$txt['mc_watched_users_delete_post'] = 'Are you sure you want to delete this post?';
+$txt['mc_watched_users_delete_posts'] = 'Are you sure you want to delete these posts?';
+$txt['mc_watched_users_posted'] = 'Posted';
+$txt['mc_watched_users_member'] = 'Member';
 
- $txt['mc_warnings_none'] = 'কোন সতর্কবার্তা জারি করা হয়নি।';
- $txt['mc_warnings_recipient'] = 'প্রাপক';
+$txt['mc_warnings_description'] = 'From this section you can see which warnings have been issued to members of the forum. You can also add and modify the notification templates used when sending a warning to a member.';
+$txt['mc_warning_log'] = 'Log';
+$txt['mc_warning_templates'] = 'Custom Templates';
+$txt['mc_warning_log_title'] = 'Viewing warning log';
+$txt['mc_warning_templates_title'] = 'Custom warning templates';
 
- $txt['mc_warning_templates_none'] = 'এখনও কোনো সতর্কতা টেমপ্লেট তৈরি করা হয়নি';
- $txt['mc_warning_templates_time'] = 'সময় তৈরি হয়েছে';
- $txt['mc_warning_templates_name'] = 'টেমপ্লেট';
- $txt['mc_warning_templates_creator'] = 'তৈরি করেছে';
- $txt['mc_warning_template_add'] = 'টেমপ্লেট যোগ করুন';
- $txt['mc_warning_template_modify'] = 'টেমপ্লেট সম্পাদনা করুন';
- $txt['mc_warning_template_delete'] = 'নির্বাচিত মুছুন';
- $txt['mc_warning_template_delete_confirm'] = 'আপনি কি নিশ্চিত যে আপনি নির্বাচিত টেমপ্লেট মুছে ফেলতে চান?';
- $txt['report_action_message_saved'] = 'আপনি সফলভাবে একটি নতুন নোট তৈরি করেছেন।';
- $txt['report_action_message_edited'] = 'আপনি সফলভাবে নোটটি সম্পাদনা করেছেন।';
- $txt['report_action_message_deleted'] = 'নোটটি সফলভাবে মুছে ফেলা হয়েছে।';
- $txt['report_action_message_edit_issue'] = 'আপনি যে নোটটি সম্পাদনা করার চেষ্টা করছেন সেটি আর উপলব্ধ নেই।  এটি ইতিমধ্যে মুছে ফেলা হয়েছে কিনা অনুগ্রহ করে পরীক্ষা করুন৷';
- $txt['report_action_message_edit_cannot'] = 'আমি দুঃখিত, আপনি এই নোটটি সম্পাদনা করতে পারবেন না।';
- $txt['report_action_message_delete_cannot'] = 'আমি দুঃখিত, আপনি এই নোটটি মুছতে পারবেন না।';
- $txt['report_action_message_delete_issue'] = 'আপনি যে নোটটি মুছে ফেলার চেষ্টা করছেন সেটি আর উপলব্ধ নেই।  এটি ইতিমধ্যে মুছে ফেলা হয়েছে কিনা অনুগ্রহ করে পরীক্ষা করুন৷';
- $txt['report_action_ignore'] = 'রিপোর্টটি সফলভাবে উপেক্ষা করা হয়েছে।';
- $txt['report_action_unignore'] = 'প্রতিবেদনটি সফলভাবে উপেক্ষা করা হয়নি।';
- $txt['report_action_close'] = 'প্রতিবেদনটি সফলভাবে বন্ধ করা হয়েছে।';
- $txt['report_action_open'] = 'রিপোর্টটি সফলভাবে খোলা হয়েছে।';
- $txt['report_action_close_all'] = 'আপনি সফলভাবে সমস্ত নির্বাচিত প্রতিবেদন বন্ধ করেছেন।';
- 
- $txt['mc_warning_template_desc'] = 'টেমপ্লেটের বিবরণ পূরণ করতে এই পৃষ্ঠাটি ব্যবহার করুন।  নোট করুন যে ইমেলের বিষয় টেমপ্লেটের অংশ নয়।  নোট করুন যে বিজ্ঞপ্তিটি প্রধানমন্ত্রীর দ্বারা পাঠানো হয় আপনি টেমপ্লেটের মধ্যে বিবিসি ব্যবহার করতে পারেন।  মনে রাখবেন আপনি যদি {MESSAGE} ভেরিয়েবল ব্যবহার করেন তাহলে জেনেরিক সতর্কতা জারি করার সময় এই টেমপ্লেটটি উপলভ্য হবে না (যেমন একটি সতর্কবার্তা পোস্টের সাথে লিঙ্ক করা নেই)।';
- $txt['mc_warning_template_title'] = 'টেমপ্লেট শিরোনাম';
- $txt['mc_warning_template_body_desc'] = 'বিজ্ঞপ্তি বার্তার বিষয়বস্তু।  মনে রাখবেন যে আপনি এই টেমপ্লেটে নিম্নলিখিত শর্টকাটগুলি ব্যবহার করতে পারেন৷<ul style="margin-top: 0px;"><li>{MEMBER} - সদস্যের নাম৷</li><li>{MESSAGE} - আপত্তিকর পোস্টের লিঙ্ক  .  (যদি প্রযোজ্য হয়)</li><li>{FORUMNAME} - ফোরামের নাম৷</li><li>{SCRIPTURL} - ফোরামের ওয়েব ঠিকানা৷</li><li>{REGARDS} - স্ট্যান্ডার্ড ইমেল সাইন-অফ  .</li></ul>';
- $txt['mc_warning_template_body_default'] = "{সদস্য},\n\nআপনি অনুপযুক্ত কার্যকলাপের জন্য একটি সতর্কতা পেয়েছেন। অনুগ্রহ করে এই কার্যকলাপগুলি বন্ধ করুন এবং ফোরামের নিয়মগুলি মেনে চলুন, অন্যথায় আমরা পরবর্তী ব্যবস্থা নেব।\n\n{সচেতন}"  ;
- $txt['mc_warning_template_personal'] = 'ব্যক্তিগত টেমপ্লেট';
- $txt['mc_warning_template_personal_desc'] = 'আপনি যদি এই বিকল্পটি নির্বাচন করেন তবেই আপনি এই টেমপ্লেটটি দেখতে, সম্পাদনা করতে এবং ব্যবহার করতে পারবেন৷  নির্বাচিত না হলে সকল মডারেটর এই টেমপ্লেট ব্যবহার করতে সক্ষম হবেন।';
- $txt['mc_warning_template_error_no_title'] = 'আপনাকে একটি শিরোনাম সেট করতে হবে।';
- $txt['mc_warning_template_error_no_body'] = 'আপনাকে অবশ্যই একটি নোটিফিকেশন বডি সেট করতে হবে।';
+$txt['mc_warnings_none'] = 'No warnings have been issued.';
+$txt['mc_warnings_recipient'] = 'Recipient';
 
- $txt['mc_settings'] = 'সেটিংস পরিবর্তন করুন';
- $txt['mc_prefs_title'] = 'মডারেশন পছন্দ';
- $txt['mc_prefs_desc'] = 'এই বিভাগটি আপনাকে সংযম সম্পর্কিত কার্যকলাপ যেমন ইমেল বিজ্ঞপ্তির জন্য কিছু ব্যক্তিগত পছন্দ সেট করতে দেয়।';
- $txt['mc_no_settings'] = 'প্রদর্শনের জন্য কোনো সেটিংস নেই।';
+$txt['mc_warning_templates_none'] = 'No warning templates have been created yet';
+$txt['mc_warning_templates_time'] = 'Time Created';
+$txt['mc_warning_templates_name'] = 'Template';
+$txt['mc_warning_templates_creator'] = 'Created By';
+$txt['mc_warning_template_add'] = 'Add Template';
+$txt['mc_warning_template_modify'] = 'Edit Template';
+$txt['mc_warning_template_delete'] = 'Delete Selected';
+$txt['mc_warning_template_delete_confirm'] = 'Are you sure you want to delete the selected templates?';
+$txt['report_action_message_saved'] = 'You successfully created a new note.';
+$txt['report_action_message_edited'] = 'You successfully edited the note.';
+$txt['report_action_message_deleted'] = 'The note was successfully deleted.';
+$txt['report_action_message_edit_issue'] = 'The note you are trying to edit is not available any more. Please check if it wasn\'t deleted already.';
+$txt['report_action_message_edit_cannot'] = 'I am sorry, you are not allowed to edit this note.';
+$txt['report_action_message_delete_cannot'] = 'I am sorry, you are not allowed to delete this note.';
+$txt['report_action_message_delete_issue'] = 'The note you are trying to delete is not available any more. Please check if it wasn\'t deleted already.';
+$txt['report_action_ignore'] = 'The report was successfully ignored.';
+$txt['report_action_unignore'] = 'The report was successfully un-ignored.';
+$txt['report_action_close'] = 'The report was successfully closed.';
+$txt['report_action_open'] = 'The report was successfully opened.';
+$txt['report_action_close_all'] = 'You successfully closed all selected reports.';
 
- $txt['mc_logoff'] = 'মডারেটর সেশন শেষ করুন';
+$txt['mc_warning_template_desc'] = 'Use this page to fill in the details of the template. Note that the subject for the email is not part of the template. Note that as the notification is sent by PM you can use BBC within the template. Note if you use the {MESSAGE} variable then this template will not be available when issuing a generic warning (i.e. A warning not linked to a post).';
+$txt['mc_warning_template_title'] = 'Template Title';
+$txt['mc_warning_template_body_desc'] = 'The content of the notification message. Note that you can use the following shortcuts in this template.<ul style="margin-top: 0px;"><li>{MEMBER} - Member Name.</li><li>{MESSAGE} - Link to Offending Post. (If Applicable)</li><li>{FORUMNAME} - Forum Name.</li><li>{SCRIPTURL} - Web address of forum.</li><li>{REGARDS} - Standard email sign-off.</li></ul>';
+$txt['mc_warning_template_body_default'] = "{MEMBER},\n\nYou have received a warning for inappropriate activity. Please cease these activities and abide by the forum rules otherwise we will take further action.\n\n{REGARDS}";
+$txt['mc_warning_template_personal'] = 'Personal Template';
+$txt['mc_warning_template_personal_desc'] = 'If you select this option only you will be able to see, edit and use this template. If not selected all moderators will be able to use this template.';
+$txt['mc_warning_template_error_no_title'] = 'You must set a title.';
+$txt['mc_warning_template_error_no_body'] = 'You must set a notification body.';
 
- // নিচের স্ট্রিং এ সত্তা ব্যবহার করুন।
- $txt['mc_click_add_note'] = 'একটি নতুন নোট যোগ করুন';
- $txt['mc_add_note'] = 'যোগ করুন';
+$txt['mc_settings'] = 'Change Settings';
+$txt['mc_prefs_title'] = 'Moderation Preferences';
+$txt['mc_prefs_desc'] = 'This section allows you to set some personal preferences for moderation related activities such as email notifications.';
+$txt['mc_no_settings'] = 'There are no settings to display.';
 
- // নিচের স্ট্রিং-এ সংখ্যাসূচক এন্ট্রি ব্যবহার করবেন না।
- $txt['mc_reportedm_ignore_confirm'] = 'আপনি যদি &quot;ঠিক আছে&quot; বেছে নেন, তাহলে এই ব্যবহারকারীর প্রোফাইল সম্পর্কে ভবিষ্যতের সমস্ত প্রতিবেদন উপেক্ষা করা হবে;  মডারেটররা এই ব্যবহারকারীর প্রোফাইল সম্পর্কে ভবিষ্যতে কোনো প্রতিবেদন দেখতে পাবে না৷  আপনি কি নিশ্চিত আপনি এটি করতে চান?';
- $txt['mc_reported_members_title'] = 'প্রতিবেদিত সদস্য';
- $txt['mc_reported_members_desc'] = 'আপনাকে সমস্ত ব্যবহারকারীর তালিকা দেখার অনুমতি দেয় যাদের প্রোফাইল রিপোর্ট করা হয়েছে';
+$txt['mc_logoff'] = 'End Moderator Session';
 
- ?>
+// Use entities in the below string.
+$txt['mc_click_add_note'] = 'Add a new note';
+$txt['mc_add_note'] = 'Add';
+
+// Do not use numeric entries in the below string.
+$txt['mc_reportedm_ignore_confirm'] = 'If you choose &quot;OK&quot;, all future reports about this user\'s profile will be ignored; moderators will not see any future reports about this user\'s profile. Are you sure you wish to do this?';
+$txt['mc_reported_members_title'] = 'Reported Members';
+$txt['mc_reported_members_desc'] = 'Allows you to view a list of all users whose profiles have been reported';
+
+?>

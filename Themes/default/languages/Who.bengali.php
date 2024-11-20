@@ -1,216 +1,216 @@
 <?php
- // সংস্করণ: 2.1.3;  WHO
+// Version: 2.1.3; Who
 
- বিশ্বব্যাপী $scripturl, $context;
+global $scripturl, $context;
 
- $txt['who_hidden'] = 'কিছুই নয়, বা কিছুই দেখতে পাচ্ছেন না...';
- $txt['who_admin'] = 'প্রশাসন কেন্দ্র দেখা';
- $txt['who_moderate'] = 'মডারেশন সেন্টার দেখা';
- $txt['who_generic'] = 'দেখা হচ্ছে';
- $txt['who_unknown'] = 'অজানা অ্যাকশন';
- $txt['who_user'] = 'ব্যবহারকারী';
- $txt['who_time'] = 'সময়';
- $txt['who_action'] = 'Action';
- $txt['who_show'] = 'দেখান';
- $txt['who_show_members_only'] = 'শুধুমাত্র সদস্যরা';
- $txt['who_show_guests_only'] = 'শুধুমাত্র অতিথি';
- $txt['who_show_spiders_only'] = 'শুধুমাত্র মাকড়সা';
- $txt['who_show_all'] = 'সবাই';
- $txt['who_no_online_spiders'] = 'বর্তমানে অনলাইনে কোনো মাকড়সা নেই।';
- $txt['who_no_online_guests'] = 'বর্তমানে অনলাইনে কোনো অতিথি নেই।';
- $txt['who_no_online_members'] = 'বর্তমানে অনলাইনে কোনো সদস্য নেই।';
- $txt['who_guest_login'] = 'ব্যবহারকারীকে লগইন পৃষ্ঠায় নিয়ে যাওয়া হয়েছে।';
+$txt['who_hidden'] = 'Nothing, or nothing you can see...';
+$txt['who_admin'] = 'Viewing the Administration Center';
+$txt['who_moderate'] = 'Viewing the Moderation Center';
+$txt['who_generic'] = 'Viewing the';
+$txt['who_unknown'] = 'Unknown Action';
+$txt['who_user'] = 'User';
+$txt['who_time'] = 'Time';
+$txt['who_action'] = 'Action';
+$txt['who_show'] = 'Show ';
+$txt['who_show_members_only'] = 'Members only';
+$txt['who_show_guests_only'] = 'Guests only';
+$txt['who_show_spiders_only'] = 'Spiders only';
+$txt['who_show_all'] = 'Everyone';
+$txt['who_no_online_spiders'] = 'There are currently no spiders online.';
+$txt['who_no_online_guests'] = 'There are currently no guests online.';
+$txt['who_no_online_members'] = 'There are currently no members online.';
+$txt['who_guest_login'] = 'User has been taken to the login page.';
 
- $txt['whospider_login'] = 'লগইন পৃষ্ঠা দেখা।';
- $txt['whospider_register'] = 'রেজিস্ট্রেশন পৃষ্ঠা দেখা';
- $txt['whospider_reminder'] = 'অনুস্মারক পাতা দেখা।';
+$txt['whospider_login'] = 'Viewing the login page.';
+$txt['whospider_register'] = 'Viewing the registration page.';
+$txt['whospider_reminder'] = 'Viewing the reminder page.';
 
- $txt['whoall_activate'] = 'তাদের অ্যাকাউন্ট সক্রিয় করা হচ্ছে।';
- $txt['whoall_buddy'] = 'তাদের বন্ধু তালিকা সংশোধন করা হচ্ছে।';
- $txt['whoall_agreement'] = '<a href="%1$s?action=agreement">শর্তাবলী এবং নিয়ম</a> দেখা।';
- $txt['whoall_coppa'] = 'অভিভাবক/অভিভাবকের সম্মতি ফর্ম পূরণ করা।';
- $txt['whoall_credits'] = 'ক্রেডিট পৃষ্ঠা দেখা।';
- $txt['whoall_emailuser'] = 'অন্য সদস্যকে ইমেল পাঠানো হচ্ছে।';
- $txt['whoall_groups'] = 'সদস্যদের গ্রুপ পৃষ্ঠা দেখা।';
- // যুক্তি(গুলি): $scripturl
- $txt['whoall_help'] = '<a href="%1$s?action=help">সহায়তা পৃষ্ঠা</a> দেখা হচ্ছে।';
- $txt['whoall_helpadmin'] = 'একটি সাহায্য পপআপ দেখা।';
- $txt['whoall_pm'] = 'তাদের বার্তা দেখা।';
- $txt['whoall_login'] = 'ফোরামে লগ ইন করা।';
- $txt['whoall_login2'] = 'ফোরামে লগ ইন করা।';
- $txt['whoall_logout'] = 'ফোরাম থেকে লগ আউট করা';
- $txt['whoall_markasread'] = 'পঠিত বা অপঠিত বিষয় চিহ্নিত করা।';
- $txt['whoall_news'] = 'খবর দেখা।';
- $txt['whoall_notify'] = 'তাদের বিজ্ঞপ্তি সেটিংস পরিবর্তন করা হচ্ছে।';
- $txt['whoall_notifyboard'] = 'তাদের বিজ্ঞপ্তি সেটিংস পরিবর্তন করা হচ্ছে।';
- $txt['whoall_quickmod'] = 'একটি বোর্ড মডারেট করা।';
- // যুক্তি(গুলি): $scripturl
- $txt['whoall_recent'] = 'একটি <a href="%1$s?action=recent">সাম্প্রতিক বিষয়গুলির তালিকা</a> দেখা হচ্ছে।';
- $txt['whoall_reminder'] = 'পাসওয়ার্ড রিমাইন্ডারের অনুরোধ করা হচ্ছে।';
- $txt['whoall_reporttm'] = 'একটি বিষয় একজন মডারেটরের কাছে রিপোর্ট করা।';
- $txt['whoall_restoretopic'] = 'একটি বিষয় পুনরুদ্ধার করা।';
- $txt['whoall_signup'] = 'ফোরামে একটি অ্যাকাউন্টের জন্য নিবন্ধন করা।';
- $txt['whoall_signup2'] = 'ফোরামে একটি অ্যাকাউন্টের জন্য নিবন্ধন করা।';
- $txt['whoall_spellcheck'] = 'বানান পরীক্ষক ব্যবহার করা';
- $txt['whoall_unread'] = 'তাদের শেষ দেখার পর থেকে অপঠিত বিষয় দেখা হচ্ছে।';
- $txt['whoall_unreadreplies'] = 'তাদের শেষ দেখার পর থেকে অপঠিত উত্তর দেখা।';
- $txt['whoall_unwatchtopic'] = 'একটি বিষয় দেখা যাচ্ছে না।';
- // যুক্তি(গুলি): $scripturl
- $txt['whoall_who'] = 'দেখা হচ্ছে <a href="%1$s?action=who">কে অনলাইনে</a>।';
+$txt['whoall_activate'] = 'Activating their account.';
+$txt['whoall_buddy'] = 'Modifying their buddy list.';
+$txt['whoall_agreement'] = 'Viewing the <a href="%1$s?action=agreement">Terms and Rules</a>.';
+$txt['whoall_coppa'] = 'Filling out parent/guardian consent form.';
+$txt['whoall_credits'] = 'Viewing credits page.';
+$txt['whoall_emailuser'] = 'Sending email to another member.';
+$txt['whoall_groups'] = 'Viewing the member groups page.';
+// argument(s): $scripturl
+$txt['whoall_help'] = 'Viewing the <a href="%1$s?action=help">help page</a>.';
+$txt['whoall_helpadmin'] = 'Viewing a help popup.';
+$txt['whoall_pm'] = 'Viewing their messages.';
+$txt['whoall_login'] = 'Logging into the forum.';
+$txt['whoall_login2'] = 'Logging into the forum.';
+$txt['whoall_logout'] = 'Logging out of the forum.';
+$txt['whoall_markasread'] = 'Marking topics read or unread.';
+$txt['whoall_news'] = 'Viewing the news.';
+$txt['whoall_notify'] = 'Changing their notification settings.';
+$txt['whoall_notifyboard'] = 'Changing their notification settings.';
+$txt['whoall_quickmod'] = 'Moderating a board.';
+// argument(s): $scripturl
+$txt['whoall_recent'] = 'Viewing a <a href="%1$s?action=recent">list of recent topics</a>.';
+$txt['whoall_reminder'] = 'Requesting a password reminder.';
+$txt['whoall_reporttm'] = 'Reporting a topic to a moderator.';
+$txt['whoall_restoretopic'] = 'Restoring a topic.';
+$txt['whoall_signup'] = 'Registering for an account on the forum.';
+$txt['whoall_signup2'] = 'Registering for an account on the forum.';
+$txt['whoall_spellcheck'] = 'Using the spellchecker';
+$txt['whoall_unread'] = 'Viewing unread topics since their last visit.';
+$txt['whoall_unreadreplies'] = 'Viewing unread replies since their last visit.';
+$txt['whoall_unwatchtopic'] = 'Unwatching a topic.';
+// argument(s): $scripturl
+$txt['whoall_who'] = 'Viewing <a href="%1$s?action=who">Who\'s Online</a>.';
 
- $txt['whoall_collapse_collapse'] = 'একটি বিভাগ ভেঙে ফেলা।';
- $txt['whoall_collapse_expand'] = 'একটি বিভাগ সম্প্রসারণ করা।';
- $txt['whoall_pm_removeall'] = 'তাদের সব বার্তা মুছে ফেলা হচ্ছে।';
- $txt['whoall_pm_send'] = 'একটি বার্তা পাঠানো হচ্ছে।';
- $txt['whoall_pm_send2'] = 'একটি বার্তা পাঠানো হচ্ছে।';
+$txt['whoall_collapse_collapse'] = 'Collapsing a category.';
+$txt['whoall_collapse_expand'] = 'Expanding a category.';
+$txt['whoall_pm_removeall'] = 'Removing all their messages.';
+$txt['whoall_pm_send'] = 'Sending a message.';
+$txt['whoall_pm_send2'] = 'Sending a message.';
 
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_announce'] = 'বিষয়টি ঘোষণা করা হচ্ছে &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
- $txt['whotopic_attachapprove'] = 'একটি সংযুক্তি অনুমোদন করা।';
- $txt['whotopic_dlattach'] = 'একটি সংযুক্তি দেখা।';
- $txt['whotopic_deletemsg'] = 'একটি বার্তা মুছে ফেলা হচ্ছে।';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_editpoll'] = 'এ পোল সম্পাদনা করা হচ্ছে &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_editpoll2'] = '&quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.'-এ পোল সম্পাদনা করা হচ্ছে;
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_jsmodify'] = '&quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.'-তে একটি পোস্ট সংশোধন করা হচ্ছে;
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_lock'] = 'বিষয়টি লক করা &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_lockvoting'] = 'এ পোল লক করা হচ্ছে &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_mergetopics'] = 'বিষয়টি মার্জ করা হচ্ছে &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;  অন্য বিষয়ের সাথে।';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_movetopic'] = 'বিষয়টি সরানো হচ্ছে &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;  অন্য বোর্ডে।';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_movetopic2'] = 'বিষয়টি সরানো হচ্ছে &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;  অন্য বোর্ডে।';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_post'] = '<a href="%3$s?topic=%1$d.0">%2$s</a> এ পোস্ট করা হচ্ছে।';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_post2'] = '<a href="%3$s?topic=%1$d.0">%2$s</a> এ পোস্ট করা হচ্ছে।';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_printpage'] = 'বিষয়টি মুদ্রণ করা হচ্ছে &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_quickmod2'] = 'বিষয়টি নিয়ন্ত্রণ করা হচ্ছে <a href="%3$s?topic=%1$d.0">%2$s</a>।';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_removepoll'] = '&quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.'-এ পোল সরানো হচ্ছে;
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_removetopic2'] = 'বিষয়টি সরানো হচ্ছে <a href="%3$s?topic=%1$d.0">%2$s</a>।';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_splittopics'] = 'বিষয়টি বিভক্ত করা &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;  দুটি বিষয়ে।';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_sticky'] = 'বিষয়টি সেট করা হচ্ছে &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;  যেমন আঠালো।';
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whotopic_vote'] = '<a href="%3$s?topic=%1$d.0">%2$s</a>-এ ভোট দেওয়া হচ্ছে।';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_announce'] = 'Announcing the topic &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
+$txt['whotopic_attachapprove'] = 'Approving an attachment.';
+$txt['whotopic_dlattach'] = 'Viewing an attachment.';
+$txt['whotopic_deletemsg'] = 'Deleting a message.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_editpoll'] = 'Editing the poll in &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_editpoll2'] = 'Editing the poll in &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_jsmodify'] = 'Modifying a post in &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_lock'] = 'Locking the topic &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_lockvoting'] = 'Locking the poll in &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_mergetopics'] = 'Merging the topic &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot; with another topic.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_movetopic'] = 'Moving the topic &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot; to another board.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_movetopic2'] = 'Moving the topic &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot; to another board.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_post'] = 'Posting in <a href="%3$s?topic=%1$d.0">%2$s</a>.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_post2'] = 'Posting in <a href="%3$s?topic=%1$d.0">%2$s</a>.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_printpage'] = 'Printing the topic &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_quickmod2'] = 'Moderating the topic <a href="%3$s?topic=%1$d.0">%2$s</a>.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_removepoll'] = 'Removing the poll in &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_removetopic2'] = 'Removing the topic <a href="%3$s?topic=%1$d.0">%2$s</a>.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_splittopics'] = 'Splitting the topic &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot; into two topics.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_sticky'] = 'Setting the topic &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot; as sticky.';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whotopic_vote'] = 'Voting in <a href="%3$s?topic=%1$d.0">%2$s</a>.';
 
- // যুক্তি(গুলি): $id_topic, $subject, $scripturl
- $txt['whopost_quotefast'] = '&quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot; থেকে একটি পোস্ট উদ্ধৃত করা।';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['whopost_quotefast'] = 'Quoting a post from &quot;<a href="%3$s?topic=%1$d.0">%2$s</a>&quot;.';
 
- $txt['whoadmin_editagreement'] = 'নিবন্ধন চুক্তি সম্পাদনা।';
- $txt['whoadmin_featuresettings'] = 'ফোরাম বৈশিষ্ট্য এবং বিকল্প সম্পাদনা করা।';
- $txt['whoadmin_modlog'] = 'মডারেটর লগ দেখা হচ্ছে';
- $txt['whoadmin_servversettings'] = 'ফোরাম সেটিংস সম্পাদনা করা হচ্ছে।';
- $txt['whoadmin_packageget'] = 'প্যাকেজ পাওয়া যাচ্ছে';
- $txt['whoadmin_packages'] = 'প্যাকেজ ম্যানেজার দেখা।';
- $txt['whoadmin_permissions'] = 'ফোরাম অনুমতি সম্পাদনা করা হচ্ছে।';
- $txt['whoadmin_pgdownload'] = 'একটি প্যাকেজ ডাউনলোড করা হচ্ছে।';
- $txt['whoadmin_theme'] = 'থিম সেটিংস সম্পাদনা করা হচ্ছে।';
- $txt['whoadmin_trackip'] = 'একটি আইপি ঠিকানা ট্র্যাক করা।';
+$txt['whoadmin_editagreement'] = 'Editing the registration agreement.';
+$txt['whoadmin_featuresettings'] = 'Editing forum features and options.';
+$txt['whoadmin_modlog'] = 'Viewing the moderator log.';
+$txt['whoadmin_serversettings'] = 'Editing the forum settings.';
+$txt['whoadmin_packageget'] = 'Getting packages.';
+$txt['whoadmin_packages'] = 'Viewing the package manager.';
+$txt['whoadmin_permissions'] = 'Editing the forum permissions.';
+$txt['whoadmin_pgdownload'] = 'Downloading a package.';
+$txt['whoadmin_theme'] = 'Editing the theme settings.';
+$txt['whoadmin_trackip'] = 'Tracking an IP address.';
 
- $txt['whoallow_manageboards'] = 'বোর্ড এবং বিভাগ সেটিংস সম্পাদনা করা হচ্ছে।';
- // যুক্তি(গুলি): $scripturl
- $txt['whoallow_admin'] = '<a href="%1$s?action=admin">প্রশাসন কেন্দ্র</a> দেখা হচ্ছে।';
- $txt['whoallow_ban'] = 'নিষেধাজ্ঞার তালিকা সম্পাদনা করা হচ্ছে।';
- $txt['whoallow_boardrecount'] = 'ফোরামের মোট পুনঃগণনা।';
- // যুক্তি(গুলি): $scripturl
- $txt['whoallow_calendar'] = '<a href="%1$s?action=calendar">ক্যালেন্ডার</a> দেখা হচ্ছে।';
- $txt['whoallow_editnews'] = 'সংবাদ সম্পাদনা করা।';
- $txt['whoallow_mailing'] = 'একটি ফোরাম ইমেল পাঠানো হচ্ছে।';
- $txt['whoallow_maintain'] = 'নিয়মিত ফোরাম রক্ষণাবেক্ষণ করা।';
- $txt['whoallow_manageattachments'] = 'সংযুক্তিগুলি পরিচালনা করা।';
- $txt['whoallow_modsettings'] = 'মোড সেটিংস সম্পাদনা করা হচ্ছে';
- $txt['whoallow_logs'] = 'ফোরাম লগ দেখা';
- $txt['whoallow_languages'] = 'ভাষা পরিচালনা করা';
- $txt['whoallow_sengines'] = 'সার্চ ইঞ্জিন পরিচালনা করা';
- $txt['whoallow_managesearch'] = 'অনুসন্ধান সেটিংস সম্পাদনা করা';
- $txt['whoallow_managecalendar'] = 'ক্যালেন্ডার পরিচালনা করা';
- $txt['whoallow_postsettings'] = 'পোস্ট সেটিংস সম্পাদনা করা';
- $txt['whoallow_scheduledtasks'] = 'নির্ধারিত কাজগুলি পরিচালনা করা';
- $txt['whoallow_mailqueue'] = 'মেইলের সারি দেখা';
- $txt['whoallow_reports'] = 'প্রশাসন প্রতিবেদন দেখা';
- $txt['whoallow_membergroups'] = 'সদস্যগোষ্ঠী পরিচালনা করা';
- $txt['whoallow_regcenter'] = 'রেজিস্ট্রেশন সেন্টার দেখা';
- $txt['whoallow_paidsubscribe'] = 'প্রদেয় সাবস্ক্রিপশন পরিচালনা করা';
- // যুক্তি(গুলি): $scripturl
- $txt['whoallow_moderate'] = '<a href="%1$s?action=moderate">মডারেশন সেন্টার</a> দেখা হচ্ছে।';
- // যুক্তি(গুলি): $scripturl
- $txt['whoallow_mlist'] = '<a href="%1$s?action=mlist">সদস্য তালিকা</a> দেখা হচ্ছে।';
- $txt['whoallow_optimizetables'] = 'ডাটাবেস টেবিল অপ্টিমাইজ করা।';
- $txt['whoallow_repairboards'] = 'ডাটাবেস টেবিল মেরামত।';
- // যুক্তি(গুলি): $scripturl
- $txt['whoallow_search'] = '<a href="%1$s?action=search">অনুসন্ধান</a> ফোরাম।';
- $txt['whoallow_search2'] = 'একটি অনুসন্ধানের ফলাফল দেখা।';
- // যুক্তি(গুলি): $scripturl
- $txt['whoallow_stats'] = '<a href="%1$s?action=stats">ফোরাম পরিসংখ্যান</a> দেখা।';
- $txt['whoallow_viewerrorlog'] = 'ত্রুটির লগ দেখা হচ্ছে';
- $txt['whoallow_viewmembers'] = 'সদস্যদের তালিকা দেখা হচ্ছে।';
+$txt['whoallow_manageboards'] = 'Editing the board and category settings.';
+// argument(s): $scripturl
+$txt['whoallow_admin'] = 'Viewing the <a href="%1$s?action=admin">administration center</a>.';
+$txt['whoallow_ban'] = 'Editing the ban list.';
+$txt['whoallow_boardrecount'] = 'Recounting the forum totals.';
+// argument(s): $scripturl
+$txt['whoallow_calendar'] = 'Viewing the <a href="%1$s?action=calendar">calendar</a>.';
+$txt['whoallow_editnews'] = 'Editing the news.';
+$txt['whoallow_mailing'] = 'Sending a forum email.';
+$txt['whoallow_maintain'] = 'Performing routine forum maintenance.';
+$txt['whoallow_manageattachments'] = 'Managing the attachments.';
+$txt['whoallow_modsettings'] = 'Editing mod settings';
+$txt['whoallow_logs '] = 'Viewing the forum logs';
+$txt['whoallow_languages'] = 'Managing the languages';
+$txt['whoallow_sengines'] = 'Managing search engines';
+$txt['whoallow_managesearch'] = 'Editing the search settings';
+$txt['whoallow_managecalendar'] = 'Managing the calendar';
+$txt['whoallow_postsettings'] = 'Editing the post settings';
+$txt['whoallow_scheduledtasks'] = 'Managing the scheduled tasks';
+$txt['whoallow_mailqueue'] = 'Viewing the mail queue';
+$txt['whoallow_reports'] = 'Viewing administration reports';
+$txt['whoallow_membergroups'] = 'Managing membergroups';
+$txt['whoallow_regcenter'] = 'Viewing the registration center';
+$txt['whoallow_paidsubscribe'] = 'Managing paid subscriptions';
+// argument(s): $scripturl
+$txt['whoallow_moderate'] = 'Viewing the <a href="%1$s?action=moderate">Moderation Center</a>.';
+// argument(s): $scripturl
+$txt['whoallow_mlist'] = 'Viewing the <a href="%1$s?action=mlist">memberlist</a>.';
+$txt['whoallow_optimizetables'] = 'Optimizing the database tables.';
+$txt['whoallow_repairboards'] = 'Repairing the database tables.';
+// argument(s): $scripturl
+$txt['whoallow_search'] = '<a href="%1$s?action=search">Searching</a> the forum.';
+$txt['whoallow_search2'] = 'Viewing the results of a search.';
+// argument(s): $scripturl
+$txt['whoallow_stats'] = 'Viewing the <a href="%1$s?action=stats">forum stats</a>.';
+$txt['whoallow_viewerrorlog'] = 'Viewing the error log.';
+$txt['whoallow_viewmembers'] = 'Viewing a list of members.';
 
- // আর্গুমেন্ট(গুলি): $id_topic, $subject, $scripturl
- $txt['who_topic'] = 'বিষয়টি দেখা হচ্ছে <a href="%3$s?topic=%1$d.0">%2$s</a>।';
- // আর্গুমেন্ট(গুলি): বোর্ড আইডি, বোর্ডের নাম, $scripturl
- $txt['who_board'] = 'বোর্ড দেখা <a href="%3$s?board=%1$d.0">%2$s</a>।';
- // যুক্তি(গুলি): $scripturl, $context['forum_name_html_safe']
- $txt['who_index'] = '<a href="%1$s">%2$s</a> এর বোর্ড সূচক দেখা হচ্ছে।';
- // আর্গুমেন্ট(গুলি): সদস্য আইডি, আসল নাম, $scripturl
- $txt['who_viewprofile'] = '<a href="%3$s?action=profile;u=%1$d">%2$s</a>\'র প্রোফাইল দেখা হচ্ছে।';
- // আর্গুমেন্ট(গুলি): সদস্য আইডি, আসল নাম, $scripturl
- $txt['who_viewownprofile'] = 'দেখা হচ্ছে <a href="%3$s?action=profile;u=%1$d">তাদের নিজস্ব প্রোফাইল</a>।';
- // আর্গুমেন্ট(গুলি): সদস্য আইডি, আসল নাম, $scripturl
- $txt['who_profile'] = '<a href="%3$s?action=profile;u=%1$d">%2$s</a>-এর প্রোফাইল সম্পাদনা করা হচ্ছে।';
- // আর্গুমেন্ট(গুলি): বোর্ড আইডি, বোর্ডের নাম, $scripturl
- $txt['who_post'] = '<a href="%3$s?board=%1$d.0">%2$s</a>-এ একটি নতুন বিষয় পোস্ট করা।';
- // আর্গুমেন্ট(গুলি): বোর্ড আইডি, বোর্ডের নাম, $scripturl
- $txt['who_poll'] = '<a href="%3$s?board=%1$d.0">%2$s</a>-এ একটি নতুন পোল পোস্ট করা হচ্ছে।';
+// argument(s): $id_topic, $subject, $scripturl
+$txt['who_topic'] = 'Viewing the topic <a href="%3$s?topic=%1$d.0">%2$s</a>.';
+// argument(s): board id, board name, $scripturl
+$txt['who_board'] = 'Viewing the board <a href="%3$s?board=%1$d.0">%2$s</a>.';
+// argument(s): $scripturl, $context['forum_name_html_safe']
+$txt['who_index'] = 'Viewing the board index of <a href="%1$s">%2$s</a>.';
+// argument(s): member id, real name, $scripturl
+$txt['who_viewprofile'] = 'Viewing <a href="%3$s?action=profile;u=%1$d">%2$s</a>\'s profile.';
+// argument(s): member id, real name, $scripturl
+$txt['who_viewownprofile'] = 'Viewing <a href="%3$s?action=profile;u=%1$d">their own profile</a>.';
+// argument(s): member id, real name, $scripturl
+$txt['who_profile'] = 'Editing the profile of <a href="%3$s?action=profile;u=%1$d">%2$s</a>.';
+// argument(s): board id, board name, $scripturl
+$txt['who_post'] = 'Posting a new topic in <a href="%3$s?board=%1$d.0">%2$s</a>.';
+// argument(s): board id, board name, $scripturl
+$txt['who_poll'] = 'Posting a new poll in <a href="%3$s?board=%1$d.0">%2$s</a>.';
 
- // ক্রেডিট টেক্সট
- $txt['credits'] = 'ক্রেডিট';
- $txt['credits_intro'] = 'সিম্পল মেশিনস সকলকে ধন্যবাদ জানাতে চায় যারা SMF 2.1 কে আজকে তৈরি করতে সাহায্য করেছে;  মোটা এবং পাতলা মাধ্যমে আমাদের প্রকল্পের আকার এবং নির্দেশনা.  তোমাকে ছাড়া এটা সম্ভব হতো না।  এর মধ্যে রয়েছে আমাদের ব্যবহারকারী এবং বিশেষ করে চার্টার সদস্যরা - আমাদের সফ্টওয়্যার ইনস্টল এবং ব্যবহার করার পাশাপাশি মূল্যবান প্রতিক্রিয়া, বাগ রিপোর্ট এবং মতামত প্রদানের জন্য ধন্যবাদ৷';
- $txt['credits_team'] = 'দ্যা টিম';
- $txt['credits_special'] = 'বিশেষ ধন্যবাদ';
- $txt['credits_list'] = '%1$s';
- $txt['credits_anyone'] = 'এবং যে কাউকে আমরা মিস করেছি, ধন্যবাদ!';
- $txt['credits_copyright'] = 'কপিরাইট';
- $txt['credits_forum'] = 'ফোরাম';
- $txt['credits_modifications'] = 'পরিবর্তন';
- $txt['credits_software_graphics'] = 'সফটওয়্যার/গ্রাফিক্স';
- $txt['credits_software'] = 'সফ্টওয়্যার';
- $txt['credits_graphics'] = 'গ্রাফিক্স';
- $txt['credits_fonts'] = 'ফন্ট';
- $txt['credits_groups_pm'] = 'প্রকল্প ব্যবস্থাপনা';
- $txt['credits_groups_dev'] = 'ডেভেলপার';
- $txt['credits_groups_support'] = 'সহায়তা বিশেষজ্ঞ';
- $txt['credits_groups_customize'] = 'কাস্টমাইজার';
- $txt['credits_groups_docs'] = 'ডকুমেন্টেশন রাইটার';
- $txt['credits_groups_marketing'] = 'বিপণন';
- $txt['credits_groups_internationalizers'] = 'লোকালাইজার';
- $txt['credits_groups_servers'] = 'সার্ভার অ্যাডমিনিস্ট্রেটর';
- $txt['credits_groups_site'] = 'সাইট অ্যাডমিনিস্ট্রেটর';
- $txt['credits_license'] = 'লাইসেন্স';
- $txt['credits_version'] = 'সংস্করণ';
- // নীচের স্ট্রিংটিতে এই ভাষা প্যাকের নামের সাথে "ইংরেজি" প্রতিস্থাপন করুন।
- $txt['credits_groups_translation'] = 'ইংরেজি অনুবাদ';
- $txt['credits_groups_translators'] = 'ভাষা অনুবাদক';
- $txt['credits_translators_message'] = 'আপনার প্রচেষ্টার জন্য ধন্যবাদ যা সারা বিশ্বের মানুষের জন্য SMF ব্যবহার করা সম্ভব করে তোলে';
- $txt['credits_groups_consultants'] = 'পরামর্শকারী বিকাশকারী';
- $txt['credits_code_contributors'] = 'যে সবাই <a href="https://github.com/SimpleMachines/SMF/graphs/contributors">GitHub-এ অবদান রেখেছেন</a>';
- $txt['credits_groups_beta'] = 'বিটা পরীক্ষক';
- $txt['credits_beta_message'] = 'অমূল্য কয়েকজন যারা অক্লান্তভাবে বাগ খুঁজে বের করে, প্রতিক্রিয়া প্রদান করে এবং ডেভেলপারদের পাগল করে দেয়';
- $txt['credits_groups_founder'] = 'এসএমএফের প্রতিষ্ঠাতা';
- $txt['credits_groups_orignal_pm'] = 'অরিজিনাল প্রজেক্ট ম্যানেজার';
- $txt['credits_in_memoriam'] = 'প্রেমময় স্মৃতিতে';
+// Credits text
+$txt['credits'] = 'Credits';
+$txt['credits_intro'] = 'Simple Machines wants to thank everyone who helped make SMF 2.1 what it is today; shaping and directing our project, all through the thick and the thin. It wouldn\'t have been possible without you. This includes our users and especially Charter Members - thanks for installing and using our software as well as providing valuable feedback, bug reports, and opinions.';
+$txt['credits_team'] = 'The Team';
+$txt['credits_special'] = 'Special Thanks';
+$txt['credits_list'] = '%1$s.';
+$txt['credits_anyone'] = 'And for anyone we may have missed, thank you!';
+$txt['credits_copyright'] = 'Copyright';
+$txt['credits_forum'] = 'Forum';
+$txt['credits_modifications'] = 'Modifications';
+$txt['credits_software_graphics'] = 'Software/Graphics';
+$txt['credits_software'] = 'Software';
+$txt['credits_graphics'] = 'Graphics';
+$txt['credits_fonts'] = 'Fonts';
+$txt['credits_groups_pm'] = 'Project Management';
+$txt['credits_groups_dev'] = 'Developers';
+$txt['credits_groups_support'] = 'Support Specialists';
+$txt['credits_groups_customize'] = 'Customizers';
+$txt['credits_groups_docs'] = 'Documentation Writers';
+$txt['credits_groups_marketing'] = 'Marketing';
+$txt['credits_groups_internationalizers'] = 'Localizers';
+$txt['credits_groups_servers'] = 'Servers Administrators';
+$txt['credits_groups_site'] = 'Site Administrators';
+$txt['credits_license'] = 'License';
+$txt['credits_version'] = 'Version';
+// Replace "English" with the name of this language pack in the string below.
+$txt['credits_groups_translation'] = 'English Translation';
+$txt['credits_groups_translators'] = 'Language Translators';
+$txt['credits_translators_message'] = 'Thank you for your efforts which make it possible for people all around the world to use SMF';
+$txt['credits_groups_consultants'] = 'Consulting Developers';
+$txt['credits_code_contributors'] = 'everyone who <a href="https://github.com/SimpleMachines/SMF/graphs/contributors">contributed on GitHub</a>';
+$txt['credits_groups_beta'] = 'Beta Testers';
+$txt['credits_beta_message'] = 'The invaluable few who tirelessly find bugs, provide feedback, and drive the developers crazier';
+$txt['credits_groups_founder'] = 'Founding Father of SMF';
+$txt['credits_groups_orignal_pm'] = 'Original Project Managers';
+$txt['credits_in_memoriam'] = 'In loving memory of';
 
- // যারা এই অনুবাদে টোকেনের বেশি অবদান রেখেছেন তাদের কমা থেকে আলাদা করা তালিকা।  উদাহরণ: 'এলিস "দ্য হ্যামার" স্মিথ, বব ক্র্যাচিট, গ্যান্ডালফ দ্য গ্রে'।  (দ্রষ্টব্য: ইংরেজি সংস্করণে একটি একক কমা রয়েছে যাতে স্ট্রিংটি CrowdIn-এ দেখানো হবে।)
- $txt['translation_credits'] = 'Rumpa';
+// Comma separated list of people who have made more than a token contribution to this translation. Example: 'Alice "The Hammer" Smith, Bob Cratchit, Gandalf the Grey'. (Note: English version contains a single comma so that the string will be shown in CrowdIn.)
+$txt['translation_credits'] = ',';
 
- ?>
+?>

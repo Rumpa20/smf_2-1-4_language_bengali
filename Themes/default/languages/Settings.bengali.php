@@ -1,10 +1,10 @@
 <?php
- // সংস্করণ: 2.1.0;  সেটিংস
+// Version: 2.1.0; Settings
 
- বিশ্বব্যাপী $সেটিং;
+global $settings;
 
- // আর্গুমেন্ট(গুলি): images_url সেটিংসে সংরক্ষিত
- $txt['theme_thumbnail_href'] = '%1$s/thumbnail.png';
- $txt['theme_description'] = 'সিম্পল মেশিনের ডিফল্ট থিম।<br><br>লেখক: দ্য সিম্পল মেশিন টিম';
+// argument(s): images_url as saved in settings
+$txt['theme_thumbnail_href'] = '%1$s/thumbnail.png';
+$txt['theme_description'] = 'The default theme from Simple Machines.<br><br>Author: The Simple Machines Team';
 
- ?>
+?>

@@ -1,38 +1,38 @@
 <?php
- // সংস্করণ: 2.1.0;  ম্যানুয়াল
+// Version: 2.1.0; Manual
 
- /* এই ফাইলের সবকিছুই সিম্পল মেশিন হেল্প ম্যানুয়ালের জন্য
-    আপনি যদি ম্যানুয়ালটিকে অন্য ভাষায় অনুবাদ করার দিকে তাকিয়ে থাকেন
-    সহায়তা করার জন্য সরঞ্জামগুলির জন্য অনুগ্রহ করে সরল মেশিন ওয়েবসাইট দেখুন!  */
+/* Everything in this file is for the Simple Machines help manual
+   If you are looking at translating the manual into another language
+   please visit the Simple Machines website for tools to assist! */
 
- $txt['manual_smf_user_help'] = 'SMF ব্যবহারকারী সহায়তা';
+$txt['manual_smf_user_help'] = 'SMF User Help';
 
- $txt['manual_welcome'] = 'সিম্পল মেশিন দ্বারা চালিত %s-এ স্বাগতম&reg;  ফোরাম (SMF) সফটওয়্যার!';
- $txt['manual_introduction'] = 'SMF&reg;  মার্জিত, কার্যকর, শক্তিশালী এবং বিনামূল্যের ফোরাম সফ্টওয়্যার সমাধান যা এই সাইটটি চলছে৷  এটি ব্যবহারকারীদের একটি চতুর এবং সংগঠিত পদ্ধতিতে একটি প্রদত্ত বিষয়ে আলোচনার বিষয়গুলিতে যোগাযোগ করতে দেয়।  উপরন্তু, এটিতে বেশ কয়েকটি শক্তিশালী বৈশিষ্ট্য রয়েছে যা শেষ ব্যবহারকারীরা সুবিধা নিতে পারে।  SMF এর অনেক বৈশিষ্ট্যের জন্য সহায়তা প্রাসঙ্গিক বিভাগের পাশের প্রশ্ন চিহ্ন আইকনে ক্লিক করে বা এই পৃষ্ঠার লিঙ্কগুলির একটি নির্বাচন করে পাওয়া যেতে পারে।  এই লিঙ্কগুলি আপনাকে সিম্পল মেশিনের অফিসিয়াল সাইটে SMF এর কেন্দ্রীয়ভাবে অবস্থিত ডকুমেন্টেশনে নিয়ে যাবে।';
- $txt['manual_docs_and_credits'] = 'কীভাবে SMF ব্যবহার করবেন সে সম্পর্কে আরও তথ্যের জন্য, অনুগ্রহ করে <a href="%1$s" target="_blank" rel="noopener">সাধারণ মেশিন ডকুমেন্টেশন উইকি</a> দেখুন  এবং আজকে কে SMF তৈরি করেছে তা জানতে <a href="%2$s">ক্রেডিট</a> দেখুন৷';
+$txt['manual_welcome'] = 'Welcome to %s, powered by Simple Machines&reg; Forum (SMF) software!';
+$txt['manual_introduction'] = 'SMF&reg; is the elegant, effective, powerful and free forum software solution that this site is running. It allows users to communicate in discussion topics on a given subject in a clever and organized manner. Furthermore, it has a number of powerful features which end users can take advantage of. Help for many of SMF\'s features can be found by either clicking the question mark icon next to the relevant section or by selecting one of the links on this page. These links will take you to SMF\'s centrally-located documentation on the Simple Machines official site.';
+$txt['manual_docs_and_credits'] = 'For more information about how to use SMF, please see the <a href="%1$s" target="_blank" rel="noopener">Simple Machines Documentation Wiki</a> and check out the <a href="%2$s">credits</a> to find out who has made SMF what it is today.';
 
- $txt['manual_section_registering_title'] = 'নিবন্ধন';
- $txt['manual_section_logging_in_title'] = 'লগ ইন';
- $txt['manual_section_profile_title'] = 'প্রোফাইল';
- $txt['manual_section_search_title'] = 'অনুসন্ধান';
- $txt['manual_section_posting_title'] = 'পোস্টিং';
- $txt['manual_section_bbc_title'] = 'বুলেটিন বোর্ড কোড (বিবিসি)';
- $txt['manual_section_personal_messages_title'] = 'ব্যক্তিগত বার্তা';
- $txt['manual_section_memberlist_title'] = 'সদস্য তালিকা';
- $txt['manual_section_calendar_title'] = 'ক্যালেন্ডার';
- $txt['manual_section_features_title'] = 'বৈশিষ্ট্য';
+$txt['manual_section_registering_title'] = 'Registering';
+$txt['manual_section_logging_in_title'] = 'Logging In';
+$txt['manual_section_profile_title'] = 'Profile';
+$txt['manual_section_search_title'] = 'Search';
+$txt['manual_section_posting_title'] = 'Posting';
+$txt['manual_section_bbc_title'] = 'Bulletin Board Code (BBC)';
+$txt['manual_section_personal_messages_title'] = 'Personal Messages';
+$txt['manual_section_memberlist_title'] = 'Memberlist';
+$txt['manual_section_calendar_title'] = 'Calendar';
+$txt['manual_section_features_title'] = 'Features';
 
- $txt['manual_section_registering_desc'] = 'অনেক ফোরামে সম্পূর্ণ অ্যাক্সেস পেতে ব্যবহারকারীদের নিবন্ধন করতে হয়।';
- $txt['manual_section_logging_in_desc'] = 'একবার নিবন্ধিত হলে ব্যবহারকারীদের তাদের অ্যাকাউন্ট অ্যাক্সেস করতে লগইন করতে হবে।';
- $txt['manual_section_profile_desc'] = 'প্রত্যেক সদস্যের নিজস্ব ব্যক্তিগত প্রোফাইল আছে।';
- $txt['manual_section_search_desc'] = 'অনুসন্ধান পোস্ট এবং বিষয়ের তথ্য খোঁজার জন্য একটি অত্যন্ত সহায়ক হাতিয়ার।';
- $txt['manual_section_posting_desc'] = 'একটি ফোরামের পুরো পয়েন্ট, পোস্টিং ব্যবহারকারীদের নিজেদের প্রকাশ করতে দেয়।';
- $txt['manual_section_bbc_desc'] = 'পোস্টগুলো একটু বিবিসি দিয়ে মশলাদার করা যেতে পারে।';
- $txt['manual_section_personal_messages_desc'] = 'ব্যবহারকারীরা একে অপরকে ব্যক্তিগত বার্তা পাঠাতে পারে।';
- $txt['manual_section_memberlist_desc'] = 'সদস্যতালিকা একটি ফোরামের সকল সদস্যকে দেখায়।';
- $txt['manual_section_calendar_desc'] = 'ব্যবহারকারীরা ক্যালেন্ডারের মাধ্যমে ইভেন্ট, ছুটির দিন এবং জন্মদিনের ট্র্যাক রাখতে পারে।';
- $txt['manual_section_features_desc'] = 'এসএমএফের সবচেয়ে জনপ্রিয় বৈশিষ্ট্যগুলির একটি তালিকা এখানে রয়েছে।';
+$txt['manual_section_registering_desc'] = 'Many forums require users to register to gain full access.';
+$txt['manual_section_logging_in_desc'] = 'Once registered, users must login to access their account.';
+$txt['manual_section_profile_desc'] = 'Each member has their own personal profile.';
+$txt['manual_section_search_desc'] = 'Searching is an extremely helpful tool for finding information in posts and topics.';
+$txt['manual_section_posting_desc'] = 'The whole point of a forum, posting allows users to express themselves.';
+$txt['manual_section_bbc_desc'] = 'Posts can be spiced up with a little BBC.';
+$txt['manual_section_personal_messages_desc'] = 'Users can send personal messages to each other.';
+$txt['manual_section_memberlist_desc'] = 'The memberlist shows all the members of a forum.';
+$txt['manual_section_calendar_desc'] = 'Users can keep track of events, holidays, and birthdays with the calendar.';
+$txt['manual_section_features_desc'] = 'Here is a list of the most popular features in SMF.';
 
- $txt['agreement_disabled'] = 'নিবন্ধন চুক্তি নিষ্ক্রিয়';
+$txt['agreement_disabled'] = 'Registration agreement disabled';
 
- ?>
+?>

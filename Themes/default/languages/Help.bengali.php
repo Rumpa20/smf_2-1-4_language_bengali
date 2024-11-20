@@ -1,663 +1,663 @@
 <?php
- // সংস্করণ: 2.1.3;  সাহায্য
+// Version: 2.1.3; Help
 
- বিশ্বব্যাপী $helptxt, $scripturl;
+global $helptxt, $scripturl;
 
- $txt['close_window'] = 'জানালা বন্ধ করুন';
+$txt['close_window'] = 'Close window';
 
- $helptxt['manage_boards'] = '
- 	 <strong>বোর্ড সম্পাদনা করুন</strong><br>
- 	 এই পৃষ্ঠায় আপনি বোর্ড এবং বিভাগগুলি তৈরি/পুনঃক্রম/সরাতে পারেন
- 	 তাদের উপরে।  উদাহরণস্বরূপ, যদি আপনি একটি বিস্তৃত ছিল
- 	 যে সাইট &quot;ক্রীড়া&quot;  এবং &quot;গাড়ি&quot;  এবং &quot;সঙ্গীত&quot;, এগুলো
- 	 আপনি তৈরি করবেন শীর্ষ-স্তরের বিভাগগুলি।  এই প্রতিটি অধীনে
- 	 আপনি সম্ভবত &quot;বোর্ড&quot; তৈরি করতে চান এমন বিভাগ  প্রতিটি বিষয়ের জন্য।  এই কাঠামোর সাথে এটি একটি সাধারণ শ্রেণিবিন্যাস: <br>
- 	 <ul class="normallist">
- 		 <li>
- 			 <strong>খেলাধুলা</strong>
- 			 &nbsp;- A &quot;শ্রেণি&quot;
- 			 <ul class="normallist">
- 				 <li>
- 					 <strong>বেসবল</strong>
- 					 &nbsp;- &quot;ক্রীড়া&quot; বিভাগের অধীনে একটি বোর্ড
- 					 <ul class="normallist">
- 						 <li>
- 							 <strong>পরিসংখ্যান</strong>
- 							 &nbsp;- &quot;বেসবল&quot; বোর্ডের অধীনে একটি সাব-বোর্ড
- 						 </li>
- 					 </ul>
- 				 </li>
- 				 <li><strong>ফুটবল</strong>
- 				 &nbsp;- &quot;স্পোর্টস&quot;</li> বিভাগের অধীনে একটি বোর্ড
- 			 </ul>
- 		 </li>
- 	 </ul>
- 	 বিভাগগুলি আপনাকে বোর্ডগুলিকে বিস্তৃত বিষয়গুলিতে বিভক্ত করার অনুমতি দেয় (&quot;কার,
- 	 খেলাধুলা&quot;), এবং &quot;বোর্ড&quot;  তাদের অধীনে ব্যবহারকারীদের প্রকৃত বিষয় পোস্ট করার অনুমতি দেয়.
- 	 পিন্টোসে আগ্রহী একজন ব্যবহারকারী &quot;কারস->পিন্টো&quot; এর অধীনে একটি বার্তা পোস্ট করবেন।
- 	 এই পৃষ্ঠার প্রশাসনিক কাজ হল নতুন বোর্ড তৈরি করা
- 	 প্রতিটি বিভাগের অধীনে, সেগুলিকে পুনরায় সাজাতে (নিচে &quot;চেভি&quot; &quot;পিন্টো&quot; রাখুন), অথবা
- 	 বোর্ড সম্পূর্ণ মুছে ফেলার জন্য।';
+$helptxt['manage_boards'] = '
+	<strong>Edit Boards</strong><br>
+	On this page you can create/reorder/remove boards, and the categories
+	above them. For example, if you had a wide-ranging
+	site that offered information on &quot;Sports&quot; and &quot;Cars&quot; and &quot;Music&quot;, these
+	would be the top-level Categories you\'d create. Under each of these
+	categories you\'d likely want to create &quot;Boards&quot; for topics within each. It\'s a simple hierarchy, with this structure: <br>
+	<ul class="normallist">
+		<li>
+			<strong>Sports</strong>
+			&nbsp;- A &quot;category&quot;
+			<ul class="normallist">
+				<li>
+					<strong>Baseball</strong>
+					&nbsp;- A board under the category of &quot;Sports&quot;
+					<ul class="normallist">
+						<li>
+							<strong>Stats</strong>
+							&nbsp;- A sub-board under the board of &quot;Baseball&quot;
+						</li>
+					</ul>
+				</li>
+				<li><strong>Football</strong>
+				&nbsp;- A board under the category of &quot;Sports&quot;</li>
+			</ul>
+		</li>
+	</ul>
+	Categories allow you to break down the boards into broad topics (&quot;Cars,
+	Sports&quot;), and the &quot;Boards&quot; under them allow users to post actual topics.
+	A user interested in Pintos	would post a message under &quot;Cars->Pinto&quot;.
+	Administrative functions for this page are to create new boards
+	under each category, to reorder them (put &quot;Pinto&quot; below &quot;Chevy&quot;), or
+	to delete the board entirely.';
 
- $helptxt['edit_news'] = '
- 	 <ul class="normallist">
- 		 <li>
- 			 <strong>সংবাদ</strong><br>
- 			 এই পৃষ্ঠাটি আপনাকে বোর্ড সূচক পৃষ্ঠায় প্রদর্শিত সংবাদ আইটেমগুলির জন্য পাঠ্য সেট করার অনুমতি দেয়।
- 			 আপনি যে কোনো আইটেম যোগ করুন (যেমন, &quot;এই মঙ্গলবার সম্মেলন মিস করবেন না&quot;)।  প্রতিটি সংবাদ আইটেম এলোমেলোভাবে প্রদর্শিত হয় এবং একটি পৃথক বাক্সে স্থাপন করা উচিত।
- 		 </li>
- 		 <li>
- 			 <strong>নিউজলেটার</strong><br>
- 			 এই পৃষ্ঠাটি আপনাকে ব্যক্তিগত বার্তা বা ইমেলের মাধ্যমে ফোরামের সদস্যদের কাছে নিউজলেটার পাঠাতে দেয়।  প্রথমে আপনি যে গ্রুপগুলি নিউজলেটার পেতে চান এবং যেগুলিকে আপনি নিউজলেটার পেতে চান না সেগুলি নির্বাচন করুন৷  আপনি যদি চান, আপনি নিউজলেটার পাবেন যে অতিরিক্ত সদস্য এবং ইমেল ঠিকানা যোগ করতে পারেন.  অবশেষে, আপনি যে বার্তাটি পাঠাতে চান সেটি ইনপুট করুন এবং আপনি সদস্যদের ব্যক্তিগত বার্তা বা একটি ইমেল হিসাবে পাঠাতে চান কিনা তা নির্বাচন করুন।
- 		 </li>
- 		 <li>
- 			 <strong>সেটিংস</strong><br>৷
- 				 এই পৃষ্ঠাটিতে কয়েকটি সেটিংস রয়েছে যা সংবাদ এবং নিউজলেটারগুলির সাথে সম্পর্কিত, যার মধ্যে কোন গ্রুপ ফোরামের সংবাদ সম্পাদনা করতে পারে বা নিউজলেটার পাঠাতে পারে তা নির্বাচন করে৷  আপনি ফোরামে নিউজ ফিডগুলি সক্ষম করতে চান কিনা তা কনফিগার করার জন্য একটি সেটিংও রয়েছে, পাশাপাশি ফিডে প্রদর্শিত প্রতিটি নতুন পোস্টের জন্য দৈর্ঘ্য (কতটি অক্ষর প্রদর্শিত হবে) কনফিগার করার একটি সেটিং রয়েছে৷
- 		 </li>
- 	 </ul>';
+$helptxt['edit_news'] = '
+	<ul class="normallist">
+		<li>
+			<strong>News</strong><br>
+			This page allows you to set the text for news items displayed on the Board Index page.
+			Add any item you want (e.g., &quot;Don\'t miss the conference this Tuesday&quot;). Each news item is displayed randomly and should be placed in a separate box.
+		</li>
+		<li>
+			<strong>Newsletters</strong><br>
+			This page allows you to send out newsletters to the members of the forum via personal message or email. First select the groups that you want to receive the newsletter, and those you don\'t want to receive the newsletter. If you wish, you can add additional members and email addresses that will receive the newsletter. Finally, input the message you want to send and select whether you want it to be sent to members as a personal message or as an email.
+		</li>
+		<li>
+			<strong>Settings</strong><br>
+				This page contains a few settings that relate to news and newsletters, including selecting which groups can edit forum news or send newsletters. There is also a setting to configure whether you want news feeds enabled on the forum, as well as a setting to configure the length (how many characters are displayed) for each new post that shows in the feed.
+		</li>
+	</ul>';
 
 $helptxt['view_members'] = '
- 	 <ul class="normallist">
- 		 <li>
- 			 <strong>সকল সদস্যকে দেখুন</strong><br>
- 			 ফোরামের সকল সদস্যদের দেখুন।  আপনাকে সদস্যদের নামের একটি হাইপারলিঙ্ক করা তালিকা উপস্থাপন করা হয়েছে।  আপনি ক্লিক করতে পারেন
- 			 সদস্যদের বিশদ বিবরণ (হোমপেজ, বয়স, ইত্যাদি) এবং প্রশাসক হিসাবে খুঁজে পেতে যেকোনো নামের উপর
- 			 আপনি এই পরামিতিগুলি সংশোধন করতে সক্ষম।  সদস্যদের উপর আপনার সম্পূর্ণ নিয়ন্ত্রণ রয়েছে, সহ
- 			 ফোরাম থেকে তাদের মুছে ফেলার ক্ষমতা।<br><br>
- 		 </li>
- 		 <li>
- 			 <strong>অনুমোদনের অপেক্ষায়</strong><br>
- 			 আপনি সমস্ত নতুন নিবন্ধনের প্রশাসক অনুমোদন সক্ষম করলেই এই পৃষ্ঠাটি দেখানো হবে৷  যে কেউ আপনার যোগদানের জন্য নিবন্ধন
- 			 ফোরাম শুধুমাত্র একজন প্রশাসক দ্বারা অনুমোদিত হলেই পূর্ণ সদস্য হবে।  পৃষ্ঠায় সেই সমস্ত সদস্যদের তালিকা রয়েছে যারা
- 			 তাদের ইমেল এবং আইপি ঠিকানা সহ এখনও অনুমোদনের অপেক্ষায় রয়েছে৷  আপনি গ্রহণ বা প্রত্যাখ্যান (মুছুন) বেছে নিতে পারেন
- 			 সদস্যের পাশের বাক্সটি চেক করে এবং নীচের ড্রপ-ডাউন বক্স থেকে অ্যাকশন বেছে নিয়ে তালিকায় থাকা যেকোনো সদস্যকে
- 			 পৃষ্ঠার  কোনো সদস্যকে প্রত্যাখ্যান করার সময় আপনি সদস্যকে আপনার সিদ্ধান্তের বিষয়ে অবহিত না করে বা না করেই মুছে ফেলার সিদ্ধান্ত নিতে পারেন।<br><br>
- 		 </li>
- 		 <li>
- 			 <strong>অ্যাক্টিভেশনের অপেক্ষায়</strong><br>
- 			 এই পৃষ্ঠাটি কেবল তখনই দৃশ্যমান হবে যদি আপনি ফোরামে নতুন সদস্য অ্যাকাউন্টগুলির ইমেল সক্রিয়করণ সক্ষম করেন।  এই পৃষ্ঠায় সব তালিকা করা হবে
- 			 সদস্য যারা এখনও তাদের নতুন অ্যাকাউন্ট সক্রিয় করেনি।  এই পৃষ্ঠা থেকে আপনি গ্রহণ, প্রত্যাখ্যান বা স্মরণ করিয়ে দিতে বেছে নিতে পারেন
- 			 অসামান্য নিবন্ধন সহ সদস্য.  উপরের হিসাবে আপনি সদস্যকে তাদের অবহিত করার জন্য ইমেল করতেও বেছে নিতে পারেন
- 			 আপনি যে পদক্ষেপ নিয়েছেন।<br><br>
- 		 </li>
- 	 </ul>';
+	<ul class="normallist">
+		<li>
+			<strong>View all Members</strong><br>
+			View all members of the forum. You are presented with a hyperlinked list of member names. You may click
+			on any of the names to find details of the members (homepage, age, etc.), and as Administrator
+			you are able to modify these parameters. You have complete control over members, including the
+			ability to delete them from the forum.<br><br>
+		</li>
+		<li>
+			<strong>Awaiting approval</strong><br>
+			This page is only shown if you have enabled admin approval of all new registrations. Anyone who registers to join your
+			forum will only become a full member once they have been approved by an admin. The page lists all those members who
+			are still awaiting approval, along with their email and IP address. You can choose to either accept or reject (delete)
+			any member on the list by checking the box next to the member and choosing the action from the drop-down box at the bottom
+			of the page. When rejecting a member you can choose to delete the member either with or without notifying them of your decision.<br><br>
+		</li>
+		<li>
+			<strong>Awaiting activation</strong><br>
+			This page will only be visible if you have email activation of new member accounts enabled on the forum. This page will list all
+			members who have still not activated their new accounts. From this page you can choose to either accept, reject or remind
+			members with outstanding registrations. As above you can also choose to email the member to inform them of the
+			action you have taken.<br><br>
+		</li>
+	</ul>';
 
-$helptxt['ban_members'] = '<strong>সদস্যদের নিষিদ্ধ করুন</strong><br>
- 	 SMF "নিষিদ্ধ" করার ক্ষমতা প্রদান করে  ব্যবহারকারী, যা ব্যবহারকারীদের বিরুদ্ধে একটি কার্যকর পদক্ষেপ হতে পারে
- 	 স্প্যামিং বা ট্রোলিং ইত্যাদির মাধ্যমে ফোরামের বিশ্বাস লঙ্ঘন করেছে৷ এটি আপনাকে ক্ষতিকারক ব্যবহারকারীদের বাদ দিতে দেয়৷
- 	 আপনার ফোরামে।  একজন প্রশাসক হিসাবে, আপনি যখন আপনার ফোরামে করা পোস্টগুলি দেখেন, আপনি পোস্ট করার সময় ব্যবহারকারীর আইপি ঠিকানাটি দেখতে পারেন।
- 	 নিষেধাজ্ঞার তালিকায়, আপনি কেবল সেই আইপি ঠিকানাটি টাইপ করুন, সংরক্ষণ করুন এবং তারা সেই অবস্থান থেকে আর পোস্ট করতে পারবে না।<br>আপনিও করতে পারেন।
- 	 লোকেদের তাদের ইমেল ঠিকানার মাধ্যমে নিষিদ্ধ করুন।';
+$helptxt['ban_members'] = '<strong>Ban Members</strong><br>
+	SMF provides the ability to &quot;ban&quot; users, which can be a useful course of action against users that have
+	violated the trust of the forum	by spamming or trolling, etc. This allows you to exclude users that are detrimental
+	to your forum. As an admin, when you view posts made on your forum, you can see the IP address that the user had at the time of posting.
+	In the ban list, you simply type that IP address in, save, and they can no longer post from that location.<br>You can also
+	ban people through their email address.';
 
- $helptxt['featuresettings'] = '<strong>বৈশিষ্ট্য এবং বিকল্প</strong><br>
- 	 এই পৃষ্ঠায় বেশ কিছু বৈশিষ্ট্য রয়েছে যা আপনার পছন্দ অনুযায়ী পরিবর্তন করা যেতে পারে।';
+$helptxt['featuresettings'] = '<strong>Features and Options</strong><br>
+	There are several features in this page that can be changed to your preference.';
 
- $helptxt['modsettings'] = '<strong>পরিবর্তন সেটিংস</strong><br>
- 	 এই পৃষ্ঠায় আপনার ফোরামে ইনস্টল করা পরিবর্তন দ্বারা যোগ করা যেকোনো সেটিংস রয়েছে।';
+$helptxt['modsettings'] = '<strong>Modification Settings</strong><br>
+	This page contains any settings added by modifications installed on your forum.';
 
- $helptxt['time_format'] = '<strong>সময় বিন্যাস</strong><br>
- 	 আপনার নিজের জন্য সময় এবং তারিখ কীভাবে দেখায় তা সামঞ্জস্য করার ক্ষমতা আপনার আছে।  অনেক ছোট অক্ষর আছে, কিন্তু এটা বেশ সহজ।
- 	 কনভেনশনগুলি PHP এর strftime ফাংশন অনুসরণ করে এবং নীচে বর্ণনা করা হয়েছে (আরও বিশদ <a href="https://php.net/manual/function.strftime.php" target="_blank" rel="-এ পাওয়া যাবে  noopener">php.net</a>).<br>
- 	 <br>
- 	 নিম্নলিখিত অক্ষর বিন্যাস স্ট্রিং স্বীকৃত হয়: <br>
- 	 <span class="smalltext">
- 	 &nbsp;&nbsp;%a - সংক্ষিপ্ত সাপ্তাহিক দিনের নাম<br>
- 	 &nbsp;&nbsp;%A - পুরো সপ্তাহের দিন নাম<br>
- 	 &nbsp;&nbsp;%b - সংক্ষিপ্ত মাসের নাম<br>
- 	 &nbsp;&nbsp;%B - পুরো মাসের নাম<br>
- 	 &nbsp;&nbsp;%d - মাসের দিন (01 থেকে 31) <br>
- 	 &nbsp;&nbsp;%D<strong>*</strong> - %m/%d/%y <br> এর মতো
- 	 &nbsp;&nbsp;%e<strong>*</strong> - মাসের দিন (1 থেকে 31) <br>
- 	 &nbsp;&nbsp;%H - ঘন্টা 24-ঘন্টা ব্যবহার করে (পরিসীমা 00 থেকে 23) <br>
- 	 &nbsp;&nbsp;%I - ঘন্টা একটি 12-ঘন্টা ঘড়ি ব্যবহার করে (পরিসীমা 01 থেকে 12) <br>
- 	 &nbsp;&nbsp;%m - একটি সংখ্যা হিসাবে মাস (01 থেকে 12) <br>
- 	 &nbsp;&nbsp;%M - একটি সংখ্যা হিসাবে মিনিট <br>
- 	 &nbsp;&nbsp;%p - হয় &quot;আমি&quot;  অথবা &quot;pm&quot;  প্রদত্ত সময় অনুযায়ী<br>
- 	 &nbsp;&nbsp;%R<strong>*</strong> - 24 ঘন্টা স্বরলিপিতে সময় <br>
- 	 &nbsp;&nbsp;%S - দশমিক সংখ্যা হিসাবে সেকেন্ড <br>
- 	 &nbsp;&nbsp;%T<strong>*</strong> - বর্তমান সময়, সমান %H:%M:%S <br>
- 	 &nbsp;&nbsp;%y - 2 সংখ্যার বছর (00 থেকে 99) <br>
- 	 &nbsp;&nbsp;%Y - 4 সংখ্যার বছর<br>
- 	 &nbsp;&nbsp;%% - একটি আক্ষরিক \'%\' অক্ষর <br>
- 	 <br>
- 	 <em>* Windows-ভিত্তিক সার্ভারে কাজ করে না।</em></span>';
+$helptxt['time_format'] = '<strong>Time Format</strong><br>
+	You have the ability to adjust how the time and date look for yourself. There are a lot of little letters, but it\'s quite simple.
+	The conventions follow PHP\'s strftime function and are described as below (more details can be found at <a href="https://php.net/manual/function.strftime.php" target="_blank" rel="noopener">php.net</a>).<br>
+	<br>
+	The following characters are recognized in the format string: <br>
+	<span class="smalltext">
+	&nbsp;&nbsp;%a - abbreviated weekday name<br>
+	&nbsp;&nbsp;%A - full weekday name<br>
+	&nbsp;&nbsp;%b - abbreviated month name<br>
+	&nbsp;&nbsp;%B - full month name<br>
+	&nbsp;&nbsp;%d - day of the month (01 to 31) <br>
+	&nbsp;&nbsp;%D<strong>*</strong> - same as %m/%d/%y <br>
+	&nbsp;&nbsp;%e<strong>*</strong> - day of the month (1 to 31) <br>
+	&nbsp;&nbsp;%H - hour using a 24-hour clock (range 00 to 23) <br>
+	&nbsp;&nbsp;%I - hour using a 12-hour clock (range 01 to 12) <br>
+	&nbsp;&nbsp;%m - month as a number (01 to 12) <br>
+	&nbsp;&nbsp;%M - minute as a number <br>
+	&nbsp;&nbsp;%p - either &quot;am&quot; or &quot;pm&quot; according to the given time<br>
+	&nbsp;&nbsp;%R<strong>*</strong> - time in 24 hour notation <br>
+	&nbsp;&nbsp;%S - second as a decimal number <br>
+	&nbsp;&nbsp;%T<strong>*</strong> - current time, equal to %H:%M:%S <br>
+	&nbsp;&nbsp;%y - 2 digit year (00 to 99) <br>
+	&nbsp;&nbsp;%Y - 4 digit year<br>
+	&nbsp;&nbsp;%% - a literal \'%\' character <br>
+	<br>
+	<em>* Does not work on Windows-based servers.</em></span>';
 
-$helptxt['live_news'] = '<strong>লাইভ ঘোষণা</strong><br>
- 	 এই বক্সটি <a href="https://www.simplemachines.org/" target="_blank" rel="noopener">www.simplemachines.org</a> থেকে সাম্প্রতিক আপডেট করা ঘোষণাগুলি দেখায়৷
- 	 সিম্পল মেশিনস থেকে আপডেট, নতুন রিলিজ এবং গুরুত্বপূর্ণ তথ্যের জন্য আপনাকে প্রতিবার এখানে চেক করা উচিত।';
+$helptxt['live_news'] = '<strong>Live announcements</strong><br>
+	This box shows recently updated announcements from <a href="https://www.simplemachines.org/" target="_blank" rel="noopener">www.simplemachines.org</a>.
+	You should check here every now and then for updates, new releases, and important information from Simple Machines.';
 
- $helptxt['registrations'] = '<strong>নিবন্ধন ব্যবস্থাপনা</strong><br>
- 	 এই পৃষ্ঠায় সমস্ত ফাংশন রয়েছে যা ফোরামে নতুন নিবন্ধন পরিচালনার জন্য প্রয়োজনীয় হতে পারে।  এটি চারটি পর্যন্ত ধারণ করে
- 	 আপনার ফোরাম সেটিংসের উপর নির্ভর করে দৃশ্যমান পৃষ্ঠাগুলি।  এগুলো হল:<br><br>
- 	 <ul class="normallist">
- 		 <li>
- 			 <strong>নতুন সদস্য নিবন্ধন করুন</strong><br>
- 			 এই পৃষ্ঠা থেকে আপনি তাদের পক্ষ থেকে নতুন সদস্যদের জন্য অ্যাকাউন্ট নিবন্ধন করতে পারেন।  এটি এমন ফোরামগুলিতে কার্যকর হতে পারে যেখানে নিবন্ধন বন্ধ রয়েছে
- 			 নতুন সদস্যদের কাছে, অথবা এমন ক্ষেত্রে যেখানে প্রশাসক একটি পরীক্ষা অ্যাকাউন্ট তৈরি করতে চান।  সেটিং করতে হলে অ্যাকাউন্ট সক্রিয় করতে হবে
- 			 নির্বাচিত হলে সদস্যকে একটি অ্যাক্টিভেশন লিঙ্ক ইমেল করা হবে যা অ্যাকাউন্ট ব্যবহার করার আগে ক্লিক করতে হবে।  একইভাবে আপনি পারেন
- 			 উল্লেখিত ইমেল ঠিকানায় ব্যবহারকারীর নতুন পাসওয়ার্ড ইমেল করতে নির্বাচন করুন।<br><br>
- 		 </li>
- 		 <li>
- 			 <strong>নিবন্ধন চুক্তি সম্পাদনা করুন</strong><br>
- 			 এই পৃষ্ঠাটি আপনাকে আপনার ফোরামে সদস্যরা সাইন আপ করার সময় প্রদর্শিত নিবন্ধন চুক্তির জন্য পাঠ্য সেট করতে দেয়।
- 			 আপনি ডিফল্ট রেজিস্ট্রেশন চুক্তি থেকে যেকোনো কিছু যোগ করতে বা সরাতে পারেন, যা SMF-এ অন্তর্ভুক্ত।<br><br>
- 		 </li>
- 		 <li>
- 			 <strong>সংরক্ষিত নাম সেট করুন</strong><br>
- 			 এই পৃষ্ঠাটি ব্যবহার করে আপনি এমন শব্দ বা নাম নির্দিষ্ট করতে পারেন যা আপনার ব্যবহারকারীরা ব্যবহার নাও করতে পারে৷<br><br>৷
- 		 </li>
- 		 <li>
- 			 <strong>সেটিংস</strong><br>৷
- 			 এই পৃষ্ঠাটি কেবল তখনই দৃশ্যমান হবে যদি আপনার কাছে ফোরাম পরিচালনা করার অনুমতি থাকে।  এই পৃষ্ঠা থেকে আপনি নিবন্ধন পদ্ধতি সম্পর্কে সিদ্ধান্ত নিতে পারেন
- 			 আপনার ফোরামে ব্যবহার করতে, সেইসাথে অন্যান্য নিবন্ধন সম্পর্কিত সেটিংস।
- 		 </li>
- 	 </ul>';
+$helptxt['registrations'] = '<strong>Registration Management</strong><br>
+	This page contains all the functions that could be necessary to manage new registrations on the forum. It contains up to four
+	pages which are visible depending on your forum settings. These are:<br><br>
+	<ul class="normallist">
+		<li>
+			<strong>Register new member</strong><br>
+			From this page you can choose to register accounts for new members on their behalf. This can be useful in forums where registration is closed
+			to new members, or in cases where the admin wishes to create a test account. If the setting to require activation of the account
+			is selected the member will be emailed an activation link which must be clicked before they can use the account. Similarly you can
+			select to email the user\'s new password to the stated email address.<br><br>
+		</li>
+		<li>
+			<strong>Edit Registration Agreement</strong><br>
+			This page allows you to set the text for the registration agreement displayed when members sign up for your forum.
+			You can add or remove anything from the default registration agreement, which is included in SMF.<br><br>
+		</li>
+		<li>
+			<strong>Set Reserved Names</strong><br>
+			Using this page you can specify words or names which may not be used by your users.<br><br>
+		</li>
+		<li>
+			<strong>Settings</strong><br>
+			This page will only be visible if you have permission to administrate the forum. From this page you can decide on the registration method
+			to use on your forum, as well as other registration related settings.
+		</li>
+	</ul>';
 
- $helptxt['modlog'] = '<strong>মডারেশন লগ</strong><br>
- 	 এই পৃষ্ঠাটি মডারেশন টিমের সদস্যদেরকে ফোরামের মডারেটররা সম্পাদিত সমস্ত মডারেশন অ্যাকশন ট্র্যাক করার অনুমতি দেয়৷  উল্লেখ্য যে
- 	 অপব্যবহার রোধ করতে লগ সাফ করা লগ করা হবে।';
- $helptxt['adminlog'] = '<strong>প্রশাসন লগ</strong><br>
- 	 এই পৃষ্ঠাটি প্রশাসক দলের সদস্যদের ফোরামে ঘটেছে এমন কিছু প্রশাসনিক ক্রিয়াকলাপ ট্র্যাক করার অনুমতি দেয়৷  উল্লেখ্য যে
- 	 অপব্যবহার রোধ করতে লগ সাফ করা লগ করা হবে।';
- $helptxt['userlog'] = '<strong>প্রোফাইল সম্পাদনা লগ</strong><br>
- 	 এই পৃষ্ঠাটি প্রশাসক দলের সদস্যদের তাদের প্রোফাইলে ব্যবহারকারীদের করা পরিবর্তনগুলি দেখতে দেয় এবং এটি একটি ব্যবহারকারীর প্রোফাইল এলাকা থেকে উপলব্ধ৷';
- $helptxt['warning_enable'] = '<strong>ব্যবহারকারী সতর্কতা সিস্টেম</strong><br>
- 	 এই বৈশিষ্ট্যটি প্রশাসক এবং মডারেশন টিমের সদস্যদের সদস্যদের সতর্কতা জারি করতে এবং সদস্যদের সতর্কতা স্তর ব্যবহার করতে সক্ষম করে
- 	 ফোরামে তাদের জন্য উপলব্ধ কর্ম.  এই বৈশিষ্ট্য সক্রিয় করার পরে একটি অনুমতি সংজ্ঞায়িত করার অনুমতি পৃষ্ঠার মধ্যে উপলব্ধ হবে
- 	 কোন গ্রুপ সদস্যদের সতর্কতা বরাদ্দ করতে পারে.  সতর্কতা মাত্রা একজন সদস্যের প্রোফাইল থেকে সামঞ্জস্য করা যেতে পারে।';
- $helptxt['warning_watch'] = 'এই সেটিংটি নির্ধারণ করে যে শতাংশ সতর্কতা স্তর একজন সদস্যকে স্বয়ংক্রিয়ভাবে একটি &quot;ঘড়ি&quot; বরাদ্দ করতে পৌঁছাতে হবে।  সদস্যের কাছে।  যে কোনো সদস্য যাকে &quot;দেখা হচ্ছে&quot;  মডারেশন সেন্টারে দেখা সদস্যদের তালিকায় উপস্থিত হবে।';
- $helptxt['warning_moderate'] = 'যেকোন সদস্য এই সেটিংটির মান পাস করলে ফোরাম সম্প্রদায়ে উপস্থিত হওয়ার আগে তাদের সমস্ত পোস্ট মডারেটরের অনুমোদনের প্রয়োজন হবে।  এটি পোস্ট মডারেশন সম্পর্কিত যে কোনও স্থানীয় বোর্ডের অনুমতিগুলিকে ওভাররাইড করবে৷';
- $helptxt['warning_mute'] = 'যদি এই সতর্কতা স্তরটি কোনো সদস্যের দ্বারা পাস করা হয় তবে তারা পোস্ট নিষেধাজ্ঞার আওতায় পড়বে।  সদস্য সকল পোস্টিং অধিকার হারাবেন।';
- $helptxt['user_limit'] = 'এই সেটিংটি চব্বিশ ঘণ্টার মধ্যে কোনো নির্দিষ্ট সদস্যকে কোনো মডারেটর যোগ/সরানোর পয়েন্টের পরিমাণ সীমাবদ্ধ করে।  এই
- 			 অল্প সময়ের মধ্যে একজন মডারেটর যা করতে পারে তা সীমিত করতে ব্যবহার করা যেতে পারে।  এটিকে শূন্যের মান নির্ধারণ করে নিষ্ক্রিয় করা যেতে পারে।  উল্লেখ্য যে
- 			 প্রশাসকের অনুমতি সহ কোনো সদস্য এই মান দ্বারা প্রভাবিত হয় না।';
+$helptxt['modlog'] = '<strong>Moderation Log</strong><br>
+	This page allows members of the moderation team to track all the moderation actions that the forum moderators have performed. Note that
+	clearing the log will be logged to prevent abuse.';
+$helptxt['adminlog'] = '<strong>Administration Log</strong><br>
+	This page allows members of the admin team to track some of the administrative actions that have occurred on the forum. Note that
+	clearing the log will be logged to prevent abuse.';
+$helptxt['userlog'] = '<strong>Profile Edits Log</strong><br>
+	This page allows members of the admin team to view changes users make to their profiles, and is available from inside a user\'s profile area.';
+$helptxt['warning_enable'] = '<strong>User Warning System</strong><br>
+	This feature enables members of the admin and moderation team to issue warnings to members - and to use a members warning level to determine the
+	actions available to them on the forum. Upon enabling this feature a permission will be available within the permissions page to define
+	which groups may assign warnings to members. Warning levels can be adjusted from a member\'s profile.';
+$helptxt['warning_watch'] = 'This setting defines the percentage warning level a member must reach to automatically assign a &quot;watch&quot; to the member. Any member who is being &quot;watched&quot; will appear in the watched members list in the moderation center.';
+$helptxt['warning_moderate'] = 'Any member passing the value of this setting will find all their posts require moderator approval before they appear to the forum community. This will override any local board permissions which may exist related to post moderation.';
+$helptxt['warning_mute'] = 'If this warning level is passed by a member they will find themselves under a post ban. The member will lose all posting rights.';
+$helptxt['user_limit'] = 'This setting limits the amount of points a moderator may add/remove to any particular member in a twenty four hour period. This
+			can be used to limit what a moderator can do in a small period of time. This can be disabled by setting it to a value of zero. Note that
+			any members with administrator permissions are not affected by this value.';
 
-$helptxt['error_log'] = '<strong>ত্রুটি লগ</strong><br>
- 	 ত্রুটি লগ আপনার ফোরামের ব্যবহারকারীদের দ্বারা সম্মুখীন প্রতিটি গুরুতর ত্রুটি ট্র্যাক করে.  এটি তারিখ অনুসারে এই সমস্ত ত্রুটিগুলি তালিকাভুক্ত করে, যা বাছাই করা যেতে পারে
- 	 প্রতিটি তারিখের পাশে কালো তীরটিতে ক্লিক করে।  অতিরিক্তভাবে আপনি প্রতিটি ত্রুটি পরিসংখ্যানের পাশের ছবিতে ক্লিক করে ত্রুটিগুলি ফিল্টার করতে পারেন।  এই
- 	 আপনাকে ফিল্টার করতে দেয়, উদাহরণস্বরূপ, সদস্য দ্বারা।  যখন একটি ফিল্টার সক্রিয় থাকে তখন শুধুমাত্র সেই ফলাফলগুলি প্রদর্শিত হবে যা সেই ফিল্টারের সাথে মেলে৷';
- $helptxt['theme_settings'] = '<strong>থিম সেটিংস</strong><br>
- 	 সেটিংস পৃষ্ঠা আপনাকে একটি থিমের জন্য নির্দিষ্ট সেটিংস পরিবর্তন করতে দেয়।  এই সেটিংস যেমন থিম ডিরেক্টরি এবং URL তথ্য হিসাবে বিকল্প অন্তর্ভুক্ত কিন্তু
- 	 এছাড়াও বিকল্পগুলি যা আপনার ফোরামে একটি থিমের বিন্যাসকে প্রভাবিত করে৷  বেশীরভাগ থিমগুলিতে ব্যবহারকারীর কনফিগারযোগ্য বিভিন্ন সেটিংস থাকবে, যা আপনাকে একটি থিম মানিয়ে নিতে দেয়
- 	 আপনার ব্যক্তিগত ফোরামের প্রয়োজন অনুসারে।';
- $helptxt['smileys'] = '<strong>স্মাইলি সেন্টার</strong><br>
- 	 এখানে আপনি স্মাইলি এবং স্মাইলি সেট যোগ এবং মুছে ফেলতে পারেন।  যদি একটি স্মাইলি একটি সেটে উপস্থিত থাকে তবে এটি সমস্ত সেটে উপস্থিত থাকা উচিত - অন্যথায়, এটি হতে পারে
- 	 বিভিন্ন সেট ব্যবহার করে আপনার ব্যবহারকারীদের জন্য বিভ্রান্তিকর হয়ে উঠুন।<br><br>
+$helptxt['error_log'] = '<strong>Error Log</strong><br>
+	The error log tracks every serious error encountered by users of your forum. It lists all of these errors by date, which can be sorted
+	by clicking the black arrow next to each date. Additionally you can filter the errors by clicking the picture next to each error statistic. This
+	allows you to filter, for example, by member. When a filter is active the only results that will be displayed will be those that match that filter.';
+$helptxt['theme_settings'] = '<strong>Theme Settings</strong><br>
+	The settings page allows you to change settings specific to a theme. These settings include options such as the themes directory and URL information but
+	also options that affect the layout of a theme on your forum. Most themes will have a variety of user configurable settings, allowing you to adapt a theme
+	to suit your individual forum needs.';
+$helptxt['smileys'] = '<strong>Smiley Center</strong><br>
+	Here you can add and remove smileys, and smiley sets. If a smiley is present in one set, it should be present in all sets - otherwise, it might
+	get confusing for your users using different sets.<br><br>
 
- 	 আপনি এখান থেকে বার্তা আইকন সম্পাদনা করতে সক্ষম হবেন, যদি আপনি সেগুলি সেটিংস পৃষ্ঠায় সক্ষম করে থাকেন।';
- $helptxt['calendar'] = '<strong>ক্যালেন্ডার পরিচালনা করুন</strong><br>
- 	 এখানে আপনি বর্তমান ক্যালেন্ডার সেটিংস পরিবর্তন করতে পারেন সেইসাথে ক্যালেন্ডারে প্রদর্শিত ছুটির দিনগুলি যোগ এবং মুছে ফেলতে পারেন৷';
- $helptxt['cal_export'] = 'অন্যান্য ক্যালেন্ডার অ্যাপ্লিকেশনে আমদানি করার জন্য iCal বিন্যাসে একটি টেক্সট ফাইল রপ্তানি করে';
- $helptxt['cal_highlight_events'] = 'এই সেটিং আপনাকে মিনি ক্যালেন্ডার, প্রধান ক্যালেন্ডার, উভয় স্থানে ইভেন্ট হাইলাইট করতে বা ইভেন্ট হাইলাইটিং অক্ষম করতে দেয়।';
- $helptxt['cal_highlight_holidays'] = 'এই সেটিংটি আপনাকে মিনি ক্যালেন্ডার, প্রধান ক্যালেন্ডার, উভয় স্থানে ছুটির দিনগুলি হাইলাইট করতে বা ইভেন্ট হাইলাইটিং অক্ষম করতে দেয়।';
- $helptxt['cal_highlight_birthdays'] = 'এই সেটিংটি আপনাকে মিনি ক্যালেন্ডার, প্রধান ক্যালেন্ডার, উভয় স্থানে জন্মদিন হাইলাইট করতে বা ইভেন্ট হাইলাইটিং অক্ষম করতে দেয়।';
- $helptxt['cal_disable_prev_next'] = 'যদি এই সেটিংটি চেক করা হয়, পৃষ্ঠার বাম দিকের তিন মাসের ব্লকগুলি নিষ্ক্রিয় করা হবে।';
- $helptxt['cal_display_type'] = 'এই সেটিং আপনাকে ক্যালেন্ডারের প্রদর্শনের ধরন পরিবর্তন করতে দেয়।<br><br><strong>আরামদায়ক:</strong> ক্যালেন্ডারের সারিগুলিকে বড় করে তোলে।<br><strong>  >কমপ্যাক্ট:</strong> ক্যালেন্ডারের সারি ছোট করে।';
- $helptxt['cal_week_links'] = 'যদি এই সেটিংটি চেক করা থাকে, ক্যালেন্ডারে প্রতি সপ্তাহের পাশাপাশি লিঙ্ক যোগ করা হবে।';
- $helptxt['cal_prev_next_links'] = 'যদি এই সেটিংটি চেক করা থাকে, সহজে নেভিগেশনের জন্য আগের মাস এবং পরের মাসের লিঙ্কগুলি প্রতি মাসের শীর্ষে যোগ করা হবে।';
- // যুক্তি(গুলি): $txt['months_short'][1], $txt['months_titles'][1]
- $helptxt['cal_short_months'] = 'যদি এই সেটিংটি চেক করা থাকে, ক্যালেন্ডারের মধ্যে মাসের নামগুলি ছোট করা হবে৷<br><br><strong>সক্ষম:</strong> %1$s 1<br><strong>  অক্ষম:</strong> %2$s 1';
- // যুক্তি(গুলি): $txt['days_short'][1], $txt['days'][1]
- $helptxt['cal_short_days'] = 'যদি এই সেটিংটি চেক করা থাকে, ক্যালেন্ডারের মধ্যে দিনের নামগুলি ছোট করা হবে৷<br><br><strong>সক্ষম:</strong> %1$s<br><strong>অক্ষম  :</strong> %2$s';
+	You are also able to edit message icons from here, if you have them enabled on the settings page.';
+$helptxt['calendar'] = '<strong>Manage Calendar</strong><br>
+	Here you can modify the current calendar settings as well as add and remove holidays that appear on the calendar.';
+$helptxt['cal_export'] = 'Exports a text file in the iCal format for importing into other calendar applications';
+$helptxt['cal_highlight_events'] = 'This setting allows you to highlight events on the Mini Calendars, Main Calendar, both places, or disable event highlighting.';
+$helptxt['cal_highlight_holidays'] = 'This setting allows you to highlight holidays on the Mini Calendars, Main Calendar, both places, or disable event highlighting.';
+$helptxt['cal_highlight_birthdays'] = 'This setting allows you to highlight birthdays on the Mini Calendars, Main Calendar, both places, or disable event highlighting.';
+$helptxt['cal_disable_prev_next'] = 'If this setting is checked, the three month blocks on the left hand side of the page will be disabled.';
+$helptxt['cal_display_type'] = 'This setting allows you to change the display type of the calendar.<br><br><strong>Comfortable:</strong> makes the rows of the calendar big.<br><strong>Compact:</strong> makes the rows of the calendar small.';
+$helptxt['cal_week_links'] = 'If this setting is checked, links will be added alongside each week in the calendar.';
+$helptxt['cal_prev_next_links'] = 'If this setting is checked, previous month and next month links will be added to the top of each month for easy navigation.';
+// argument(s): $txt['months_short'][1], $txt['months_titles'][1]
+$helptxt['cal_short_months'] = 'If this setting is checked, month names within the calendar will be shortened.<br><br><strong>Enabled:</strong> %1$s 1<br><strong>Disabled:</strong> %2$s 1';
+// argument(s): $txt['days_short'][1], $txt['days'][1]
+$helptxt['cal_short_days'] = 'If this setting is checked, day names within the calendar will be shortened.<br><br><strong>Enabled:</strong> %1$s<br><strong>Disabled:</strong> %2$s';
 
- $helptxt['serversttings'] = '<strong>সার্ভার সেটিংস</strong><br>
- 	 এখানে আপনি আপনার ফোরামের জন্য কিছু মূল কনফিগারেশন করতে পারেন।  এই পৃষ্ঠায় ডাটাবেস এবং URL সেটিংস, সেইসাথে অন্যান্য অন্তর্ভুক্ত রয়েছে৷
- 	 গুরুত্বপূর্ণ কনফিগারেশন আইটেম যেমন মেল সেটিংস এবং ক্যাশিং।  যখনই এই সেটিংস সম্পাদনা করার সময় একটি ত্রুটি হতে পারে তখন সাবধানে চিন্তা করুন
- 	 ফোরামটি প্রবেশযোগ্য নয়';
- $helptxt['manage_files'] = '
- 	 <ul class="normallist">
- 		 <li>
- 			 <strong>ফাইলগুলি ব্রাউজ করুন</strong><br>৷
- 			 SMF দ্বারা সংরক্ষিত সমস্ত সংযুক্তি, অবতার এবং থাম্বনেইলগুলি ব্রাউজ করুন৷<br><br>
- 		 </li><li>
- 			 <strong>সংযুক্তি সেটিংস</strong><br>৷
- 			 সংযুক্তিগুলি কোথায় সংরক্ষণ করা হবে তা কনফিগার করুন এবং সংযুক্তির প্রকারের উপর সীমাবদ্ধতা সেট করুন৷<br><br>৷
- 		 </li><li>
- 			 <strong>অবতার সেটিংস</strong><br>৷
- 			 অবতারগুলি কোথায় সংরক্ষণ করা হয়েছে তা কনফিগার করুন এবং অবতারগুলির আকার পরিবর্তন পরিচালনা করুন৷<br><br>
- 		 </li><li>
- 			 <strong>ফাইল রক্ষণাবেক্ষণ</strong><br>
- 			 অ্যাটাচমেন্ট ডাইরেক্টরিতে যেকোন ত্রুটি চেক করুন এবং মেরামত করুন এবং নির্বাচিত অ্যাটাচমেন্ট মুছে দিন।<br><br>
- 		 </li>
- 	 </ul>';
+$helptxt['serversettings'] = '<strong>Server Settings</strong><br>
+	Here you can perform some core configuration for your forum. This page includes the database and URL settings, as well as other
+	important configuration items such as mail settings and caching. Think carefully whenever editing these settings as an error may
+	render the forum inaccessible';
+$helptxt['manage_files'] = '
+	<ul class="normallist">
+		<li>
+			<strong>Browse Files</strong><br>
+			Browse through all the attachments, avatars and thumbnails stored by SMF.<br><br>
+		</li><li>
+			<strong>Attachment Settings</strong><br>
+			Configure where attachments are stored and set restrictions on the types of attachments.<br><br>
+		</li><li>
+			<strong>Avatar Settings</strong><br>
+			Configure where avatars are stored and manage the resizing of avatars.<br><br>
+		</li><li>
+			<strong>File Maintenance</strong><br>
+			Check and repair any error in the attachment directory and delete selected attachments.<br><br>
+		</li>
+	</ul>';
 
- $helptxt['topicSummaryPosts'] = 'এটি আপনাকে উত্তর পৃষ্ঠায় বিষয়ের সারাংশে দেখানো আগের পোস্টের সংখ্যা সেট করতে দেয়।';
- $helptxt['enableAllMessages'] = 'এটিকে <em>সর্বোচ্চ</em> পোস্টের সংখ্যায় সেট করুন একটি বিষয়ের <em>সমস্ত</em> লিঙ্ক দেখানোর জন্য।  এটিকে &quot;বিষয় পৃষ্ঠায় প্রদর্শনের জন্য সর্বাধিক বার্তাগুলির চেয়ে কম সেট করা হচ্ছে&quot;  এর সহজ অর্থ হল এটি কখনই দেখানো হবে না, এবং এটিকে খুব বেশি রাখলে আপনার ফোরাম ধীর হয়ে যেতে পারে।';
- $helptxt['allow_guestAccess'] = 'এই বক্সটি আনচেক করা অতিথিদের আপনার ফোরামে - লগইন, রেজিস্টার, পাসওয়ার্ড রিমাইন্ডার ইত্যাদি - আপনার ফোরামে খুব প্রাথমিক অ্যাকশন ছাড়া আর কিছু করা বন্ধ করবে।  এটি বোর্ডে অতিথিদের প্রবেশাধিকার নিষিদ্ধ করার মতো নয়।';
- $helptxt['userLanguage'] = 'এই সেটিংটি চালু করলে ব্যবহারকারীরা কোন ভাষা ফাইল ব্যবহার করেন তা নির্বাচন করতে পারবেন।  এটা প্রভাবিত করবে না
- 		 ডিফল্ট নির্বাচন।';
- $helptxt['trackStats'] = 'পরিসংখ্যান:<br>এটি ব্যবহারকারীদের আপনার ফোরামে সর্বশেষ পোস্ট এবং সর্বাধিক জনপ্রিয় বিষয়গুলি দেখতে অনুমতি দেবে৷
- 		 এটি বেশ কয়েকটি পরিসংখ্যানও দেখাবে, যেমন অনলাইনে সর্বাধিক সদস্য, নতুন সদস্য এবং নতুন বিষয়৷<hr>
- 		 পৃষ্ঠা দর্শন:<br>আপনার ফোরামে পৃষ্ঠা দর্শনের সংখ্যা সহ পরিসংখ্যান পৃষ্ঠায় আরেকটি কলাম যোগ করে।';
- $helptxt['titlesEnable'] = 'কাস্টম টাইটেল চালু করলে প্রাসঙ্গিক অনুমতি থাকা সদস্যরা নিজেদের জন্য একটি বিশেষ শিরোনাম তৈরি করতে পারবেন।
- 		 এটি নামের নিচে দেখানো হবে।<br><em>উদাহরণস্বরূপ:</em><br>জেফ<br>কুল গাই';
- $helptxt['onlineEnable'] = 'এটি সদস্য অনলাইন নাকি অফলাইন তা নির্দেশ করার জন্য একটি ছবি দেখাবে';
- $helptxt['todayMod'] = 'এটি দেখাবে &quot;আজ&quot;  অথবা &quot;গতকাল&quot;  তারিখের পরিবর্তে।<br><br>
- 		 <strong>উদাহরণ:</strong><br><br>
- 		 <ul class="normallist">
- 			 <li>
- 			 <strong>অক্ষম</strong><br>৷
- 			 অক্টোবর 3, 2009 12:59:18 am</li>৷
- 			 <li><strong>শুধুমাত্র আজ</strong><br>
- 			 আজ 12:59:18 am</li>
- 			 <li><strong>আজ &amp;  গতকাল</strong><br>
- 			 গতকাল 09:36:55 pm</li>
- 		 </ul>';
- $helptxt['disableCustomPerPage'] = 'ব্যবহারকারীদের যথাক্রমে মেসেজ ইনডেক্স এবং টপিক ডিসপ্লে পৃষ্ঠায় প্রতি পৃষ্ঠায় প্রদর্শিত বার্তা এবং বিষয়গুলির পরিমাণ কাস্টমাইজ করা থেকে বিরত রাখতে এই সেটিংটি পরীক্ষা করুন।';
- $helptxt['enablePreviousNext'] = 'এটি পরবর্তী এবং আগের বিষয়ের একটি লিঙ্ক দেখাবে।';
- $helptxt['pollMode'] = 'এটি নির্বাচন করে যে পোল সক্রিয় করা হয়েছে কি না।  পোল অক্ষম করা হলে, বিদ্যমান যেকোন পোল লুকিয়ে রাখা হবে
- 		 বিষয় তালিকা থেকে.  আপনি নির্বাচন করে তাদের পোল ছাড়াই নিয়মিত বিষয় দেখানো চালিয়ে যেতে পারেন
- 		 &quot;বিদ্যমান পোলগুলিকে বিষয় হিসাবে দেখান৷<br><br>কে পোল পোস্ট করতে পারে, পোল দেখতে এবং অনুরূপ করতে পারে তা চয়ন করতে, আপনি
- 		 অনুমতি দিতে পারে এবং সেই অনুমতিগুলি অস্বীকার করতে পারে।  ভোট যদি কাজ না করে তাহলে এটা মনে রাখবেন।';
- $helptxt['enableCompressedOutput'] = 'এই সেটিংটি ব্যান্ডউইথের খরচ কমানোর জন্য আউটপুটকে সংকুচিত করবে, তবে এটির প্রয়োজন
- 		 zlib ইনস্টল করা হবে।';
-$helptxt['httponlyCookies'] = 'কুকিজ স্ক্রিপ্টিং ভাষা, যেমন জাভাস্ক্রিপ্ট দ্বারা অ্যাক্সেসযোগ্য হবে না।  এই সেটিং XSS আক্রমণের মাধ্যমে পরিচয় চুরি কমাতে সাহায্য করতে পারে।  এটি তৃতীয় পক্ষের স্ক্রিপ্টগুলির সাথে সমস্যা সৃষ্টি করতে পারে তবে যেখানেই সম্ভব সেখানে থাকা উচিত।';
- $helptxt['samesiteCookies'] = 'সেট-কুকি HTTP প্রতিক্রিয়া শিরোনামের একইসাইট বৈশিষ্ট্য আপনাকে ঘোষণা করতে দেয় যে আপনার কুকি একটি প্রথম-পক্ষ বা একই-সাইট প্রসঙ্গে সীমাবদ্ধ করা উচিত কিনা।  আরও তথ্যের জন্য, অনুগ্রহ করে <a href="https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite">MDN</a>' দেখুন;
- $helptxt['databaseSession_enable'] = 'এই সেটিংটি সেশন স্টোরেজের জন্য ডাটাবেস ব্যবহার করে - এটি ভারসাম্যপূর্ণ সার্ভার লোড করার জন্য সর্বোত্তম, তবে সমস্ত টাইমআউট সমস্যার সাথে সাহায্য করে এবং ফোরামটিকে দ্রুততর করতে পারে।';
- $helptxt['databaseSession_loose'] = 'এটি চালু করলে আপনার ফোরামের ব্যান্ডউইথ কমে যাবে এবং আবার ক্লিক করলে পৃষ্ঠাটি পুনরায় লোড হবে না - নেতিবাচক দিক হল (নতুন) আইকনগুলি অন্যান্য জিনিসের মধ্যে আপডেট হবে না  .  (যদি না আপনি সেই পৃষ্ঠায় ফিরে যাওয়ার পরিবর্তে ক্লিক করুন)।';
- $helptxt['databaseSession_lifetime'] = 'এটি সেশনের সেকেন্ডের সংখ্যা যা সেগুলি অ্যাক্সেস না করার পরে স্থায়ী হয়৷  যদি একটি অধিবেশন খুব বেশি সময় ধরে অ্যাক্সেস না করা হয়, তবে এটিকে "টাইম আউট" বলা হয়।  2400-এর চেয়ে বেশি কিছু বাঞ্ছনীয়।';
- $helptxt['tfa_mode'] = 'আপনি <a href="https://en.wikipedia.org/wiki/Two_factor_authentication">টু ফ্যাক্টর প্রমাণীকরণ</a> সক্ষম করে আপনার ফোরামে নিরাপত্তার দ্বিতীয় স্তর যোগ করতে পারেন৷  2FA আপনার ব্যবহারকারীদের নিয়মিত লগইন করার পরে একটি মেশিন-জেনারেটেড কোড যোগ করতে বাধ্য করে।  আপনি অন্য ব্যবহারকারীদের কাছে জোর করতে সক্ষম হওয়ার আগে আপনাকে 2FA কনফিগার করতে হবে!';
- $helptxt['cache_enable'] = 'SMF বিভিন্ন স্তরে ক্যাশিং সঞ্চালন করে।  ক্যাশিং এর স্তর যত বেশি সক্ষম হবে তত বেশি CPU সময় ক্যাশে করা তথ্য পুনরুদ্ধার করতে ব্যয় হবে।  যদি আপনার মেশিনে ক্যাশিং উপলব্ধ থাকে তবে প্রথমে লেভেল 1 এ ক্যাশে করার চেষ্টা করার পরামর্শ দেওয়া হয়।';
- $helptxt['cache_memcached'] = 'আপনি যদি মেমক্যাচেড ব্যবহার করেন তাহলে আপনাকে সার্ভারের বিশদ বিবরণ দিতে হবে।  নীচের উদাহরণে দেখানো হিসাবে এটি একটি কমা বিভক্ত তালিকা হিসাবে প্রবেশ করা উচিত:<br><br> &quot;server1,server2,server3:port,server4&quot;<br><br>উল্লেখ্য যে যদি কোনো পোর্ট নির্দিষ্ট করা না থাকে তাহলে SMF ব্যবহার করবে  পোর্ট 11211 যদি হোস্টে একটি স্ল্যাশ না থাকে, তাহলে এটি একটি বিকল্প পরিবহন বলে ধরে নেওয়া হয় এবং পোর্টটি 0 এ সেট করা হবে। SMF নির্দিষ্ট সার্ভার জুড়ে রুক্ষ/এলোমেলো লোড ব্যালেন্স করার চেষ্টা করবে।';
- $helptxt['cache_cachedir'] = 'এই সেটিংটি শুধুমাত্র smf ফাইল-ভিত্তিক ক্যাশে সিস্টেমের জন্য।  এটি ক্যাশে ডিরেক্টরির পথ নির্দিষ্ট করে।  এটা বাঞ্ছনীয় যে আপনি এটিকে /tmp/ এ রাখুন যদি আপনি এটি ব্যবহার করতে যাচ্ছেন, যদিও এটি যেকোনো ডিরেক্টরিতে কাজ করবে';
- $helptxt['cache_sqlite_cachedir'] = 'এই সেটিংটি শুধুমাত্র SQLite ডাটাবেস ক্যাশে সিস্টেমের জন্য।  এটি ক্যাশে ডিরেক্টরির পথ নির্দিষ্ট করে।  এটা বাঞ্ছনীয় যে আপনি এটিকে /tmp/ এ রাখুন যদি আপনি এটি ব্যবহার করতে যাচ্ছেন, যদিও এটি যেকোনো ডিরেক্টরিতে কাজ করবে';
- $helptxt['enableErrorLogging'] = 'এটি ব্যর্থ লগইনের মতো যেকোনো ত্রুটি লগ করবে, যাতে আপনি দেখতে পারেন কী ভুল হয়েছে।';
- $helptxt['enableErrorQueryLogging'] = 'এটি ত্রুটির লগে ডাটাবেসে পাঠানো সম্পূর্ণ কোয়েরি অন্তর্ভুক্ত করবে।  এটির জন্য ত্রুটি লগিং চালু করা প্রয়োজন৷<br><br><strong>দ্রষ্টব্য: এটি ত্রুটি বার্তা দ্বারা ত্রুটি লগ ফিল্টার করার ক্ষমতাকে প্রভাবিত করবে৷</strong>';
- $helptxt['disallow_sendBody'] = 'এই সেটিংটি বিজ্ঞপ্তি ইমেলে উত্তর, পোস্ট এবং ব্যক্তিগত বার্তার পাঠ্য পাওয়ার বিকল্পটি সরিয়ে দেয়।<br><br>প্রায়শই, সদস্যরা বিজ্ঞপ্তি ইমেলের উত্তর দেয়, যা বেশিরভাগ ক্ষেত্রেই  মানে ওয়েবমাস্টার উত্তর পায়।';
- $helptxt['enable_ajax_alerts'] = 'এই বিকল্পটি আপনার সদস্যদের AJAX বিজ্ঞপ্তি পেতে অনুমতি দেয়।  এর অর্থ হল নতুন বিজ্ঞপ্তি পেতে সদস্যদের পৃষ্ঠাটি রিফ্রেশ করার প্রয়োজন নেই৷<br><strong>মনে রাখবেন:</strong> এই বিকল্পটি অনলাইনে অনেক ব্যবহারকারীর সাথে আপনার সার্ভারে একটি গুরুতর লোড হতে পারে৷';
- $helptxt['alerts_auto_purge'] = 'একবার একটি সতর্কতা পড়া হয়ে গেলে, এটি খুব কমই প্রয়োজন হয়।  কর্মক্ষমতার কারণে, কিছুক্ষণ পরে স্বয়ংক্রিয়ভাবে সেগুলি মুছে ফেলা একটি ভাল ধারণা৷';
- $helptxt['jquery_source'] = 'এটি jQuery লাইব্রেরি লোড করতে ব্যবহৃত উৎস নির্ধারণ করবে।  <em>Google CDN, jQuery CDN</em> এবং <em>Microsoft CDN</em> সংশ্লিষ্ট CDN নেটওয়ার্ক থেকে jQuery লাইব্রেরি লোড করবে।  <em>স্থানীয়</em> শুধুমাত্র স্থানীয় উৎস ব্যবহার করবে।  <em>কাস্টম</em> আপনাকে লাইব্রেরির জন্য একটি কাস্টম URL নির্দিষ্ট করতে দেয়।';
- $helptxt['compactTopicPagesEnable'] = 'এটি শুধুমাত্র পৃষ্ঠার সংখ্যার একটি নির্বাচন দেখাবে।<br><em>উদাহরণ:</em>
- 		 &quot;3&quot;  প্রদর্শনের জন্য: 1 ... 4 [5] 6 ... 9 <br>
- 		 &quot;5&quot;  প্রদর্শনের জন্য: 1 ... 3 4 [5] 6 7 ... 9';
- $helptxt['timeLoadPageEnable'] = 'এটি বোর্ডের নীচে পৃষ্ঠাটি তৈরি করতে SMF কত সেকেন্ডে সময় নিয়েছে তা দেখাবে।';
- $helptxt['removeNestedQuotes'] = 'কোট লিঙ্কের মাধ্যমে প্রশ্নে থাকা পোস্টটি উদ্ধৃত করার সময় এটি একটি পোস্ট থেকে নেস্টেড উদ্ধৃতিগুলি সরিয়ে ফেলবে।';
- $helptxt['max_image_width'] = 'এটি আপনাকে পোস্ট করা ছবির জন্য সর্বোচ্চ আকার নির্ধারণ করতে দেয়।  সর্বোচ্চ থেকে ছোট ছবি প্রভাবিত হবে না.  থাম্বনেইলে ক্লিক করার সময় সংযুক্ত ছবিগুলি কীভাবে প্রদর্শিত হবে তাও এটি নির্ধারণ করে।';
- $helptxt['mail_type'] = 'এই সেটিংটি আপনাকে হয় PHP এর ডিফল্ট সেটিংস বেছে নিতে বা SMTP দিয়ে সেই সেটিংস ওভাররাইড করতে দেয়।  PHP SMTP এর সাথে প্রমাণীকরণ ব্যবহার সমর্থন করে না (যা এখন অনেক হোস্টের প্রয়োজন), তাই আপনি যদি চান যে আপনার SMTP নির্বাচন করা উচিত।  দয়া করে মনে রাখবেন যে SMTP ধীর হতে পারে, এবং কিছু সার্ভার ব্যবহারকারীর নাম এবং পাসওয়ার্ড গ্রহণ করবে না৷<br><br>আপনাকে SMTP সেটিংস পূরণ করতে হবে না যদি এটি PHP এর ডিফল্টে সেট করা থাকে৷';
- $helptxt['attachment_manager_settings'] = 'সংযুক্তি হল এমন ফাইল যা সদস্যরা পোস্টে আপলোড এবং সংযুক্ত করতে পারে।  বিভিন্ন সাইট বিভিন্ন উপায়ে এগুলি ব্যবহার করতে পারে, যা আপনি এখানে কনফিগার করতে পারেন।';
- $helptxt['attachmentCheckExtensions'] = 'কিছু সম্প্রদায়ের জন্য, আপনি এক্সটেনশন চেক করে ব্যবহারকারীরা আপলোড করতে পারেন এমন ফাইলের ধরন সীমিত করতে চাইতে পারেন: যেমন  myphoto.jpg-এ jpg এর একটি এক্সটেনশন রয়েছে।';
- // রেফারেন্স সেটিং অ্যাটাচমেন্ট চেক এক্সটেনশন
- $helptxt['attachmentExtensions'] = 'উপরে "অ্যাটাচমেন্টের এক্সটেনশন চেক করুন" সক্ষম করা থাকলে, এই এক্সটেনশনগুলি নতুন সংযুক্তির জন্য অনুমোদিত হবে।';
- $helptxt['attachmentUploadDir'] = 'সার্ভারে আপনার সংযুক্তি ফোল্ডারের পথ<br>(উদাহরণ: /home/sites/yoursite/www/forum/attachments)';
- $helptxt['attachmentDirSizeLimit'] = 'সংযুক্তি ফোল্ডারটি কত বড় হতে পারে তা নির্বাচন করুন, এর মধ্যে থাকা সমস্ত ফাইল সহ।';
- $helptxt['attachmentPostLimit'] = 'প্রতি পোস্টে করা সমস্ত সংযুক্তির সর্বোচ্চ ফাইলের আকার (কেবিতে) নির্বাচন করুন।  যদি এটি প্রতি-সংযুক্তি সীমার চেয়ে কম হয় তবে এটি সীমা হবে।';
- $helptxt['attachmentSizeLimit'] = 'প্রতিটি পৃথক সংযুক্তির সর্বোচ্চ ফাইলের আকার নির্বাচন করুন।';
- $helptxt['attachmentNumPerPostLimit'] = 'একজন ব্যক্তি প্রতি পোস্টে কতগুলো সংযুক্তি করতে পারে তা নির্বাচন করুন।';
- $helptxt['attachmentShowImages'] = 'আপলোড করা ফাইলটি যদি একটি ছবি হয়, তাহলে সেটি পোস্টের নিচে প্রদর্শিত হবে।';
- $helptxt['attachmentThumbnails'] = 'যদি উপরের সেটিংটি নির্বাচন করা হয়, তাহলে এটি ব্যান্ডউইথ কমাতে থাম্বনেইলের জন্য একটি পৃথক (ছোট) সংযুক্তি সংরক্ষণ করবে।';
- $helptxt['attachmentThumbWidth'] = 'শুধুমাত্র &quot;পোস্টের নিচে দেখানোর সময় চিত্রের আকার পরিবর্তন করুন&quot;  সেটিং  সংযুক্তিগুলির আকার পরিবর্তন করার জন্য এটি সর্বাধিক প্রস্থ।  তাদের আনুপাতিক আকার পরিবর্তন করা হবে।';
- $helptxt['attachmentThumbHeight'] = 'শুধুমাত্র পোস্টের নিচে দেখানোর সময় ইমেজ রিসাইজ করা হয়'  সেটিং  সংযুক্তিগুলির আকার পরিবর্তন করার জন্য এটি সর্বাধিক উচ্চতা।  তাদের আনুপাতিক আকার পরিবর্তন করা হবে।';
- $helptxt['attachmentDirFileLimit'] = 'ডিরেক্টরি প্রতি ফাইলের সর্বোচ্চ সংখ্যা';
- $helptxt['attachmentEnable'] = 'এই সেটিং আপনাকে কীভাবে সংযুক্তিগুলি তৈরি করা যায় তা কনফিগার করতে সক্ষম করে৷<br><br>
- 	 <ul class="normallist">
- 		 <li>
- 			 <strong>সমস্ত সংযুক্তি নিষ্ক্রিয় করুন</strong><br>
- 			 সমস্ত সংযুক্তি নিষ্ক্রিয় করা হয়.  বিদ্যমান সংযুক্তিগুলি মুছে ফেলা হয় না, তবে সেগুলি দৃশ্য থেকে লুকানো হয় (এমনকি প্রশাসকরাও সেগুলি দেখতে পারে না)৷  অনুমতি নির্বিশেষে নতুন সংযুক্তিগুলিও করা যাবে না৷<br><br>৷
- 		 </li>
- 		 <li>
- 			 <strong>সমস্ত সংযুক্তি সক্ষম করুন</strong><br>
- 			 সবকিছু স্বাভাবিক হিসাবে আচরণ করে, যে ব্যবহারকারীদের সংযুক্তিগুলি দেখার অনুমতি দেওয়া হয়েছে তারা তা করতে পারে, যে ব্যবহারকারীদের আপলোড করার অনুমতি দেওয়া হয়েছে তারা তা করতে পারে৷<br><br>
- 		 </li>
- 		 <li>
- 			 <strong>নতুন সংযুক্তিগুলি অক্ষম করুন</strong><br>৷
- 			 বিদ্যমান সংযুক্তিগুলি এখনও অ্যাক্সেসযোগ্য, তবে অনুমতি নির্বিশেষে কোনো নতুন সংযুক্তি যোগ করা যাবে না৷
- 		 </li>
- 	 </ul>';
- $helptxt['attachment_image_paranoid'] = 'এই সেটিংটি নির্বাচন করা ছবি সংযুক্তিগুলিতে অত্যন্ত কঠোর নিরাপত্তা পরীক্ষা সক্ষম করবে৷  <strong>সতর্কতা!</strong> এই বিস্তৃত চেকগুলি বৈধ ছবিতেও ব্যর্থ হতে পারে৷  এটি দৃঢ়ভাবে সুপারিশ করা হয় যে শুধুমাত্র এই সেটিংটি ইমেজ রি-এনকোডিংয়ের সাথে একসাথে ব্যবহার করার জন্য, যাতে SMF সেই ছবিগুলিকে পুনরায় নমুনা করার চেষ্টা করে যা নিরাপত্তা পরীক্ষায় ব্যর্থ হয়: সফল হলে, সেগুলি স্যানিটাইজ এবং আপলোড করা হবে।  অন্যথায়, ইমেজ রি-এনকোডিং সক্ষম না হলে, চেক ব্যর্থ হওয়া সমস্ত সংযুক্তি প্রত্যাখ্যান করা হবে।';
- $helptxt['attachment_image_reencode'] = 'এই সেটিংটি নির্বাচন করলে আপলোড করা ছবি সংযুক্তিগুলিকে পুনরায় এনকোড করার চেষ্টা করা সম্ভব হবে৷  ইমেজ রি-এনকোডিং ভালো নিরাপত্তা প্রদান করে।  তবে মনে রাখবেন যে ইমেজ রি-এনকোডিং সমস্ত অ্যানিমেটেড ছবিকে স্ট্যাটিক রেন্ডার করে।  <br> এই বৈশিষ্ট্যটি শুধুমাত্র তখনই সম্ভব যদি আপনার সার্ভারে জিডি মডিউল ইনস্টল করা থাকে।';
- $helptxt['attachment_thumb_memory'] = 'সোর্স ইমেজ (আকার এবং প্রস্থ x উচ্চতা) যত বড় হবে, সফলভাবে থাম্বনেইল ইমেজ তৈরি করতে সিস্টেমের জন্য মেমরির প্রয়োজনীয়তা তত বেশি।<br>এই সেটিং চেক করলে, সিস্টেম অনুমান করবে  প্রয়োজনীয় মেমরি এবং তারপর সেই পরিমাণ অনুরোধ করবে।  যদি সফল হয়, তবেই এটি থাম্বনেইল তৈরি করার চেষ্টা করবে৷<br>এর ফলে কম সাদা পৃষ্ঠার ত্রুটি দেখা দেবে কিন্তু এর ফলে কম থাম্বনেল তৈরি হতে পারে৷  চেক না করে রেখে দিলে সিস্টেম সবসময় থাম্বনেইল তৈরি করার চেষ্টা করবে (একটি নির্দিষ্ট পরিমাণ মেমরি সহ)।  এর ফলে আরও সাদা পাতার ত্রুটি হতে পারে।';
- $helptxt['attachmentRecodeLineEndings'] = 'স্ক্রিপ্টটি আপনার সার্ভার অনুযায়ী লাইনের শেষগুলি পুনরায় কোড করবে।';
- $helptxt['automanage_attachments'] = 'ডিফল্টরূপে, SMF একটি একক ফোল্ডারে নতুন সংযুক্তি রাখে।  বেশিরভাগ সাইটের জন্য এটি একটি সমস্যা নয়, কিন্তু একটি সাইট বাড়ার সাথে সাথে সংযুক্তিগুলি সংরক্ষণ করার জন্য একাধিক ফোল্ডার থাকা উপযোগী হতে পারে৷<br><br>এই সেটিংটি আপনি নিজে এই ফোল্ডারগুলি পরিচালনা করবেন কিনা তা সেট করতে দেয় (যেমন একটি সেকেন্ড তৈরি করা  ফোল্ডার এবং আপনি যখন প্রস্তুত তখন এটিতে চলে যান) অথবা আপনি SMF কে এটি করতে দেন কিনা, মানদণ্ডের উপর ভিত্তি করে, যেমন যখন বর্তমান ডিরেক্টরি একটি নির্দিষ্ট আকারে পৌঁছে যায়, বা খুব ব্যস্ত সাইটগুলিতে বছর বা এমনকি মাস ধরে ফোল্ডারগুলি ভেঙে ফেলা।';
- $helptxt['dont_show_attach_under_post'] = 'সক্রিয় থাকলে, পোস্টে এম্বেড করা অ্যাটাচমেন্ট পোস্টের নিচে প্রদর্শিত হবে না, কিন্তু এখনও মুছে ফেলা হবে।';
- $helptxt['use_subdirectories_for_attachments'] = 'নতুন ডিরেক্টরি তৈরি করুন।';
- $helptxt['max_image_height'] = 'সর্বোচ্চ প্রস্থের মতো, এই সেটিংটি নির্দেশ করে যে একটি পোস্ট করা ছবির সর্বোচ্চ উচ্চতা হতে পারে।';
- $helptxt['avatar_paranoid'] = 'এই সেটিংটি নির্বাচন করা অবতারের উপর অত্যন্ত কঠোর নিরাপত্তা পরীক্ষা সক্ষম করবে।  <strong>সতর্কতা!</strong> এই বিস্তৃত চেকগুলি বৈধ ছবিতেও ব্যর্থ হতে পারে৷  এটি দৃঢ়ভাবে সুপারিশ করা হয় যে শুধুমাত্র এই সেটিংটি অবতার রি-এনকোডিংয়ের সাথে একসাথে ব্যবহার করার জন্য, যাতে SMF সেই ছবিগুলিকে পুনরায় নমুনা করার চেষ্টা করে যা নিরাপত্তা পরীক্ষায় ব্যর্থ হয়: সফল হলে, সেগুলি স্যানিটাইজ করা হবে এবং আপলোড করা হবে৷  অন্যথায়, যদি অবতারের পুনরায় এনকোডিং সক্ষম না করা হয়, চেক ব্যর্থ হওয়া সমস্ত অবতার বাতিল করা হবে৷';
- $helptxt['avatar_reencode'] = 'এই সেটিংটি নির্বাচন করলে আপলোড করা অবতারগুলিকে পুনরায় এনকোড করার চেষ্টা করা সম্ভব হবে৷  ইমেজ রি-এনকোডিং ভালো নিরাপত্তা প্রদান করে।  উল্লেখ্য, যাইহোক, সেই ইমেজ রি-এনকোডিং সব অ্যানিমেটেড ইমেজকে স্ট্যাটিক রেন্ডার করে।  <br> এই বৈশিষ্ট্যটি শুধুমাত্র তখনই সম্ভব যদি আপনার সার্ভারে GD মডিউল ইনস্টল করা থাকে।';
- $helptxt['cal_enabled'] = 'ক্যালেন্ডারটি জন্মদিন দেখানোর জন্য বা আপনার সম্প্রদায়ের গুরুত্বপূর্ণ ঘটনাগুলি দেখানোর জন্য ব্যবহার করা যেতে পারে।  এই সেটিং ক্যালেন্ডার এবং এর সমস্ত বৈশিষ্ট্য সক্রিয় করে।';
- $helptxt['cal_link_postevent'] = 'এটি সদস্যদের সেই দিনের ইভেন্ট পোস্ট করার অনুমতি দেবে, যখন তারা সেই তারিখে ক্লিক করবে';
- $helptxt['cal_maxdays_advance'] = 'যদি এটি 7 এ সেট করা হয়, তাহলে পরের সপ্তাহের ইভেন্টের মূল্য দেখানো হবে';
- $helptxt['cal_allow_unlinkedevents'] = 'সদস্যদের একটি বোর্ডের পোস্টের সাথে লিঙ্ক করার প্রয়োজন ছাড়াই ইভেন্টগুলি পোস্ট করার অনুমতি দিন';
- $helptxt['cal_min_year'] = '&quot;প্রথম&quot; নির্বাচন করুন  ক্যালেন্ডার তালিকায় বছর';
- $helptxt['cal_max_year'] = '&quot;শেষ&quot; নির্বাচন করুন;  ক্যালেন্ডার তালিকায় বছর';
- $helptxt['cal_maxevent_span'] = 'একটি ইভেন্ট যত দিন জুড়ে থাকতে পারে তার সর্বোচ্চ সংখ্যা নির্বাচন করুন';
- $helptxt['localCookies'] = 'SMF ক্লায়েন্ট কম্পিউটারে লগইন তথ্য সংরক্ষণ করতে কুকিজ ব্যবহার করে।
- 	 কুকিজ বিশ্বব্যাপী (myserver.com) বা স্থানীয়ভাবে (myserver.com/path/to/forum) সংরক্ষণ করা যেতে পারে।<br><br>
- 	 আপনি যদি ব্যবহারকারীদের স্বয়ংক্রিয়ভাবে লগ আউট হওয়ার সমস্যার সম্মুখীন হন তবে এই সেটিংটি ব্যবহার করে দেখুন৷<hr>৷
- 	 শেয়ার্ড ওয়েব সার্ভারে (যেমন ট্রাইপড) ব্যবহার করা হলে বিশ্বব্যাপী সঞ্চিত কুকিজ কম সুরক্ষিত থাকে।<hr>
- 	 স্থানীয় কুকিগুলি ফোরাম ডিরেক্টরির বাইরে কাজ করে না তাই, যদি আপনার ফোরাম www.myserver.com/forum এ সংরক্ষিত থাকে, www.myserver.com/index.php এর মতো পৃষ্ঠাগুলি অ্যাকাউন্টের তথ্য অ্যাক্সেস করতে পারে না৷<br><br>
- 	 SSI.php ব্যবহার করার সময় গ্লোবাল কুকিজ বিশেষভাবে সুপারিশ করা হয় তবে তাদের নিজস্ব ডোমেনে বেশিরভাগ সাইটের জন্য ভাল কাজ করে।';
- $helptxt['enableBBC'] = 'এই সেটিংটি নির্বাচন করলে আপনার সদস্যরা পুরো ফোরাম জুড়ে বুলেটিন বোর্ড কোড (বিবিসি) ব্যবহার করতে পারবে, ব্যবহারকারীদের ছবি, টাইপ ফরম্যাটিং এবং আরও অনেক কিছু দিয়ে তাদের পোস্ট ফরম্যাট করার অনুমতি দেবে।';
- $helptxt['legacy_bbc'] = 'লিগেসি বিবিকোডগুলি অপ্রচলিত এবং নতুন পোস্টে ব্যবহার করা যাবে না৷  যাইহোক, এখানে সক্ষম হলে সেগুলি বিদ্যমান পোস্টগুলিতে পার্স করা হবে৷<br><br>লেগ্যাসি BBCcodes সক্ষম করা শুধুমাত্র তখনই উপযোগী যদি আপনার ফোরামটি SMF এর পূর্ববর্তী সংস্করণ থেকে আপগ্রেড করা হয়৷<br><br>এছাড়াও, এমনকি যখন সেগুলি সক্রিয় থাকে  , কিছু লিগ্যাসি BBCcodes একইভাবে রেন্ডার করা হবে না যেভাবে তারা আগে ছিল।  উদাহরণস্বরূপ, [ফ্ল্যাশ] বিবিকোড ফ্ল্যাশ বিষয়বস্তুকে এম্বেড করার পরিবর্তে একটি লিঙ্ক দেখাবে।';
- $helptxt['default_timezone'] = 'এটি ফোরাম জুড়ে সময় প্রদর্শনের জন্য ব্যবহৃত ডিফল্ট টাইমজোন।';
- $helptxt['timezone_priority_countries'] = 'এই সেটিংটি আপনাকে একটি নির্দিষ্ট দেশ বা দেশের জন্য সময় অঞ্চলগুলিকে নির্বাচনযোগ্য টাইম জোনের তালিকার শীর্ষে ঠেলে দিতে দেয় যা দেখানো হয় যখন ব্যবহারকারীরা তাদের প্রোফাইল কনফিগার করছেন, ক্যালেন্ডার ইভেন্টগুলি তৈরি করছেন ইত্যাদি৷<  br><br>উদাহরণস্বরূপ, যদি আপনার ফোরামের অনেক সদস্য নিউজিল্যান্ড বা ফিজিতে থাকেন, তাহলে আপনি "NZ,FJ" লিখতে পারেন যাতে তাদের জন্য সবচেয়ে প্রাসঙ্গিক সময় অঞ্চলগুলি দ্রুত খুঁজে পাওয়া সহজ হয়৷<br>  <br>আপনি "<a href="https://www.google.com/search?q=iso+3166-1+alpha-2" target= এর জন্য ইন্টারনেট অনুসন্ধান করে ISO দেশের কোডগুলির সম্পূর্ণ তালিকা খুঁজে পেতে পারেন  "_blank" rel="noopener">ISO 3166-1 আলফা-2</a>"।';
- $helptxt['spamWaitTime'] = 'এখানে আপনি পোস্ট করার মধ্যে যে পরিমাণ সময় পার করতে হবে তা নির্বাচন করতে পারেন।  লোকেরা কত ঘন ঘন পোস্ট করতে পারে তা সীমিত করে আপনার ফোরামকে "স্প্যামিং" থেকে আটকাতে এটি ব্যবহার করা যেতে পারে৷';
+$helptxt['topicSummaryPosts'] = 'This allows you to set the number of previous posts shown in the topic summary on the reply page.';
+$helptxt['enableAllMessages'] = 'Set this to the <em>maximum</em> number of posts a topic can have to show the <em>all</em> link. Setting this lower than &quot;Maximum messages to display in a topic page&quot; will simply mean it never gets shown, and setting it too high could slow down your forum.';
+$helptxt['allow_guestAccess'] = 'Unchecking this box will stop guests from doing anything but very basic actions on your forum - login, register, password reminder, etc. - on your forum. This is not the same as disallowing guest access to boards.';
+$helptxt['userLanguage'] = 'Turning this setting on will allow users to select which language file they use. It will not affect the
+		default selection.';
+$helptxt['trackStats'] = 'Stats:<br>This will allow users to see the latest posts and the most popular topics on your forum.
+		It will also show several statistics, like the most members online, new members, and new topics.<hr>
+		Page views:<br>Adds another column to the stats page with the number of pageviews on your forum.';
+$helptxt['titlesEnable'] = 'Switching Custom Titles on will allow members with the relevant permission to create a special title for themselves.
+		This will be shown underneath the name.<br><em>For example:</em><br>Jeff<br>Cool Guy';
+$helptxt['onlineEnable'] = 'This will show an image to indicate whether the member is online or offline';
+$helptxt['todayMod'] = 'This will show &quot;Today&quot; or &quot;Yesterday&quot; instead of the date.<br><br>
+		<strong>Examples:</strong><br><br>
+		<ul class="normallist">
+			<li>
+			<strong>Disabled</strong><br>
+			October 3, 2009 at 12:59:18 am</li>
+			<li><strong>Only Today</strong><br>
+			Today at 12:59:18 am</li>
+			<li><strong>Today &amp; Yesterday</strong><br>
+			Yesterday at 09:36:55 pm</li>
+		</ul>';
+$helptxt['disableCustomPerPage'] = 'Check this setting to stop users from customizing the amount of messages and topics to display per page on the Message Index and Topic Display page respectively.';
+$helptxt['enablePreviousNext'] = 'This will show a link to the next and previous topic.';
+$helptxt['pollMode'] = 'This selects whether polls are enabled or not. If polls are disabled, any existing polls will be hidden
+		from the topic listing. You can choose to continue to show the regular topic without their polls by selecting
+		&quot;Show Existing Polls as Topics&quot;.<br><br>To choose who can post polls, view polls, and similar, you
+		can allow and disallow those permissions. Remember this if polls are not working.';
+$helptxt['enableCompressedOutput'] = 'This setting will compress output in order to lower bandwidth consumption, but it requires
+		zlib to be installed.';
+$helptxt['httponlyCookies'] = 'Cookies won\'t be accessible by scripting languages, such as JavaScript. This setting can help to reduce identity theft through XSS attacks. This can cause issues with third party scripts but should be on wherever possible.';
+$helptxt['samesiteCookies'] = 'The SameSite attribute of the Set-Cookie HTTP response header allows you to declare if your cookie should be restricted to a first-party or same-site context. For further information, please refer to <a href="https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite">MDN</a>';
+$helptxt['databaseSession_enable'] = 'This setting makes use of the database for session storage - it is best for load balanced servers, but helps with all timeout issues and can make the forum faster.';
+$helptxt['databaseSession_loose'] = 'Turning this on will decrease the bandwidth your forum uses, and make it so clicking back will not reload the page - the downside is that the (new) icons won\'t update, among other things. (unless you click to that page instead of going back to it).';
+$helptxt['databaseSession_lifetime'] = 'This is the number of seconds for sessions to last after they haven\'t been accessed. If a session is not accessed for too long, it is said to have &quot;timed out&quot;. Anything higher than 2400 is recommended.';
+$helptxt['tfa_mode'] = 'You can add a second level of security to your forum by enabling <a href="https://en.wikipedia.org/wiki/Two_factor_authentication">Two Factor Authentication</a>. 2FA forces your users to add a enter a machine-generated code after the regular login. You need to configure 2FA to yourself before you are able to force it to other users!';
+$helptxt['cache_enable'] = 'SMF performs caching at a variety of levels. The higher the level of caching enabled the more CPU time will be spent retrieving cached information. If caching is available on your machine it is recommended that you try caching at level 1 first.';
+$helptxt['cache_memcached'] = 'If you are using memcached you need to provide the server details. This should be entered as a comma separated list as shown in the example below:<br><br>	&quot;server1,server2,server3:port,server4&quot;<br><br>Note that if no port is specified SMF will use port 11211 unless the host contains a slash, then it is assumed to be an alternative transport and the port will be set to 0. SMF will attempt to perform rough/random load balancing across the specified servers.';
+$helptxt['cache_cachedir'] = 'This setting is only for the smf file-based cache system. It specifies the path to the cache directory. It is recommended that you place this in /tmp/ if you are going to use this, although it will work in any directory';
+$helptxt['cache_sqlite_cachedir'] = 'This setting is only for the SQLite database cache system. It specifies the path to the cache directory. It is recommended that you place this in /tmp/ if you are going to use this, although it will work in any directory';
+$helptxt['enableErrorLogging'] = 'This will log any errors, like a failed login, so you can see what went wrong.';
+$helptxt['enableErrorQueryLogging'] = 'This will include the full query sent to the database in the error log. It requires error logging to be turned on.<br><br><strong>Note:  This will affect the ability to filter the error log by the error message.</strong>';
+$helptxt['disallow_sendBody'] = 'This setting removes the option to receive the text of replies, posts, and personal messages in notification emails.<br><br>Often, members will reply to the notification email, which in most cases means the webmaster receives the reply.';
+$helptxt['enable_ajax_alerts'] = 'This option allows your members to receive AJAX notifications. This means that members don\'t need to refresh the page to get new notifications.<br><strong>DO NOTE:</strong> This option might cause a severe load at your server with many users online.';
+$helptxt['alerts_auto_purge'] = 'Once an alert has been read, it is rarely needed again. For performance reasons, it is a good idea to automatically delete them after a while.';
+$helptxt['jquery_source'] = 'This will determine the source used to load the jQuery Library. <em>Google CDN, jQuery CDN</em> and <em>Microsoft CDN</em> will load the jQuery library from those respective CDN networks. <em>Local</em> will only use the local source. <em>Custom</em> allows you to specify a custom URL for the library.';
+$helptxt['compactTopicPagesEnable'] = 'This will just show a selection of the number of pages.<br><em>Example:</em>
+		&quot;3&quot; to display: 1 ... 4 [5] 6 ... 9 <br>
+		&quot;5&quot; to display: 1 ... 3 4 [5] 6 7 ... 9';
+$helptxt['timeLoadPageEnable'] = 'This will show the time in seconds SMF took to create the page at the bottom of the board.';
+$helptxt['removeNestedQuotes'] = 'This will strip nested quotes from a post when citing the post in question via a quote link.';
+$helptxt['max_image_width'] = 'This allows you to set a maximum size for posted pictures. Pictures smaller than the maximum will not be affected. This also determines how attached images are displayed when a thumbnail is clicked on.';
+$helptxt['mail_type'] = 'This setting allows you to choose either PHP\'s default settings, or to override those settings with SMTP. PHP doesn\'t support using authentication with SMTP (which many hosts now require), so if you want that you should select SMTP. Please note that SMTP can be slower, and some servers will not accept usernames and passwords.<br><br>You don\'t need to fill in the SMTP settings if this is set to PHP\'s default.';
+$helptxt['attachment_manager_settings'] = 'Attachments are files that members can upload and attach to a post. Different sites may use these in different ways, which you can configure here.';
+$helptxt['attachmentCheckExtensions'] = 'For some communities, you may wish to limit the types of files that users can upload by checking the extension: e.g. myphoto.jpg has an extension of jpg.';
+// References setting attachmentCheckExtensions
+$helptxt['attachmentExtensions'] = 'If "check attachment\'s extension" above is enabled, these are the extensions that will be permitted for new attachments.';
+$helptxt['attachmentUploadDir'] = 'The path to your attachment folder on the server<br>(example: /home/sites/yoursite/www/forum/attachments)';
+$helptxt['attachmentDirSizeLimit'] = 'Select how large the attachment folder can be, including all files within it.';
+$helptxt['attachmentPostLimit'] = 'Select the maximum filesize (in KB) of all attachments made per post. If this is lower than the per-attachment limit, this will be the limit.';
+$helptxt['attachmentSizeLimit'] = 'Select the maximum filesize of each separate attachment.';
+$helptxt['attachmentNumPerPostLimit'] = 'Select the number of attachments a person can make per post.';
+$helptxt['attachmentShowImages'] = 'If the uploaded file is a picture, it will be displayed underneath the post.';
+$helptxt['attachmentThumbnails'] = 'If the above setting is selected, this will save a separate (smaller) attachment for the thumbnail to decrease bandwidth.';
+$helptxt['attachmentThumbWidth'] = 'Only used with the &quot;Resize images when showing under posts&quot; setting. This is the maximum width to resize attachments down to. They will be resized proportionally.';
+$helptxt['attachmentThumbHeight'] = 'Only used with the &quot;Resize images when showing under posts&quot; setting. This is the maximum height to resize attachments down to. They will be resized proportionally.';
+$helptxt['attachmentDirFileLimit'] = 'Max number of files per directory';
+$helptxt['attachmentEnable'] = 'This setting enables you to configure how attachments can be made.<br><br>
+	<ul class="normallist">
+		<li>
+			<strong>Disable all attachments</strong><br>
+			All attachments are disabled. Existing attachments are not deleted, but they are hidden from view (even administrators cannot see them). New attachments cannot be made either, regardless of permissions.<br><br>
+		</li>
+		<li>
+			<strong>Enable all attachments</strong><br>
+			Everything behaves as normal, users who are permitted to view attachments can do so, users who are permitted to upload can do so.<br><br>
+		</li>
+		<li>
+			<strong>Disable new attachments</strong><br>
+			Existing attachments are still accessible, but no new attachments can be added, regardless of permission.
+		</li>
+	</ul>';
+$helptxt['attachment_image_paranoid'] = 'Selecting this setting will enable very strict security checks on image attachments. <strong>Warning!</strong> These extensive checks can fail on valid images too. It is strongly recommended to only use this setting together with image re-encoding, in order to have SMF try to resample the images which fail the security checks: if successful, they will be sanitized and uploaded. Otherwise, if image re-encoding is not enabled, all attachments failing checks will be rejected.';
+$helptxt['attachment_image_reencode'] = 'Selecting this setting will enable trying to re-encode the uploaded image attachments. Image re-encoding offers better security. Note however that image re-encoding also renders all animated images static. <br> This feature is only possible if the GD module is installed on your server.';
+$helptxt['attachment_thumb_memory'] = 'The larger the source image (size & width x height), the higher the memory requirements are for the system to successfully create a thumbnail image.<br>Checking this setting, the system will estimate the required memory and will then request that amount. If successful, only then will it attempt to create the thumbnail.<br>This will result in fewer white page errors but may result in fewer thumbnails being created. Leaving this unchecked will always cause the system to try to create the thumbnail (with a fixed amount of memory). This may result in more white page errors.';
+$helptxt['attachmentRecodeLineEndings'] = 'The script will re-code line endings according to your server.';
+$helptxt['automanage_attachments'] = 'By default, SMF puts new attachments into a single folder. For most sites this is not a problem, but as a site grows it can be useful to have multiple folders to store attachments in.<br><br>This setting allows you to set whether you manage these folders yourself (e.g. creating a second folder and moving to it when you are ready) or whether you let SMF do it, based on criteria, such as when the current directory reaches a given size, or breaking down folders by years or even months on very busy sites.';
+$helptxt['dont_show_attach_under_post'] = 'If enabled, the attachments embedded in the post won\'t appear under the post, but are still subject to be deleted.';
+$helptxt['use_subdirectories_for_attachments'] = 'Create new directories.';
+$helptxt['max_image_height'] = 'As with the maximum width, this setting indicates the maximum height a posted image can be.';
+$helptxt['avatar_paranoid'] = 'Selecting this setting will enable very strict security checks on avatars. <strong>Warning!</strong> These extensive checks can fail on valid images too. It is strongly recommended to only use this setting together with avatar re-encoding, in order to have SMF try to resample the images which fail the security checks: if successful, they will be sanitized and uploaded. Otherwise, if re-encoding of avatars is not enabled, all avatars failing checks will be rejected.';
+$helptxt['avatar_reencode'] = 'Selecting this setting will enable trying to re-encode the uploaded avatars. Image re-encoding offers better security. Note, however, that image re-encoding also renders all animated images static. <br> This feature is only possible if the GD module is installed on your server.';
+$helptxt['cal_enabled'] = 'The calendar can be used for showing birthdays, or for showing important events happening in your community. This setting enables the calendar and all its features.';
+$helptxt['cal_link_postevent'] = 'This will allow members to post events for that day, when they click on that date';
+$helptxt['cal_maxdays_advance'] = 'If this is set to 7, the next week\'s worth of events will be shown';
+$helptxt['cal_allow_unlinkedevents'] = 'Allow members to post events without requiring them to be linked with a post in a board';
+$helptxt['cal_min_year'] = 'Select the &quot;first&quot; year on the calendar list';
+$helptxt['cal_max_year'] = 'Select the &quot;last&quot; year on the calendar list';
+$helptxt['cal_maxevent_span'] = 'Select the maximum number of days that an event can span';
+$helptxt['localCookies'] = 'SMF uses cookies to store login information on the client computer.
+	Cookies can be stored globally (myserver.com) or locally (myserver.com/path/to/forum).<br><br>
+	Try this setting if you\'re experiencing problems with users getting logged out automatically.<hr>
+	Globally stored cookies are less secure when used on a shared webserver (like Tripod).<hr>
+	Local cookies don\'t work outside the forum directory so, if your forum is stored at www.myserver.com/forum, pages like www.myserver.com/index.php cannot access the account information.<br><br>
+	Global cookies are especially recommended when using SSI.php but work well for most sites on their own domain.';
+$helptxt['enableBBC'] = 'Selecting this setting will allow your members to use Bulletin Board Code (BBC) throughout the forum, allowing users to format their posts with images, type formatting, and more.';
+$helptxt['legacy_bbc'] = 'Legacy BBCodes are obsolete and cannot be used in new posts. However, they will be parsed in existing posts if enabled here.<br><br>Enabling legacy BBCodes is only useful if your forum was upgraded from a previous version of SMF.<br><br>Also, even when they are enabled, some legacy BBCodes will not be rendered in the same way that they once were. For example, the [flash] BBCode will simply show a link to the Flash content instead of embedding it.';
+$helptxt['default_timezone'] = 'This is the default timezone used for the display of times throughout the forum.';
+$helptxt['timezone_priority_countries'] = 'This setting lets you push the time zones for a certain country or countries to the top of the list of selectable time zones that is shown when users are configuring their profiles, creating calendar events, etc.<br><br>For example, if many of your forum\'s members live in New Zealand or Fiji, you may enter "NZ,FJ" to make it easier for them to find the most relevant time zones quickly.<br><br>You can find the complete list of ISO country codes by searching the Internet for "<a href="https://www.google.com/search?q=iso+3166-1+alpha-2" target="_blank" rel="noopener">ISO 3166-1 alpha-2</a>".';
+$helptxt['spamWaitTime'] = 'Here you can select the amount of time that must pass between postings. This can be used to stop people from "spamming" your forum by limiting how often they can post.';
 
- $helptxt['enablePostHTML'] = 'এটি কিছু মৌলিক HTML ট্যাগ পোস্ট করার অনুমতি দেবে:
- 	 <ul class="normallist">
- 		 <li>&lt;b&gt;, &lt;u&gt;, &lt;i&gt;, &lt;s&gt;, &lt;em&gt;, &lt;strong&gt;, &lt;ins&gt;, &lt;del&gt;</li>
- 		 <li>&lt;a href=&quot;&quot;&gt;</li>
- 		 <li>&lt;img src=&quot;&quot;  alt=&quot;&quot;  /&gt;</li>
- 		 <li>&lt;br&gt;, &lt;hr&gt;</li>
- 		 <li>&lt;pre&gt;, &lt;blockquote&gt;</li>
- 	 </ul>';
+$helptxt['enablePostHTML'] = 'This will allow the posting of some basic HTML tags:
+	<ul class="normallist">
+		<li>&lt;b&gt;, &lt;u&gt;, &lt;i&gt;, &lt;s&gt;, &lt;em&gt;, &lt;strong&gt;, &lt;ins&gt;, &lt;del&gt;</li>
+		<li>&lt;a href=&quot;&quot;&gt;</li>
+		<li>&lt;img src=&quot;&quot; alt=&quot;&quot; /&gt;</li>
+		<li>&lt;br&gt;, &lt;hr&gt;</li>
+		<li>&lt;pre&gt;, &lt;blockquote&gt;</li>
+	</ul>';
 
- $helptxt['themes_manage'] = 'এখানে আপনি নতুন থিম ইন্সটল করতে পারবেন এবং আপনার ব্যবহারকারীরা কোন থিম থেকে বেছে নিতে পারবেন, নতুন ব্যবহারকারী এবং অতিথিরা যে ডিফল্ট থিম ব্যবহার করবেন, সেইসাথে অন্যান্য থিম নির্বাচন সেটিংস নির্বাচন করতে পারবেন।';
- $helptxt['theme_install'] = 'এটি আপনাকে নতুন থিম ইনস্টল করতে দেয়।  আপনি একটি বিদ্যমান ডিরেক্টরি থেকে, থিমের জন্য একটি সংরক্ষণাগার আপলোড করে বা ডিফল্ট থিম অনুলিপি করে এটি করতে পারেন৷<br><br>মনে রাখবেন যে সংরক্ষণাগার বা ডিরেক্টরির একটি <pre>theme_info.xml</pre> সংজ্ঞা থাকতে হবে  ফাইল।';
- $helptxt['xmlnews_enable'] = 'লোকেদের <a href="%1$s?action=.xml;sa=news" target="_blank" rel="noopener">সাম্প্রতিক সংবাদ</a> লিঙ্ক করার অনুমতি দেয়
- 	 এবং অনুরূপ ডেটা।  এটাও বাঞ্ছনীয় যে আপনি সাম্প্রতিক পোস্ট/সংবাদের আকার সীমিত করুন কারণ কিছু ক্লায়েন্ট আশা করে যে RSS ডেটা প্রদর্শনের জন্য কেটে যাবে।';
- $helptxt['xmlnews_attachments'] = 'আপনার XML/RSS ফিডের মধ্যে সংযুক্তির লিঙ্কগুলিকে আবদ্ধ করার অনুমতি দেয়৷  আপনি যদি আপনার ফোরামকে পডকাস্টিং, ব্রডক্যাচিং বা অনুরূপ সামগ্রী বিতরণ প্ল্যাটফর্ম হিসাবে ব্যবহার করতে চান তবে এটি চালু করুন৷
- 	 <br><br>
- 	 "সংযুক্তিগুলি দেখুন" অনুমতি এই সেটিংকে প্রভাবিত করে৷  সদস্য এবং অতিথিরা শুধুমাত্র ফিডে একটি পোস্টের সংযুক্তি দেখতে পাবেন যদি তারা পোস্টের ওয়েব পৃষ্ঠায় সংযুক্তিগুলিও দেখতে পান৷  মনে রাখবেন যে বেশিরভাগ ফিড পাঠক অতিথি হিসাবে আপনার ফিডগুলি অ্যাক্সেস করবে৷
- 	 <br><br>
-     কিছু ফিড ফরম্যাট শুধুমাত্র প্রতি পোস্টে একটি সংযুক্ত সংযুক্তির অনুমতি দেয়।  যদি একটি পোস্টে একাধিক সংযুক্তি থাকে, তাহলে SMF এই ফিডগুলিতে সবচেয়ে বড়টি সংযুক্ত করবে৷';
- $helptxt['globalCookies'] = 'সাবডোমেন জুড়ে লগ ইন কুকিজ উপলব্ধ করে।  উদাহরণস্বরূপ, যদি...<br>
- 	 আপনার সাইট হল https://www.example.com/,<br>
- 	 এবং আপনার ফোরাম হল https://forum.example.com/,<br>
- 	 এই সেটিং ব্যবহার করে আপনি আপনার সাইটে ফোরামের কুকি অ্যাক্সেস করতে পারবেন।  অন্য সাবডোমেন (যেমন hacker.example.com) আপনার দ্বারা নিয়ন্ত্রিত না হলে এটি সক্ষম করবেন না৷<br><br>
- 	 স্থানীয় কুকিজ সক্রিয় থাকলে এই সেটিং কাজ করে না।';
- $helptxt['globalCookiesDomain'] = 'সাবডোমেন স্বাধীন কুকিজ (গ্লোবাল কুকিজ) ব্যবহার করার সময়, আপনি তাদের জন্য কোন ডোমেন ব্যবহার করা উচিত তা উল্লেখ করতে পারেন।  এটি অবশ্যই আপনার প্রধান ডোমেনে সেট করা উচিত - উদাহরণস্বরূপ, আপনি যদি <em>forum.example.com</em> এবং <em>www.example.com</em> ব্যবহার করেন তবে ডোমেনটি হল <  em>example.com</em> এই ক্ষেত্রে।  আপনি এটির সামনে <em>http://</em> বা <em>https://</em> অংশ রাখবেন না।';
- $helptxt['secureCookies'] = 'এই সেটিং সক্রিয় করা আপনার ফোরামে ব্যবহারকারীদের জন্য তৈরি করা কুকিগুলিকে সুরক্ষিত হিসাবে চিহ্নিত করতে বাধ্য করবে৷  আপনি যদি আপনার সাইটে জুড়ে HTTPS ব্যবহার করেন তবেই কেবল এই সেটিংটি সক্ষম করুন, অন্যথায় এর অর্থ হবে যে কেউ সঠিকভাবে লগ ইন করতে পারবে না!';
- $helptxt['securityDisable'] = 'সক্রিয় করা হলে, এটি প্রশাসনিক পৃষ্ঠার জন্য অতিরিক্ত পাসওয়ার্ড চেক <em>অক্ষম</em> করে।  এটা বাঞ্ছনীয় নয়!';
- $helptxt['securityDisable_why'] = 'আপনার বর্তমান পাসওয়ার্ড লিখুন।  (যেটি আপনি লগইন করতে ব্যবহার করেন।)<br><br>এটি প্রবেশ করার প্রয়োজনীয়তা নিশ্চিত করতে সাহায্য করে যে আপনি যে প্রশাসনই করছেন তা আপনি করতে চান এবং এটি <strong>আপনি</strong> করছেন।'  ;
- $helptxt['securityDisable_moderate'] = 'সক্রিয় করা হলে, এটি মডারেশন পৃষ্ঠার জন্য অতিরিক্ত পাসওয়ার্ড চেক <em>অক্ষম</em> করে।  এই সেটিং ডিফল্টরূপে সক্রিয় করা হয়.';
- $helptxt['securityDisable_moderate_why'] = 'আপনার বর্তমান পাসওয়ার্ড লিখুন।  (যেটি আপনি লগইন করতে ব্যবহার করেন।)<br><br>এটি প্রবেশ করার প্রয়োজনীয়তা নিশ্চিত করতে সাহায্য করে যে আপনি যা কিছু সংযম করছেন তা আপনি করতে চান এবং এটি <strong>আপনি</strong> করছেন।'  ;
- $helptxt['allow_cors'] = 'ক্রস অরিজিন রিসোর্স শেয়ারিং বা CORS হল আধুনিক ব্রাউজারদের বিভিন্ন ডোমেনে অনুরোধ করা রিসোর্সকে বিশ্বাস করার জন্য একটি নীতি।   যদি সক্ষম করা থাকে, তাহলে এটি বিভিন্ন ডোমেন থেকে ফোরাম সংস্থান অ্যাক্সেস করার স্ক্রিপ্টগুলির জন্য CORS নীতির সমাধান করার চেষ্টা করবে৷   যদি সাবডোমেন স্বাধীন কুকিজ (গ্লোবাল কুকিজ) সক্ষম করা হয়, তাহলে সঠিক ডোমেইন নির্ধারণ করার চেষ্টা করা হয়।   ডোমেনগুলির একটি কমা দ্বারা পৃথক তালিকা সহ অতিরিক্ত CORS ডোমেনগুলি সরবরাহ করা অতিরিক্ত ডোমেনের জন্য অনুমতি দেয়৷   ফর্ম্যাটটি হওয়া উচিত {SCHEMA}://{DOMAIN}৷   যদি ডোমেনে একটি ওয়াইল্ডকার্ড (*) সরবরাহ করা হয়, তাহলে ওয়াইল্ডকার্ডটি সমাধান করার চেষ্টা করা হয়।   যদি একটি ওয়াইল্ডকার্ড (*) শুধুমাত্র অতিরিক্ত ডোমেন হিসাবে সরবরাহ করা হয়, তবে সমস্ত ডোমেন অনুমোদিত হয় এবং এটি আপনার ফোরামে একটি নিরাপত্তা ঝুঁকি উপস্থাপন করতে পারে এবং চরম ক্ষেত্রে ছাড়া ব্যবহার করা উচিত নয়।   অতিরিক্ত শিরোনামগুলি একটি কমা পৃথক তালিকায় সরবরাহ করা যেতে পারে এবং এই শিরোনামগুলি সম্বলিত অনুরোধের সময় অনুমতি দেওয়া হবে এবং ওয়াইল্ডকার্ড (*) অনুমোদিত।';
- $helptxt['frame_security'] = 'আধুনিক ব্রাউজার এখন X-Frame-Options নামক সার্ভার দ্বারা উপস্থাপিত একটি নিরাপত্তা শিরোনাম বোঝে।  এই বিকল্পটি সেট করে আপনি নির্দিষ্ট করেন যে আপনি কীভাবে আপনার সাইটকে ফ্রেমসেট বা আইফ্রেমের মধ্যে ফ্রেম করার অনুমতি দিতে চান।  নিষ্ক্রিয় কোনো শিরোনাম পাঠাবে না এবং সবচেয়ে অনিরাপদ, তবে সর্বাধিক স্বাধীনতার অনুমতি দেয়।  অস্বীকার সম্পূর্ণরূপে সমস্ত ফ্রেম প্রতিরোধ করবে এবং সবচেয়ে সীমাবদ্ধ এবং নিরাপদ.  একই উত্সকে অনুমতি দিলে শুধুমাত্র আপনার ডোমেন যেকোন ফ্রেম ইস্যু করতে পারবে এবং পূর্ববর্তী দুটি বিকল্পের জন্য একটি মধ্যম স্থল প্রদান করবে।';
- $helptxt['proxy_ip_header'] = 'এটি সার্ভার হেডার যা প্রকৃত ব্যবহারকারীদের আইপি ঠিকানা ধারণ করার জন্য SMF দ্বারা বিশ্বস্ত হবে।  এই সেটিং পরিবর্তন করলে সদস্যদের উপর অপ্রত্যাশিত IP ফলাফল হতে পারে।  এই সেটিংস পরিবর্তন করার আগে আপনার সার্ভার অ্যাডমিনিস্ট্রেটর, CDN প্রদানকারী বা প্রক্সি অ্যাডমিনিস্ট্রেটরের সাথে চেক করুন।  অধিকাংশ প্রদানকারী HTTP_X_FORWARDED_FOR বুঝতে এবং ব্যবহার করবে৷  নিরাপত্তার জন্য রিভার্স প্রক্সি হেডার পাঠানো সার্ভারের তালিকা আপনার পূরণ করা উচিত যাতে এই শিরোনামগুলি শুধুমাত্র বৈধ উৎস থেকে আসে।';
- $helptxt['email_members'] = 'এই বার্তাটিতে আপনি কয়েকটি &quot;ভেরিয়েবল&quot; ব্যবহার করতে পারেন।  এগুলো হল:<br>
- 	 {$board_url} - আপনার ফোরামের URL৷<br>৷
- 	 {$current_time} - বর্তমান সময়।<br>
- 	 {$member.email} - বর্তমান সদস্যের ইমেল৷<br>৷
- 	 {$member.link} - বর্তমান সদস্যের লিঙ্ক৷<br>৷
- 	 {$member.id} - বর্তমান সদস্যের আইডি৷<br>৷
- 	 {$member.name} - বর্তমান সদস্যের নাম।  (ব্যক্তিগতকরণের জন্য)।<br>
- 	 {$latest_member.link} - অতি সম্প্রতি নিবন্ধিত সদস্যের লিঙ্ক৷<br>৷
- 	 {$latest_member.id} - অতি সম্প্রতি নিবন্ধিত সদস্যের আইডি৷<br>৷
- 	 {$latest_member.name} - অতি সম্প্রতি নিবন্ধিত সদস্যের নাম।';
+$helptxt['themes_manage'] = 'Here you can install new themes and select which themes your users can choose from, the default theme that new users and guests will use, as well as other theme selection settings.';
+$helptxt['theme_install'] = 'This allows you to install new themes. You can do this from an existing directory, by uploading an archive for the theme, or by copying the default theme.<br><br>Note that the archive or directory must have a <pre>theme_info.xml</pre> definition file.';
+$helptxt['xmlnews_enable'] = 'Allows people to link to <a href="%1$s?action=.xml;sa=news" target="_blank" rel="noopener">Recent news</a>
+	and similar data. It is also recommended that you limit the size of recent posts/news because some clients expect the RSS data to be truncated for display.';
+$helptxt['xmlnews_attachments'] = 'Allows links to attachments to be enclosed within your XML/RSS feeds. Turn this on if you want to use your forum as a podcasting, broadcatching, or similar content distribution platform.
+	<br><br>
+	The "view attachments" permission affects this setting. Members and guests will only see a post\'s attachments in the feed if they can also see the attachments on the post\'s web page. Keep in mind that most feed readers will access your feeds as a guest.
+	<br><br>
+	Some feed formats only allow one enclosed attachment per post. If a post has multiple attachments, SMF will enclose the largest one in these feeds.';
+$helptxt['globalCookies'] = 'Makes log in cookies available across subdomains. For example, if...<br>
+	your site is https://www.example.com/,<br>
+	and your forum is https://forum.example.com/,<br>
+	using this setting will allow you to access the forum\'s cookie on your site. Do not enable this if there are other subdomains (like hacker.example.com) not controlled by you.<br><br>
+	This setting does not function when local cookies are enabled.';
+$helptxt['globalCookiesDomain'] = 'When using subdomain independent cookies (global cookies), you can specify which domain should be used for them. This should, of course, be set to your main domain - for example, if you are using <em>forum.example.com</em> and <em>www.example.com</em>, the domain is <em>example.com</em> in this case. You should not put the <em>http://</em> or <em>https://</em> part in front of it.';
+$helptxt['secureCookies'] = 'Enabling this setting will force the cookies created for users on your forum to be marked as secure. Only enable this setting if you are using HTTPS throughout your site, otherwise it will mean no-one will be able to log in properly!';
+$helptxt['securityDisable'] = 'When enabled, this <em>disables</em> the additional password check for the administration page. This is not recommended!';
+$helptxt['securityDisable_why'] = 'Enter your current password. (The same one you use to login.)<br><br>The requirement to enter this helps ensure that you want to do whatever administration you are doing, and that it is <strong>you</strong> doing it.';
+$helptxt['securityDisable_moderate'] = 'When enabled, this <em>disables</em> the additional password check for the moderation page. This setting is enabled by default.';
+$helptxt['securityDisable_moderate_why'] = 'Enter your current password. (The same one you use to login.)<br><br>The requirement to enter this helps ensure that you want to do whatever moderation you are doing, and that it is <strong>you</strong> doing it.';
+$helptxt['allow_cors'] = 'Cross Origin Resource Sharing or CORS is a policy for modern browsers to trust resources being requested across different domains.  If enabled, this will attempt to resolve CORS policy for scripts accessing the forum resources from different domains.  If subdomain independent cookies (global cookies) are enabled, attempts are made to determine the proper domain.  Supplying the Additional CORS domains with a comma separated list of domains allows for additional domains.  The format should be {SCHEMA}://{DOMAIN}.  If a wildcard (*) is supplied in the domain, attempts are made to resolve the wildcard.  If a wildcard (*) is supplied as the only additional domain, all domains are allowed and this may present a security risk to your forum and should not be used except in extreme cases.  Additional headers can be supplied in a comma separated list and will be allowed during requests containing these headers and wildcard (*) is allowed.';
+$helptxt['frame_security'] = 'Modern browsers now understand a security header presented by servers called X-Frame-Options. By setting this option you specify how you want to allow your site to be framed inside a frameset or a iframe. Disable will not send any header and is the most unsecure, however allows the most freedom. Deny will prevent all frames completely and is the most restrictive and secure. Allowing the Same Origin will only allow your domain to issue any frames and provides a middle ground for the previous two options.';
+$helptxt['proxy_ip_header'] = 'This is the server header that will be trusted by SMF for containing the actual users IP address. Changing this setting can cause unexpected IP results on members. Please check with your server administrator, CDN provider or proxy administrator prior to changing these settings. Most providers will understand and use HTTP_X_FORWARDED_FOR. You should fill out the list of Servers sending the reverse proxy headers for security to ensure these headers only come from valid sources.';
+$helptxt['email_members'] = 'In this message you can use a few &quot;variables&quot;. These are:<br>
+	{$board_url} - The URL to your forum.<br>
+	{$current_time} - The current time.<br>
+	{$member.email} - The current member\'s email.<br>
+	{$member.link} - The current member\'s link.<br>
+	{$member.id} - The current member\'s id.<br>
+	{$member.name} - The current member\'s name. (for personalization).<br>
+	{$latest_member.link} - The most recently registered member\'s link.<br>
+	{$latest_member.id} - The most recently registered member\'s id.<br>
+	{$latest_member.name} - The most recently registered member\'s name.';
 
- $helptxt['failed_login_threshold'] = 'ব্যবহারকারীকে পাসওয়ার্ড রিমাইন্ডার পৃষ্ঠায় পাঠানোর আগে ব্যর্থ লগইন প্রচেষ্টার সংখ্যা সেট করুন।';
- $helptxt['loginHistoryDays'] = 'ব্যবহারকারী প্রোফাইল ট্র্যাকিংয়ের অধীনে লগইন ইতিহাস রাখার জন্য দিনের সংখ্যা।  ডিফল্ট 30 দিন।';
- $helptxt['oldTopicDays'] = 'যদি এই সেটিংটি সক্ষম করা থাকে, ব্যবহারকারীর কাছে একটি সতর্কতা প্রদর্শিত হবে যখন একটি বিষয়ের উত্তর দেওয়ার চেষ্টা করা হবে যেখানে এই সেটিং দ্বারা নির্দিষ্ট সময়ের জন্য কোন নতুন উত্তর দেওয়া হয়নি।  .  বৈশিষ্ট্যটি নিষ্ক্রিয় করতে এই সেটিংটি 0 এ সেট করুন।';
- $helptxt['edit_wait_time'] = 'শেষ সম্পাদনার তারিখ লগ করার আগে একটি পোস্ট সম্পাদনা করার জন্য অনুমোদিত সেকেন্ডের সংখ্যা।';
- $helptxt['edit_disable_time'] = 'ব্যবহারকারী তার করা পোস্ট এডিট করতে না পারার আগে পাস করার অনুমতি দেওয়া মিনিটের সংখ্যা।  0 নিষ্ক্রিয় সেট করুন।  <br><br><em>দ্রষ্টব্য: এটি এমন কোনো ব্যবহারকারীকে প্রভাবিত করবে না যার অন্য ব্যক্তির পোস্ট সম্পাদনা করার অনুমতি আছে৷</em>';
- $helptxt['preview_characters'] = 'এই সেটিংটি প্রথম এবং শেষ বার্তা বিষয়ের পূর্বরূপের জন্য উপলব্ধ অক্ষরের সংখ্যা নির্ধারণ করে।';
- $helptxt['quote_expand'] = 'এই সেটিংটি বড় উদ্ধৃতিগুলিকে ভেঙে ফেলার অনুমতি দেয়, ব্যবহারকারীকে তাদের সম্পূর্ণ দৈর্ঘ্যে প্রসারিত করার বিকল্প দেয়।  এই সেটিং থেকে ছোট উদ্ধৃতি প্রভাবিত হবে না৷';
- $helptxt['posts_require_captcha'] = 'এই সেটিংটি ব্যবহারকারীদের প্রতিবার বোর্ডে পোস্ট করার সময় অ্যান্টি-স্প্যাম বট যাচাইকরণ পাস করতে বাধ্য করবে।  শুধুমাত্র সংখ্যা সেটের নীচে একটি পোস্ট গণনা সহ ব্যবহারকারীদের কোডটি প্রবেশ করতে হবে - এটি স্বয়ংক্রিয় স্প্যামিং স্ক্রিপ্টগুলির বিরুদ্ধে লড়াই করতে সহায়তা করবে৷';
- $helptxt['disable_wysiwyg'] = 'এই সেটিংটি সমস্ত ব্যবহারকারীকে পোস্ট পৃষ্ঠায় WYSIWYG (&quot;আপনি যা দেখেন তা আপনি যা পান&quot;) সম্পাদক ব্যবহার করতে নিষেধ করে।';
- $helptxt['lastActive'] = 'বোর্ড সূচকে X মিনিটের মধ্যে লোকেদের সক্রিয় দেখানোর জন্য মিনিটের সংখ্যা সেট করুন।  ডিফল্ট হল 15 মিনিট।';
+$helptxt['failed_login_threshold'] = 'Set the number of failed login attempts before directing the user to the password reminder page.';
+$helptxt['loginHistoryDays'] = 'The number of days to keep login history under user profile tracking. The default is 30 days.';
+$helptxt['oldTopicDays'] = 'If this setting is enabled, a warning will be displayed to the user when attempting to reply to a topic which has not had any new replies for the amount of time, in days, specified by this setting. Set this setting to 0 to disable the feature.';
+$helptxt['edit_wait_time'] = 'The number of seconds allowed for a post to be edited before logging the last edit date.';
+$helptxt['edit_disable_time'] = 'The number of minutes allowed to pass before a user can no longer edit a post they have made. Set to 0 disable. <br><br><em>Note: This will not affect any user who has permission to edit other people\'s posts.</em>';
+$helptxt['preview_characters'] = 'This setting sets the number of available characters for the first and last message topic preview.';
+$helptxt['quote_expand'] = 'This setting allows large quotes to be collapsed, giving the user the option to expand them to their full length. Quotes smaller than this setting won\'t be affected.';
+$helptxt['posts_require_captcha'] = 'This setting will force users to pass anti-spam bot verification each time they make a post to a board. Only users with a post count below the number set will need to enter the code - this should help combat automated spamming scripts.';
+$helptxt['disable_wysiwyg'] = 'This setting disallows all users from using the WYSIWYG (&quot;What You See Is What You Get&quot;) editor on the post page.';
+$helptxt['lastActive'] = 'Set the number of minutes to show people are active in X number of minutes on the board index. Default is 15 minutes.';
 
- $helptxt['customoptions'] = 'এটি বিকল্পগুলিকে সংজ্ঞায়িত করে যা একজন ব্যবহারকারী ড্রপ ডাউন তালিকা থেকে বেছে নিতে পারে।  এই পৃষ্ঠায় লক্ষ্য করার জন্য কয়েকটি মূল পয়েন্ট রয়েছে:
- 	 <ul class="normallist">
- 		 <li><strong>ডিফল্ট সেটিং:</strong> যে কোনো চেক বক্সে &quot;রেডিও বোতাম&quot;  ব্যবহারকারী যখন তাদের প্রোফাইলে প্রবেশ করেন তখন এটির পাশে নির্বাচিতটি ডিফল্ট নির্বাচন হবে৷</li>
- 		 <li><strong>বিকল্প অপসারণ:</strong> একটি বিকল্প সরাতে কেবলমাত্র সেই বিকল্পের জন্য পাঠ্য বাক্সটি খালি করুন - যে সমস্ত ব্যবহারকারীরা নির্বাচন করেছেন তাদের বিকল্পটি সাফ হয়ে যাবে৷</li>
- 		 <li><strong>পুনঃক্রমের বিকল্পগুলি:</strong> আপনি বাক্সগুলির মধ্যে পাঠ্যকে ঘুরিয়ে দিয়ে বিকল্পগুলিকে পুনরায় সাজাতে পারেন৷  যাইহোক - একটি গুরুত্বপূর্ণ দ্রষ্টব্য - আপনাকে অবশ্যই নিশ্চিত করতে হবে যে বিকল্পগুলি পুনরায় সাজানোর সময় আপনি পাঠ্য পরিবর্তন <strong>করবেন না</strong> কারণ অন্যথায় ব্যবহারকারীর ডেটা হারিয়ে যাবে৷</li>
- 	 </ul>';
+$helptxt['customoptions'] = 'This defines the options that a user may choose from a drop down list. There are a few key points to note on this page:
+	<ul class="normallist">
+		<li><strong>Default setting:</strong> Whichever check box has the &quot;radio button&quot; next to it selected will be the default selection for the user when they enter their profile.</li>
+		<li><strong>Removing Options:</strong> To remove an option simply empty the text box for that option - all users with that selected will have their option cleared.</li>
+		<li><strong>Reordering Options:</strong> You can reorder the options by moving text around between the boxes. However - an important note - you must make sure you do <strong>not</strong> change the text when reordering options as otherwise user data will be lost.</li>
+	</ul>';
 
- $helptxt['autoFixDatabase'] = 'এটি স্বয়ংক্রিয়ভাবে ভাঙা টেবিল ঠিক করবে এবং আবার শুরু করবে যেন কিছুই হয়নি।  যখন এটি ঘটে তখন এটি আপনাকে ইমেল করে৷<br>আপনি যদি এই বিকল্পটি অক্ষম করতে চান তবে আপনার ফোরামটি বন্ধ থাকবে যতক্ষণ না আপনি লক্ষ্য করবেন এবং ম্যানুয়ালি সমস্যার সমাধান করবেন৷';
- // যুক্তি(গুলি): scripturl
- $helptxt['pgFulltextSearch'] = 'এই সেটিংটি PostgreSQL এর ফুলটেক্সট অনুসন্ধানের জন্য ব্যবহার করার জন্য ভাষা নির্ধারণ করে।  আপনার ফোরাম আসলে যে ভাষা ব্যবহার করে তার সাথে সবচেয়ে ঘনিষ্ঠভাবে মেলে এমন ভাষা বেছে নিন।  যদি আপনার ফোরামের ভাষা তালিকাভুক্ত না হয়, অথবা যদি আপনার ফোরামটি বহুভাষিক হয়, তাহলে "সহজ" বিকল্পটি বেছে নিন।  <br>
- এই সেটিংটি আপনার প্রধান SMF ভাষা সেটিংস থেকে স্বাধীন এবং SMF-এর জন্য ইনস্টল করা ভাষার সাথে সম্পর্কিত নয়।  <br>
- আপনি যখন এই সেটিং পরিবর্তন করবেন তখন আপনাকে <a href="%1$s?action=admin;area=managesearch;sa=method" target="_blank" rel="noopener">পূর্ণ পাঠ্য অনুসন্ধান সূচী পুনর্নির্মাণ করতে হবে</a>  .<br>
- আপনার প্রয়োজনীয় কোনো ভাষা তালিকাভুক্ত না হলে, আপনার ডাটাবেস অ্যাডমিনকে সেই ভাষার জন্য PostgreSQL ভাষা সমর্থন ইনস্টল করতে বলুন।';
+$helptxt['autoFixDatabase'] = 'This will automatically fix broken tables and resume as if nothing happened. It does email you when this happens.<br>If you choose to disable this option, your forum will be down until you notice and manually fix the problem.';
+// argument(s): scripturl
+$helptxt['pgFulltextSearch'] = 'This setting defines the language to use for PostgreSQL\'s fulltext search. Choose the language that most closely matches the language your forum actually uses. If your forum\'s language is not listed, or if your forum is multi-lingual, choose the "simple" option. <br>
+This setting is independent of your main SMF language settings and not related to the installed language for SMF. <br>
+When you change this setting you need to <a href="%1$s?action=admin;area=managesearch;sa=method" target="_blank" rel="noopener">rebuild the fulltext search index</a>.<br>
+If a language you need is not listed, ask your database admin to install PostgreSQL language support for that language.';
 
- $helptxt['enableParticipation'] = 'এটি ব্যবহারকারীর পোস্ট করা বিষয়গুলির উপর একটি ছোট আইকন দেখায়।';
+$helptxt['enableParticipation'] = 'This shows a little icon on the topics the user has posted in.';
 
- $helptxt['db_persist'] = 'এটি কর্মক্ষমতা বাড়াতে সংযোগটিকে সক্রিয় রাখে।  আপনি একটি ডেডিকেটেড সার্ভারে না থাকলে, এটি আপনার হোস্টের সাথে সমস্যা সৃষ্টি করতে পারে৷<br>
- এই বিকল্পটি নিষ্ক্রিয় থাকলে, আপনাকে আপনার php.ini ফাইলে mysqli.allow_persistent বা pgsql.allow_persistent সেটিং সক্রিয় করতে হতে পারে।';
- $helptxt['ssi_db_user'] = 'আপনি যখন SSI.php ব্যবহার করছেন তখন একটি ভিন্ন ডাটাবেস ব্যবহারকারী এবং পাসওয়ার্ড ব্যবহার করার জন্য ঐচ্ছিক সেটিং';
+$helptxt['db_persist'] = 'This keeps the connection active to increase performance. If you aren\'t on a dedicated server, this may cause you problems with your host.<br>
+If this option is disabled, you may need to enable the mysqli.allow_persistent or pgsql.allow_persistent setting in your php.ini file.';
+$helptxt['ssi_db_user'] = 'Optional setting to use a different database user and password when you are using SSI.php.';
 
- // আর্গুমেন্ট(গুলি): হয় $helptxt['queryless_urls_supported'] অথবা $helptxt['queryless_urls_unsupported'], সার্ভার একটি সমর্থিত ওয়েব সার্ভার ব্যবহার করে কিনা তার উপর নির্ভর করে
- $helptxt['queryless_urls'] = 'এটি URL-এর বিন্যাসকে কিছুটা পরিবর্তন করে যাতে সার্চ ইঞ্জিনগুলি সেগুলিকে আরও ভালোভাবে পছন্দ করবে৷  এগুলো দেখতে index.php/topic,1.0.html এর মত হবে।<br><br>%1$s';
- // শর্তসাপেক্ষে $helptxt['queryless_urls'] এর অংশ হিসাবে ব্যবহৃত হয়
- $helptxt['queryless_urls_supported'] = 'এই বৈশিষ্ট্যটি আপনার সার্ভারে কাজ করবে।';
- // শর্তসাপেক্ষে $helptxt['queryless_urls'] এর অংশ হিসাবে ব্যবহৃত হয়
- $helptxt['queryless_urls_unsupported'] = 'এই বৈশিষ্ট্যটি আপনার সার্ভারে কাজ করবে না।';
- $helptxt['minimize_files'] = 'এই বিকল্পটি আপনার ফোরামে ব্যবহৃত CSS এবং JavaScript ফাইলগুলিকে কমিয়ে দেবে, আপনার সার্ভারে অনুরোধ কলগুলিকে কমিয়ে দেবে এবং আপনার ব্যবহারকারীদের জন্য লোডের সময়কে দ্রুত করবে৷<br><br>আপনার সাধারণত এটি ছেড়ে দেওয়া উচিত৷  বিকল্প সক্রিয়।  আপনি যখন আপনার সাইটে ব্যবহৃত CSS বা JavaScript ফাইলগুলিকে পরিবর্তন করার প্রক্রিয়ার মধ্যে থাকেন তখনই আপনি এটিকে সাময়িকভাবে নিষ্ক্রিয় করতে চাইতে পারেন (উদাহরণস্বরূপ, আপনার থিম ফাইলগুলি সম্পাদনা করার সময় বা একটি পরিবর্তন বিকাশ করার সময়)।';
- $helptxt['boardindex_max_depth'] = 'সাব-বোর্ডে নতুন পোস্ট খোঁজার সময় কতগুলি সাব-বোর্ড স্তর SMF চেক করবে এই সেটিং নিয়ন্ত্রণ করে।  "অভিভাবকের মোটে সাব-বোর্ডের পোস্টগুলি গণনা করুন" বিকল্পটি সক্রিয় থাকলে কোন বোর্ডগুলি অন্তর্ভুক্ত করা হবে তাও এটি প্রভাবিত করে৷<br><br>উদাহরণস্বরূপ, যদি এটি 1 তে সেট করা হয়, একটি সাব-বোর্ড হবে  শুধুমাত্র সূচী পৃষ্ঠায় "নতুন" হিসাবে চিহ্নিত করা হবে যদি সাব-বোর্ডে একটি নতুন পোস্ট থাকে।  যদি এটি 2 তে সেট করা হয়, সাব-বোর্ডে বা সাব-সাব-বোর্ডে একটি নতুন পোস্ট থাকলে সাব-বোর্ডটিকে "নতুন" হিসাবে চিহ্নিত করা হবে।  যদি এটি 10-এ সেট করা হয়, তাহলে উপ-বোর্ডে একটি নতুন পদ, একটি উপ-উপ-বোর্ড, একটি উপ-উপ-উপ-বোর্ড, ইত্যাদি পর্যন্ত, উপ-বোর্ড "নতুন" হিসাবে চিহ্নিত হবে  10 স্তর গভীর।<br><br>বড়, সক্রিয় ফোরাম সার্ভার সংস্থান সংরক্ষণের জন্য এই মানটিকে কম সংখ্যায় সেট করতে চাইতে পারে।';
- $helptxt['countChildPosts'] = 'এই সেটিং চেক করার অর্থ হল একটি বোর্ডের সাব-বোর্ডের পোস্ট এবং বিষয়গুলিকে সূচী পৃষ্ঠায় তার মোট সংখ্যার দিকে গণনা করা হবে৷<br><br>এর মানে হল একটি প্যারেন্ট বোর্ড যেখানে নেই  এর সাব-বোর্ডে কোনো পোস্ট থাকলে এটির পোস্টগুলি \'0\' দেখাবে না।';
- $helptxt['allow_ignore_boards'] = 'এই সেটিং চেক করা ব্যবহারকারীদের তারা উপেক্ষা করতে চান এমন বোর্ড নির্বাচন করতে অনুমতি দেবে।';
- $helptxt['deny_boards_access'] = 'এই সেটিংটি চেক করা আপনাকে সদস্যগোষ্ঠীর অ্যাক্সেসের উপর ভিত্তি করে নির্দিষ্ট বোর্ডগুলিতে অ্যাক্সেস অস্বীকার করার অনুমতি দেবে';
- 
- // যুক্তি(গুলি): scripturl
- $helptxt['who_enabled'] = 'এই সেটিং আপনাকে <a href="%1$s?action=who" target="_blank" rel="noopener">কে অনলাইনে চালু বা বন্ধ করতে দেয়৷  /a> পৃষ্ঠা, যা দেখায় কে ফোরাম ব্রাউজ করছে এবং তারা কি করছে।';
+// argument(s): either $helptxt['queryless_urls_supported'] or $helptxt['queryless_urls_unsupported'], depending on whether the server uses a supported webserver
+$helptxt['queryless_urls'] = 'This changes the format of URLs a little so search engines will like them better. They will look like index.php/topic,1.0.html.<br><br>%1$s';
+// is conditionally used as part of $helptxt['queryless_urls']
+$helptxt['queryless_urls_supported'] = 'This feature will work on your server.';
+// is conditionally used as part of $helptxt['queryless_urls']
+$helptxt['queryless_urls_unsupported'] = 'This feature will not work on your server.';
+$helptxt['minimize_files'] = 'This option will minimize the CSS and JavaScript files used by your forum, reducing the request calls to your server and speeding up load times for your users.<br><br>You should normally leave this option enabled. The only time you might want to disable it temporarily is while you are in the process of altering the CSS or JavaScript files used on your site (for example, when editing your theme files or developing a modification).';
+$helptxt['boardindex_max_depth'] = 'This setting controls how many sub-board levels SMF will check when looking for new posts in sub-boards. It also affects which boards are included when the "Count sub-board\'s posts in parent\'s totals" option is enabled.<br><br>For example, if this is set to 1, a sub-board will only be marked "new" on the index page if the sub-board itself contains a new post. If it is set to 2, the sub-board will be marked "new" if there is a new post in the sub-board or in a sub-sub-board. If it is set to 10, the sub-board will be marked "new" if there is a new post in the sub-board, a sub-sub-board, a sub-sub-sub-board, etc., up to 10 levels deep.<br><br>Large, active forums may want to set this value to a low number in order to conserve server resources.';
+$helptxt['countChildPosts'] = 'Checking this setting means that posts and topics in a board\'s sub-board will count toward its totals on the index page.<br><br>This means that a parent board with no posts in it won\'t show \'0\' if there are any posts in its sub-boards.';
+$helptxt['allow_ignore_boards'] = 'Checking this setting will allow users to select boards they wish to ignore.';
+$helptxt['deny_boards_access'] = 'Checking this setting will allow you to deny access to certain boards based on membergroup access';
 
- $helptxt['recycle_enable'] = '&quot;রিসাইকেল&quot;  মুছে ফেলা বিষয় এবং নির্দিষ্ট বোর্ডের পোস্ট.';
+// argument(s): scripturl
+$helptxt['who_enabled'] = 'This setting allows you to turn on or off the <a href="%1$s?action=who" target="_blank" rel="noopener">Who\'s Online</a> page, which shows who is browsing the forum and what they are doing.';
 
- $helptxt['enableReportPM'] = 'এই সেটিংটি আপনার ব্যবহারকারীদের প্রশাসনিক দলের কাছে প্রাপ্ত ব্যক্তিগত বার্তাগুলিকে রিপোর্ট করতে দেয়।  ব্যক্তিগত মেসেজিং সিস্টেমের কোনো অপব্যবহার ট্র্যাক করতে সাহায্য করতে এটি কার্যকর হতে পারে।';
- $helptxt['max_pm_recipients'] = 'এই সেটিং আপনাকে একজন ফোরাম সদস্যের পাঠানো একক ব্যক্তিগত বার্তায় অনুমোদিত প্রাপকদের সর্বোচ্চ পরিমাণ সেট করতে দেয়।  এটি PM সিস্টেমের স্প্যাম অপব্যবহার বন্ধ করতে সাহায্য করতে ব্যবহার করা যেতে পারে।  নোট করুন যে ব্যবহারকারীদের নিউজলেটার পাঠানোর অনুমতি আছে তারা এই সীমাবদ্ধতা থেকে অব্যাহতিপ্রাপ্ত।  কোন সীমার জন্য শূন্য সেট করুন।';
- $helptxt['pm_posts_verification'] = 'এই সেটিংটি ব্যবহারকারীদের প্রতিবার ব্যক্তিগত বার্তা পাঠানোর সময় একটি যাচাইকরণ ছবিতে দেখানো একটি কোড লিখতে বাধ্য করবে।  শুধুমাত্র সংখ্যা সেটের নীচে একটি পোস্ট গণনা সহ ব্যবহারকারীদের কোডটি প্রবেশ করতে হবে - এটি স্বয়ংক্রিয় স্প্যামিং স্ক্রিপ্টগুলির বিরুদ্ধে লড়াই করতে সহায়তা করবে৷';
- $helptxt['pm_posts_per_hour'] = 'এটি ব্যক্তিগত বার্তার সংখ্যা সীমিত করবে যা একজন ব্যবহারকারীর দ্বারা এক ঘন্টার মধ্যে পাঠানো হতে পারে।  এটি অ্যাডমিন বা মডারেটরদের প্রভাবিত করে না।';
+$helptxt['recycle_enable'] = '&quot;Recycles&quot; deleted topics and posts to the specified board.';
 
- $helptxt['default_personal_text'] = 'একজন নতুন ব্যবহারকারীর &quot;ব্যক্তিগত পাঠ্য&quot; হিসেবে ডিফল্ট পাঠ্য সেট করে।  যখন ব্যক্তিগত পাঠ্য নিষ্ক্রিয় করা হয়, বা ব্যবহারকারীরা নিজেদের জন্য নিবন্ধনের জন্য ব্যক্তিগত পাঠ্য সেট করতে পারেন তখন এই সেটিংটি উপলব্ধ নয়৷';
+$helptxt['enableReportPM'] = 'This setting allows your users to report personal messages they receive to the administration team. This may be useful in helping to track down any abuse of the personal messaging system.';
+$helptxt['max_pm_recipients'] = 'This setting allows you to set the maximum amount of recipients allowed in a single personal message sent by a forum member. This may be used to help stop spam abuse of the PM system. Note that users with permission to send newsletters are exempt from this restriction. Set to zero for no limit.';
+$helptxt['pm_posts_verification'] = 'This setting will force users to enter a code shown on a verification image each time they are sending a personal message. Only users with a post count below the number set will need to enter the code - this should help combat automated spamming scripts.';
+$helptxt['pm_posts_per_hour'] = 'This will limit the number of personal messages which may be sent by a user in a one hour period. This does not affect admins or moderators.';
 
- $helptxt['registration_method'] = 'এই সেটিংটি নির্ধারণ করে যে আপনার ফোরামে যোগদান করতে ইচ্ছুক ব্যক্তিদের জন্য নিবন্ধনের পদ্ধতি কী ব্যবহার করা হবে।  আপনি এখান থেকে নির্বাচন করতে পারেন:<br><br>
- 	 <ul class="normallist">
- 		 <li>
- 			 <strong>নিবন্ধন নিষ্ক্রিয়</strong><br>
- 				 নিবন্ধন প্রক্রিয়া নিষ্ক্রিয় করে, যার অর্থ হল আপনার ফোরামে যোগদানের জন্য কোনো নতুন সদস্য নিবন্ধন করতে পারবে না৷<br>
- 		 </li><li>
- 			 <strong>অবিলম্বে নিবন্ধন</strong><br>
- 				 নতুন সদস্যরা আপনার ফোরামে নিবন্ধন করার সাথে সাথে লগইন করতে এবং পোস্ট করতে পারে৷<br>৷
- 		 </li><li>
- 			 <strong>ইমেল সক্রিয়করণ</strong><br>৷
- 				 যখন এই সেটিংটি সক্ষম করা হয় তখন ফোরামে নিবন্ধন করা সদস্যদের একটি সক্রিয়করণ লিঙ্ক তাদের কাছে ইমেল করা হবে যেটিতে তাদের পূর্ণ সদস্য হওয়ার আগে ক্লিক করতে হবে।<br>
- 		 </li><li>
- 			 <strong>প্রশাসকের অনুমোদন</strong><br>৷
- 				 এই সেটিংটি এটি তৈরি করবে যাতে আপনার ফোরামে নিবন্ধন করা সমস্ত নতুন সদস্য সদস্য হওয়ার আগে প্রশাসকের দ্বারা অনুমোদিত হতে হবে৷
- 		 </li>
- 	 </ul>';
- 
- $helptxt['send_validation_onChange'] = 'যখন এই সেটিংটি চেক করা হয় যে সমস্ত সদস্যরা তাদের প্রোফাইলে তাদের ইমেল ঠিকানা পরিবর্তন করে তাদের সেই ঠিকানায় পাঠানো একটি ইমেল থেকে তাদের অ্যাকাউন্ট পুনরায় সক্রিয় করতে হবে';
- $helptxt['approveAccountDeletion'] = 'যখন এই সেটিংটি চেক করা হয়, তার নিজের অ্যাকাউন্ট মুছে ফেলার জন্য যেকোনো ব্যবহারকারীর অনুরোধ একজন প্রশাসকের দ্বারা অনুমোদিত হতে হবে';
+$helptxt['default_personal_text'] = 'Sets the default text a new user will have as their &quot;personal text.&quot; This setting is not available when personal text is disabled, or when users can set personal text on registration for themselves.';
 
- $helptxt['send_welcomeEmail'] = 'যখন এই সেটিংটি সক্ষম করা হয় তখন সমস্ত নতুন সদস্যদের আপনার সম্প্রদায়ে স্বাগত জানিয়ে একটি ইমেল পাঠানো হবে';
- $helptxt['password_strength'] = 'এই সেটিংটি আপনার ফোরাম ব্যবহারকারীদের দ্বারা নির্বাচিত পাসওয়ার্ডের জন্য প্রয়োজনীয় শক্তি নির্ধারণ করে।  পাসওয়ার্ড যত শক্তিশালী হবে, সদস্যদের অ্যাকাউন্টে আপস করা তত কঠিন হবে।
- 	 এর সম্ভাব্য সেটিংস হল:
- 	 <ul class="normallist">
- 		 <li><strong>নিম্ন:</strong> পাসওয়ার্ডটি কমপক্ষে চারটি অক্ষরের হতে হবে৷</li>৷
- 		 <li><strong>মাঝারি:</strong> পাসওয়ার্ডটি কমপক্ষে আট অক্ষরের হতে হবে এবং এটি কোনও ব্যবহারকারীর নাম বা ইমেল ঠিকানার অংশ হতে পারে না৷</li>
- 		 <li><strong>উচ্চ:</strong> মাধ্যম হিসাবে, পাসওয়ার্ড ছাড়া অবশ্যই বড় এবং ছোট হাতের অক্ষরের মিশ্রণ এবং কমপক্ষে একটি সংখ্যা থাকতে হবে।</li>
- 	 </ul>';
- $helptxt['enable_password_conversion'] = 'এই সেটিং সক্রিয় করার মাধ্যমে, SMF অন্যান্য ফরম্যাটে সংরক্ষিত পাসওয়ার্ড সনাক্ত করার চেষ্টা করবে এবং সেগুলিকে SMF ব্যবহার করা ফর্ম্যাটে রূপান্তর করবে৷  সাধারণত এটি SMF তে রূপান্তরিত ফোরামের জন্য ব্যবহৃত হয়, তবে এর অন্যান্য ব্যবহারও থাকতে পারে।  এটি নিষ্ক্রিয় করা একজন ব্যবহারকারীকে একটি রূপান্তরের পরে তাদের পাসওয়ার্ড ব্যবহার করে লগ ইন করতে বাধা দেয় এবং তাদের তাদের পাসওয়ার্ড পুনরায় সেট করতে হবে।';
+$helptxt['registration_method'] = 'This setting determines what method of registration is used for people wishing to join your forum. You can select from:<br><br>
+	<ul class="normallist">
+		<li>
+			<strong>Registration Disabled</strong><br>
+				Disables the registration process, which means that no new members can register to join your forum.<br>
+		</li><li>
+			<strong>Immediate Registration</strong><br>
+				New members can login and post immediately after registering on your forum.<br>
+		</li><li>
+			<strong>Email Activation</strong><br>
+				When this setting is enabled any members registering with the forum will have an activation link emailed to them which they must click before they can become full members.<br>
+		</li><li>
+			<strong>Admin Approval</strong><br>
+				This setting will make it so all new members registering on your forum will need to be approved by the admin before they become members.
+		</li>
+	</ul>';
 
- $helptxt['coppaAge'] = 'এই বাক্সে উল্লিখিত মানটি ফোরামে অবিলম্বে প্রবেশাধিকার পাওয়ার জন্য নতুন সদস্যদের ন্যূনতম বয়স নির্ধারণ করবে।
- 	 নিবন্ধনের সময় তাদের এই বয়সের বেশি কিনা তা নিশ্চিত করতে বলা হবে, এবং যদি না হয় তবে তাদের আবেদন প্রত্যাখ্যান করা হবে বা পিতামাতার অনুমোদনের অপেক্ষায় স্থগিত করা হবে - নির্বাচিত বিধিনিষেধের ধরণের উপর নির্ভর করে।
- 	 যদি এই সেটিংটির জন্য 0-এর একটি মান বেছে নেওয়া হয় তবে অন্যান্য সমস্ত বয়স সীমাবদ্ধতা সেটিংস উপেক্ষা করা হবে৷';
- $helptxt['coppaType'] = 'যদি বয়সের বিধিনিষেধ সক্ষম করা থাকে, তাহলে এই সেটিংটি নির্ধারণ করবে যে ন্যূনতম বয়সের নিচের কোনো ব্যবহারকারী আপনার ফোরামে নিবন্ধন করার চেষ্টা করলে কী ঘটবে৷  দুটি সম্ভাব্য পছন্দ আছে:
- 	 <ul class="normallist">
- 		 <li>
- 			 <strong>তাদের নিবন্ধন প্রত্যাখ্যান করুন:</strong><br>
- 				 ন্যূনতম বয়সের নিচে যেকোন নতুন সদস্যের নিবন্ধন অবিলম্বে বাতিল হয়ে যাবে।<br>
- 		 </li><li>
- 			 <strong>অভিভাবক/অভিভাবকের অনুমোদন প্রয়োজন</strong><br>
- 				 যে কোনো নতুন সদস্য যারা নিবন্ধন করার চেষ্টা করে এবং ন্যূনতম অনুমোদিত বয়সের নিচে তাদের অ্যাকাউন্ট অনুমোদনের অপেক্ষায় চিহ্নিত করা হবে এবং একটি ফর্ম উপস্থাপন করা হবে যার উপর তাদের পিতামাতাকে অবশ্যই ফোরামের সদস্য হওয়ার অনুমতি দিতে হবে।
- 				 তাদের সেটিংস পৃষ্ঠায় প্রবেশ করা ফোরামের যোগাযোগের বিবরণও উপস্থাপন করা হবে, যাতে তারা প্রশাসকের কাছে মেইল ​​বা ফ্যাক্সের মাধ্যমে ফর্মটি পাঠাতে পারে।
- 		 </li>
- 	 </ul>';
- $helptxt['coppaPost'] = 'যোগাযোগ বাক্সগুলি প্রয়োজন যাতে অপ্রাপ্তবয়স্কদের নিবন্ধনের অনুমতি প্রদানকারী ফর্মগুলি ফোরাম প্রশাসকের কাছে পাঠানো যায়৷  এই বিবরণগুলি সমস্ত নতুন নাবালকদের দেখানো হবে এবং পিতামাতা/অভিভাবকের অনুমোদনের জন্য প্রয়োজন৷  অন্তত একটি ডাক ঠিকানা বা ফ্যাক্স নম্বর অবশ্যই প্রদান করতে হবে।';
- 
- $helptxt['allow_hideOnline'] = 'এই সেটিংটি সক্ষম করার মাধ্যমে সমস্ত সদস্য অন্যান্য ব্যবহারকারীদের থেকে তাদের অনলাইন স্থিতি লুকিয়ে রাখতে সক্ষম হবে (প্রশাসক ছাড়া)।  মনে রাখবেন যে এই সেটিংটি নিষ্ক্রিয় করা কোনো বিদ্যমান সদস্যের স্থিতি পরিবর্তন করবে না - এটি কেবল তাদের ভবিষ্যতে নিজেদের লুকিয়ে রাখা থেকে বিরত রাখে৷';
- $helptxt['meta_keywords'] = 'এই কীওয়ার্ডগুলি আপনার সাইটের মূল বিষয়বস্তু সার্চ ইঞ্জিনকে (ইত্যাদি) নির্দেশ করার জন্য প্রতিটি পৃষ্ঠার আউটপুটে পাঠানো হয়।  সেগুলি শব্দের একটি কমা দ্বারা বিভক্ত তালিকা হওয়া উচিত এবং HTML ব্যবহার করা উচিত নয়৷';
+$helptxt['send_validation_onChange'] = 'When this setting is checked all members who change their email address in their profile will have to reactivate their account from an email sent to that address';
+$helptxt['approveAccountDeletion'] = 'When this setting is checked, any user request to delete his own account has to be approved by an administrator';
 
- $helptxt['latest_themes'] = 'এই এলাকাটি <a href="https://www.simplemachines.org/" target="_blank" rel="noopener">www থেকে সাম্প্রতিকতম এবং সবচেয়ে জনপ্রিয় থিমগুলির কয়েকটি দেখায়  .simplemachines.org</a>।  আপনার কম্পিউটার <a href="https://www.simplemachines.org/" target="_blank" rel="noopener">www.simplemachines.org</a> খুঁজে না পেলে এটি সঠিকভাবে প্রদর্শিত নাও হতে পারে  , যদিও।';
+$helptxt['send_welcomeEmail'] = 'When this setting is enabled all new members will be sent an email welcoming them to your community';
+$helptxt['password_strength'] = 'This setting determines the strength required for passwords selected by your forum users. The stronger the password, the harder it should be to compromise member\'s accounts.
+	Its possible settings are:
+	<ul class="normallist">
+		<li><strong>Low:</strong> The password must be at least four characters long.</li>
+		<li><strong>Medium:</strong> The password must be at least eight characters long, and cannot be part of a user\'s name or email address.</li>
+		<li><strong>High:</strong> As for medium, except the password must also contain a mixture of upper and lower case letters, and at least one number.</li>
+	</ul>';
+$helptxt['enable_password_conversion'] = 'By enabling this setting, SMF will attempt to detect passwords stored in other formats and convert them to the format SMF uses. Typically this is used for forums converted to SMF, but may have other uses as well. Disabling this prevents a user from logging in using their password after a conversion and they would need to reset their password.';
 
- $helptxt['secret_why_blank'] = 'আপনার নিরাপত্তার জন্য, আপনার পাসওয়ার্ড এবং আপনার গোপন প্রশ্নের উত্তর এনক্রিপ্ট করা হয়েছে যাতে SMF সফ্টওয়্যার আপনাকে বা অন্য কাউকে বলতে পারে না যে তারা কী।';
- $helptxt['moderator_why_missing'] = 'যেহেতু মডারেশন বোর্ড-বাই-বোর্ড ভিত্তিতে করা হয়, তাই আপনাকে <a href="%1$s?action=admin;area=manageboards" target= থেকে সদস্যদের মডারেটর করতে হবে  "_blank" rel="noopener">বোর্ড ম্যানেজমেন্ট ইন্টারফেস</a>।';
+$helptxt['coppaAge'] = 'The value specified in this box will determine the minimum age that new members must be in order to be granted immediate access to the forums.
+	On registration they will be prompted to confirm whether they are over this age, and if not will either have their application rejected or suspended awaiting parental approval - dependant on the type of restriction chosen.
+	If a value of 0 is chosen for this setting then all other age restriction settings shall be ignored.';
+$helptxt['coppaType'] = 'If age restrictions are enabled, then this setting will define what happens when a user below the minimum age attempts to register with your forum. There are two possible choices:
+	<ul class="normallist">
+		<li>
+			<strong>Reject Their Registration:</strong><br>
+				Any new member below the minimum age will have their registration rejected immediately.<br>
+		</li><li>
+			<strong>Require Parent/Guardian Approval</strong><br>
+				Any new member who attempts to register and is below the minimum permitted age will have their account marked as awaiting approval, and will be presented with a form upon which their parents must give permission to become a member of the forum.
+				They will also be presented with the forum contact details entered on the settings page, so that they can send the form to the administrator by mail or fax.
+		</li>
+	</ul>';
+$helptxt['coppaPost'] = 'The contact boxes are required so that forms granting permission for underage registration can be sent to the forum administrator. These details will be shown to all new minors, and are required for parent/guardian approval. At the very least a postal address or fax number must be provided.';
 
- $helptxt['permissions'] = 'অনুমতি হল আপনি কীভাবে গোষ্ঠীগুলিকে অনুমতি দেন বা নির্দিষ্ট কিছু করার জন্য গোষ্ঠীগুলিকে অস্বীকার করেন৷<br><br>আপনি চেকবক্সগুলির সাহায্যে একাধিক বোর্ড একবারে পরিবর্তন করতে পারেন, বা অনুমতিগুলি দেখতে পারেন৷  \'সংশোধন করুন।\' ক্লিক করে একটি নির্দিষ্ট গ্রুপ;
- $helptxt['permissions_board'] = 'যদি একটি বোর্ড \'Global\' সেট করা হয়, তাহলে এর অর্থ হল বোর্ডের কোনো বিশেষ অনুমতি থাকবে না।  \'স্থানীয়\' মানে এর নিজস্ব অনুমতি থাকবে - বিশ্বব্যাপী থেকে আলাদা।  এটি আপনাকে প্রতিটি বোর্ডের জন্য সেট করার প্রয়োজন ছাড়াই একটি বোর্ডের অনুমতি দেয় যার অন্যটির চেয়ে বেশি বা কম অনুমতি রয়েছে৷';
- $helptxt['permissions_quickgroups'] = 'এগুলি আপনাকে &quot;ডিফল্ট&quot;  অনুমতি সেটআপ - <em>মানক</em> মানে \'বিশেষ কিছু নেই\', <em>নিষেধমূলক</em> মানে \'অতিথির মতো\', <em>মডারেটর</em> মানে \'কী একজন মডারেটর  আছে\', এবং সবশেষে <em>রক্ষণাবেক্ষণ</em> মানে \'অনুমতি একজন প্রশাসকের খুব কাছাকাছি\'।';
- $helptxt['permissions_deny'] = 'অনুমতি অস্বীকার করা উপকারী হতে পারে যখন আপনি নির্দিষ্ট সদস্যদের কাছ থেকে অনুমতি কেড়ে নিতে চান।  আপনি যে সদস্যদের অনুমতি প্রত্যাখ্যান করতে চান তাদের \'অস্বীকার\'-অনুমতি সহ আপনি একটি সদস্যগোষ্ঠী যোগ করতে পারেন।<br><br><strong>সতর্কতার সাথে ব্যবহার করুন</strong>, অস্বীকৃত অনুমতি যা কিছুই থাকুক না কেন তা অস্বীকৃত থাকবে।  অন্যান্য সদস্য গোষ্ঠীতে সদস্য রয়েছে।';
- $helptxt['permissions_postgroups'] = 'পোস্টের সংখ্যার উপর ভিত্তি করে গোষ্ঠীগুলির জন্য অনুমতিগুলি সক্ষম করা হলে আপনি নির্দিষ্ট পরিমাণ বার্তা পোস্ট করেছেন এমন সদস্যদের অনুমতিগুলিকে বৈশিষ্ট্যযুক্ত করতে পারবেন৷  পোস্ট গণনা ভিত্তিক গোষ্ঠীগুলির অনুমতিগুলি নিয়মিত সদস্য গোষ্ঠীগুলির অনুমতিগুলিতে <em>যোগ করা হয়</em>৷';
- $helptxt['membergroup_guests'] = 'অতিথি সদস্যগোষ্ঠী এমন সব ব্যবহারকারীর জন্য যারা লগ ইন করেননি।';
- $helptxt['membergroup_regular_members'] = 'নিয়মিত সদস্যরা সকল সদস্য যারা লগইন করেছেন, কিন্তু যাদের কোনো প্রাথমিক সদস্যগোষ্ঠী নির্ধারিত নেই।';
- $helptxt['membergroup_administrator'] = 'প্রশাসক, সংজ্ঞা অনুসারে, যেকোনো কিছু করতে পারেন এবং যেকোনো বোর্ড দেখতে পারেন।  প্রশাসকের জন্য কোন অনুমতি সেটিংস নেই।';
- $helptxt['membergroup_moderator'] = 'মডারেটর মেম্বারগ্রুপ একটি বিশেষ সদস্য গ্রুপ।  এই গ্রুপের জন্য নির্ধারিত অনুমতি এবং সেটিংস মডারেটরদের জন্য প্রযোজ্য কিন্তু শুধুমাত্র <em>বোর্ডে তারা মডারেট করে</em>।  এই বোর্ডের বাইরে তারা অন্য সদস্যদের মতোই।  মনে রাখবেন যে এই গ্রুপের অনুমতিগুলি একটি বোর্ডকে নিয়ন্ত্রণ করার জন্য নির্ধারিত যে কোনও গ্রুপের জন্যও প্রযোজ্য।';
- $helptxt['membergroups'] = 'SMF-এ দুই ধরনের গ্রুপ আছে যেগুলোর অংশ হতে পারে আপনার সদস্যরা।  এগুলো হলঃ
- 	 <ul class="normallist">
- 		 <li><strong>নিয়মিত গোষ্ঠী:</strong> একটি নিয়মিত গোষ্ঠী হল এমন একটি গোষ্ঠী যেখানে সদস্যদের স্বয়ংক্রিয়ভাবে রাখা হয় না৷  একজন সদস্যকে একটি গ্রুপে থাকার জন্য বরাদ্দ করতে কেবল তাদের প্রোফাইলে যান এবং &quot;অ্যাকাউন্ট সেটিংস&quot; ক্লিক করুন।  এখান থেকে আপনি তাদের যেকোন সংখ্যক নিয়মিত গ্রুপ বরাদ্দ করতে পারেন যেখানে তারা অংশ হবে।</li>
- 		 <li><strong>পোস্ট গ্রুপ:</strong> নিয়মিত গ্রুপের বিপরীতে পোস্ট ভিত্তিক গ্রুপ নিয়োগ করা যাবে না।  পরিবর্তে, সদস্যদের স্বয়ংক্রিয়ভাবে একটি পোস্ট ভিত্তিক গ্রুপে বরাদ্দ করা হয় যখন তারা সেই গ্রুপে থাকা প্রয়োজনীয় পোস্টের ন্যূনতম সংখ্যায় পৌঁছায়।</li>
- 	 </ul>';
+$helptxt['allow_hideOnline'] = 'With this setting enabled all members will be able to hide their online status from other users (except administrators). Note that disabling this setting will not change any existing member\'s status - it just stops them from hiding themselves in the future.';
+$helptxt['meta_keywords'] = 'These keywords are sent in the output of every page to indicate to search engines (etc) the key content of your site. They should be a comma separated list of words, and should not use HTML.';
 
- $helptxt['calendar_how_edit'] = 'আপনি তাদের নামের পাশে লাল তারকাচিহ্ন (*) এ ক্লিক করে এই ইভেন্টগুলি সম্পাদনা করতে পারেন।';
- 
- $helptxt['maintenance_backup'] = 'এই এলাকাটি আপনাকে আপনার ফোরামের সমস্ত পোস্ট, সেটিংস, সদস্য এবং অন্যান্য তথ্যের একটি অনুলিপি একটি খুব বড় ফাইলে সংরক্ষণ করতে দেয়৷<br><br>আপনি এটি করার পরামর্শ দেওয়া হচ্ছে  এটি প্রায়ই, সম্ভবত সাপ্তাহিক, নিরাপত্তা এবং নিরাপত্তার জন্য।';
- $helptxt['maintenance_rot'] = 'এটি আপনাকে <strong>সম্পূর্ণভাবে</strong> এবং <strong>অপরিবর্তনীয়ভাবে</strong> পুরানো বিষয়গুলিকে অপসারণ করতে দেয়৷  এটি সুপারিশ করা হয় যে আপনি প্রথমে একটি ব্যাকআপ নেওয়ার চেষ্টা করুন, যদি আপনি এমন কিছু মুছে ফেলতে চান যা আপনি চান না৷<br><br><strong>এই সেটিংটি যত্ন সহকারে ব্যবহার করুন৷</strong>';
- $helptxt['maintenance_members'] = 'এটি আপনাকে <strong>সম্পূর্ণরূপে</strong> এবং <strong>অপরিহার্যভাবে</strong> আপনার ফোরাম থেকে সদস্য অ্যাকাউন্টগুলি সরাতে দেয়৷  এটি <strong>অত্যন্ত</strong> বাঞ্ছনীয় যে আপনি প্রথমে একটি ব্যাকআপ নেওয়ার চেষ্টা করুন, যদি আপনি এমন কিছু মুছে ফেলতে চান যা আপনি চান না৷<br><br><strong>এই সেটিংটি যত্ন সহকারে ব্যবহার করুন৷<  </strong>';
+$helptxt['latest_themes'] = 'This area shows a few of the latest and most popular themes from <a href="https://www.simplemachines.org/" target="_blank" rel="noopener">www.simplemachines.org</a>. It may not show up properly if your computer can\'t find <a href="https://www.simplemachines.org/" target="_blank" rel="noopener">www.simplemachines.org</a>, though.';
 
- $helptxt['avatar_server_stored'] = 'এটি আপনার সদস্যদের আপনার সার্ভারে সঞ্চিত অবতার থেকে বেছে নিতে দেয়।  ডিফল্টরূপে এগুলি "অবতার" ডিরেক্টরিতে সংরক্ষিত থাকে৷<br>একটি পরামর্শ হিসাবে, আপনি যদি সেই ফোল্ডারে ডিরেক্টরি তৈরি করেন, আপনি অবতারগুলির "বিভাগ" করতে পারেন৷';
- $helptxt['avatar_external'] = 'এটি সক্ষম করে, আপনার সদস্যরা তাদের নিজস্ব অবতারে একটি URL টাইপ করতে পারে।  এর নেতিবাচক দিক হল, কিছু কিছু ক্ষেত্রে, তারা এমন অবতার ব্যবহার করতে পারে যা অত্যধিক বড় বা এমন ছবি তুলে ধরতে পারে যা আপনি আপনার ফোরামে চান না।';
- $helptxt['avatar_download_external'] = 'এই সেটিংটি সক্ষম করে, ব্যবহারকারীদের দেওয়া URL থেকে বাহ্যিক অবতারগুলি ডাউনলোড করা হবে৷  সফল হলে, অবতারদের আপলোড করা অবতারের মতোই গণ্য করা হবে।';
- $helptxt['avatar_action_too_large'] = 'এই সেটিং আপনাকে (অন্যান্য সাইট থেকে) ছবিগুলিকে প্রত্যাখ্যান করতে দেয় যেগুলি খুব বড়, অথবা ব্যবহারকারীর ব্রাউজারকে সেগুলির আকার পরিবর্তন করতে বা আপনার সার্ভারে ডাউনলোড করতে বলে৷<br><br  >যদি ব্যবহারকারীরা তাদের অবতার হিসাবে খুব বড় ইমেজ রাখে এবং ব্রাউজারে আকার পরিবর্তন করে, তবে এটি আপনার ব্যবহারকারীদের জন্য খুব ধীর গতিতে লোড হতে পারে - এটি আসলে ফাইলটির আকার পরিবর্তন করে না,  এটা শুধু এটা ছোট প্রদর্শন.  সুতরাং, উদাহরণস্বরূপ, একটি ডিজিটাল ফটো এখনও সম্পূর্ণভাবে লোড হবে এবং তারপরে শুধুমাত্র প্রদর্শিত হলেই আকার পরিবর্তন করা হবে - তাই ব্যবহারকারীদের জন্য এটি বেশ ধীর হতে পারে এবং প্রচুর ব্যান্ডউইথ ব্যবহার করতে পারে৷<br><br>অন্যদিকে, সেগুলি ডাউনলোড করার অর্থ হল  আপনার ব্যান্ডউইথ এবং সার্ভার স্পেস ব্যবহার করে, কিন্তু আপনি এটিও নিশ্চিত করেন যে ছবিগুলি ছোট, তাই এটি ব্যবহারকারীদের জন্য দ্রুত হওয়া উচিত।  (দ্রষ্টব্য: ডাউনলোড এবং আকার পরিবর্তনের জন্য হয় জিডি লাইব্রেরি বা ইমেজ ম্যাজিকের প্রয়োজন হয় ইমেজিক বা ম্যাজিকওয়ান্ড এক্সটেনশন ব্যবহার করে)';
- $helptxt['avatar_upload'] = 'এই সেটিংটি অনেকটা &quot;বহিরাগত অবতারের&quot; এর মত, আপনার অবতারগুলির উপর ভাল নিয়ন্ত্রণ, তাদের আকার পরিবর্তন করার একটি ভাল সময়, এবং আপনার সদস্যদের অবতার রাখার জন্য কোথাও থাকতে হবে না।<  br><br>তবে, খারাপ দিক হল এটি আপনার সার্ভারে অনেক জায়গা নিতে পারে।';
- $helptxt['avatar_download_png'] = 'PNG গুলি বড়, কিন্তু ভালো মানের কম্প্রেশন অফার করে।  যদি এটি আনচেক করা হয়, তবে এর পরিবর্তে JPEG ব্যবহার করা হবে - যা প্রায়শই ছোট, তবে কম বা ঝাপসা মানেরও হয়।';
+$helptxt['secret_why_blank'] = 'For your security, your password and the answer to your secret question are encrypted so that the SMF software will never tell you, or anyone else, what they are.';
+$helptxt['moderator_why_missing'] = 'Since moderation is done on a board-by-board basis, you have to make members moderators from the <a href="%1$s?action=admin;area=manageboards" target="_blank" rel="noopener">board management interface</a>.';
 
- $helptxt['disableHostnameLookup'] = 'এটি হোস্ট নেম লুকআপগুলিকে নিষ্ক্রিয় করে, যা কিছু সার্ভারে খুব ধীর।  মনে রাখবেন যে এটি নিষেধাজ্ঞাকে কম কার্যকর করবে।';
+$helptxt['permissions'] = 'Permissions are how you either allow groups to, or deny groups from, doing specific things.<br><br>You can modify multiple boards at once with the checkboxes, or look at the permissions for a specific group by clicking \'Modify.\'';
+$helptxt['permissions_board'] = 'If a board is set to \'Global,\' it means that the board will not have any special permissions. \'Local\' means it will have its own permissions - separate from the global ones. This allows you to have a board that has more or fewer permissions than another, without requiring you to set them for each and every board.';
+$helptxt['permissions_quickgroups'] = 'These allow you to use the &quot;default&quot; permission setups -  <em>standard</em> means \'nothing special\', <em>restrictive</em> means \'like a guest\', <em>moderator</em> means \'what a moderator has\', and lastly <em>maintenance</em> means \'permissions very close to those of an administrator\'.';
+$helptxt['permissions_deny'] = 'Denying permissions can be useful when you want to take away permission from certain members. You can add a membergroup with a \'deny\'-permission to the members you wish to deny a permission.<br><br><strong>Use with care</strong>, a denied permission will stay denied no matter what other membergroups the member is in.';
+$helptxt['permissions_postgroups'] = 'Enabling permissions for groups based on post count will allow you to attribute permissions to members that have posted a certain amount of messages. The permissions of the post count based groups are <em>added</em> to the permissions of the regular membergroups.';
+$helptxt['membergroup_guests'] = 'The Guests membergroup is for all users that are not logged in.';
+$helptxt['membergroup_regular_members'] = 'The Regular Members are all members that are logged in, but that have no primary membergroup assigned.';
+$helptxt['membergroup_administrator'] = 'The administrator can, per definition, do anything and see any board. There are no permission settings for the administrator.';
+$helptxt['membergroup_moderator'] = 'The Moderator membergroup is a special membergroup. Permissions and settings assigned to this group apply to moderators but only <em>on the boards they moderate</em>. Outside these boards they\'re just like any other member. Note that permissions for this group also apply to any group assigned to moderate a board.';
+$helptxt['membergroups'] = 'In SMF there are two types of groups that your members can be part of. These are:
+	<ul class="normallist">
+		<li><strong>Regular Groups:</strong> A regular group is a group in which members are not automatically placed. To assign a member to be in a group simply go to their profile and click &quot;Account Settings&quot;. From here you can assign them any number of regular groups to which they will be part.</li>
+		<li><strong>Post Groups:</strong> Unlike regular groups post based groups cannot be assigned. Instead, members are automatically assigned to a post based group when they reach the minimum number of posts required to be in that group.</li>
+	</ul>';
 
- $helptxt['smiley_sameall'] = 'যদি "সমস্ত সেটের জন্য একই ছবি" চেক করা হয়, তাহলে আপনার সমস্ত স্মাইলি সেটে একই ছবি যোগ করা হবে।  আপনি বাক্সটি আনচেক করলে, প্রতিটি ইনস্টল করা স্মাইলি সেটের জন্য একটি ভিন্ন চিত্র আপলোড করা যেতে পারে।  মনে রাখবেন যে প্রতিটি স্মাইলি সেটের জন্য একটি ছবি প্রদান করা প্রয়োজন।';
- 
- $helptxt['search_weight_frequency'] = 'অনুসন্ধান ফলাফলের প্রাসঙ্গিকতা নির্ধারণ করতে ওজনের উপাদান ব্যবহার করা হয়।  আপনার ফোরামের জন্য বিশেষভাবে গুরুত্বপূর্ণ জিনিসগুলির সাথে মেলে এই ওজনের কারণগুলি পরিবর্তন করুন।  উদাহরণস্বরূপ, একটি নিউজ সাইটের একটি ফোরাম, \'শেষ ম্যাচিং বার্তার বয়স\' এর জন্য তুলনামূলকভাবে উচ্চ মান চায়।  সমস্ত মান একে অপরের সাথে আপেক্ষিক এবং ধনাত্মক পূর্ণসংখ্যা হওয়া উচিত।<br><br>এই ফ্যাক্টরটি মিলে যাওয়া বার্তাগুলির পরিমাণ গণনা করে এবং একটি বিষয়ের মধ্যে বার্তাগুলির মোট সংখ্যা দ্বারা ভাগ করে।';
- $helptxt['search_weight_age'] = 'অনুসন্ধান ফলাফলের প্রাসঙ্গিকতা নির্ধারণ করতে ওজনের উপাদান ব্যবহার করা হয়।  আপনার ফোরামের জন্য বিশেষভাবে গুরুত্বপূর্ণ জিনিসগুলির সাথে মেলে এই ওজনের কারণগুলি পরিবর্তন করুন।  উদাহরণস্বরূপ, একটি নিউজ সাইটের একটি ফোরাম, \'শেষ ম্যাচিং বার্তার বয়স\' এর জন্য তুলনামূলকভাবে উচ্চ মান চায়।  সমস্ত মান একে অপরের সাথে সম্পর্কযুক্ত এবং ধনাত্মক পূর্ণসংখ্যা হওয়া উচিত।<br><br>এই ফ্যাক্টরটি একটি বিষয়ের মধ্যে শেষ মিলিত বার্তার বয়সকে রেট করে।  এই বার্তাটি যত সাম্প্রতিক, স্কোর তত বেশি।';
- $helptxt['search_weight_length'] = 'অনুসন্ধান ফলাফলের প্রাসঙ্গিকতা নির্ধারণ করতে ওজনের উপাদান ব্যবহার করা হয়।  আপনার ফোরামের জন্য বিশেষভাবে গুরুত্বপূর্ণ জিনিসগুলির সাথে মেলে এই ওজনের কারণগুলি পরিবর্তন করুন।  উদাহরণস্বরূপ, একটি নিউজ সাইটের একটি ফোরাম, \'শেষ ম্যাচিং বার্তার বয়স\' এর জন্য তুলনামূলকভাবে উচ্চ মান চায়।  সমস্ত মান একে অপরের সাথে সম্পর্কিত এবং ধনাত্মক পূর্ণসংখ্যা হওয়া উচিত।<br><br>এই ফ্যাক্টরটি বিষয়ের আকারের উপর ভিত্তি করে।  বিষয়ের মধ্যে যত বেশি বার্তা থাকবে, স্কোর তত বেশি হবে।';
- $helptxt['search_weight_subject'] = 'অনুসন্ধান ফলাফলের প্রাসঙ্গিকতা নির্ধারণ করতে ওজনের উপাদান ব্যবহার করা হয়।  আপনার ফোরামের জন্য বিশেষভাবে গুরুত্বপূর্ণ জিনিসগুলির সাথে মেলে এই ওজনের কারণগুলি পরিবর্তন করুন।  উদাহরণস্বরূপ, একটি নিউজ সাইটের একটি ফোরাম, \'শেষ ম্যাচিং বার্তার বয়স\' এর জন্য তুলনামূলকভাবে উচ্চ মান চায়।  সমস্ত মান একে অপরের সাথে সম্পর্কিত এবং ধনাত্মক পূর্ণসংখ্যা হওয়া উচিত।<br><br>এই ফ্যাক্টরটি একটি বিষয়ের বিষয়ের মধ্যে একটি অনুসন্ধান শব্দ পাওয়া যাবে কিনা তা দেখায়।';
- $helptxt['search_weight_first_message'] = 'অনুসন্ধান ফলাফলের প্রাসঙ্গিকতা নির্ধারণ করতে ওজনের উপাদান ব্যবহার করা হয়।  আপনার ফোরামের জন্য বিশেষভাবে গুরুত্বপূর্ণ জিনিসগুলির সাথে মেলে এই ওজনের কারণগুলি পরিবর্তন করুন।  উদাহরণস্বরূপ, একটি নিউজ সাইটের একটি ফোরাম, \'শেষ ম্যাচিং বার্তার বয়স\' এর জন্য তুলনামূলকভাবে উচ্চ মান চায়।  সমস্ত মান একে অপরের সাথে সম্পর্কিত এবং ধনাত্মক পূর্ণসংখ্যা হওয়া উচিত।<br><br>এই ফ্যাক্টরটি একটি বিষয়ের প্রথম বার্তায় একটি মিল খুঁজে পাওয়া যায় কিনা তা দেখায়।';
- $helptxt['search_weight_sticky'] = 'অনুসন্ধান ফলাফলের প্রাসঙ্গিকতা নির্ধারণ করতে ওজনের উপাদান ব্যবহার করা হয়।  আপনার ফোরামের জন্য বিশেষভাবে গুরুত্বপূর্ণ জিনিসগুলির সাথে মেলে এই ওজনের কারণগুলি পরিবর্তন করুন।  উদাহরণস্বরূপ, একটি নিউজ সাইটের একটি ফোরাম, \'শেষ ম্যাচিং বার্তার বয়স\' এর জন্য তুলনামূলকভাবে উচ্চ মান চায়।  সমস্ত মান একে অপরের সাথে আপেক্ষিক এবং ধনাত্মক পূর্ণসংখ্যা হওয়া উচিত।<br><br>এই ফ্যাক্টরটি একটি বিষয় স্টিকি কিনা তা দেখায় এবং যদি এটি প্রাসঙ্গিকতা স্কোর বৃদ্ধি করে।';
- $helptxt['search'] = 'এখানে অনুসন্ধান ফাংশনের জন্য সমস্ত সেটিংস সামঞ্জস্য করুন।';
- $helptxt['search_why_use_index'] = 'একটি সার্চ ইনডেক্স আপনার ফোরামে সার্চের পারফরম্যান্সকে ব্যাপকভাবে উন্নত করতে পারে।  বিশেষ করে যখন একটি ফোরামে বার্তার সংখ্যা বেড়ে যায়, একটি সূচী ছাড়াই অনুসন্ধান করা দীর্ঘ সময় নিতে পারে এবং আপনার ডাটাবেসের উপর চাপ বাড়াতে পারে৷  যদি আপনার ফোরামটি 50.000 বার্তার চেয়ে বড় হয়, তাহলে আপনি আপনার ফোরামের সর্বোচ্চ কার্যক্ষমতা নিশ্চিত করতে একটি অনুসন্ধান সূচক তৈরি করার কথা বিবেচনা করতে পারেন৷<br><br>মনে রাখবেন যে একটি অনুসন্ধান সূচক বেশ কিছু জায়গা নিতে পারে৷  একটি ফুলটেক্সট সূচক হল MySQL এবং PostgreSQL-এর অন্তর্নির্মিত সূচক।  এটি তুলনামূলকভাবে কমপ্যাক্ট (প্রায় বার্তা টেবিলের সমান), কিন্তু অনেক শব্দ ইন্ডেক্স করা হয় না এবং কিছু সার্চ কোয়েরিতে এটি খুব ধীর হতে পারে।  কাস্টম সূচকটি প্রায়শই বড় হয় (আপনার কনফিগারেশনের উপর নির্ভর করে এটি বার্তা টেবিলের আকারের 3 গুণ পর্যন্ত হতে পারে) তবে এটির কার্যকারিতা ফুলটেক্সট থেকে ভাল এবং তুলনামূলকভাবে স্থিতিশীল।';
+$helptxt['calendar_how_edit'] = 'You can edit these events by clicking on the red asterisk (*) next to their names.';
 
- $helptxt['see_admin_ip'] = 'আইপি ঠিকানাগুলি অ্যাডমিনিস্ট্রেটর এবং মডারেটরদের দেখানো হয় যাতে মডারেশন সহজতর হয় এবং লোকেদের ট্র্যাক করা সহজ হয়।  মনে রাখবেন যে আইপি ঠিকানাগুলি সর্বদা সনাক্ত নাও হতে পারে, এবং বেশিরভাগ লোকের আইপি ঠিকানাগুলি পর্যায়ক্রমে পরিবর্তিত হয়৷<br><br>সদস্যদেরও তাদের নিজস্ব আইপি দেখার অনুমতি দেওয়া হয়৷';
- $helptxt['see_member_ip'] = 'আপনার IP ঠিকানা শুধুমাত্র আপনাকে এবং মডারেটরদের দেখানো হয়।  মনে রাখবেন যে এই তথ্যটি সনাক্ত করা যাচ্ছে না, এবং বেশিরভাগ আইপি পর্যায়ক্রমে পরিবর্তিত হয়।<br><br>আপনি অন্য সদস্যদের আইপি ঠিকানা দেখতে পারবেন না এবং তারা আপনার ঠিকানা দেখতে পারবেন না।';
- $helptxt['whytwoip'] = 'এসএমএফ ব্যবহারকারীর আইপি ঠিকানা সনাক্ত করতে বিভিন্ন পদ্ধতি ব্যবহার করে।  সাধারণত এই দুটি পদ্ধতির ফলে একই ঠিকানা হয় তবে কিছু ক্ষেত্রে একাধিক ঠিকানা সনাক্ত করা যেতে পারে।  এই ক্ষেত্রে SMF দুটি অতি সাম্প্রতিক ঠিকানা লগ করে, এবং উভয়ই ব্যান চেকের (ইত্যাদি) জন্য ব্যবহার করে।  আপনি যে আইপি ট্র্যাক করতে এবং প্রয়োজনে নিষিদ্ধ করতে যেকোন ঠিকানায় ক্লিক করতে পারেন।';
- 
- $helptxt['ban_cannot_post'] = '\'পোস্ট করা যাবে না\' বিধিনিষেধটি নিষিদ্ধ ব্যবহারকারীর জন্য ফোরামটিকে শুধুমাত্র-পঠন মোডে পরিণত করে।  ব্যবহারকারী নতুন বিষয় তৈরি করতে পারবেন না, বা বিদ্যমান বিষয়গুলির উত্তর দিতে পারবেন না, ব্যক্তিগত বার্তা পাঠাতে পারবেন না বা ভোটে ভোট দিতে পারবেন না।  নিষিদ্ধ ব্যবহারকারী যদিও এখনও ব্যক্তিগত বার্তা এবং বিষয়গুলি পড়তে পারেন৷<br><br>এইভাবে নিষিদ্ধ ব্যবহারকারীদের একটি সতর্ক বার্তা দেখানো হয়৷';
+$helptxt['maintenance_backup'] = 'This area allows you to save a copy of all the posts, settings, members, and other information in your forum to a very large file.<br><br>It is recommended that you do this often, perhaps weekly, for safety and security.';
+$helptxt['maintenance_rot'] = 'This allows you to <strong>completely</strong> and <strong>irrevocably</strong> remove old topics. It is recommended that you try to make a backup first, just in case you remove something you didn\'t mean to.<br><br><strong>Use this setting with care.</strong>';
+$helptxt['maintenance_members'] = 'This allows you to <strong>completely</strong> and <strong>irrevocably</strong> remove member accounts from your forum. It is <strong>highly</strong> recommended that you try to make a backup first, just in case you remove something you didn\'t mean to.<br><br><strong>Use this setting with care.</strong>';
 
- $helptxt['posts_and_topics'] = '
- 	 <ul class="normallist">
- 		 <li>
- 			 <strong>পোস্ট সেটিংস</strong><br>৷
- 			 বার্তা পোস্ট করার সাথে সম্পর্কিত সেটিংস এবং বার্তাগুলি দেখানোর উপায় পরিবর্তন করুন৷  আপনি এখানে বানান পরীক্ষাও সক্ষম করতে পারেন।
- 		 </li><li>
- 			 <strong>বুলেটিন বোর্ড কোড</strong><br>
- 			 সঠিক লেআউটে ফোরাম বার্তাগুলি দেখায় এমন কোডটি সক্ষম করুন৷  কোন কোডগুলি অনুমোদিত এবং কোনটি নয় তাও সামঞ্জস্য করুন৷
- 		 </li><li>
- 			 <strong>সেন্সর করা শব্দ</strong>
- 			 আপনার ফোরামে ভাষা নিয়ন্ত্রণে রাখার জন্য, আপনি কিছু শব্দ সেন্সর করতে পারেন।  এই ফাংশনটি আপনাকে নিষিদ্ধ শব্দগুলিকে নির্দোষ সংস্করণে রূপান্তর করতে দেয়।
- 		 </li><li>
- 			 <strong>বিষয় সেটিংস</strong>
- 			 বিষয় সম্পর্কিত সেটিংস পরিবর্তন করুন।  প্রতি পৃষ্ঠায় বিষয়ের সংখ্যা, প্রিন্ট-পৃষ্ঠা দৃশ্য সক্ষম করা আছে কিনা ইত্যাদি।
- 		 </li>
- 	 </ul>';
+$helptxt['avatar_server_stored'] = 'This allows your members to pick from avatars stored on your server itself. By default they are stored in the "avatars" directory.<br>As a tip, if you create directories in that folder, you can make "categories" of avatars.';
+$helptxt['avatar_external'] = 'With this enabled, your members can type in a URL to their own avatar. The downside of this is that, in some cases, they may use avatars that are overly large or portray images you don\'t want on your forum.';
+$helptxt['avatar_download_external'] = 'With this setting enabled, external avatars will be downloaded from the URLs given by the users. On success, the avatars will be treated like uploaded avatars.';
+$helptxt['avatar_action_too_large'] = 'This setting lets you reject images (from other sites) that are too big, or tells the user\'s browser to resize them, or to download them to your server.<br><br>If users put in very large images as their avatars and resize in the browser, it could cause very slow loading for your users - it does not actually resize the file, it just displays it smaller. So a digital photo, for example, would still be loaded in full and then resized only when displayed - so for users this could get quite slow and use a lot of bandwidth.<br><br>On the other hand, downloading them means using your bandwidth and server space, but you also ensure that images are smaller, so it should be faster for users. (Note: downloading and resizing requires either the GD library, or ImageMagick using either the Imagick or MagickWand extensions)';
+$helptxt['avatar_upload'] = 'This setting is much like &quot;external avatars&quot;, except that you have better control over the avatars, a better time resizing them, and your members do not have to have somewhere to put avatars.<br><br>However, the downside is that it can take a lot of space on your server.';
+$helptxt['avatar_download_png'] = 'PNGs are larger, but offer better quality compression. If this is unchecked, JPEG will be used instead - which is often smaller, but also of lesser or blurry quality.';
 
- $helptxt['spider_mode'] = 'লগিং লেভেল সেট করে।<br>
- স্ট্যান্ডার্ড - ন্যূনতম মাকড়সার কার্যকলাপ লগ করে৷<br>৷
- মধ্যপন্থী - আরো সঠিক পরিসংখ্যান প্রদান করে৷<br>৷
- আক্রমনাত্মক - &quot;মডারেট&quot; এর মতোই, কিন্তু পরিদর্শন করা প্রতিটি পৃষ্ঠার ডেটা লগ করে।';
+$helptxt['disableHostnameLookup'] = 'This disables host name lookups, which on some servers are very slow. Note that this will make banning less effective.';
 
- $helptxt['spider_group'] = 'একটি সীমাবদ্ধ গোষ্ঠী নির্বাচন করার মাধ্যমে, যখন একজন অতিথিকে অনুসন্ধান ক্রলার হিসাবে সনাক্ত করা হয় তখন এটি স্বয়ংক্রিয়ভাবে যে কোনও &quot;অস্বীকার করুন&quot;  অতিথির স্বাভাবিক অনুমতির পাশাপাশি এই গ্রুপের অনুমতি।  আপনি একজন সাধারণ অতিথির চেয়ে সার্চ ইঞ্জিনে কম অ্যাক্সেস প্রদান করতে এটি ব্যবহার করতে পারেন।  আপনি উদাহরণস্বরূপ "স্পাইডার্স" নামে একটি নতুন গ্রুপ তৈরি করতে চাইতে পারেন;  এবং এটি এখানে নির্বাচন করুন।  তারপরে আপনি আপনার সদস্যদের প্রোফাইলগুলিকে মাকড়সা সূচীকরণ বন্ধ করার জন্য প্রোফাইলগুলি দেখার জন্য সেই গোষ্ঠীর অনুমতি অস্বীকার করতে পারেন৷<br>দ্রষ্টব্য: মাকড়সা সনাক্তকরণ নিখুঁত নয় এবং ব্যবহারকারীদের দ্বারা অনুকরণ করা যেতে পারে তাই এই বৈশিষ্ট্যটি কেবলমাত্র সেই সার্চ ইঞ্জিনগুলিতে আপনার বিষয়বস্তু সীমাবদ্ধ করার গ্যারান্টি দেওয়া হয় না  যোগ করেছি।';
- $helptxt['show_spider_online'] = 'এই সেটিং আপনাকে মাকড়সাকে ​​&quot;কার অনলাইন&quot; তালিকায় তালিকাভুক্ত করা উচিত কিনা তা নির্বাচন করতে দেয়।  বোর্ড সূচকে তালিকা এবং &quot;কে অনলাইন&quot;  পৃষ্ঠা  বিকল্পগুলি হল:
- 	 <ul class="normallist">
- 		 <li>
- 			 <strong>মোটেই না</strong><br>
- 			 মাকড়সা কেবলমাত্র সমস্ত ব্যবহারকারীর কাছে অতিথি হিসাবে উপস্থিত হবে।
- 		 </li><li>
- 			 <strong>মাকড়সার পরিমাণ দেখান</strong><br>
- 			 বোর্ড সূচক বর্তমানে ফোরামে আসা মাকড়সার সংখ্যা প্রদর্শন করবে।
- 		 </li><li>
- 			 <strong>মাকড়সার নাম দেখান</strong><br>
- 			 প্রতিটি মাকড়সার নাম প্রকাশ করা হবে, যাতে ব্যবহারকারীরা দেখতে পারেন যে প্রতিটি মাকড়সার কতজন বর্তমানে ফোরামে আসছেন - এটি বোর্ড সূচক এবং কার অনলাইন পৃষ্ঠা উভয় ক্ষেত্রেই কার্যকর হবে৷
- 		 </li><li>
- 			 <strong>মাকড়সার নাম দেখান - শুধুমাত্র অ্যাডমিন</strong><br>
- 			 উপরের হিসাবে শুধুমাত্র অ্যাডমিনিস্ট্রেটররা স্পাইডার স্ট্যাটাস দেখতে পারেন - অন্য সমস্ত ব্যবহারকারীদের কাছে মাকড়সা অতিথি হিসাবে উপস্থিত হয়।
- 		 </li>
- 	 </ul>';
+$helptxt['smiley_sameall'] = 'If checking "Same image for all sets", the same image will be added to all your smiley sets. If you uncheck the box, a different image can be uploaded for every installed smiley set. Note that an image needs to be provided for every smiley set.';
 
- $helptxt['birthday_email'] = 'ব্যবহার করার জন্য জন্মদিনের ইমেল বার্তাটির সূচী বেছে নিন।  ইমেল বিষয় এবং ইমেল বডি ক্ষেত্রগুলিতে একটি পূর্বরূপ দেখানো হবে৷<br><strong>দ্রষ্টব্য:</strong> এই সেটিংটি নির্বাচন করা জন্মদিনের ইমেলগুলি স্বয়ংক্রিয়ভাবে সক্ষম করে না৷  জন্মদিনের ইমেলগুলি সক্ষম করতে <a href="%1$s?action=admin;area=scheduledtasks;%3$s=%2$s" target="_blank" rel="noopener">নির্ধারিত কার্যগুলি</a ব্যবহার করুন  > পৃষ্ঠা এবং জন্মদিনের ইমেল টাস্ক সক্ষম করুন।';
- $helptxt['pm_bcc'] = 'একটি ব্যক্তিগত বার্তা পাঠানোর সময় আপনি BCC (ব্লাইন্ড কার্বন কপি) হিসাবে একজন প্রাপককে যুক্ত করতে বেছে নিতে পারেন।  BCC প্রাপকদের বার্তার অন্যান্য প্রাপকদের কাছে তাদের পরিচয় প্রকাশ করা হয় না।';
- 
- $helptxt['move_topics_maintenance'] = 'এটি আপনাকে একটি বোর্ড থেকে অন্য বোর্ডে সমস্ত পোস্ট সরানোর অনুমতি দেবে।';
- $helptxt['maintain_reattribute_posts'] = 'আপনি এই ফাংশনটি ব্যবহার করে আপনার বোর্ডের গেস্ট পোস্টগুলিকে নিবন্ধিত সদস্যের কাছে অ্যাট্রিবিউট করতে পারেন৷  এটি কার্যকর যদি, উদাহরণস্বরূপ, একজন ব্যবহারকারী তাদের অ্যাকাউন্ট মুছে ফেলেন এবং তাদের মন পরিবর্তন করেন এবং তাদের অ্যাকাউন্টের সাথে তাদের পুরানো পোস্টগুলি যুক্ত করতে চান৷';
- $helptxt['chmod_flags'] = 'আপনি নির্বাচিত ফাইল সেট করতে চান এমন অনুমতি ম্যানুয়ালি সেট করতে পারেন।  এটি করার জন্য একটি সংখ্যাসূচক (অক্টেট) মান হিসাবে chmod মান লিখুন।  দ্রষ্টব্য - মাইক্রোসফ্ট উইন্ডোজ অপারেটিং সিস্টেমে এই পতাকাগুলির কোন প্রভাব থাকবে না৷';
+$helptxt['search_weight_frequency'] = 'Weight factors are used to determine the relevancy of a search result. Change these weight factors to match the things that are specifically important for your forum. For instance, a forum of a news site, might want a relatively high value for \'age of last matching message\'. All values are relative in relation to each other and should be positive integers.<br><br>This factor counts the amount of matching messages and divides them by the total number of messages within a topic.';
+$helptxt['search_weight_age'] = 'Weight factors are used to determine the relevancy of a search result. Change these weight factors to match the things that are specifically important for your forum. For instance, a forum of a news site, might want a relatively high value for \'age of last matching message\'. All values are relative in relation to each other and should be positive integers.<br><br>This factor rates the age of the last matching message within a topic. The more recent this message is, the higher the score.';
+$helptxt['search_weight_length'] = 'Weight factors are used to determine the relevancy of a search result. Change these weight factors to match the things that are specifically important for your forum. For instance, a forum of a news site, might want a relatively high value for \'age of last matching message\'. All values are relative in relation to each other and should be positive integers.<br><br>This factor is based on the topic size. The more messages are within the topic, the higher the score.';
+$helptxt['search_weight_subject'] = 'Weight factors are used to determine the relevancy of a search result. Change these weight factors to match the things that are specifically important for your forum. For instance, a forum of a news site, might want a relatively high value for \'age of last matching message\'. All values are relative in relation to each other and should be positive integers.<br><br>This factor looks whether a search term can be found within the subject of a topic.';
+$helptxt['search_weight_first_message'] = 'Weight factors are used to determine the relevancy of a search result. Change these weight factors to match the things that are specifically important for your forum. For instance, a forum of a news site, might want a relatively high value for \'age of last matching message\'. All values are relative in relation to each other and should be positive integers.<br><br>This factor looks whether a match can be found in the first message of a topic.';
+$helptxt['search_weight_sticky'] = 'Weight factors are used to determine the relevancy of a search result. Change these weight factors to match the things that are specifically important for your forum. For instance, a forum of a news site, might want a relatively high value for \'age of last matching message\'. All values are relative in relation to each other and should be positive integers.<br><br>This factor looks whether a topic is sticky and increases the relevancy score if it is.';
+$helptxt['search'] = 'Adjust all settings for the search function here.';
+$helptxt['search_why_use_index'] = 'A search index can greatly improve the performance of searches on your forum. Especially when the number of messages on a forum grows bigger, searching without an index can take a long time and increase the pressure on your database. If your forum is bigger than 50.000 messages, you might want to consider creating a search index to assure peak performance of your forum.<br><br>Note that a search index can take up quite some space. A fulltext index is a built-in index of MySQL and PostgreSQL. It\'s relatively compact (approximately the same size as the message table), but a lot of words aren\'t indexed and it can, in some search queries, turn out to be very slow. The custom index is often bigger (depending on your configuration it can be up to 3 times the size of the messages table) but it\'s performance is better than fulltext and relatively stable.';
 
- $helptxt['postmod'] = 'এই পৃষ্ঠাটি মডারেশন টিমের সদস্যদের (পর্যাপ্ত অনুমতি সহ) যেকোনো পোস্ট এবং বিষয় দেখানোর আগে অনুমোদন করতে দেয়।';
+$helptxt['see_admin_ip'] = 'IP addresses are shown to administrators and moderators to facilitate moderation and to make it easier to track people up to no good. Remember that IP addresses may not always be identifying, and most people\'s IP addresses change periodically.<br><br>Members are also allowed to see their own IPs.';
+$helptxt['see_member_ip'] = 'Your IP address is shown only to you and moderators. Remember that this information is not identifying, and that most IPs change periodically.<br><br>You cannot see other members\' IP addresses, and they cannot see yours.';
+$helptxt['whytwoip'] = 'SMF uses various methods to detect user IP addresses. Usually these two methods result in the same address but in some cases more than one address may be detected. In this case SMF logs the two most recent addresses, and uses them both for ban checks (etc). You can click on either address to track that IP and ban if necessary.';
 
- $helptxt['field_show_enclosed'] = 'কিছু পাঠ্য বা এইচটিএমএল এর মধ্যে ব্যবহারকারীর ইনপুট আবদ্ধ করে।  এটি আপনাকে আরও তাত্ক্ষণিক বার্তা প্রদানকারী, ছবি বা একটি এম্বেড ইত্যাদি যোগ করার অনুমতি দেবে। উদাহরণস্বরূপ:<br><br>
- 		 &lt;a href="https://example.com/{INPUT}"&gt;&lt;img src="{DEFAULT_IMAGES_URL}/icon.png" alt="{INPUT}" /&gt;&lt;/a&gt;<  br><br>
- 		 মনে রাখবেন যে আপনি নিম্নলিখিত ভেরিয়েবলগুলি ব্যবহার করতে পারেন:<br>
- 		 <ul class="normallist">
- 			 <li>{INPUT} - ব্যবহারকারীর দ্বারা নির্দিষ্ট করা ইনপুট৷</li>৷
- 			 <li>{SCRIPTURL} - ফোরামের ওয়েব ঠিকানা।</li>
- 			 <li>{IMAGES_URL} - ব্যবহারকারীদের বর্তমান থিমে চিত্র ডিরেক্টরির URL৷</li>৷
- 			 <li>{DEFAULT_IMAGES_URL} - ডিফল্ট থিমে ইমেজ ডিরেক্টরির URL।</li>
- 			 <li>{KEY} - যখন একটি ক্ষেত্রে একাধিক বিকল্প থাকে তখন ব্যবহৃত হয়, এটি সনাক্ত করতে ব্যবহৃত অনন্য সংখ্যাসূচক ID।</li>
- 		 </ul>';
+$helptxt['ban_cannot_post'] = 'The \'cannot post\' restriction turns the forum into read-only mode for the banned user. The user cannot create new topics, or reply to existing ones, send personal messages or vote in polls. The banned user can however still read personal messages and topics.<br><br>A warning message is shown to the users that are banned this way.';
 
- $helptxt['custom_mask'] = 'ইনপুট মাস্ক আপনার ফোরামের নিরাপত্তার জন্য গুরুত্বপূর্ণ।  ব্যবহারকারীর কাছ থেকে ইনপুট যাচাই করা নিশ্চিত করতে সাহায্য করতে পারে যে ডেটা এমনভাবে ব্যবহার করা হয় না যা আপনি আশা করেন না।  আমরা ইঙ্গিত হিসাবে কিছু সহজ রেগুলার এক্সপ্রেশন প্রদান করেছি।<br><br>
-     প্যাটার্নের শুরু এবং শেষ চিহ্নিত করা ডিলিমিটার প্রয়োজন!  নিচের উদাহরণে এগুলি হল টিল্ডস (~)৷<br><br>৷
- 	 <div class="smalltext" style="margin: 0 2em">
- 		 &quot;~[A-Za-z]+~&quot;  - সমস্ত বড় এবং ছোট হাতের বর্ণমালার অক্ষর মেলে৷<br>৷
- 		 &quot;~[0-9]+~&quot;  - সমস্ত সাংখ্যিক অক্ষর মিলান৷<br>৷
- 		 &quot;~[A-Za-z0-9]{7}~&quot;  - সমস্ত বড় এবং ছোট হাতের বর্ণমালা এবং সাংখ্যিক অক্ষর সাতবার মিলিয়ে নিন।<br>
- 		 &quot;~[^0-9]?~&quot;  - যেকোন সংখ্যার মিল হওয়া থেকে নিষেধ করুন৷<br>৷
- 		 &quot;~^([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$~&quot;  - শুধুমাত্র 3 বা 6 অক্ষরের হেক্সকোডের অনুমতি দিন৷<br>৷
- 	 </div><br><br>
- 	 উপরন্তু, বিশেষ মেটা অক্ষর?+*^$ এবং {xx} সংজ্ঞায়িত করা যেতে পারে।
- 	 <div class="smalltext" style="margin: 0 2em">
- 		 ?  - পূর্ববর্তী অভিব্যক্তির কোনটি বা একটি মিল৷<br>৷
- 		 + - এক বা একাধিক পূর্ববর্তী অভিব্যক্তি।<br>
- 		 * - পূর্ববর্তী অভিব্যক্তির কোনটি বা তার বেশি৷<br>৷
- 		 {xx} - আগের রাশি থেকে একটি সঠিক সংখ্যা৷<br>৷
- 		 {xx,} - আগের রাশি থেকে একটি সঠিক সংখ্যা বা তার বেশি।<br>
- 		 {,xx} - আগের রাশি থেকে একটি সঠিক সংখ্যা বা কম৷<br>৷
- 		 {xx,yy} - আগের রাশি থেকে দুটি সংখ্যার মধ্যে একটি সঠিক মিল৷<br>৷
- 		 ^ - স্ট্রিং এর শুরু।<br>
- 		 $ - স্ট্রিং এর শেষ।<br>
- 		 \ - পরবর্তী অক্ষর থেকে পালিয়ে যায়৷<br>৷
- 	 </div><br><br>
- 	 ইন্টারনেটে আরও তথ্য এবং উন্নত কৌশল পাওয়া যেতে পারে।';
+$helptxt['posts_and_topics'] = '
+	<ul class="normallist">
+		<li>
+			<strong>Post Settings</strong><br>
+			Modify the settings related to the posting of messages and the way messages are shown. You can also enable the spell check here.
+		</li><li>
+			<strong>Bulletin Board Code</strong><br>
+			Enable the code that shows forum messages in the right layout. Also adjust which codes are allowed and which aren\'t.
+		</li><li>
+			<strong>Censored Words</strong>
+			In order to keep the language on your forum under control, you can censor certain words. This function allows you to convert forbidden words into innocent versions.
+		</li><li>
+			<strong>Topic Settings</strong>
+			Modify the settings related to topics. The number of topics per page, whether the print-page view is enabled, etc.
+		</li>
+	</ul>';
 
- $helptxt['topic_move_any'] = 'যদি চেক করা থাকে, ব্যবহারকারীরা দেখতে পাবে এমন যেকোনো বোর্ডে বিষয়গুলি সরানোর অনুমতি দেওয়া হবে৷  অন্যথায়, তারা শুধুমাত্র তাদের বোর্ডে স্থানান্তর করতে সক্ষম হবে যেখানে তারা নতুন বিষয় পোস্ট করতে পারবে।';
+$helptxt['spider_mode'] = 'Sets the logging level.<br>
+Standard - Logs minimal spider activity.<br>
+Moderate - Provides more accurate statistics.<br>
+Aggressive - Same as &quot;Moderate&quot;, but logs data about each page visited.';
 
- $helptxt['alert_pm_new'] = 'নতুন ব্যক্তিগত বার্তাগুলির বিজ্ঞপ্তিগুলি সতর্কতা ফলকে প্রদর্শিত হয় না, তবে পরিবর্তে "আমার বার্তা" তালিকায় উপস্থিত হয়৷';
- $helptxt['alert_event_new'] = 'একটি নতুন ক্যালেন্ডার ইভেন্ট যোগ করা হলে এটি অনুরোধ অনুযায়ী একটি সতর্কতা বা ইমেল পাঠাবে।  যাইহোক, যদি সেই ইভেন্টটি পোস্ট করা হয় এবং একটি বিষয় যুক্ত করা হয়, আপনি যদি ইতিমধ্যেই সেই বোর্ডটিকে অনুসরণ করেন তবে আপনি ইভেন্টের জন্য একটি সতর্কতা পাবেন না - বোর্ড অনুসরণ করার সতর্কতা এটিকে কভার করবে৷';
- 
- $helptxt['force_ssl'] = '<strong>এটি সক্ষম করার আগে আপনার সার্ভারে সঠিকভাবে SSL এবং HTTPS পরীক্ষা করুন, এটি আপনার ফোরামকে অ্যাক্সেসযোগ্য করে তুলতে পারে।</strong> আপনি যদি সক্ষম করার পরে ফোরাম অ্যাক্সেস করতে না পারেন তবে রক্ষণাবেক্ষণ মোড সক্ষম করুন  এটি৷<br><br><strong>এই সেটিংটি পরিবর্তন করা হলে তা আপনার ফোরামের প্রাথমিক URL আপডেট করবে, সেইসাথে আপনার থিম ফাইল এবং ছবি, স্মাইলি এবং অবতারগুলির URLগুলিকে http: বা https:-তে সেট করবে৷  আপনার নির্বাচনের উপর ভিত্তি করে।  কাস্টমাইজড ইউআরএল প্রভাবিত হবে না৷</strong>';
- $helptxt['image_proxy_enabled'] = 'সম্পূর্ণ SSL এ থাকা অবস্থায় বহিরাগত ছবি এম্বেড করার জন্য প্রয়োজনীয়';
- $helptxt['image_proxy_secret'] = 'এটি গোপন রাখুন, হটলিংক করা ছবি থেকে আপনার ফোরামকে রক্ষা করে।  বর্তমান হটলিংক করা ছবিগুলিকে অকেজো করার জন্য এটি পরিবর্তন করুন';
- $helptxt['image_proxy_maxsize'] = 'সর্বোচ্চ ইমেজ সাইজ যা SSL ইমেজ প্রক্সি ক্যাশে করবে: বড় ছবি ক্যাশে করা হবে না।  ক্যাশে করা ছবিগুলি আপনার SMF ক্যাশে ফোল্ডারে সংরক্ষণ করা হয়, তাই নিশ্চিত করুন যে আপনার পর্যাপ্ত ফাঁকা জায়গা আছে।';
+$helptxt['spider_group'] = 'By selecting a restrictive group, when a guest is detected as a search crawler it will automatically be assigned any &quot;deny&quot; permissions of this group in addition to the normal permissions of a guest. You can use this to provide lesser access to a search engine than you would a normal guest. You might for example wish to create a new group called &quot;Spiders&quot; and select that here. You could then deny permission for that group to view profiles to stop spiders indexing your members profiles.<br>Note: Spider detection is not perfect and can be simulated by users so this feature is not guaranteed to restrict content only to those search engines you have added.';
+$helptxt['show_spider_online'] = 'This setting allows you to select whether spiders should be listed in the &quot;Who\'s Online&quot; list on the board index and &quot;Who\'s Online&quot; page. The options are:
+	<ul class="normallist">
+		<li>
+			<strong>Not at All</strong><br>
+			Spiders will simply appear as guests to all users.
+		</li><li>
+			<strong>Show Spider Quantity</strong><br>
+			The Board Index will display the number of spiders currently visiting the forum.
+		</li><li>
+			<strong>Show Spider Names</strong><br>
+			Each spider name will be revealed, so users can see how many of each spider is currently visiting the forum - this takes effect in both the Board Index and Who\'s Online page.
+		</li><li>
+			<strong>Show Spider Names - Admin Only</strong><br>
+			As above except only Administrators can see spider status - to all other users spiders appear as guests.
+		</li>
+	</ul>';
 
- $helptxt['enable_sm_stats'] = 'সক্রিয় থাকলে, এটি সাধারণ মেশিনগুলিকে মৌলিক পরিসংখ্যান সংগ্রহ করতে মাসে একবার আপনার সাইট দেখার অনুমতি দেবে৷  এটি কোন কনফিগারেশনের জন্য সফ্টওয়্যারটিকে অপ্টিমাইজ করতে হবে সে বিষয়ে সিদ্ধান্ত নিতে আমাদের সাহায্য করবে৷  আরও তথ্যের জন্য অনুগ্রহ করে আমাদের <a href="https://www.simplemachines.org/about/stats.php" target="_blank" rel="noopener">তথ্য পৃষ্ঠা</a> দেখুন।';
+$helptxt['birthday_email'] = 'Choose the index of the birthday email message to use. A preview will be shown in the Email Subject and Email Body fields.<br><strong>Note:</strong> Selecting this setting does not automatically enable birthday emails. To enable birthday emails use the <a href="%1$s?action=admin;area=scheduledtasks;%3$s=%2$s" target="_blank" rel="noopener">Scheduled Tasks</a> page and enable the birthday email task.';
+$helptxt['pm_bcc'] = 'When sending a personal message you can choose to add a recipient as BCC (Blind Carbon Copy). BCC recipients do not have their identities revealed to the other recipients of the message.';
 
- $helptxt['field_reg_require'] = 'রেজিস্ট্রেশনের সময় যদি এই ক্ষেত্রটির প্রয়োজন হয়, তবে প্রোফাইল পরিবর্তনের ক্ষেত্রেও এটির প্রয়োজন হবে।';
+$helptxt['move_topics_maintenance'] = 'This will allow you to move all the posts from one board to another board.';
+$helptxt['maintain_reattribute_posts'] = 'You can use this function to attribute guest posts on your board to a registered member. This is useful if, for example, a user deleted their account and changed their mind and wished to have their old posts associated with their account.';
+$helptxt['chmod_flags'] = 'You can manually set the permissions you wish to set the selected files to. To do this enter the chmod value as a numeric (octet) value. Note - these flags will have no effect on Microsoft Windows operating systems.';
 
- $helptxt['translatable_fields'] = 'আপনি যদি আপনার কাস্টম প্রোফাইল ফিল্ডের জন্য বহু-ভাষা সমর্থন দিতে চান তবে নাম এবং বিবরণ উভয় ক্ষেত্রেই অনুবাদযোগ্য টোকেন ব্যবহার করতে পারেন।<br><br>
- ধনুর্বন্ধনী <span class="monospace">{}</span> দিয়ে আবদ্ধ যেকোন কিছুকে একটি টোকেন হিসাবে বিবেচনা করা হবে এবং একটি $txt স্ট্রিং এর সাথে মিলিত হবে৷  উদাহরণস্বরূপ, টোকেন <span class="monospace">{gender}</span> $txt[\'gender\']<br><br> এর মান দ্বারা প্রতিস্থাপিত হবে
- বর্তমানে ইনস্টল করা <strong>সমস্ত</strong> ভাষায় মিলিত $txt স্ট্রিং যোগ করা <strong>খুব গুরুত্বপূর্ণ</strong>।  এটি করতে, <a href="%1$s?action=admin;area=languages;sa=edit;%3$s=%2$s" class="bbc_link" target="_blank" rel-এ যান  ="noopener">ভাষা সম্পাদনা করুন</a> পৃষ্ঠা এবং প্রতিটি ইনস্টল করা ভাষার জন্য নিম্নলিখিত পদক্ষেপগুলি সম্পূর্ণ করুন:
- <ol class="bbc_list" style="list-style-type: decimal">
- 	 <li>ভাষার নামের পাশে "সম্পাদনা" বোতামে ক্লিক করুন।</li>
- 	 <li>"সম্পাদনা করার জন্য এন্ট্রি নির্বাচন করুন" মেনুতে, "পরিবর্তন" নির্বাচন করুন।</li>
- 	 <li>নীচে স্ক্রোল করুন এবং "অন্য আইটেম যোগ করুন" বোতামে ক্লিক করুন।</li>
- 	 <li>আপনার নতুন স্ট্রিং যোগ করার জন্য প্রম্পটগুলি অনুসরণ করুন৷</li>৷
- </ol>';
- 
- // যুক্তি(গুলি): $boarddir, $boardurl
- $helptxt['cron_is_real_cron'] = 'ডিফল্টরূপে, SMF প্রতিটি পৃষ্ঠায় জাভাস্ক্রিপ্টের একটি ছোট অংশ যোগ করে যা ব্যবহারকারীর ব্রাউজারকে SMF এর cron.php পটভূমিতে ট্রিগার করতে অনুরোধ করে।  এই পদ্ধতিটি SMF কে প্রশাসককে কোন অতিরিক্ত সার্ভার কনফিগারেশন করার প্রয়োজন ছাড়াই নিয়মিতভাবে তার নির্ধারিত কাজগুলি সম্পাদন করতে দেয়।  যাইহোক, কিছু অ্যাডমিন তাদের সার্ভারগুলিকে নিয়মিতভাবে সরাসরি cron.php চালানোর জন্য কনফিগার করতে পছন্দ করতে পারে।  আপনি যদি এটি করে থাকেন তবে আপনি জাভাস্ক্রিপ্ট পদ্ধতিটি নিষ্ক্রিয় করতে পারেন৷<br><br><strong>দ্রষ্টব্য:</strong> আপনার সার্ভারকে এইভাবে নির্ধারিত কাজগুলি চালানোর জন্য কনফিগার করা SMF এর মধ্যে থেকে করা যাবে না৷  এটি করার জন্য আপনাকে আপনার সার্ভার কনফিগারেশন সফ্টওয়্যার ব্যবহার করতে হবে।  এই উদ্দেশ্যে সাধারণ সরঞ্জামগুলির মধ্যে রয়েছে <code>cron</code> (লিনাক্স সার্ভারের জন্য), <code>schtasks.exe</code> (উইন্ডোজ সার্ভারের জন্য), এবং <code>লঞ্চড</code> (macOS সার্ভারের জন্য)  .  বেশিরভাগ ওয়েব হোস্টিং কোম্পানিগুলি তাদের গ্রাহকদের এই সরঞ্জামগুলি অ্যাক্সেস করার অনুমতি দেওয়ার জন্য কিছু ধরণের নিয়ন্ত্রণ প্যানেল ইন্টারফেস প্রদান করে৷<br><br>আপনার ফোরামের cron.php এর পাথ এবং URL হল:<br>পথ: %1$s  /cron.php<br>URL: %2$s/cron.php';
+$helptxt['postmod'] = 'This page allows members of the moderation team (with sufficient permissions) to approve any posts and topics before they are shown.';
 
- $helptxt['languages_txt'] = 'এসএমএফ জুড়ে এই ভাষা এন্ট্রিগুলি ব্যবহার করা হয় বিভিন্ন ভাষার জন্য পাঠ্যের স্থানীয় সংস্করণ সংজ্ঞায়িত করার জন্য।<br><br>যদি আপনি <code>&#37;1$s</ এর মত একটি মান দেখতে পান  কোড> একটি এন্ট্রিতে, এটি একটি স্থানধারক যা SMF রানটাইমে একটি বাস্তব মান দিয়ে পূরণ করে।  আপনার কাস্টমাইজড টেক্সটে এই ধরনের স্থানধারক রাখা নিশ্চিত করুন।';
- $helptxt['languages_helptxt'] = 'এই ভাষা এন্ট্রিগুলি ফ্লোটিং হেল্প টেক্সট পপআপ দেখানোর জন্য ব্যবহার করা হয় (এটির মতো)';
- $helptxt['languages_editortxt'] = 'এই ভাষা এন্ট্রিগুলি পোস্ট এডিটরে ইউজার ইন্টারফেস উপাদানের জন্য ব্যবহার করা হয়।';
- $helptxt['languages_tztxt'] = 'এই ভাষা এন্ট্রিগুলি টাইম জোনের জন্য বর্ণনা তৈরি করতে ব্যবহার করা হয়৷<br><br>উদাহরণস্বরূপ, <code>Europe_Western</code> স্ট্রিংটি <code>daylight_saving_time_false< এর সাথে মিলিত হতে পারে  "ওয়েস্টার্ন ইউরোপিয়ান স্ট্যান্ডার্ড টাইম" তৈরি করতে স্ট্রিং  সময় অঞ্চল, SMF সেই সময় অঞ্চলের মধ্যে অবস্থানগুলির একটি তালিকা ব্যবহার করে একটি বিবরণ তৈরি করবে৷';
- $helptxt['languages_txt_for_timezones'] = 'এই ভাষার এন্ট্রিগুলি আপনাকে নিম্নলিখিতগুলি করতে দেয়:<br><ol class="bbc_list" style="list-style-type: decimal;"><li>এর জন্য দেখানো নামগুলি সম্পাদনা করুন  সময় অঞ্চলের সাথে সম্পর্কিত একটি প্রেক্ষাপটে ব্যবহার করা যেতে পারে এমন যেকোনো স্থানে পৃথক অবস্থান।  উদাহরণস্বরূপ, আপনি SMF কে "Thule" এর পরিবর্তে "America/Thule" অবস্থানের জন্য "Qaanaaq" দেখাতে বলতে পারেন।</li><li>বিভিন্ন দেশের জন্য দেখানো নাম সম্পাদনা করুন।  এটি প্রাসঙ্গিক <code>iso3166[></code> স্ট্রিং সম্পাদনা করে করা যেতে পারে।</li></ol>';
- $helptxt['languages_txt_for_email_templates'] = 'এসএমএফ আপনার সদস্যদের পাঠায় এমন ইমেল বার্তা তৈরি করতে এই ভাষা এন্ট্রি ব্যবহার করা হয়।';
- $helptxt['languages_native_name'] = 'ভাষার নিজের জন্য নাম, নিজস্ব স্ক্রিপ্টে উপস্থাপিত।';
- $helptxt['languages_character_set'] = 'এই ভাষার জন্য ব্যবহৃত অক্ষর এনকোডিং।  SMF 2.1 অনুসারে, এটি সর্বদা "UTF-8" হওয়া উচিত।';
- $helptxt['languages_locale'] = 'লোকেল কোডটি বিভিন্ন ফরম্যাটিং কনভেনশন ইত্যাদি নির্ধারণ করতে ব্যবহৃত হয়।<br><br>লোকেল কোডটি সাধারণত দুটি অক্ষরের ভাষা কোডের রূপ নেয়, ঐচ্ছিকভাবে একটি আন্ডারস্কোর এবং একটি দুটি অনুসরণ করে  অক্ষর দেশের কোড।  উদাহরণস্বরূপ, <code>en</code> জেনেরিক ইংরেজি সনাক্ত করবে, যখন <code>en_AU</code> বিশেষ করে অস্ট্রেলিয়ান ইংরেজিকে চিহ্নিত করবে।';
- $helptxt['languages_rtl'] = 'এখানে একটি "1" লিখুন যদি এই ভাষাটি ডান থেকে বামে পড়ে (যেমন হিব্রু, আরবি)।   বাম থেকে ডান ভাষার জন্য এটি "0" ছেড়ে দিন।';
- $helptxt['languages_dictionary'] = 'এটি মূল ভাষার অভিধানকে সংজ্ঞায়িত করে যা <a href="https://php.net/function.pspell-new" target="_blank" rel="noopener" দ্বারা ব্যবহার করা হবে  >pSpell</a> বানান পরীক্ষক (যদি ইনস্টল করা হয়)।';
- $helptxt['languages_recaptcha'] = 'reCAPTCHA যাচাইকরণ উইজেটের জন্য যে ভাষা কোড ব্যবহার করতে হবে।<br><br>এর জন্য Google এর reCAPTCHA ডকুমেন্টেশন দেখুন <a href="https://developers.google.com/  recaptcha/docs/language" target="_blank" rel="noopener" class="bbc_link">সমর্থিত ভাষার তালিকা</a>।';
- // ইইউ এর জিডিপিআর পৃষ্ঠাটি বিভিন্ন ভাষায় বিদ্যমান;  ইউআরএলের শেষে ভাষা কোড পরিবর্তন করুন
- $helptxt['requireAgreement'] = 'এই সেটিংটি <a href="https://ec.europa.eu/info/law/law-topic/data--এর নিয়ম মেনে চলার জন্য সক্রিয় করার পরামর্শ দেওয়া হচ্ছে  protect/eu-data-protection-rules_en" target="_blank" rel="noopener" class="bbc_link">GDPR</a>.';
- // ইইউ এর জিডিপিআর পৃষ্ঠাটি বিভিন্ন ভাষায় বিদ্যমান;  ইউআরএলের শেষে ভাষা কোড পরিবর্তন করুন
- $helptxt['requirePolicyAgreement'] = 'এই সেটিংটি <a href="https://ec.europa.eu/info/law/law-topic/data--এর নিয়ম মেনে চলার জন্য সক্রিয় করার পরামর্শ দেওয়া হচ্ছে  protect/eu-data-protection-rules_en" target="_blank" rel="noopener" class="bbc_link">GDPR</a>.';
- $helptxt['gravatar'] = 'গ্রাভাটার বিশ্বব্যাপী স্বীকৃত অবতার।  একটি অবতার ছবি নির্বাচন করতে <a href="https://www.gravatar.com" target="_blank" rel="noopener">https://www.gravatar.com</a> এ একটি অ্যাকাউন্ট নিবন্ধন করুন৷  এই অবতারটি গ্রাভাটার সমর্থন করে এমন প্রতিটি সাইটে উপলব্ধ।  আপনার যদি গ্রাভাটার অ্যাকাউন্ট না থাকে তবে একটি ডিফল্ট ছবি ব্যবহার করা হবে৷';
+$helptxt['field_show_enclosed'] = 'Encloses the user input between some text or html. This will allow you to add more instant message providers, images or an embed etc. For example:<br><br>
+		&lt;a href="https://example.com/{INPUT}"&gt;&lt;img src="{DEFAULT_IMAGES_URL}/icon.png" alt="{INPUT}" /&gt;&lt;/a&gt;<br><br>
+		Note that you can use the following variables:<br>
+		<ul class="normallist">
+			<li>{INPUT} - The input specified by the user.</li>
+			<li>{SCRIPTURL} - Web address of forum.</li>
+			<li>{IMAGES_URL} - URL to images directory in the users current theme.</li>
+			<li>{DEFAULT_IMAGES_URL} - URL to the images directory in the default theme.</li>
+			<li>{KEY} - Used when a field has multiple options, is the unique numeric ID used to identify it.</li>
+		</ul>';
 
- ?>
+$helptxt['custom_mask'] = 'The input mask is important for your forum\'s security. Validating the input from a user can help ensure that data is not used in a way you do not expect. We have provided some simple regular expressions as hints.<br><br>
+    Delimiters marking the beginning and end of the pattern are required! They are tildes (~) in the examples below.<br><br>
+	<div class="smalltext" style="margin: 0 2em">
+		&quot;~[A-Za-z]+~&quot; - Match all upper and lower case alphabet characters.<br>
+		&quot;~[0-9]+~&quot; - Match all numeric characters.<br>
+		&quot;~[A-Za-z0-9]{7}~&quot; - Match all upper and lower case alphabet and numeric characters seven times.<br>
+		&quot;~[^0-9]?~&quot; - Forbid any number from being matched.<br>
+		&quot;~^([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$~&quot; - Only allow 3 or 6 character hexcodes.<br>
+	</div><br><br>
+	Additionally, special metacharacters ?+*^$ and {xx} can be defined.
+	<div class="smalltext" style="margin: 0 2em">
+		? - None or one match of previous expression.<br>
+		+ - One or more of previous expression.<br>
+		* - None or more of previous expression.<br>
+		{xx} - An exact number from previous expression.<br>
+		{xx,} - An exact number or more from previous expression.<br>
+		{,xx} - An exact number or less from previous expression.<br>
+		{xx,yy} - An exact match between the two numbers from previous expression.<br>
+		^ - Start of string.<br>
+		$ - End of string.<br>
+		\ - Escapes the next character.<br>
+	</div><br><br>
+	More information and advanced techniques may be found on the Internet.';
+
+$helptxt['topic_move_any'] = 'If checked, users will be allowed to move topics to any board they can see. Otherwise, they will only be able to move them to boards where they can post new topics.';
+
+$helptxt['alert_pm_new'] = 'Notifications of new personal messages do not appear in the Alerts pane, but appear in the "My Messages" list instead.';
+$helptxt['alert_event_new'] = 'This will send out an alert or email as requested if there is a new calendar event added. However, if that event is posted and a topic is added, you will not get an alert for the event if you\'re already following that board - the alert from following the board would cover this.';
+
+$helptxt['force_ssl'] = '<strong>Test SSL and HTTPS on your server properly before enabling this, it may cause your forum to become inaccessible.</strong> Enable maintenance mode if you are unable to access the forum after enabling this.<br><br><strong>Changing this setting will update your forum\'s primary URL, as well as the URLs for your theme files and images, smileys, and avatars, setting them to either http: or https: based on your selection. Customized URLs will not be affected.</strong>';
+$helptxt['image_proxy_enabled'] = 'Required for embedding external images when in full SSL';
+$helptxt['image_proxy_secret'] = 'Keep this a secret, protects your forum from hotlinking images. Change it in order to render current hotlinked images useless';
+$helptxt['image_proxy_maxsize'] = 'Maximum image size that the SSL image proxy will cache: bigger images will be not be cached. Cached images are stored in your SMF cache folder, so make sure you have enough free space.';
+
+$helptxt['enable_sm_stats'] = 'If enabled, this will allow Simple Machines to visit your site once a month to collect basic statistics. This will help us make decisions as to which configurations to optimize the software for. For more information please visit our <a href="https://www.simplemachines.org/about/stats.php" target="_blank" rel="noopener">info page</a>.';
+
+$helptxt['field_reg_require'] = 'If this field is required during registration, it will also be required on profile changes.';
+
+$helptxt['translatable_fields'] = 'If you wish to provide multi-language support for your custom profile fields you can use translatable tokens on both the name and description fields.<br><br>
+Anything enclosed with braces <span class="monospace">{}</span> will be considered as a token and will be matched against a $txt string. For example, the token <span class="monospace">{gender}</span> will be replaced by the value of $txt[\'gender\']<br><br>
+It is <strong>very important</strong> to add the matched $txt string to <strong>ALL</strong> currently installed languages. To do this, go to the <a href="%1$s?action=admin;area=languages;sa=edit;%3$s=%2$s" class="bbc_link" target="_blank" rel="noopener">Edit Languages</a> page and complete the following steps for each installed language:
+<ol class="bbc_list" style="list-style-type: decimal">
+	<li>Click the "Edit" button next to the language name.</li>
+	<li>In the "Select entries to edit" menu, choose "Modifications".</li>
+	<li>Scroll to bottom and click the "Add Another Item" button.</li>
+	<li>Follow the prompts to add your new string.</li>
+</ol>';
+
+// argument(s): $boarddir, $boardurl
+$helptxt['cron_is_real_cron'] = 'By default, SMF adds to every page a small bit of JavaScript that prompts the user\'s browser to trigger SMF\'s cron.php in the background. This approach allows SMF to execute its scheduled tasks on a regular basis without requiring the admin to do any extra server configuration. However, some admins might prefer to configure their servers to directly execute cron.php on a regular basis. If you have done this, you can disable the JavaScript method.<br><br><strong>Note:</strong> Configuring your server to run scheduled tasks this way cannot be done from within SMF. You will need to use your server configuration software to do so. Typical tools for this purpose include <code>cron</code> (for Linux servers), <code>schtasks.exe</code> (for Windows servers), and <code>launchd</code> (for macOS servers). Most web hosting companies provide some sort of control panel interface to allow their customers to access these tools.<br><br>The path and URL for your forum\'s cron.php are:<br>Path: %1$s/cron.php<br>URL: %2$s/cron.php';
+
+$helptxt['languages_txt'] = 'These language entries are used throughout SMF to define localized versions of text for different languages.<br><br>If you see a value like <code>&#37;1$s</code> in an entry, it is a placeholder that SMF fills in with a real value at runtime. Make sure to keep such placeholders in your customized text.';
+$helptxt['languages_helptxt'] = 'These language entries are used to show floating help text popups (like this one).';
+$helptxt['languages_editortxt'] = 'These language entries are used for user interface elements in the post editor.';
+$helptxt['languages_tztxt'] = 'These language entries are used to build descriptions for time zones.<br><br>For example, the <code>Europe_Western</code> string may be combined with the <code>daylight_saving_time_false</code> string to produce "Western European Standard Time".<br><br>Note: If no description is provided for a given time zone, SMF will generate a description using a list of locations within that time zone.';
+$helptxt['languages_txt_for_timezones'] = 'These language entries allow you to do the following:<br><ol class="bbc_list" style="list-style-type: decimal;"><li>Edit the names shown for individual locations anywhere they might be used in a context related to time zones. For example, you can tell SMF to show "Qaanaaq" for the location "America/Thule" instead of "Thule".</li><li>Edit the names shown for different countries. This can be done by editing the relevant <code>iso3166[]</code> string.</li></ol>';
+$helptxt['languages_txt_for_email_templates'] = 'These language entries are used to create the email messages that SMF sends to your members.';
+$helptxt['languages_native_name'] = 'The language\'s name for itself, represented in its own script.';
+$helptxt['languages_character_set'] = 'The character encoding used for this language. As of SMF 2.1, this should always be "UTF-8".';
+$helptxt['languages_locale'] = 'The locale code is used to determine various formatting conventions, etc.<br><br>The locale code typically takes the form of a two character language code, optionally followed by an underscore and a two character country code. For example, <code>en</code> would identify generic English, while <code>en_AU</code> would identify Australian English in particular.';
+$helptxt['languages_rtl'] = 'Enter a "1" here if this language reads from right to left (e.g. Hebrew, Arabic).  Leave it "0" for left to right languages.';
+$helptxt['languages_dictionary'] = 'This defines the main language dictionary that will be used by the <a href="https://php.net/function.pspell-new" target="_blank" rel="noopener">pSpell</a> spellchecker (if installed).';
+$helptxt['languages_recaptcha'] = 'The language code to use for the reCAPTCHA verification widget.<br><br>See Google\'s reCAPTCHA documentation for its <a href="https://developers.google.com/recaptcha/docs/language" target="_blank" rel="noopener" class="bbc_link">list of supported languages</a>.';
+// The GDPR page of the EU exists in several languages; change the language code at the end of the url
+$helptxt['requireAgreement'] = 'This setting is recommended to be enabled in order to comply with the rules of the <a href="https://ec.europa.eu/info/law/law-topic/data-protection/eu-data-protection-rules_en" target="_blank" rel="noopener" class="bbc_link">GDPR</a>.';
+// The GDPR page of the EU exists in several languages; change the language code at the end of the url
+$helptxt['requirePolicyAgreement'] = 'This setting is recommended to be enabled in order to comply with the rules of the <a href="https://ec.europa.eu/info/law/law-topic/data-protection/eu-data-protection-rules_en" target="_blank" rel="noopener" class="bbc_link">GDPR</a>.';
+$helptxt['gravatar'] = 'Gravatar is Globally Recognized Avatars. Register an account at <a href="https://www.gravatar.com" target="_blank" rel="noopener">https://www.gravatar.com</a> to select an avatar image. This avatar is then available at every site that supports gravatars. If you don\'t have a gravatar account, a default image will be used.';
+
+?>
