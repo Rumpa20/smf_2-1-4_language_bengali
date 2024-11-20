@@ -1,956 +1,956 @@
 <?php
- // সংস্করণ: 2.1.3;  সূচক
-
- বিশ্বব্যাপী $forum_copyright, $webmaster_email, $scripturl, $context, $boardurl;
-
- // স্থানীয় নাম, আপনার ভাষার নাম লিখতে সম্পূর্ণ HTML সত্তা ব্যবহার করুন।
- $txt['native_name'] = 'ইংরেজি';
-
- // লোকেল (strftime, basename)।  আরও তথ্যের জন্য দেখুন:
- // - https://php.net/function.setlocale
- $txt['lang_locale'] = 'en_US';
- $txt['lang_dictionary'] = 'en';
- //https://developers.google.com/recaptcha/docs/language
- $txt['lang_recaptcha'] = 'en';
-
- // অক্ষর সেট স্ট্রিংগুলির জন্য আপনি বড় হাতের অক্ষর ব্যবহার করতে ভুলবেন না তা নিশ্চিত করুন।
- $txt['lang_character_set'] = 'UTF-8';
- // অক্ষর ডান থেকে বামে সেট?   0 = ltr;  1 = rtl
- $txt['lang_rtl'] = '0';
- // নম্বর বিন্যাস।
- $txt['number_format'] = '1,234.00';
-
- $txt['days_title'] = 'দিন';
- $txt['days'] = অ্যারে('রবিবার', 'সোমবার', 'মঙ্গলবার', 'বুধবার', 'বৃহস্পতিবার', 'শুক্রবার', 'শনিবার');
- $txt['days_short'] = অ্যারে('রবি', 'সোম', 'মঙ্গল', 'বুধ', 'বৃহস্পতি', 'শুক্র', 'শনি');
- // মাস অবশ্যই 1 => 'জানুয়ারি' দিয়ে শুরু হবে।  (অথবা অনুবাদ, অবশ্যই।)
- $txt['months_title'] = 'মাস';
- $txt['months'] = array(1 => 'জানুয়ারি', 2 => 'ফেব্রুয়ারি', 3 => 'মার্চ', 4 => 'এপ্রিল', 5 => 'মে', 6 => 'জুন  ', 7 => 'জুলাই', 8 => 'আগস্ট', 9 => 'সেপ্টেম্বর', 10 => 'অক্টোবর', 11 => 'নভেম্বর', 12 => 'ডিসেম্বর');
- $txt['months_titles'] = array(1 => 'জানুয়ারি', 2 => 'ফেব্রুয়ারি', 3 => 'মার্চ', 4 => 'এপ্রিল', 5 => 'মে', 6 => 'জুন  ', 7 => 'জুলাই', 8 => 'আগস্ট', 9 => 'সেপ্টেম্বর', 10 => 'অক্টোবর', 11 => 'নভেম্বর', 12 => 'ডিসেম্বর');
- $txt['months_short'] = অ্যারে(1 => 'জান', 2 => 'ফেব্রুয়ারি', 3 => 'মার', 4 => 'এপ্রিল', 5 => 'মে', 6 => 'জুন  ', 7 => 'Jul', 8 => 'Aug', 9 => 'Sep', 10 => 'Oct', 11 => 'Nov', 12 => 'Dec');
- $txt['prev_month'] = 'আগের মাস';
- $txt['next_month'] = 'পরের মাস';
- $txt['start'] = 'শুরু';
- $txt['end'] = 'শেষ';
- $txt['starts'] = 'শুরু';
- $txt['ends'] = 'শেষ';
- $txt['none'] = 'কোনোটিই';
-
- $txt['minutes_label'] = 'মিনিট';
- $txt['hours_label'] = 'ঘন্টা';
- $txt['years_title'] = 'বছর';
-
- $txt['time_am'] = 'am';
- $txt['time_pm'] = 'pm';
-
- // মিনিটের সংক্ষিপ্ত রূপ
- $txt['minutes_short'] = 'মিনিট';
- // ঘন্টার সংক্ষিপ্ত রূপ
- $txt['hour_short'] = 'hr';
- // ঘন্টার সংক্ষিপ্ত রূপ
- $txt['hours_short'] = 'ঘন্টা';
- // দশমিক চিহ্ন
- $txt['decimal_sign'] = '.';
-
- $txt['admin'] = 'অ্যাডমিন';
- $txt['moderate'] = 'মডারেট';
-
- $txt['save'] = 'সংরক্ষণ করুন';
- $txt['reset'] = 'রিসেট';
- $txt['upload'] = 'আপলোড';
- $txt['upload_all'] = 'সমস্ত আপলোড করুন';
- $txt['processing'] = 'প্রসেসিং...';
-
- $txt['modify'] = 'সংশোধন';
- $txt['forum_index'] = '%1$s - সূচক';
- $txt['members'] = 'সদস্য';
- $txt['board_name'] = 'বোর্ডের নাম';
- $txt['posts'] = 'পোস্ট';
-
- $txt['member_postcount'] = 'পোস্ট';
- $txt['no_subject'] = '(কোন বিষয় নেই)';
- $txt['view_profile'] = 'প্রোফাইল দেখুন';
- $txt['guest_title'] = 'অতিথি';
- $txt['author'] = 'লেখক';
- $txt['on'] = 'চালু';
- $txt['remove'] = 'সরান';
- $txt['start_new_topic'] = 'নতুন বিষয় শুরু করুন';
-
- $txt['login'] = 'লগ ইন';
- // নিচের স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করুন।
- $txt['username'] = 'ব্যবহারকারীর নাম';
- $txt['password'] = 'পাসওয়ার্ড';
-
- $txt['username_no_exist'] = 'সেই ব্যবহারকারীর নামটি বিদ্যমান নেই।';
- $txt['no_user_with_email'] = 'সেই ইমেলের সাথে যুক্ত কোনো ব্যবহারকারীর নাম নেই।';
-
- $txt['board_moderator'] = 'বোর্ড মডারেটর';
- $txt['remove_topic'] = 'বিষয় সরান';
- $txt['topics'] = 'বিষয়';
- $txt['modify_msg'] = 'বার্তা পরিবর্তন করুন';
- $txt['name'] = 'নাম';
- $txt['email'] = 'ইমেল';
- $txt['user_email_address'] = 'ইমেল ঠিকানা';
- $txt['subject'] = 'বিষয়';
- $txt['message'] = 'বার্তা';
- $txt['redirects'] = 'রিডাইরেক্ট';
- $txt['quick_modify'] = 'ইনলাইন পরিবর্তন করুন';
- $txt['quick_modify_message'] = 'আপনি সফলভাবে এই বার্তাটি পরিবর্তন করেছেন।';
- $txt['reason_for_edit'] = 'সম্পাদনার কারণ';
-
- $txt['choose_pass'] = 'পাসওয়ার্ড চয়ন করুন';
- $txt['verify_pass'] = 'পাসওয়ার্ড যাচাই করুন';
- $txt['notify_announcements'] = 'প্রশাসকদের আমাকে ইমেলের মাধ্যমে গুরুত্বপূর্ণ খবর পাঠাতে অনুমতি দিন';
-
- $txt['position'] = 'পজিশন';
-
- // যুক্তি(গুলি): ব্যবহারকারীর নাম
- $txt['view_profile_of_username'] = '%1$s এর প্রোফাইল দেখুন';
- $txt['total'] = 'মোট';
- $txt['website'] = 'ওয়েবসাইট';
- $txt['register'] = 'সাইন আপ';
- $txt['warning_status'] = 'সতর্কতা অবস্থা';
- $txt['user_warn_watch'] = 'ব্যবহারকারী মডারেটর ওয়াচ লিস্টে আছেন';
- $txt['user_warn_moderate'] = 'ব্যবহারকারীর পোস্ট অনুমোদনের সারিতে যোগদান করে';
- $txt['user_warn_mute'] = 'ব্যবহারকারীকে পোস্ট করা নিষিদ্ধ করা হয়েছে';
- $txt['warn_watch'] = 'দেখা হয়েছে';
- $txt['warn_moderate'] = 'মডারেটেড';
- $txt['warn_mute'] = 'নিঃশব্দ';
-
- $txt['message_index'] = 'মেসেজ ইনডেক্স';
- $txt['news'] = 'সংবাদ';
- $txt['home'] = 'বাড়ি';
- $txt['page'] = 'পৃষ্ঠা';
- $txt['prev'] = 'আগের পৃষ্ঠা';
- $txt['next'] = 'পরবর্তী পৃষ্ঠা';
-
- $txt['lock_unlock'] = 'লক/আনলক টপিক';
- $txt['post'] = 'পোস্ট';
- $txt['error_occured'] = 'একটি ত্রুটি ঘটেছে';
- $txt['at'] = 'at';
- $txt['by'] = 'দ্বারা';
- $txt['logout'] = 'লগ আউট';
- $txt['started_by'] = 'এর দ্বারা শুরু';
- $txt['topic_started_by'] = '<em>%2$s</em>'-এ <strong>%1$s</strong> দ্বারা শুরু হয়েছে;
- $txt['replies'] = 'উত্তর';
- $txt['last_post'] = 'শেষ পোস্ট';
- $txt['first_post'] = 'প্রথম পোস্ট';
- $txt['last_poster'] = 'শেষ পোস্ট';
- $txt['last_post_message'] = '<strong>শেষ পোস্ট: </strong>%3$s <span class="postby">%2$s by %1$s</span>';
- $txt['last_post_topic'] = '%1$s<br>%2$s' দ্বারা;
- $txt['post_by_member'] = '<strong>%1$s</strong> দ্বারা <strong>%2$s</strong><br>';
- $txt['boardindex_total_posts'] = '%3$s সদস্যদের দ্বারা %2$s বিষয়ে %1$s পোস্ট';
- $txt['show'] = 'দেখান';
- $txt['hide'] = 'লুকান';
-
- $txt['admin_login'] = 'প্রশাসন লগইন';
- // নিচের স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করুন।
- $txt['topic'] = 'বিষয়';
- $txt['help'] = 'সহায়তা';
- $txt['terms_and_rules'] = 'শর্তাবলী এবং নিয়ম';
- $txt['watch_board'] = 'এই বোর্ডটি দেখুন';
- $txt['unwatch_board'] = 'বোর্ড দেখা বন্ধ করুন';
- $txt['watch_topic'] = 'এই বিষয়টি দেখুন';
- $txt['unwatch_topic'] = 'বিষয় দেখা বন্ধ করুন';
- $txt['watching_topic'] = 'আপনি যে বিষয় দেখছেন';
- $txt['watching_this_topic'] = 'আপনি এই বিষয়টি দেখছেন, এবং এটি সম্পর্কে বিজ্ঞপ্তি পাবেন।';
- $txt['notify'] = 'সূচিত করুন';
- $txt['unnotify'] = 'অনোটিফাই';
- 
- // নিচের স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করুন।
- // যুক্তি(গুলি): ফোরামের নাম
- $txt['regards_team'] = 'শুভেচ্ছা,
- %1$s টিম।';
-
- $txt['notify_replies'] = 'উত্তর সূচিত করুন';
- $txt['move_topic'] = 'বিষয় সরান';
- $txt['move_to'] = 'এতে সরান';
- $txt['pages'] = 'পৃষ্ঠা';
- $txt['users_active'] = 'গত %1$d মিনিটে সক্রিয় ব্যবহারকারীরা';
- $txt['personal_messages'] = 'ব্যক্তিগত বার্তা';
- $txt['reply_quote'] = 'উদ্ধৃতি সহ উত্তর দিন';
- $txt['reply'] = 'উত্তর দিন';
- $txt['reply_noun'] = 'উত্তর দিন';
- $txt['reply_number'] = 'উত্তর #%1$s%2$s';
- $txt['অনুমোদন'] = 'অনুমোদন';
- $txt['unapprove'] = 'অনুমোদন না করা';
- $txt['approve_all'] = 'সব অনুমোদন করুন';
- $txt['issue_warning'] = 'ইস্যু সতর্কতা';
- $txt['awaiting_approval'] = 'অনুমোদনের অপেক্ষায়';
- $txt['attach_awaiting_approve'] = 'অনুমোদনের অপেক্ষায় সংযুক্তিগুলি';
- $txt['post_awaiting_approval'] = 'এই বার্তাটি একজন মডারেটরের অনুমোদনের জন্য অপেক্ষা করছে।';
- $txt['there_are_unapproved_topics'] = 'এই বোর্ডে %1$sটি বিষয় এবং %2$sটি পোস্ট অনুমোদনের অপেক্ষায় আছে।  সেগুলি দেখতে <a href="%3$s">এখানে</a> ক্লিক করুন৷';
- $txt['send_message'] = 'বার্তা পাঠান';
-
- $txt['msg_alert_no_messages'] = 'আপনার কাছে কোনো বার্তা নেই';
- $txt['msg_alert_one_message'] = 'আপনার <a href="%1$s">1টি বার্তা আছে</a>';
- $txt['msg_alert_many_message'] = 'আপনার <a href="%1$s">%2$dটি বার্তা আছে</a>';
- $txt['msg_alert_one_new'] = '1 নতুন';
- $txt['msg_alert_many_new'] = '%1$d নতুন';
- $txt['new_alert'] = 'নতুন সতর্কতা';
- $txt['remove_message'] = 'এই পোস্টটি সরান';
- $txt['remove_message_question'] = 'এই পোস্টটি সরান?';
-
- $txt['topic_alert_none'] = 'কোন বার্তা নেই...';
- $txt['pm_alert_none'] = 'কোন বার্তা নেই...';
- $txt['no_messages'] = 'কোন বার্তা নেই';
-
- $txt['online_users'] = 'ব্যবহারকারীরা অনলাইন';
- $txt['jump_to'] = 'এ যান';
- $txt['go'] = 'যাও';
- $txt['are_sure_remove_topic'] = 'আপনি কি নিশ্চিত যে আপনি এই বিষয়টি সরাতে চান?';
- $txt['yes'] = 'হ্যাঁ';
- $txt['no'] = 'না';
-
- $txt['search_end_results'] = 'ফলাফলের শেষ';
- $txt['search_on'] = 'চালু';
-
- $txt['search'] = 'অনুসন্ধান';
- $txt['all'] = 'সব';
- $txt['search_entireforum'] = 'পুরো ফোরাম';
- $txt['search_thisboard'] = 'এই বোর্ড';
- $txt['search_thistopic'] = 'এই বিষয়';
- $txt['search_members'] = 'সদস্য';
-
- $txt['back'] = 'ব্যাক';
- $txt['continue'] = 'চালিয়ে যান';
- $txt['password_reminder'] = 'পাসওয়ার্ড রিমাইন্ডার';
- $txt['topic_started'] = 'বিষয়টি শুরু হয়েছে';
- $txt['title'] = 'শিরোনাম';
- $txt['post_by'] = 'পোস্ট বাই';
- $txt['memberlist_searchable'] = 'সকল নিবন্ধিত সদস্যদের অনুসন্ধানযোগ্য তালিকা।';
- $txt['welcome_newest_member'] = 'অনুগ্রহ করে স্বাগতম %1$s, আমাদের নতুন সদস্য।';
- $txt['admin_center'] = 'প্রশাসন কেন্দ্র';
- $txt['last_edit_by'] = '<span class="lastedit">শেষ সম্পাদনা</span>: %1$s by %2$s';
- $txt['last_edit_reason'] = '<span id="reason" class="lastedit">কারণ</span>: %1$s';
- $txt['notify_deactivate'] = 'আপনি কি এই বিষয়ে বিজ্ঞপ্তি নিষ্ক্রিয় করতে চান?';
- $txt['modified_time'] = 'শেষ সম্পাদিত';
- $txt['modified_by'] = 'সম্পাদিত';
-
- $txt['recent_posts'] = 'সাম্প্রতিক পোস্ট';
-
- $txt['location'] = 'অবস্থান';
- $txt['location_desc'] = 'ভৌগলিক অবস্থান।';
- $txt['gender'] = 'লিঙ্গ';
- $txt['gender_0'] = 'কিছুই নয়';
- $txt['gender_1'] = 'পুরুষ';
- $txt['gender_2'] = 'মহিলা';
- $txt['gender_desc'] = 'আপনার লিঙ্গ';
- $txt['icq'] = 'ICQ';
- $txt['icq_desc'] = 'এটি আপনার ICQ নম্বর।';
- $txt['skype'] = 'স্কাইপ';
- $txt['skype_desc'] = 'আপনার স্কাইপ ব্যবহারকারীর নাম';
- $txt['personal_text'] = 'ব্যক্তিগত পাঠ্য';
- $txt['date_registered'] = 'নিবন্ধিত তারিখ';
-
- $txt['recent_view'] = 'ফোরামে সাম্প্রতিকতম পোস্টগুলি দেখুন।';
- $txt['recent_updated'] = 'সবচেয়ে সাম্প্রতিক আপডেট হওয়া বিষয়';
- $txt['is_recent_updated'] = '%1$s হল সাম্প্রতিক আপডেট হওয়া বিষয়';
-
- $txt['male'] = 'পুরুষ';
- $txt['female'] = 'মহিলা';
-
- $txt['error_invalid_characters_username'] = 'ব্যবহারকারীর নামে ব্যবহার করা অবৈধ অক্ষর।';
- 
- // আর্গুমেন্ট(গুলি): ফোরামের নাম, লগইন URL, লগইন জাভাস্ক্রিপ্ট স্নিপেট
- $txt['welcome_guest'] = ' <strong>%1$s</strong>-এ স্বাগতম।  অনুগ্রহ করে <a href="%2$s" onclick="%3$s">লগ ইন</a>.';
-
- // আর্গুমেন্ট(গুলি): ফোরামের নাম, লগইন URL, লগইন জাভাস্ক্রিপ্ট স্নিপেট, সাইনআপ URL
- $txt['welcome_guest_register'] = ' <strong>%1$s</strong>-এ স্বাগতম।  অনুগ্রহ করে <a href="%2$s" onclick="%3$s">লগ ইন</a> অথবা <a href="%4$s">সাইন আপ</a>৷';
-
- // যুক্তি(গুলি): $scripturl
- $txt['welcome_guest_activate'] = '<a href="%1$s?action=activate">আপনি কি আপনার অ্যাক্টিভেশন ইমেল মিস করেছেন?</a>';
-
- // যুক্তি(গুলি): $scripturl
- $txt['register_prompt'] = 'একটি অ্যাকাউন্ট নেই?  <a href="%1$s?action=signup">সাইন আপ</a>.';
-
- // যুক্তি(গুলি): ফোরামের নাম
- $txt['welcome_to_forum'] = ' <strong>%1$s</strong>-এ স্বাগতম।';
-
- // @todo নিচের স্প্রিন্টফ করতে
- $txt['hello_member'] = 'আরে,';
- // নিচের স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করুন।
- $txt['hello_guest'] = 'স্বাগত,';
- $txt['select_destination'] = 'দয়া করে একটি গন্তব্য নির্বাচন করুন';
-
- // এখানে যেকোনো একক উদ্ধৃতি দুবার এড়িয়ে যান.. 'it\'s' -> 'it\\\'s'।
- $txt['posted_by'] = 'পোস্ট করেছে';
-
- $txt['icon_smiley'] = 'স্মাইলি';
- $txt['icon_angry'] = 'রাগান্বিত';
- $txt['icon_cheesy'] = 'চিজি';
- $txt['icon_laugh'] = 'হাসি';
- $txt['icon_sad'] = 'দুঃখিত';
- $txt['icon_wink'] = 'উইঙ্ক';
- $txt['icon_grin'] = 'হাসি';
- $txt['icon_shocked'] = 'শকড';
- $txt['icon_cool'] = 'কুল';
- $txt['icon_huh'] = 'হুহ';
- $txt['icon_rolleyes'] = 'রোল আইজ';
- $txt['icon_tongue'] = 'জিহ্বা';
- $txt['icon_embarrassed'] = 'বিব্রত';
- $txt['icon_lips'] = 'ঠোঁট সিল করা';
- $txt['icon_undecided'] = 'অনির্ধারিত';
- $txt['icon_kiss'] = 'চুমু';
- $txt['icon_cry'] = 'কান্না';
-
- $txt['moderator'] = 'মডারেটর';
- $txt['moderators'] = 'মডারেটর';
-
- $txt['views'] = 'ভিউ';
- $txt['new'] = 'নতুন';
-
- $txt['view_all_members'] = 'সব সদস্য দেখুন';
- $txt['view'] = 'দেখুন';
-
- $txt['viewing_members'] = 'সদস্যদের দেখা হচ্ছে %1$s থেকে %2$s';
- $txt['of_total_members'] = '%1$s মোট সদস্যের';
-
- $txt['forgot_your_password'] = 'আপনার পাসওয়ার্ড ভুলে গেছেন?';
-
- $txt['date'] = 'তারিখ';
- // নিচের স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করুন।
- $txt['from'] = 'থেকে';
- $txt['check_new_messages'] = 'নতুন বার্তা পরীক্ষা করুন';
- $txt['to'] = 'প্রতি';
-
- $txt['board_topics'] = 'বিষয়';
- $txt['members_title'] = 'সদস্য';
- $txt['members_list'] = 'সদস্যদের তালিকা';
- $txt['new_posts'] = 'নতুন পোস্ট';
- $txt['old_posts'] = 'কোনো নতুন পোস্ট নেই';
- $txt['redirect_board'] = 'রিডাইরেক্ট বোর্ড';
-
- $txt['sendtopic_send'] = 'পাঠান';
- $txt['report_sent'] = 'আপনার রিপোর্ট সফলভাবে পাঠানো হয়েছে।';
- $txt['post_becomes_unapproved'] = 'আপনার বার্তাটি অনুমোদিত হয়নি কারণ এটি একটি অননুমোদিত বিষয়ে পোস্ট করা হয়েছিল।  একবার বিষয় অনুমোদিত হলে আপনার বার্তাও অনুমোদিত হবে।';
-
- $txt['time_offset'] = 'টাইম অফসেট';
- $txt['or'] = 'বা';
-
- $txt['no_matches'] = 'দুঃখিত, কোনো মিল পাওয়া যায়নি';
-
- $txt['notification'] = 'বিজ্ঞপ্তি';
-
- $txt['your_ban'] = 'দুঃখিত %1$s, আপনি এই ফোরাম ব্যবহার থেকে নিষিদ্ধ!';
- $txt['your_ban_expires'] = 'এই নিষেধাজ্ঞার মেয়াদ %1$s শেষ হওয়ার জন্য সেট করা হয়েছে।';
- $txt['your_ban_expires_never'] = 'এই নিষেধাজ্ঞার মেয়াদ শেষ হওয়ার জন্য সেট করা হয়নি।';
- $txt['ban_continue_browse'] = 'আপনি অতিথি হিসেবে ফোরাম ব্রাউজ করা চালিয়ে যেতে পারেন।';
-
- $txt['mark_as_read'] = 'সমস্ত বার্তা পঠিত হিসাবে চিহ্নিত করুন';
-
- $txt['locked_topic'] = 'লকড টপিক';
- $txt['normal_topic'] = 'সাধারণ বিষয়';
- $txt['participation_caption'] = 'আপনি পোস্ট করেছেন এমন বিষয়';
- $txt['moved_topic'] = 'মুভড টপিক';
-
- $txt['go_caps'] = 'GO';
-
- $txt['print'] = 'প্রিন্ট';
- $txt['profile'] = 'প্রোফাইল';
- $txt['topic_summary'] = 'বিষয় সারাংশ';
- $txt['not_applicable'] = 'N/A';
- $txt['name_in_use'] = 'এই নামটি ইতিমধ্যেই অন্য সদস্যের দ্বারা ব্যবহার করা হচ্ছে।';
-
- $txt['total_members'] = 'মোট সদস্য';
- $txt['total_posts'] = 'মোট পোস্ট';
- $txt['total_topics'] = 'মোট বিষয়';
-
- $txt['time_logged_in'] = 'লগ ইন থাকার সময়';
-
- $txt['preview'] = 'প্রিভিউ';
- $txt['always_logged_in'] = 'চিরদিন';
-
- $txt['logged'] = 'লগড';
- $txt['show_ip'] = 'আইপি ঠিকানা দেখান';
- // নিচের স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করুন।
- $txt['ip'] = 'IP';
- $txt['url'] = 'URL';
- $txt['www'] = 'WWW';
-
- $txt['hours'] = 'ঘন্টা';
- $txt['minutes'] = 'মিনিট';
- $txt['seconds'] = 'সেকেন্ড';
-
- // অর্থপ্রদত্ত সাবস্ক্রিপশন পরিচালনায় বড় হাতের অক্ষর ব্যবহার করা হয়েছে
- $txt['hour'] = 'ঘন্টা';
- $txt['days_word'] = 'দিন';
-
- $txt['search_for'] = 'অনুসন্ধান করুন';
- $txt['search_match'] = 'ম্যাচ';
-
- $txt['forum_in_maintenance'] = 'আপনার ফোরাম রক্ষণাবেক্ষণ মোডে আছে।  শুধুমাত্র প্রশাসকরা বর্তমানে লগ ইন করতে পারেন।';
- $txt['maintenance_page'] = 'আপনি <a href="%1$s">সার্ভার সেটিংস</a> এলাকা থেকে রক্ষণাবেক্ষণ মোড বন্ধ করতে পারেন।';
-
- $txt['read_one_time'] = '1 বার পড়ুন';
- $txt['read_many_times'] = '%1$d বার পড়ুন';
-
- $txt['forum_stats'] = 'ফোরাম পরিসংখ্যান';
- $txt['latest_member'] = 'সর্বশেষ সদস্য';
- $txt['total_cats'] = 'মোট বিভাগ';
- $txt['latest_post'] = 'সর্বশেষ পোস্ট';
-
- $txt['total_boards'] = 'মোট বোর্ড';
-
- $txt['print_page'] = 'প্রিন্ট পৃষ্ঠা';
- $txt['print_page_text'] = 'শুধুমাত্র পাঠ্য';
- $txt['print_page_images'] = 'ছবি সহ পাঠ্য';
-
- $txt['valid_email'] = 'এটি অবশ্যই একটি বৈধ ইমেল ঠিকানা হতে হবে।';
-
- $txt['geek'] = 'আমি একজন গিক!!';
- $txt['info_center_title'] = '%1$s - তথ্য কেন্দ্র';
-
- $txt['watch'] = 'দেখুন';
- $txt['unwatch'] = 'দেখা বন্ধ করুন';
-
- $txt['check_all'] = 'সব নির্বাচন করুন';
-
- // নিচের স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করুন।
- $txt['database_error'] = 'ডাটাবেস ত্রুটি';
- $txt['try_again'] = 'অনুগ্রহ করে আবার চেষ্টা করুন।  আপনি যদি এই ত্রুটির পর্দায় ফিরে আসেন, তাহলে একজন প্রশাসকের কাছে ত্রুটিটি রিপোর্ট করুন।';
- $txt['file'] = 'ফাইল';
- $txt['line'] = 'লাইন';
- // নিচের স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করুন।
- $txt['tried_to_repair'] = 'SMF সনাক্ত করেছে এবং স্বয়ংক্রিয়ভাবে আপনার ডাটাবেসে একটি ত্রুটি মেরামত করার চেষ্টা করেছে।  যদি আপনার সমস্যা অব্যাহত থাকে, বা এই ইমেলগুলি পাওয়া অব্যাহত থাকে, অনুগ্রহ করে আপনার হোস্টের সাথে যোগাযোগ করুন।';
- $txt['database_error_versions'] = '<strong>দ্রষ্টব্য:</strong> মনে হচ্ছে আপনার ডাটাবেসের <em>হতে পারে</em> একটি আপগ্রেড প্রয়োজন৷  আপনার ফোরামের ফাইলগুলি বর্তমানে %1$s সংস্করণে রয়েছে, যখন আপনার ডাটাবেসটি %2$s সংস্করণে রয়েছে৷  আপনি upgrade.php এর সর্বশেষ সংস্করণটি কার্যকর করলে উপরের ত্রুটিটি সম্ভবত দূরে যেতে পারে।';
- $txt['template_parse_error'] = 'টেমপ্লেট পার্স ত্রুটি!';
- $txt['template_parse_error_message'] = 'মনে হচ্ছে টেমপ্লেট সিস্টেমের সাথে ফোরামে কিছু খারাপ হয়ে গেছে।  এই সমস্যাটি শুধুমাত্র অস্থায়ী হওয়া উচিত, তাই অনুগ্রহ করে পরে ফিরে আসুন এবং আবার চেষ্টা করুন৷  আপনি যদি এই বার্তাটি দেখতে থাকেন তবে অনুগ্রহ করে প্রশাসকের সাথে যোগাযোগ করুন৷<br><br>আপনি <a href="javascript:location.reload();">এই পৃষ্ঠাটি রিফ্রেশ করার</a>ও চেষ্টা করতে পারেন৷';
- // আর্গুমেন্ট(গুলি): ফাইলের নাম, $boardurl, $scripturl
- $txt['template_parse_error_details'] = '<pre><strong>%1$s</strong></pre> টেমপ্লেট বা ভাষা ফাইল লোড করার সময় একটি সমস্যা হয়েছে৷  অনুগ্রহ করে সিনট্যাক্স পরীক্ষা করুন এবং আবার চেষ্টা করুন - মনে রাখবেন, একক উদ্ধৃতি (<pre>\'</pre>) প্রায়ই একটি স্ল্যাশ (<pre>\\</pre>) দিয়ে এড়িয়ে যেতে হয়।  PHP থেকে আরও নির্দিষ্ট ত্রুটির তথ্য দেখতে, <a href="%2$s%1$s">ফাইলটি সরাসরি অ্যাক্সেস করার</a> চেষ্টা করুন৷<br><br>আপনি চেষ্টা করতে চাইতে পারেন <a href=  "javascript:location.reload();">এই পৃষ্ঠাটি রিফ্রেশ করুন</a> অথবা <a href="%3$s?theme=1">ডিফল্ট থিম ব্যবহার করুন</a>।';
-$txt['template_parse_errmsg'] = 'দুর্ভাগ্যবশত ঠিক কী ভুল সে সম্পর্কে এই মুহূর্তে আরও তথ্য পাওয়া যাচ্ছে না।';
-
- $txt['today'] = '<strong>আজ</strong> এ ';
- $txt['yesterday'] = '<strong>গতকাল</strong> এ ';
- $txt['new_poll'] = 'নতুন পোল';
- $txt['poll_question'] = 'প্রশ্ন';
- $txt['poll_vote'] = 'ভোট জমা দিন';
- $txt['poll_total_voters'] = 'মোট সদস্য ভোট দিয়েছেন';
- $txt['poll_results'] = 'ফলাফল দেখুন';
- $txt['poll_lock'] = 'ভোটিং লক';
- $txt['poll_unlock'] = 'ভোটিং আনলক';
- $txt['poll_edit'] = 'পোল সম্পাদনা করুন';
- $txt['poll'] = 'পোল';
- $txt['one_hour'] = '1 ঘন্টা';
- $txt['one_day'] = '1 দিন';
- $txt['one_week'] = '1 সপ্তাহ';
- $txt['two_weeks'] = '2 সপ্তাহ';
- $txt['one_month'] = '1 মাস';
- $txt['two_months'] = '2 মাস';
- $txt['forever'] = 'চিরদিন';
- $txt['moved'] = 'সরানো';
- $txt['move_why'] = 'অনুগ্রহ করে একটি সংক্ষিপ্ত বিবরণ লিখুন<br>কেন এই বিষয়টি সরানো হচ্ছে।';
- $txt['board'] = 'বোর্ড';
- $txt['in'] = 'in';
- $txt['sticky_topic'] = 'স্টিকি টপিক';
-
- $txt['delete'] = 'মুছুন';
- $txt['no_change'] = 'কোন পরিবর্তন নেই';
-
- $txt['your_pms'] = 'আপনার ব্যক্তিগত বার্তা';
-
- $txt['kilobyte'] = 'KB';
- $txt['megabyte'] = 'MB';
-
- $txt['more_stats'] = '[আরো পরিসংখ্যান]';
-
- // নিচের তিনটি স্ট্রিং-এ সাংখ্যিক সত্তা ব্যবহার করুন।
- $txt['code'] = 'কোড';
- $txt['code_select'] = 'নির্বাচন করুন';
- $txt['code_expand'] = 'প্রসারিত করুন';
- $txt['code_shrink'] = 'সঙ্কুচিত';
- $txt['quote_from'] = 'থেকে উদ্ধৃতি';
- $txt['quote'] = 'উদ্ধৃতি';
- $txt['quote_action'] = 'উদ্ধৃতি';
- $txt['quote_selected_action'] = 'নির্বাচিত পাঠ্য উদ্ধৃত করুন';
- $txt['fulledit'] = 'সম্পূর্ণ&nbsp;সম্পাদনা';
- $txt['edit'] = 'সম্পাদনা';
- $txt['quick_edit'] = 'দ্রুত সম্পাদনা';
- $txt['post_options'] = 'আরো...';
-
- $txt['merge_to_topic_id'] = 'লক্ষ্য বিষয়ের আইডি';
- $txt['split'] = 'বিভক্ত বিষয়';
- $txt['merge'] = 'বিষয় একত্রিত করুন';
- $txt['target_id'] = 'বিষয় আইডি অনুসারে লক্ষ্য নির্বাচন করুন';
- $txt['target_below'] = 'নীচের তালিকা থেকে লক্ষ্য নির্বাচন করুন';
- $txt['subject_new_topic'] = 'নতুন বিষয়ের জন্য বিষয়';
- $txt['split_this_post'] = 'শুধুমাত্র এই পোস্টটি বিভক্ত করুন।';
- $txt['split_after_and_this_post'] = 'এই পোস্টের পরে এবং অন্তর্ভুক্ত বিষয়কে ভাগ করুন।';
- $txt['select_split_posts'] = 'বিভক্ত করার জন্য পোস্ট নির্বাচন করুন।';
- $txt['new_topic'] = 'নতুন বিষয়';
- $txt['split_successful'] = 'বিষয়টি সফলভাবে দুটি বিষয়ে বিভক্ত।';
- $txt['origin_topic'] = 'মূল বিষয়';
- $txt['please_select_split'] = 'আপনি কোন পোস্টগুলিকে বিভক্ত করতে চান তা নির্বাচন করুন।';
- $txt['merge_successful'] = 'বিষয়গুলি সফলভাবে একত্রিত হয়েছে।';
- $txt['new_merged_topic'] = 'নতুন একত্রিত বিষয়';
- $txt['topic_to_merge'] = 'একত্রিত করা বিষয়';
- $txt['target_board'] = 'টার্গেট বোর্ড';
- $txt['target_topic'] = 'টার্গেট টপিক';
- $txt['merge_desc'] = 'এই ফাংশনটি দুটি বিষয়ের বার্তাকে একটি বিষয়ে একত্রিত করবে।  বার্তাগুলি পোস্ট করার সময় অনুসারে সাজানো হবে।  অতএব, প্রথম পোস্ট করা বার্তাটি একত্রিত বিষয়ের প্রথম বার্তা হবে৷';
-
- $txt['set_sticky'] = 'টপিক স্টিকি সেট করুন';
- $txt['set_nonsticky'] = 'নন-স্টিকি বিষয় সেট করুন';
- $txt['set_lock'] = 'লক টপিক';
- $txt['set_unlock'] = 'বিষয়টি আনলক করুন';
-
- $txt['search_advanced'] = 'উন্নত অনুসন্ধান';
-
- $txt['security_risk'] = 'প্রধান নিরাপত্তা ঝুঁকি:';
- $txt['not_removed'] = 'আপনি সরাননি';
- $txt['not_removed_extra'] = '%1$s হল %2$s এর একটি ব্যাকআপ যা SMF দ্বারা তৈরি করা হয়নি৷  এটি সরাসরি অ্যাক্সেস করা যেতে পারে এবং আপনার ফোরামে অননুমোদিত অ্যাক্সেস পেতে ব্যবহার করা যেতে পারে।  আপনি অবিলম্বে এটি মুছে ফেলা উচিত.';
- $txt['generic_warning'] = 'সতর্কতা';
- $txt['agreement_missing'] = 'আপনি নতুন ব্যবহারকারীদের একটি নিবন্ধন চুক্তি গ্রহণ করতে চান;  যাইহোক, ফাইল (agreement.txt) বিদ্যমান নেই।';
- $txt['policy_agreement_missing'] = 'আপনি নতুন ব্যবহারকারীদের একটি গোপনীয়তা নীতি গ্রহণ করতে চান;  যাইহোক, গোপনীয়তা নীতি খালি।';
- $txt['auth_secret_missing'] = 'Settings.php-এ প্রমাণীকরণ গোপন সেট করতে অক্ষম।  এটি আপনার ফোরামের নিরাপত্তাকে দুর্বল করে এবং এটিকে আক্রমণের ঝুঁকিতে ফেলে।  SMF ফাইলটিতে লিখতে পারে তা নিশ্চিত করতে Settings.php-এ ফাইলের অনুমতি পরীক্ষা করুন।';
-
- $txt['cache_writable'] = 'ক্যাশে ডিরেক্টরি লেখার যোগ্য নয় - এটি আপনার ফোরামের কর্মক্ষমতাকে বিরূপভাবে প্রভাবিত করবে।';
-
- $txt['page_created_full'] = '%2$d প্রশ্নের সাথে %1$.3f সেকেন্ডে পৃষ্ঠা তৈরি করা হয়েছে।';
-
- $txt['report_to_mod_func'] = 'একটি আপত্তিজনক বা সমস্যাযুক্ত বার্তা মডারেটর এবং প্রশাসকদের জানাতে এই ফাংশনটি ব্যবহার করুন।';
- $txt['report_profile_func'] = 'প্রশাসকদের অপমানজনক প্রোফাইল সামগ্রী, যেমন স্প্যাম বা অনুপযুক্ত ছবি সম্পর্কে অবহিত করতে এই ফাংশনটি ব্যবহার করুন।';
-
- $txt['online'] = 'অনলাইন';
- $txt['member_is_online'] = '%1$s অনলাইন';
- $txt['offline'] = 'অফলাইন';
- $txt['member_is_offline'] = '%1$s অফলাইন';
- $txt['pm_online'] = 'ব্যক্তিগত বার্তা (অনলাইন)';
- $txt['pm_offline'] = 'ব্যক্তিগত বার্তা (অফলাইন)';
- $txt['status'] = 'স্থিতি';
-
- $txt['go_up'] = 'Go Up';
- $txt['go_down'] = 'গো ডাউন';
-
- // যুক্তি(গুলি): SMF_FULL_VERSION, SMF_SOFTWARE_YEAR, $scripturl
- $forum_copyright = '<a href="%3$s?action=credits" title="License" target="_blank" rel="noopener">%1$s &কপি;  %2$s</a>, <a href="https://www.simplemachines.org" title="Simple Machines" target="_blank" rel="noopener">সাধারণ মেশিন</a>';
-
- $txt['birthdays'] = 'জন্মদিন:';
- $txt['events'] = 'ইভেন্টস:';
- $txt['birthdays_upcoming'] = 'আসন্ন জন্মদিন:';
- $txt['events_upcoming'] = 'আসন্ন ঘটনা:';
- // ক্যালেন্ডারে ছুটির জন্য প্রম্পট, শুধু ছুটির নাম প্রদর্শন করতে ফাঁকা ছেড়ে দিন।
- $txt['calendar_prompt'] = 'ছুটির দিন:';
- $txt['calendar_month'] = 'মাস';
- $txt['calendar_year'] = 'বছর';
- $txt['calendar_day'] = 'দিন';
- $txt['calendar_event_title'] = 'ইভেন্ট শিরোনাম';
- $txt['calendar_event_options'] = 'ইভেন্ট বিকল্প';
- $txt['calendar_post_in'] = 'পোস্ট ইন';
- $txt['calendar_edit'] = 'ইভেন্ট সম্পাদনা করুন';
- $txt['calendar_export'] = 'এক্সপোর্ট ইভেন্ট';
- $txt['calendar_view_week'] = 'ভিউ উইক';
- $txt['event_delete_confirm'] = 'এই ইভেন্টটি মুছবেন?';
- $txt['event_delete'] = 'ইভেন্ট মুছুন';
- $txt['calendar_post_event'] = 'ইভেন্ট পোস্ট করুন';
- $txt['calendar'] = 'ক্যালেন্ডার';
- $txt['calendar_link'] = 'ক্যালেন্ডারে লিঙ্ক';
- $txt['calendar_upcoming'] = 'আসন্ন ক্যালেন্ডার';
- $txt['calendar_today'] = 'আজকের ক্যালেন্ডার';
- $txt['calendar_week'] = 'সপ্তাহ';
- $txt['calendar_week_title'] = '%2$d এর %1$d সপ্তাহ';
- // %1$s হল মাস, %2$s হল দিন, %3$s হল বছর৷  আপনার ভাষা অনুসারে পরিবর্তন করুন।
- $txt['calendar_week_beginning'] = 'সপ্তাহের শুরু %1$s %2$s, %3$s';
- $txt['calendar_numb_days'] = 'দিনের সংখ্যা';
- $txt['calendar_how_edit'] = 'আপনি কীভাবে এই ইভেন্টগুলি সম্পাদনা করবেন?';
- $txt['calendar_link_event'] = 'পোস্টের জন্য ইভেন্ট লিঙ্ক করুন';
- $txt['calendar_confirm_delete'] = 'আপনি কি নিশ্চিত যে আপনি এই ইভেন্টটি মুছতে চান?';
- $txt['calendar_linked_events'] = 'লিঙ্কড ইভেন্ট';
- $txt['calendar_click_all'] = 'সব %1$s দেখতে ক্লিক করুন';
- $txt['calendar_allday'] = 'সারা দিন';
- $txt['calendar_timezone'] = 'টাইম জোন';
- $txt['calendar_list'] = 'তালিকা';
- $txt['calendar_empty'] = 'প্রদর্শনের জন্য কোনো ইভেন্ট নেই।';
-
- $txt['movetopic_change_subject'] = 'বিষয়টির বিষয় পরিবর্তন করুন';
- $txt['movetopic_new_subject'] = 'নতুন বিষয়';
- $txt['movetopic_change_all_subjects'] = 'প্রতিটি বার্তার বিষয় পরিবর্তন করুন';
- $txt['move_topic_unapproved_js'] = 'সতর্কতা!  এই বিষয়টি এখনও অনুমোদিত হয়নি৷\\n\\nআপনি একটি পুনঃনির্দেশের বিষয় তৈরি করার পরামর্শ দেওয়া হয় না যদি না আপনি সরানোর পরে অবিলম্বে পোস্টটি অনুমোদন করতে চান৷';
- $txt['movetopic_auto_board'] = '[বোর্ড]';
- $txt['movetopic_auto_topic'] = '[টপিক লিঙ্ক]';
-
- // যুক্তি(গুলি): $txt['movetopic_auto_board'], $txt['movetopic_auto_topic']
- $txt['movetopic_default'] = 'এই বিষয়টি %1$s এ সরানো হয়েছে।
-
- %2$s';
-
- $txt['movetopic_redirect'] = 'সরানো বিষয়ে পুনঃনির্দেশ করুন';
-
- $txt['post_redirection'] = 'পুনর্নির্দেশের বিষয় পোস্ট করুন';
- $txt['redirect_topic_expires'] = 'পুনর্নির্দেশের বিষয় স্বয়ংক্রিয়ভাবে সরান';
- $txt['mergetopic_redirect'] = 'একত্রিত বিষয়ে পুনর্নির্দেশ করুন';
- $txt['merge_topic_unapproved_js'] = 'সতর্কতা!  এই বিষয়টি এখনও অনুমোদন করা হয়নি৷\\n\\nএটি সুপারিশ করা হয় না যে আপনি একটি পুনঃনির্দেশের বিষয় তৈরি করুন যদি না আপনি একত্রিত হওয়ার পরে অবিলম্বে পোস্টটি অনুমোদন করতে চান৷';
-
- $txt['theme_template_error'] = '\'%1$s\' টেমপ্লেট লোড করতে অক্ষম।';
- $txt['theme_language_error'] = '\'%1$s\' ভাষা ফাইল লোড করতে অক্ষম।';
-
- $txt['sub_boards'] = 'সাব-বোর্ড';
- $txt['restricted_board'] = 'সীমাবদ্ধ বোর্ড';
-
- $txt['smtp_no_connect'] = 'SMTP হোস্টের সাথে সংযোগ করা যায়নি';
- $txt['smtp_port_ssl'] = 'SMTP পোর্ট সেটিং ভুল;  এটি SSL সার্ভারের জন্য 465 হওয়া উচিত।  হোস্টনামের ssl:// উপসর্গ লাগতে পারে।';
- $txt['smtp_bad_response'] = 'মেইল সার্ভার প্রতিক্রিয়া কোড পাওয়া যায়নি';
- $txt['smtp_error'] = 'মেইল পাঠাতে সমস্যা হয়েছে।  ত্রুটি: ';
- $txt['mail_send_unable'] = 'ইমেল ঠিকানা \'%1$s\' এ মেল পাঠাতে অক্ষম;
-
- $txt['mlist_search'] = 'সদস্যদের জন্য অনুসন্ধান করুন';
- $txt['mlist_search_again'] = 'আবার অনুসন্ধান করুন';
- $txt['mlist_search_filter'] = 'অনুসন্ধান বিকল্প';
- $txt['mlist_search_email'] = 'ইমেল ঠিকানা দ্বারা অনুসন্ধান করুন';
- $txt['mlist_search_messenger'] = 'মেসেঞ্জার ডাকনাম দ্বারা অনুসন্ধান করুন';
- $txt['mlist_search_group'] = 'অবস্থান অনুসারে অনুসন্ধান করুন';
- $txt['mlist_search_name'] = 'নাম দ্বারা অনুসন্ধান করুন';
- $txt['mlist_search_website'] = 'ওয়েবসাইট দ্বারা অনুসন্ধান করুন';
- $txt['mlist_search_results'] = 'এর জন্য অনুসন্ধান ফলাফল';
- $txt['mlist_search_by'] = '%1$s দ্বারা অনুসন্ধান করুন';
- $txt['mlist_menu_view'] = 'সদস্য তালিকা দেখুন';
-
- $txt['attach_downloaded'] = '%1$d বার ডাউনলোড হয়েছে';
- $txt['attach_viewed'] = '%1$d বার দেখা হয়েছে';
-
- $txt['settings'] = 'সেটিংস';
- $txt['never'] = 'কখনও না';
- $txt['more'] = 'আরো';
- $txt['etc'] = 'ইত্যাদি';
- 
- $txt['hostname'] = 'হোস্টনেম';
- $txt['you_are_post_banned'] = 'দুঃখিত %1$s, আপনাকে এই ফোরামে ব্যক্তিগত বার্তা পোস্ট করা এবং পাঠানো নিষিদ্ধ করা হয়েছে৷';
- $txt['ban_reason'] = 'কারণ';
- $txt['select_item_check'] = 'তালিকায় অন্তত একটি আইটেম নির্বাচন করুন';
-
- $txt['tables_optimized'] = 'ডেটাবেস টেবিল অপ্টিমাইজড';
-
- $txt['add_poll'] = 'পোল যোগ করুন';
- $txt['poll_options_limit'] = 'আপনি শুধুমাত্র %1$s পর্যন্ত বিকল্প নির্বাচন করতে পারেন।';
- $txt['poll_remove'] = 'পোল সরান';
- $txt['poll_remove_warn'] = 'আপনি কি বিষয়টি থেকে এই পোলটি সরানোর বিষয়ে নিশ্চিত?';
- $txt['poll_results_expire'] = 'ভোটিং বন্ধ হয়ে গেলে ফলাফল দেখানো হবে';
- $txt['poll_expires_on'] = 'ভোটিং বন্ধ';
- $txt['poll_expired_on'] = 'ভোটিং বন্ধ';
- $txt['poll_change_vote'] = 'ভোট সরান';
- $txt['poll_return_vote'] = 'ভোট দেওয়ার বিকল্প';
- $txt['poll_cannot_see'] = 'আপনি এই মুহূর্তে এই পোলের ফলাফল দেখতে পারবেন না।';
-
- $txt['quick_mod_approve'] = 'নির্বাচিত অনুমোদন করুন';
- $txt['quick_mod_remove'] = 'নির্বাচিত সরান';
- $txt['quick_mod_lock'] = 'নির্বাচিত লক/আনলক';
- $txt['quick_mod_sticky'] = 'স্টিকি/আনস্টিকি নির্বাচিত';
- $txt['quick_mod_move'] = 'এতে নির্বাচিত সরান';
- $txt['quick_mod_merge'] = 'নির্বাচিত মার্জ';
- $txt['quick_mod_markread'] = 'নির্বাচিত পঠিত চিহ্নিত করুন';
- $txt['quick_mod_markunread'] = 'নির্বাচিত অপঠিত চিহ্নিত করুন';
- $txt['quick_mod_selected'] = 'নির্বাচিত বিকল্পের সাথে করুন';
- $txt['quick_mod_go'] = 'যাও';
- $txt['quickmod_confirm'] = 'আপনি কি নিশ্চিত আপনি এটি করতে চান?';
-
- $txt['spell_check'] = 'বানান পরীক্ষা';
-
- $txt['quick_reply'] = 'দ্রুত উত্তর';
- $txt['quick_reply_warning'] = 'সতর্কতা!  এই বিষয় বর্তমানে লক করা আছে, শুধুমাত্র প্রশাসক এবং মডারেটর উত্তর দিতে পারেন.';
- $txt['quick_reply_verification'] = 'আপনার পোস্ট জমা দেওয়ার পর আপনার পোস্ট %1$s যাচাই করার জন্য আপনাকে নিয়মিত পোস্ট পৃষ্ঠায় পাঠানো হবে।';
- $txt['quick_reply_verification_guests'] = '(সমস্ত অতিথিদের জন্য প্রয়োজনীয়)';
- $txt['quick_reply_verification_posts'] = '(%1$d এর কম পোস্ট সহ সকল ব্যবহারকারীর জন্য প্রয়োজনীয়)';
- $txt['wait_for_approval'] = 'দ্রষ্টব্য: এই পোস্টটি মডারেটর কর্তৃক অনুমোদিত না হওয়া পর্যন্ত প্রদর্শিত হবে না।';
-
- $txt['notification_enable_board'] = 'আপনি কি নিশ্চিত যে আপনি এই বোর্ডের জন্য নতুন বিষয়ের বিজ্ঞপ্তি সক্রিয় করতে চান?';
- $txt['notification_disable_board'] = 'আপনি কি নিশ্চিত যে আপনি এই বোর্ডের জন্য নতুন বিষয়ের বিজ্ঞপ্তি নিষ্ক্রিয় করতে চান?';
- $txt['notification_enable_topic'] = 'আপনি কি নিশ্চিত যে আপনি এই বিষয়ের জন্য নতুন উত্তরের বিজ্ঞপ্তি সক্রিয় করতে চান?';
- $txt['notification_disable_topic'] = 'আপনি কি নিশ্চিত যে আপনি এই বিষয়ের জন্য নতুন উত্তরের বিজ্ঞপ্তি নিষ্ক্রিয় করতে চান?';
-
- // উল্লেখ
- $txt['mentions'] = 'উল্লেখ';
-
- // পছন্দ
- $txt['likes'] = 'পছন্দ';
- $txt['like'] = 'লাইক';
- $txt['unlike'] = 'অপছন্দ';
- $txt['like_success'] = 'আপনার বিষয়বস্তু সফলভাবে পছন্দ হয়েছে।';
- $txt['like_delete'] = 'আপনার বিষয়বস্তু সফলভাবে মুছে ফেলা হয়েছে।';
- $txt['like_insert'] = 'আপনার বিষয়বস্তু সফলভাবে ঢোকানো হয়েছে।';
- $txt['like_error'] = 'আপনার অনুরোধে একটি ত্রুটি ছিল।';
- $txt['like_disable'] = 'লাইক বৈশিষ্ট্য নিষ্ক্রিয়।';
- $txt['not_valid_like_type'] = 'পছন্দ করা প্রকারটি বৈধ প্রকার নয়।';
- // অনুবাদক, যদি আপনার ভাষা অনুসারে আরও স্ট্রিং তৈরি করতে হয়, যেমন  $txt['likes_2'] = 'দুজন লোক এটা পছন্দ করে', দয়া করে তা করুন।
- $txt['likes_1'] = '<a href="%1$s">%2$s ব্যক্তি</a> এটি পছন্দ করে৷';
- $txt['likes_n'] = '<a href="%1$s">%2$s লোক</a> এটা পছন্দ করে।';
- $txt['you_likes_0'] = 'আপনি এটা পছন্দ করেন।';
- $txt['you_likes_1'] = 'আপনি এবং <a href="%1$s">%2$s অন্য ব্যক্তি</a> এটা পছন্দ করেন।';
- $txt['you_likes_n'] = 'আপনি এবং <a href="%1$s">%2$s অন্য লোক</a> এটা পছন্দ করেন।';
-
- $txt['report_to_mod'] = 'মডারেটরের কাছে রিপোর্ট করুন';
- $txt['report_profile'] = '%1$s-এর প্রোফাইল রিপোর্ট করুন';
-
- $txt['unread_topics_visit'] = 'সাম্প্রতিক অপঠিত বিষয়';
- // যুক্তি(গুলি): scripturl
- $txt['unread_topics_visit_none'] = 'আপনার শেষ দেখার পর থেকে কোনো অপঠিত বিষয় পাওয়া যায়নি।  <a href="%1$s?action=unread;all">সব অপঠিত বিষয় চেষ্টা করতে এখানে ক্লিক করুন</a>।';
- $txt['updated_topics_visit_none'] = 'আপনার শেষ দেখার পর থেকে কোনো আপডেট করা বিষয় পাওয়া যায়নি।';
- $txt['unread_topics_all'] = 'সমস্ত অপঠিত বিষয়';
- $txt['unread_replies'] = 'আপডেট করা বিষয়';
-
- $txt['who_title'] = 'কে অনলাইন';
- $txt['who_and'] = 'এবং';
- $txt['who_viewing_topic'] = 'এই বিষয়টি দেখছেন।';
- $txt['who_viewing_board'] = 'এই বোর্ডটি দেখছেন।';
- $txt['who_member'] = 'সদস্য';
-
- // ডিফল্ট থিম দ্বারা আর ব্যবহার করা হয় না, কিন্তু পিছনের কম্প্যাটের জন্য
- $txt['powered_by_php'] = 'PHP দ্বারা চালিত';
- $txt['powered_by_mysql'] = 'মাইএসকিউএল দ্বারা চালিত';
- $txt['valid_css'] = 'বৈধ CSS';
-
- $txt['rss'] = 'RSS';
- $txt['atom'] = 'পরমাণু';
- $txt['html'] = 'HTML';
-
- $txt['guest'] = 'অতিথি';
- $txt['guests'] = 'অতিথি';
- $txt['user'] = 'ব্যবহারকারী';
- $txt['users'] = 'ব্যবহারকারী';
- $txt['hidden'] = 'লুকানো';
- 
- // ইংরেজি ছাড়া অন্য ভাষার জন্য লুকানো বহুবচন রূপ
- $txt['hidden_s'] = 'লুকানো';
- $txt['buddy'] = 'বন্ধু';
- $txt['buddies'] = 'বন্ধু';
- $txt['most_online_ever'] = 'সর্বাধিক অনলাইন';
- $txt['most_online_today'] = 'সবচেয়ে বেশি অনলাইন আজ';
-
- $txt['merge_select_target_board'] = 'একত্রিত বিষয়ের লক্ষ্য বোর্ড নির্বাচন করুন';
- $txt['merge_select_poll'] = 'একত্রিত বিষয়ের কোন পোল হওয়া উচিত তা নির্বাচন করুন';
- $txt['merge_topic_list'] = 'একত্রিত করার বিষয় নির্বাচন করুন';
- $txt['merge_select_subject'] = 'একত্রিত বিষয়ের বিষয় নির্বাচন করুন';
- $txt['merge_custom_subject'] = 'কাস্টম বিষয়';
- $txt['merge_include_notifications'] = 'বিজ্ঞপ্তি অন্তর্ভুক্ত করবেন?';
- $txt['merge_check'] = 'একত্রীকরণ?';
- $txt['merge_no_poll'] = 'নো পোল';
- $txt['merge_why'] = 'এই বিষয়গুলি কেন একত্রিত করা হচ্ছে তার একটি সংক্ষিপ্ত বিবরণ লিখুন।';
- $txt['merged_subject'] = '[MERGED] %1$s';
- // যুক্তি(গুলি): $txt['movetopic_auto_topic']
- $txt['mergetopic_default'] = 'এই বিষয়টি %2$s এ মার্জ করা হয়েছে।';
-
- $txt['response_prefix'] = 'Re:';
- $txt['current_icon'] = 'বর্তমান আইকন';
- $txt['message_icon'] = 'মেসেজ আইকন';
-
- $txt['smileys_current'] = 'বর্তমান স্মাইলি সেট';
- $txt['smileys_none'] = 'নো স্মাইলিস';
- $txt['smileys_forum_board_default'] = 'ফোরাম/বোর্ড ডিফল্ট';
-
- $txt['search_results'] = 'অনুসন্ধান ফলাফল';
- $txt['search_no_results'] = 'দুঃখিত, কোনো মিল পাওয়া যায়নি';
-
- $txt['total_time_logged_days'] = 'দিন,';
- $txt['total_time_logged_hours'] = 'ঘন্টা এবং';
- $txt['total_time_logged_minutes'] = 'মিনিট';
- $txt['total_time_logged_d'] = 'd';
- $txt['total_time_logged_h'] = 'h';
- $txt['total_time_logged_m'] = 'm';
-
- $txt['approve_members_waiting'] = 'সদস্যদের অনুমোদন';
-
- $txt['activate_code'] = 'আপনার অ্যাক্টিভেশন কোড হল';
-
- $txt['find_members'] = 'সদস্যদের খুঁজুন';
- $txt['find_username'] = 'নাম, ব্যবহারকারীর নাম, বা ইমেল ঠিকানা';
- $txt['find_buddies'] = 'শুধু বন্ধুদের দেখান?';
- $txt['find_wildcards'] = 'অনুমোদিত ওয়াইল্ডকার্ড: *, ?';
- $txt['find_no_results'] = 'কোন ফলাফল পাওয়া যায়নি';
- $txt['find_results'] = 'ফলাফল';
- $txt['find_close'] = 'বন্ধ';
-
- $txt['unread_since_visit'] = 'শেষ দেখার পর থেকে অপঠিত পোস্ট দেখান।';
- $txt['show_unread_replies'] = 'আপনার পোস্টে নতুন উত্তর দেখান।';
-
- $txt['change_color'] = 'রঙ পরিবর্তন করুন';
-
- $txt['quickmod_delete_selected'] = 'নির্বাচিত সরান';
- $txt['quickmod_split_selected'] = 'বিভক্ত নির্বাচিত';
-
- $txt['show_personal_messages_heading'] = 'নতুন বার্তা';
- $txt['show_personal_messages'] = 'আপনার ইনবক্সে <strong>%1$s</strong> অপঠিত ব্যক্তিগত বার্তা রয়েছে।<br><br><a href="%2$s">আপনার ইনবক্সে যান।  </a>';
-
- $txt['help_popup'] = 'একটু হারিয়েছেন?  আমাকে ব্যাখ্যা করতে দিন:';
-
- $txt['previous_next_back'] = 'আগের বিষয়';
- $txt['previous_next_forward'] = 'পরবর্তী বিষয়';
-
- $txt['mark_unread'] = 'অপঠিত চিহ্নিত করুন';
-
- $txt['ssi_not_direct'] = 'অনুগ্রহ করে সরাসরি URL দ্বারা SSI.php অ্যাক্সেস করবেন না;  আপনি পাথ (%1$s) ব্যবহার করতে বা যোগ করতে চাইতে পারেন ?ssi_function=something.';
- $txt['ssi_session_broken'] = 'SSI.php একটি সেশন লোড করতে অক্ষম!  এটি লগআউট এবং অন্যান্য ফাংশনগুলির সাথে সমস্যা সৃষ্টি করতে পারে - অনুগ্রহ করে নিশ্চিত করুন যে আপনার সমস্ত স্ক্রিপ্টে *অন্য কিছু* আগে SSI.php অন্তর্ভুক্ত করা হয়েছে!';
- 
- // এখানে যেকোনো একক উদ্ধৃতি দুবার এড়িয়ে যান.. 'it\'s' -> 'it\\\'s'।
- $txt['preview_title'] = 'প্রিভিউ পোস্ট';
- $txt['preview_fetch'] = 'প্রিভিউ আনা হচ্ছে...';
- $txt['preview_new'] = 'নতুন বার্তা';
- $txt['pm_error_while_submitting'] = 'এই ব্যক্তিগত বার্তা পাঠানোর সময় নিম্নলিখিত ত্রুটি বা ত্রুটি ঘটেছে:';
- $txt['error_while_submitting'] = 'বার্তাটিতে নিম্নলিখিত ত্রুটি বা ত্রুটি রয়েছে যা চালিয়ে যাওয়ার আগে অবশ্যই সংশোধন করা উচিত:';
- $txt['error_old_topic'] = 'সতর্কতা: এই বিষয়টি অন্তত %1$d দিন পোস্ট করা হয়নি।<br>যদি না আপনি নিশ্চিত হন যে আপনি উত্তর দিতে চান, অনুগ্রহ করে একটি নতুন বিষয় শুরু করার কথা বিবেচনা করুন।';
-
- $txt['split_selected_posts'] = 'নির্বাচিত পোস্ট';
- $txt['split_selected_posts_desc'] = 'নিচের পোস্টগুলি বিভক্ত হওয়ার পরে একটি নতুন বিষয় তৈরি করবে।';
- $txt['split_reset_selection'] = 'রিসেট নির্বাচন';
-
- $txt['modify_cancel'] = 'বাতিল';
- $txt['modify_cancel_all'] = 'সব বাতিল করুন';
- $txt['mark_read_short'] = 'মার্ক রিড';
-
- $txt['alerts'] = 'সতর্কতা';
-
- $txt['pm_short'] = 'আমার বার্তা';
- $txt['pm_menu_read'] = 'আপনার বার্তা পড়ুন';
- $txt['pm_menu_send'] = 'একটি বার্তা পাঠান';
-
- $txt['unapproved_posts'] = 'অনুমোদিত পোস্ট (বিষয়: %1$d, পোস্ট: %2$d)';
-
- $txt['ajax_in_progress'] = 'লোড হচ্ছে...';
-
- $txt['mod_reports_waiting'] = 'প্রতিবেদিত পোস্ট';
-
- $txt['view_unread_category'] = 'অপঠিত পোস্ট';
- $txt['new_posts_in_category'] = '%1$s-এ নতুন পোস্ট দেখতে ক্লিক করুন';
- $txt['verification'] = 'যাচাই';
- $txt['visual_verification_hidden'] = 'দয়া করে এই বাক্সটি খালি রাখুন';
- $txt['visual_verification_description'] = 'ছবিতে দেখানো অক্ষর টাইপ করুন';
- $txt['visual_verification_sound'] = 'অক্ষরগুলি শুনুন';
- $txt['visual_verification_request_new'] = 'অন্য একটি ছবির অনুরোধ করুন';
-
- // সাব মেনু লেবেল
- $txt['summary'] = 'সারাংশ';
- $txt['account'] = 'অ্যাকাউন্ট সেটিংস';
- $txt['theme'] = 'লুক অ্যান্ড লেআউট';
- $txt['forumprofile'] = 'ফোরাম প্রোফাইল';
- $txt['activate_changed_email_title'] = 'ইমেল ঠিকানা পরিবর্তন করা হয়েছে';
- $txt['activate_changed_email_desc'] = 'আপনি আপনার ইমেল ঠিকানা পরিবর্তন করেছেন।  এই ঠিকানাটি যাচাই করার জন্য আপনি একটি ইমেল পাবেন।  আপনার অ্যাকাউন্ট পুনরায় সক্রিয় করতে সেই ইমেলের লিঙ্কটিতে ক্লিক করুন।';
- $txt['modSettings_title'] = 'বৈশিষ্ট্য এবং বিকল্প';
- $txt['package'] = 'প্যাকেজ ম্যানেজার';
- $txt['errorlog'] = 'ত্রুটি লগ';
- $txt['edit_permissions'] = 'অনুমতি';
- $txt['mc_unapproved_attachments'] = 'অনুমোদিত সংযুক্তি';
- $txt['mc_unapproved_poststopics'] = 'অনুমোদিত পোস্ট এবং বিষয়';
- $txt['mc_reported_posts'] = 'প্রতিবেদিত পোস্ট';
- $txt['mc_reported_members'] = 'প্রতিবেদিত সদস্য';
- $txt['modlog_view'] = 'মডারেশন লগ';
- $txt['calendar_menu'] = 'ক্যালেন্ডার দেখুন';
- 
- // @todo ইমেল স্ট্রিং পাঠান - সরানো উচিত?
- $txt['send_email'] = 'ইমেল পাঠান';
-
- $txt['ignoring_user'] = 'আপনি এই ব্যবহারকারীকে উপেক্ষা করছেন।';
- $txt['show_ignore_user_post'] = 'আমাকে পোস্টটি দেখাও।';
-
- $txt['স্পাইডার'] = 'মাকড়সা';
- $txt['spiders'] = 'মাকড়সা';
-
- $txt['downloads'] = 'ডাউনলোড';
- $txt['filesize'] = 'ফাইলসাইজ';
-
- // বিষয় পুনরুদ্ধার করুন
- $txt['restore_topic'] = 'বিষয় পুনরুদ্ধার করুন';
- $txt['restore_message'] = 'পুনরুদ্ধার করুন';
- $txt['quick_mod_restore'] = 'নির্বাচিত পুনরুদ্ধার করুন';
-
- // সম্পাদক প্রম্পট।
- $txt['prompt_text_email'] = 'অনুগ্রহ করে ইমেল ঠিকানা লিখুন।';
- $txt['prompt_text_ftp'] = 'অনুগ্রহ করে FTP ঠিকানা লিখুন।';
- $txt['prompt_text_url'] = 'আপনি যে URLটিতে লিঙ্ক করতে চান দয়া করে সেটি লিখুন।';
- $txt['prompt_text_img'] = 'ছবির অবস্থান লিখুন';
-
- // এখানে যেকোনো একক উদ্ধৃতি দুবার এড়িয়ে যান.. 'it\'s' -> 'it\\\'s'।
- $txt['autosuggest_delete_item'] = 'আইটেম মুছুন';
-
- // ডিবাগ সম্পর্কিত - যখন $db_show_debug সত্য হয়।
- $txt['debug_templates'] = 'টেমপ্লেট:';
- $txt['debug_subtemplates'] = 'সাব টেমপ্লেট:';
- $txt['debug_language_files'] = 'ভাষা ফাইল:';
- $txt['debug_stylesheets'] = 'স্টাইল শীট:';
- $txt['debug_files_included'] = 'ফাইল অন্তর্ভুক্ত:';
- $txt['debug_memory_use'] = 'ব্যবহৃত মেমরি:';
- $txt['debug_kb'] = 'KB';
- $txt['debug_show'] = 'শো';
- $txt['debug_cache_hits'] = 'ক্যাশে হিট:';
- $txt['debug_cache_misses'] = 'ক্যাশে মিস:';
- $txt['debug_cache_seconds_bytes'] = '%1$ss - %2$s বাইট';
- $txt['debug_cache_seconds_bytes_total'] = '%2$s বাইটের জন্য %1$ss';
- $txt['debug_queries_used'] = 'ব্যবহৃত প্রশ্ন: %1$d.';
- $txt['debug_queries_used_and_warnings'] = 'ব্যবহৃত প্রশ্ন: %1$d, %2$d সতর্কবার্তা।';
- $txt['debug_query_in_line'] = '<em>%1$s</em> লাইনে <em>%2$s</em>, ';
- $txt['debug_query_which_took'] = 'যা %1$s সেকেন্ড সময় নিয়েছে।';
- $txt['debug_query_which_took_at'] = 'যা অনুরোধে %2$s এ %1$s সেকেন্ড সময় নিয়েছে।';
- $txt['debug_show_queries'] = '[কোয়েরি দেখান]';
- $txt['debug_hide_queries'] = '[কোয়েরি লুকান]';
- $txt['debug_tokens'] = 'টোকেন:';
- $txt['debug_browser'] = 'ব্রাউজার আইডি:';
- $txt['debug_hooks'] = 'হুক বলা হয়:';
- $txt['debug_instances'] = 'ইনস্ট্যান্স তৈরি হয়েছে: ';
- $txt['are_sure_mark_read'] = 'আপনি কি নিশ্চিত যে আপনি বার্তাগুলিকে পঠিত হিসাবে চিহ্নিত করতে চান?';
-
- // ইনলাইন সংযুক্তি বার্তা।
- $txt['attachments_not_enable'] = 'সংযুক্তি নিষ্ক্রিয়';
- $txt['attachments_no_data_loaded'] = 'একটি বৈধ সংযুক্তি আইডি নয়।';
- $txt['attachments_not_allowed_to_see'] = 'আপনি এই সংযুক্তিটি দেখতে পারবেন না।';
- $txt['attachments_no_msg_associated'] = 'এই সংযুক্তির সাথে কোনো বার্তা যুক্ত নেই।';
- $txt['attachments_unapproved'] = 'সংযুক্তি অনুমোদনের অপেক্ষায় আছে।';
- 
- // অ্যাক্সেসযোগ্যতা
- $txt['hide_category'] = 'বিভাগ লুকান';
- $txt['show_category'] = 'বিভাগ দেখান';
- $txt['hide_infocenter'] = 'তথ্য কেন্দ্র লুকান';
- $txt['show_infocenter'] = 'তথ্য কেন্দ্র দেখান';
-
- // বিজ্ঞপ্তি পোস্ট নিয়ন্ত্রণ
- $txt['notify_topic_0'] = 'অনুসরণ করছে না';
- $txt['notify_topic_1'] = 'কোনও সতর্কতা বা ইমেল নেই';
- $txt['notify_topic_2'] = 'সতর্কতা পান';
- $txt['notify_topic_3'] = 'ইমেল এবং সতর্কতা গ্রহণ করুন';
- $txt['notify_topic_0_desc'] = 'আপনি এই বিষয়ের জন্য কোনো ইমেল বা সতর্কতা পাবেন না এবং এটি আপনার অপঠিত উত্তর এবং বিষয় তালিকায়ও দেখাবে না।  আপনি এখনও এই বিষয়ের জন্য @উল্লেখ পাবেন৷';
- $txt['notify_topic_1_desc'] = 'আপনি কোনো ইমেল বা সতর্কতা পাবেন না কিন্তু শুধুমাত্র অন্য সদস্যদের দ্বারা @উল্লেখ পাবেন।';
- $txt['notify_topic_2_desc'] = 'আপনি এই বিষয়ের জন্য সতর্কতা পাবেন।';
- $txt['notify_topic_3_desc'] = 'আপনি এই বিষয়ের জন্য সতর্কতা এবং ই-মেইল উভয়ই পাবেন।';
- $txt['notify_board_1'] = 'কোনও সতর্কতা বা ইমেল নেই';
- $txt['notify_board_2'] = 'সতর্কতা পান';
- $txt['notify_board_3'] = 'ইমেল এবং সতর্কতা গ্রহণ করুন';
- $txt['notify_board_1_desc'] = 'আপনি নতুন বিষয়ের জন্য কোনো ইমেল বা সতর্কতা পাবেন না';
- $txt['notify_board_2_desc'] = 'আপনি এই বোর্ডের জন্য সতর্কতা পাবেন।';
- $txt['notify_board_3_desc'] = 'আপনি এই বোর্ডের জন্য সতর্কতা এবং ই-মেইল উভয়ই পাবেন।';
-
- $txt['notify_board_prompt'] = 'যখন কেউ এই বোর্ডে একটি নতুন বিষয় পোস্ট করে আপনি কি একটি বিজ্ঞপ্তি ইমেল চান?';
- $txt['notify_board_subscribed'] = '%1$s এই বোর্ডের জন্য নতুন বিষয় বিজ্ঞপ্তিতে সদস্যতা নিয়েছে।';
- $txt['notify_board_unsubscribed'] = '%1$s এই বোর্ডের জন্য নতুন বিষয় বিজ্ঞপ্তি থেকে সদস্যতা ত্যাগ করা হয়েছে।';
-
- $txt['notify_topic_prompt'] = 'কেউ এই বিষয়ে উত্তর দিলে আপনি কি একটি বিজ্ঞপ্তি ইমেল চান?';
- $txt['notify_topic_subscribed'] = '%1$s এই বিষয়ের জন্য নতুন উত্তর বিজ্ঞপ্তির সদস্যতা নেওয়া হয়েছে।';
- $txt['notify_topic_unsubscribed'] = '%1$s এই বিষয়ের জন্য নতুন উত্তর বিজ্ঞপ্তি থেকে সদস্যতা ত্যাগ করা হয়েছে।';
-
- $txt['notify_announcements_prompt'] = 'আপনি কি ইমেলের মাধ্যমে ফোরাম নিউজলেটার, ঘোষণা এবং গুরুত্বপূর্ণ বিজ্ঞপ্তি পেতে চান?';
- $txt['notify_announcements_subscribed'] = '%1$s ফোরাম নিউজলেটার, ঘোষণা এবং গুরুত্বপূর্ণ বিজ্ঞপ্তিগুলিতে সদস্যতা নেওয়া হয়েছে।';
- $txt['notify_announcements_unsubscribed'] = '%1$s ফোরাম নিউজলেটার, ঘোষণা এবং গুরুত্বপূর্ণ বিজ্ঞপ্তি থেকে সদস্যতা ত্যাগ করা হয়েছে।';
-
- $txt['unsubscribe_announcements_plain'] = 'ফোরাম নিউজলেটার, ঘোষণা এবং গুরুত্বপূর্ণ বিজ্ঞপ্তিগুলি থেকে সদস্যতা ত্যাগ করতে, এই লিঙ্কটি অনুসরণ করুন: %1$s';
- $txt['unsubscribe_announcements_html'] = '<span style="font-size:small"><a href="%1$s">আনসাবস্ক্রাইব করুন</a> ফোরাম নিউজলেটার, ঘোষণা এবং গুরুত্বপূর্ণ বিজ্ঞপ্তিগুলি থেকে৷</span>  ';
- $txt['unsubscribe_announcements_manual'] = 'ফোরাম নিউজলেটার, ঘোষণা এবং গুরুত্বপূর্ণ বিজ্ঞপ্তিগুলি থেকে সদস্যতা ত্যাগ করতে, আপনার অনুরোধের সাথে %1$s এ আমাদের সাথে যোগাযোগ করুন।';
- 
- // মোবাইল অ্যাকশন
- $txt['mobile_action'] = 'ব্যবহারকারীর কর্ম';
- $txt['mobile_moderation'] = 'মডারেশন';
- $txt['mobile_user_menu'] = 'প্রধান মেনু';
- $txt['mobile_generic_menu'] = '%1$s মেনু';
-
- // একটি বাক্যে তালিকার বিন্যাস (যেমন "এলিস, বব, এবং চার্লি")
- // উদাহরণ:
- // $txt['sentence_list_format'][2] দুটি আইটেম সহ একটি তালিকার জন্য একটি বিন্যাস নির্দিষ্ট করে
- // $txt['sentence_list_format']['n'] ডিফল্ট ফর্ম্যাট নির্দিষ্ট করে
- // স্থানধারকদের উপর নোট:
- // {1} = তালিকার প্রথম আইটেম, {2} = দ্বিতীয় আইটেম, ইত্যাদি।
- // {-1} = তালিকার শেষ আইটেম, {-2} = দ্বিতীয় শেষ আইটেম, ইত্যাদি।
- // {series} = তালিকার বাকি আইটেমগুলির সংযুক্ত স্ট্রিং
- $txt['sentence_list_format'][1] = '{1}';
- $txt['sentence_list_format'][2] = '{1} এবং {-1}';
- $txt['sentence_list_format'][3] = '{সিরিজ}, এবং {-1}';
- $txt['sentence_list_format'][4] = '{সিরিজ}, এবং {-1}';
- $txt['sentence_list_format'][5] = '{সিরিজ}, এবং {-1}';
- $txt['sentence_list_format']['n'] = '{সিরিজ}, এবং {-1}';
- // বিভাজক একটি বাক্যে তালিকা তৈরি করতে ব্যবহৃত হয়
- $txt['sentence_list_separator'] = ', ';
- $txt['sentence_list_separator_alt'] = ';  ';
-
- ?>
+// Version: 2.1.3; index
+
+global $forum_copyright, $webmaster_email, $scripturl, $context, $boardurl;
+
+// Native name, please use full HTML entities to write your language's name.
+$txt['native_name'] = 'বাংলা';
+
+// Locale (strftime, basename). For more information see:
+//   - https://php.net/function.setlocale
+$txt['lang_locale'] = 'বাংলা';
+$txt['lang_dictionary'] = 'বাংলা';
+//https://developers.google.com/recaptcha/docs/language
+$txt['lang_recaptcha'] = 'বাংলা';
+
+// Ensure you remember to use uppercase for character set strings.
+$txt['lang_character_set'] = 'UTF-8';
+// Character set right to left?  0 = ltr; 1 = rtl
+$txt['lang_rtl'] = '0';
+// Number format.
+$txt['number_format'] = '1,234.00';
+
+$txt['days_title'] = 'দিন';
+$txt['days'] = array('রবিবার', 'সোমবার', 'মঙ্গলবার', 'বুধবার', 'বৃহস্পতিবার', 'শুক্রবার', 'শনিবার');
+$txt['days_short'] = array('রবি', 'সোম', 'মঙ্গল', 'বুধ', 'বৃহস্পতি', 'শুক্র', 'শনি');
+// Months must start with 1 => 'January'. (or translated, of course.)
+$txt['months_title'] = 'মাস';
+$txt['months'] = array(1 => 'জানুয়ারি', 2 => 'ফেব্রুয়ারী', 3 => 'মার্চ', 4 => 'এপ্রিল', 5 => 'মে', 6 => 'জুন', 7 => 'জুলাই', 8 => 'অগাস্ট', 9 => 'সেপ্টেম্বর', 10 => 'অক্টোবর', 11 => 'নভেম্বর', 12 => 'ডিসেম্বর');
+$txt['months_titles'] = array(1 => 'জানুয়ারি', 2 => 'ফেব্রুয়ারী', 3 => 'মার্চ', 4 => 'এপ্রিল', 5 => 'মে', 6 => 'জুন', 7 => 'জুলাই', 8 => 'অগাস্ট', 9 => 'সেপ্টেম্বর', 10 => 'অক্টোবর', 11 => 'নভেম্বর', 12 => 'ডিসেম্বর');
+$txt['months_short'] = array(1 => 'জানুয়ারি', 2 => 'ফেব্রুয়ারী', 3 => 'মার্চ', 4 => 'এপ্রিল', 5 => 'মে', 6 => 'জুন', 7 => 'জুলাই', 8 => 'অগাস্ট', 9 => 'সেপ্টেম্বর', 10 => 'অক্টোবর', 11 => 'নভেম্বর', 12 => 'ডিসেম্বর');
+$txt['prev_month'] = 'গত মাস';
+$txt['next_month'] = 'পরবর্তী মাস';
+$txt['start'] = 'শুরু';
+$txt['end'] = 'শেষ';
+$txt['starts'] = 'শুরু';
+$txt['ends'] = 'শেষ';
+$txt['none'] = 'কোনোটাই নয়';
+
+$txt['minutes_label'] = 'মিনিট';
+$txt['hours_label'] = 'ঘন্টা';
+$txt['years_title'] = 'বছর';
+
+$txt['time_am'] = 'am';
+$txt['time_pm'] = 'pm';
+
+// Short form of minutes
+$txt['minutes_short'] = 'মিনিট';
+// Short form of hour
+$txt['hour_short'] = 'ঘন্টা';
+// Short form of hours
+$txt['hours_short'] = 'ঘন্টা';
+// Descimal sign
+$txt['decimal_sign'] = '.';
+
+$txt['admin'] = 'প্রশাসক';
+$txt['moderate'] = 'পরিবর্তন';
+
+$txt['save'] = 'সংরক্ষণ';
+$txt['reset'] = 'রিসেট';
+$txt['upload'] = 'আপলোড';
+$txt['upload_all'] = 'সব আপলোড করুন';
+$txt['processing'] = 'প্রক্রিয়াকরণ...';
+
+$txt['modify'] = 'পরিবর্তন';
+$txt['forum_index'] = '%1$s - সূচক';
+$txt['members'] = 'সদস্যদের';
+$txt['board_name'] = 'বোর্ডের নাম';
+$txt['posts'] = 'পোস্ট';
+
+$txt['member_postcount'] = 'পোস্ট';
+$txt['no_subject'] = '(বিষয়বস্তু ছাড়া)';
+$txt['view_profile'] = 'প্রোফাইল দেখুন';
+$txt['guest_title'] = 'অতিথি';
+$txt['author'] = 'লেখক';
+$txt['on'] = 'চালু';
+$txt['remove'] = 'সরানো';
+$txt['start_new_topic'] = 'নতুন বিষয় শুরু করুন';
+
+$txt['login'] = 'লগ ইন';
+// Use numeric entities in the below string.
+$txt['username'] = 'সদস্যের নাম';
+$txt['password'] = 'পাসওয়ার্ড';
+
+$txt['username_no_exist'] = 'ওই সদস্যের নাম নেই.';
+$txt['no_user_with_email'] = 'সেই ইমেইলের সাথে যুক্ত কোনো সদস্যের নাম নেই.';
+
+$txt['board_moderator'] = 'বিভাগ পরিবর্তনকারী';
+$txt['remove_topic'] = 'বিষয় সরান';
+$txt['topics'] = 'বিষয়';
+$txt['modify_msg'] = 'বার্তা পরিবর্তন করুন';
+$txt['name'] = 'নাম';
+$txt['email'] = 'ইমেইল';
+$txt['user_email_address'] = 'ইমেইল ঠিকানা';
+$txt['subject'] = 'বিষয়বস্তু';
+$txt['message'] = 'বার্তা';
+$txt['redirects'] = 'দিকপরিবর্তন';
+$txt['quick_modify'] = 'ভিতরে পরিবর্তন';
+$txt['quick_modify_message'] = 'আপনি সফলতার সাথে বার্তা পরিবর্তন করেছেন।';
+$txt['reason_for_edit'] = 'পরিবর্তনের কারণ';
+
+$txt['choose_pass'] = 'পাসওয়ার্ড নির্বাচন করুন';
+$txt['verify_pass'] = 'পাসওয়ার্ড যাচাই করুন';
+$txt['notify_announcements'] = 'প্রশাসকদের ইমেইল মারফত গুরুত্বপূর্ণ খবর পাঠানোর অনুমতি দিন';
+
+$txt['position'] = 'স্থান';
+
+// argument(s): username
+$txt['view_profile_of_username'] = 'প্রোফাইল দেখুন এর %1$s';
+$txt['total'] = 'সমস্ত';
+$txt['website'] = 'ওয়েবসাইট';
+$txt['register'] = 'সাইন আপ';
+$txt['warning_status'] = 'সতর্কতা অবস্থা';
+$txt['user_warn_watch'] = 'সদস্যটি পরিবর্তনকারীর ওয়াচ লিস্টে আছে';
+$txt['user_warn_moderate'] = 'সদস্যটির পোস্ট অনুমোদন সারিতে আছে';
+$txt['user_warn_mute'] = 'সদস্যটি পোস্ট করতে পারবেননা';
+$txt['warn_watch'] = 'ওয়াচড';
+$txt['warn_moderate'] = 'পরিবর্তন';
+$txt['warn_mute'] = 'নিঃশব্দ';
+
+$txt['message_index'] = 'বার্তা সূচক';
+$txt['news'] = 'খবর';
+$txt['home'] = 'বাড়ি';
+$txt['page'] = 'পাতা';
+$txt['prev'] = 'পূর্ববর্তী পাতা';
+$txt['next'] = 'পরবর্তী পাতা';
+
+$txt['lock_unlock'] = 'বন্ধ/খোলা বিষয়';
+$txt['post'] = 'পোস্ট';
+$txt['error_occured'] = 'একটি ভুল ধরা পড়েছে';
+$txt['at'] = 'এ';
+$txt['by'] = 'দ্বারা';
+$txt['logout'] = 'লগ আউট';
+$txt['started_by'] = 'দ্বারা শুরু';
+$txt['topic_started_by'] = 'দ্বারা শুরু <strong>%1$s</strong> ভিতরে <em>%2$s</em>';
+$txt['replies'] = 'উত্তর';
+$txt['last_post'] = 'শেষ পোস্ট';
+$txt['first_post'] = 'প্রথম পোস্ট';
+$txt['last_poster'] = 'দ্বারা শেষ পোস্ট';
+$txt['last_post_message'] = '<strong>শেষ পোস্ট:</strong>%3$s<span class="postby">%2$s দ্বারা %1$s</span>';
+$txt['last_post_topic'] = '%1$s<br>দ্বারা %2$s';
+$txt['post_by_member'] = '<strong>%1$s</strong> দ্বারা <strong>%2$s</strong><br>';
+$txt['boardindex_total_posts'] = '%1$s পোস্ট ভিতরে %2$s বিষয়গুলি দ্বারা %3$s সদস্যরা';
+$txt['show'] = 'দেখানো';
+$txt['hide'] = 'লুকানো';
+
+$txt['admin_login'] = 'প্রশাসন লগইন';
+// Use numeric entities in the below string.
+$txt['topic'] = 'বিষয়';
+$txt['help'] = 'সাহায্য';
+$txt['terms_and_rules'] = 'শর্তাবলী এবং নিয়ম';
+$txt['watch_board'] = 'বিভাগটি দেখুন';
+$txt['unwatch_board'] = 'বিভাগটি দেখা বন্ধ করুন';
+$txt['watch_topic'] = 'বিষয়টি দেখুন';
+$txt['unwatch_topic'] = 'বিষয়টি দেখা বন্ধ করুন';
+$txt['watching_topic'] = 'আপনি যে বিষয় দেখছেন';
+$txt['watching_this_topic'] = 'আপনি এই বিষয়টি দেখছেন, এবং এটি সম্পর্কে বিজ্ঞপ্তি পাবেন.';
+$txt['notify'] = 'অবহিত করা';
+$txt['unnotify'] = 'অ অবহিত করা';
+
+// Use numeric entities in the below string.
+// argument(s): forum name
+$txt['regards_team'] = 'Regards,
+%1$s টীম.';
+
+$txt['notify_replies'] = 'উত্তর সম্পর্কে অবহিত করুন';
+$txt['move_topic'] = 'বিষয়টি সরানো';
+$txt['move_to'] = 'সরানো';
+$txt['pages'] = 'পাতা';
+$txt['users_active'] = 'সদস্যরা গত %1$d মিনিটে সক্রিয়';
+$txt['personal_messages'] = 'ব্যক্তিগত বার্তা';
+$txt['reply_quote'] = 'উদৃত্তি দিয়ে উত্তর দিন';
+$txt['reply'] = 'Reply';
+$txt['reply_noun'] = 'Reply';
+$txt['reply_number'] = 'Reply #%1$s%2$s';
+$txt['approve'] = 'Approve';
+$txt['unapprove'] = 'Unapprove';
+$txt['approve_all'] = 'approve all';
+$txt['issue_warning'] = 'Issue Warning';
+$txt['awaiting_approval'] = 'Awaiting approval';
+$txt['attach_awaiting_approve'] = 'Attachments awaiting approval';
+$txt['post_awaiting_approval'] = 'This message is awaiting approval by a moderator.';
+$txt['there_are_unapproved_topics'] = 'There are %1$s topics and %2$s posts awaiting approval in this board. Click <a href="%3$s">here</a> to view them all.';
+$txt['send_message'] = 'Send message';
+
+$txt['msg_alert_no_messages'] = 'you don\'t have any messages';
+$txt['msg_alert_one_message'] = 'you have <a href="%1$s">1 message</a>';
+$txt['msg_alert_many_message'] = 'you have <a href="%1$s">%2$d messages</a>';
+$txt['msg_alert_one_new'] = '1 is new';
+$txt['msg_alert_many_new'] = '%1$d are new';
+$txt['new_alert'] = 'New alert';
+$txt['remove_message'] = 'Remove this post';
+$txt['remove_message_question'] = 'Remove this post?';
+
+$txt['topic_alert_none'] = 'No messages...';
+$txt['pm_alert_none'] = 'No messages...';
+$txt['no_messages'] = 'No messages';
+
+$txt['online_users'] = 'Users Online';
+$txt['jump_to'] = 'Jump to';
+$txt['go'] = 'Go';
+$txt['are_sure_remove_topic'] = 'Are you sure you want to remove this topic?';
+$txt['yes'] = 'Yes';
+$txt['no'] = 'No';
+
+$txt['search_end_results'] = 'End of results';
+$txt['search_on'] = 'on';
+
+$txt['search'] = 'Search';
+$txt['all'] = 'All';
+$txt['search_entireforum'] = 'Entire forum';
+$txt['search_thisboard'] = 'This board';
+$txt['search_thistopic'] = 'This topic';
+$txt['search_members'] = 'Members';
+
+$txt['back'] = 'Back';
+$txt['continue'] = 'Continue';
+$txt['password_reminder'] = 'Password reminder';
+$txt['topic_started'] = 'Topic started by';
+$txt['title'] = 'Title';
+$txt['post_by'] = 'Post by';
+$txt['memberlist_searchable'] = 'Searchable list of all registered members.';
+$txt['welcome_newest_member'] = 'Please welcome %1$s, our newest member.';
+$txt['admin_center'] = 'Administration Center';
+$txt['last_edit_by'] = '<span class="lastedit">Last Edit</span>: %1$s by %2$s';
+$txt['last_edit_reason'] = '<span id="reason" class="lastedit">Reason</span>: %1$s';
+$txt['notify_deactivate'] = 'Would you like to deactivate notification on this topic?';
+$txt['modified_time'] = 'Last edited';
+$txt['modified_by'] = 'দ্বারা সম্পাদিত';
+
+$txt['recent_posts'] = 'সাম্প্রতিক পোস্ট';
+
+$txt['location'] = 'অবস্থান';
+$txt['location_desc'] = 'ভৌগোলিক অবস্থান.';
+$txt['gender'] = 'লিঙ্গ';
+$txt['gender_0'] = 'কোনোটাই নয়';
+$txt['gender_1'] = 'পুরুষ';
+$txt['gender_2'] = 'মহিলা';
+$txt['gender_desc'] = 'আপনার লিঙ্গ.';
+$txt['icq'] = 'ICQ';
+$txt['icq_desc'] = 'এটি আপনার ICQ নম্বর.';
+$txt['skype'] = 'Skype';
+$txt['skype_desc'] = 'আপনার Skype সদস্যপদ';
+$txt['personal_text'] = 'ব্যক্তিগত পাঠ্য';
+$txt['date_registered'] = 'তারিখ নিবন্ধিত';
+
+$txt['recent_view'] = 'View the most recent posts on the forum.';
+$txt['recent_updated'] = 'is the most recently updated topic';
+$txt['is_recent_updated'] = '%1$s is the most recently updated topic';
+
+$txt['male'] = 'Male';
+$txt['female'] = 'Female';
+
+$txt['error_invalid_characters_username'] = 'Invalid character used in Username.';
+
+// argument(s): forum name, login URL, login JavaScript snippet
+$txt['welcome_guest'] = 'Welcome to <strong>%1$s</strong>. Please <a href="%2$s" onclick="%3$s">log in</a>.';
+
+// argument(s): forum name, login URL, login JavaScript snippet, signup URL
+$txt['welcome_guest_register'] = 'Welcome to <strong>%1$s</strong>. Please <a href="%2$s" onclick="%3$s">log in</a> or <a href="%4$s">sign up</a>.';
+
+// argument(s): $scripturl
+$txt['welcome_guest_activate'] = '<a href="%1$s?action=activate">Did you miss your activation email?</a>';
+
+// argument(s): $scripturl
+$txt['register_prompt'] = 'Don\'t have an account? <a href="%1$s?action=signup">Sign up</a>.';
+
+// argument(s): forum name
+$txt['welcome_to_forum'] = 'Welcome to <strong>%1$s</strong>.';
+
+// @todo the following to sprintf
+$txt['hello_member'] = 'Hey,';
+// Use numeric entities in the below string.
+$txt['hello_guest'] = 'Welcome,';
+$txt['select_destination'] = 'Please select a destination';
+
+// Escape any single quotes in here twice.. 'it\'s' -> 'it\\\'s'.
+$txt['posted_by'] = 'Posted by';
+
+$txt['icon_smiley'] = 'Smiley';
+$txt['icon_angry'] = 'Angry';
+$txt['icon_cheesy'] = 'Cheesy';
+$txt['icon_laugh'] = 'Laugh';
+$txt['icon_sad'] = 'Sad';
+$txt['icon_wink'] = 'Wink';
+$txt['icon_grin'] = 'Grin';
+$txt['icon_shocked'] = 'Shocked';
+$txt['icon_cool'] = 'Cool';
+$txt['icon_huh'] = 'Huh';
+$txt['icon_rolleyes'] = 'Roll Eyes';
+$txt['icon_tongue'] = 'Tongue';
+$txt['icon_embarrassed'] = 'Embarrassed';
+$txt['icon_lips'] = 'Lips sealed';
+$txt['icon_undecided'] = 'Undecided';
+$txt['icon_kiss'] = 'Kiss';
+$txt['icon_cry'] = 'Cry';
+
+$txt['moderator'] = 'Moderator';
+$txt['moderators'] = 'Moderators';
+
+$txt['views'] = 'Views';
+$txt['new'] = 'New';
+
+$txt['view_all_members'] = 'View all Members';
+$txt['view'] = 'View';
+
+$txt['viewing_members'] = 'Viewing Members %1$s to %2$s';
+$txt['of_total_members'] = 'of %1$s total members';
+
+$txt['forgot_your_password'] = 'Forgot your password?';
+
+$txt['date'] = 'Date';
+// Use numeric entities in the below string.
+$txt['from'] = 'From';
+$txt['check_new_messages'] = 'Check for new messages';
+$txt['to'] = 'To';
+
+$txt['board_topics'] = 'Topics';
+$txt['members_title'] = 'Members';
+$txt['members_list'] = 'Members List';
+$txt['new_posts'] = 'New Posts';
+$txt['old_posts'] = 'No New Posts';
+$txt['redirect_board'] = 'Redirect Board';
+
+$txt['sendtopic_send'] = 'Send';
+$txt['report_sent'] = 'Your report has been sent successfully.';
+$txt['post_becomes_unapproved'] = 'Your message was not approved because it was posted in an unapproved topic. Once the topic is approved your message will be approved too.';
+
+$txt['time_offset'] = 'Time Offset';
+$txt['or'] = 'or';
+
+$txt['no_matches'] = 'Sorry, no matches were found';
+
+$txt['notification'] = 'Notification';
+
+$txt['your_ban'] = 'Sorry %1$s, you are banned from using this forum!';
+$txt['your_ban_expires'] = 'This ban is set to expire %1$s.';
+$txt['your_ban_expires_never'] = 'This ban is not set to expire.';
+$txt['ban_continue_browse'] = 'You may continue to browse the forum as a guest.';
+
+$txt['mark_as_read'] = 'Mark ALL messages as read';
+
+$txt['locked_topic'] = 'Locked Topic';
+$txt['normal_topic'] = 'Normal Topic';
+$txt['participation_caption'] = 'Topic you have posted in';
+$txt['moved_topic'] = 'Moved Topic';
+
+$txt['go_caps'] = 'GO';
+
+$txt['print'] = 'Print';
+$txt['profile'] = 'Profile';
+$txt['topic_summary'] = 'Topic summary';
+$txt['not_applicable'] = 'N/A';
+$txt['name_in_use'] = 'This name is already in use by another member.';
+
+$txt['total_members'] = 'Total Members';
+$txt['total_posts'] = 'Total Posts';
+$txt['total_topics'] = 'Total Topics';
+
+$txt['time_logged_in'] = 'Time to stay logged in';
+
+$txt['preview'] = 'Preview';
+$txt['always_logged_in'] = 'Forever';
+
+$txt['logged'] = 'Logged';
+$txt['show_ip'] = 'Show IP address';
+// Use numeric entities in the below string.
+$txt['ip'] = 'IP';
+$txt['url'] = 'URL';
+$txt['www'] = 'WWW';
+
+$txt['hours'] = 'hours';
+$txt['minutes'] = 'minutes';
+$txt['seconds'] = 'seconds';
+
+// Used upper case in Paid subscriptions management
+$txt['hour'] = 'Hour';
+$txt['days_word'] = 'days';
+
+$txt['search_for'] = 'Search for';
+$txt['search_match'] = 'Match';
+
+$txt['forum_in_maintenance'] = 'Your forum is in Maintenance Mode. Only administrators can currently log in.';
+$txt['maintenance_page'] = 'You can turn off Maintenance Mode from the <a href="%1$s">Server Settings</a> area.';
+
+$txt['read_one_time'] = 'Read 1 time';
+$txt['read_many_times'] = 'Read %1$d times';
+
+$txt['forum_stats'] = 'Forum Stats';
+$txt['latest_member'] = 'Latest Member';
+$txt['total_cats'] = 'Total Categories';
+$txt['latest_post'] = 'Latest Post';
+
+$txt['total_boards'] = 'Total Boards';
+
+$txt['print_page'] = 'Print Page';
+$txt['print_page_text'] = 'Text only';
+$txt['print_page_images'] = 'Text with Images';
+
+$txt['valid_email'] = 'This must be a valid email address.';
+
+$txt['geek'] = 'I am a geek!!';
+$txt['info_center_title'] = '%1$s - Info Center';
+
+$txt['watch'] = 'Watch';
+$txt['unwatch'] = 'Stop watching';
+
+$txt['check_all'] = 'Select all';
+
+// Use numeric entities in the below string.
+$txt['database_error'] = 'Database Error';
+$txt['try_again'] = 'Please try again. If you come back to this error screen, report the error to an administrator.';
+$txt['file'] = 'File';
+$txt['line'] = 'Line';
+// Use numeric entities in the below string.
+$txt['tried_to_repair'] = 'SMF has detected and automatically tried to repair an error in your database. If you continue to have problems, or continue to receive these emails, please contact your host.';
+$txt['database_error_versions'] = '<strong>Note:</strong> It appears that your database <em>may</em> require an upgrade. Your forum\'s files are currently at version %1$s, while your database is at version %2$s. The above error might possibly go away if you execute the latest version of upgrade.php.';
+$txt['template_parse_error'] = 'Template Parse Error!';
+$txt['template_parse_error_message'] = 'It seems something has gone sour on the forum with the template system. This problem should only be temporary, so please come back later and try again. If you continue to see this message, please contact the administrator.<br><br>You can also try <a href="javascript:location.reload();">refreshing this page</a>.';
+// argument(s): filename, $boardurl, $scripturl
+$txt['template_parse_error_details'] = 'There was a problem loading the <pre><strong>%1$s</strong></pre> template or language file. Please check the syntax and try again - remember, single quotes (<pre>\'</pre>) often have to be escaped with a slash (<pre>\\</pre>). To see more specific error information from PHP, try <a href="%2$s%1$s">accessing the file directly</a>.<br><br>You may want to try to <a href="javascript:location.reload();">refresh this page</a> or <a href="%3$s?theme=1">use the default theme</a>.';
+$txt['template_parse_errmsg'] = 'Unfortunately more information is not available at this time as to exactly what is wrong.';
+
+$txt['today'] = '<strong>Today</strong> at ';
+$txt['yesterday'] = '<strong>Yesterday</strong> at ';
+$txt['new_poll'] = 'New poll';
+$txt['poll_question'] = 'Question';
+$txt['poll_vote'] = 'Submit Vote';
+$txt['poll_total_voters'] = 'Total Members Voted';
+$txt['poll_results'] = 'View results';
+$txt['poll_lock'] = 'Lock Voting';
+$txt['poll_unlock'] = 'Unlock Voting';
+$txt['poll_edit'] = 'Edit Poll';
+$txt['poll'] = 'Poll';
+$txt['one_hour'] = '1 Hour';
+$txt['one_day'] = '1 Day';
+$txt['one_week'] = '1 Week';
+$txt['two_weeks'] = '2 Weeks';
+$txt['one_month'] = '1 Month';
+$txt['two_months'] = '2 Months';
+$txt['forever'] = 'Forever';
+$txt['moved'] = 'MOVED';
+$txt['move_why'] = 'Please enter a brief description as to<br>why this topic is being moved.';
+$txt['board'] = 'Board';
+$txt['in'] = 'in';
+$txt['sticky_topic'] = 'Sticky Topic';
+
+$txt['delete'] = 'Delete';
+$txt['no_change'] = 'No change';
+
+$txt['your_pms'] = 'Your Personal Messages';
+
+$txt['kilobyte'] = 'KB';
+$txt['megabyte'] = 'MB';
+
+$txt['more_stats'] = '[More Stats]';
+
+// Use numeric entities in the below three strings.
+$txt['code'] = 'Code';
+$txt['code_select'] = 'Select';
+$txt['code_expand'] = 'Expand';
+$txt['code_shrink'] = 'Shrink';
+$txt['quote_from'] = 'Quote from';
+$txt['quote'] = 'Quote';
+$txt['quote_action'] = 'Quote';
+$txt['quote_selected_action'] = 'Quote selected text';
+$txt['fulledit'] = 'Full&nbsp;edit';
+$txt['edit'] = 'Edit';
+$txt['quick_edit'] = 'Quick Edit';
+$txt['post_options'] = 'More...';
+
+$txt['merge_to_topic_id'] = 'ID of target topic';
+$txt['split'] = 'Split Topic';
+$txt['merge'] = 'Merge Topics';
+$txt['target_id'] = 'Select target by topic ID';
+$txt['target_below'] = 'Select target from the list below';
+$txt['subject_new_topic'] = 'Subject For New Topic';
+$txt['split_this_post'] = 'Only split this post.';
+$txt['split_after_and_this_post'] = 'Split topic after and including this post.';
+$txt['select_split_posts'] = 'Select posts to split.';
+$txt['new_topic'] = 'New Topic';
+$txt['split_successful'] = 'Topic successfully split into two topics.';
+$txt['origin_topic'] = 'Original Topic';
+$txt['please_select_split'] = 'Please select which posts you wish to split.';
+$txt['merge_successful'] = 'Topics successfully merged.';
+$txt['new_merged_topic'] = 'Newly Merged Topic';
+$txt['topic_to_merge'] = 'Topic to be merged';
+$txt['target_board'] = 'Target board';
+$txt['target_topic'] = 'Target topic';
+$txt['merge_desc'] = 'This function will merge the messages of two topics into one topic. The messages will be sorted according to the time of posting. Therefore, the earliest posted message will be the first message of the merged topic.';
+
+$txt['set_sticky'] = 'Set topic sticky';
+$txt['set_nonsticky'] = 'Set topic non-sticky';
+$txt['set_lock'] = 'Lock topic';
+$txt['set_unlock'] = 'Unlock topic';
+
+$txt['search_advanced'] = 'Advanced search';
+
+$txt['security_risk'] = 'MAJOR SECURITY RISK:';
+$txt['not_removed'] = 'You have not removed ';
+$txt['not_removed_extra'] = '%1$s is a backup of %2$s that was not generated by SMF. It can be accessed directly and used to gain unauthorized access to your forum. You should delete it immediately.';
+$txt['generic_warning'] = 'Warning';
+$txt['agreement_missing'] = 'You are requiring new users to accept a registration agreement; however, the file (agreement.txt) does not exist.';
+$txt['policy_agreement_missing'] = 'You are requiring new users to accept a privacy policy; however, the privacy policy is empty.';
+$txt['auth_secret_missing'] = 'Unable to set authentication secret in Settings.php. This weakens the security of your forum and puts it at risk for attacks. Check the file permissions on Settings.php to make sure SMF can write to the file.';
+
+$txt['cache_writable'] = 'The cache directory is not writable - this will adversely affect the performance of your forum.';
+
+$txt['page_created_full'] = 'Page created in %1$.3f seconds with %2$d queries.';
+
+$txt['report_to_mod_func'] = 'Use this function to inform the moderators and administrators of an abusive or problematic message.';
+$txt['report_profile_func'] = 'Use this function to inform the administrators of abusive profile content, such as spam or inappropriate images.';
+
+$txt['online'] = 'Online';
+$txt['member_is_online'] = '%1$s is online';
+$txt['offline'] = 'Offline';
+$txt['member_is_offline'] = '%1$s is offline';
+$txt['pm_online'] = 'Personal Message (Online)';
+$txt['pm_offline'] = 'Personal Message (Offline)';
+$txt['status'] = 'Status';
+
+$txt['go_up'] = 'Go Up';
+$txt['go_down'] = 'Go Down';
+
+// argument(s): SMF_FULL_VERSION, SMF_SOFTWARE_YEAR, $scripturl
+$forum_copyright = '<a href="%3$s?action=credits" title="License" target="_blank" rel="noopener">%1$s &copy; %2$s</a>, <a href="https://www.simplemachines.org" title="Simple Machines" target="_blank" rel="noopener">Simple Machines</a>';
+
+$txt['birthdays'] = 'Birthdays:';
+$txt['events'] = 'Events:';
+$txt['birthdays_upcoming'] = 'Upcoming Birthdays:';
+$txt['events_upcoming'] = 'Upcoming Events:';
+// Prompt for holidays in the calendar, leave blank to just display the holiday's name.
+$txt['calendar_prompt'] = 'Holidays:';
+$txt['calendar_month'] = 'Month';
+$txt['calendar_year'] = 'Year';
+$txt['calendar_day'] = 'Day';
+$txt['calendar_event_title'] = 'Event Title';
+$txt['calendar_event_options'] = 'Event Options';
+$txt['calendar_post_in'] = 'Post in';
+$txt['calendar_edit'] = 'Edit Event';
+$txt['calendar_export'] = 'Export Event';
+$txt['calendar_view_week'] = 'View Week';
+$txt['event_delete_confirm'] = 'Delete this event?';
+$txt['event_delete'] = 'Delete Event';
+$txt['calendar_post_event'] = 'Post Event';
+$txt['calendar'] = 'Calendar';
+$txt['calendar_link'] = 'Link to Calendar';
+$txt['calendar_upcoming'] = 'Upcoming Calendar';
+$txt['calendar_today'] = 'Today\'s Calendar';
+$txt['calendar_week'] = 'Week';
+$txt['calendar_week_title'] = 'Week %1$d of %2$d';
+// %1$s is the month, %2$s is the day, %3$s is the year. Change to suit your language.
+$txt['calendar_week_beginning'] = 'Week beginning %1$s %2$s, %3$s';
+$txt['calendar_numb_days'] = 'Number of Days';
+$txt['calendar_how_edit'] = 'how do you edit these events?';
+$txt['calendar_link_event'] = 'Link Event To Post';
+$txt['calendar_confirm_delete'] = 'Are you sure you want to delete this event?';
+$txt['calendar_linked_events'] = 'Linked Events';
+$txt['calendar_click_all'] = 'click to see all %1$s';
+$txt['calendar_allday'] = 'All day';
+$txt['calendar_timezone'] = 'Time zone';
+$txt['calendar_list'] = 'List';
+$txt['calendar_empty'] = 'There are no events to display.';
+
+$txt['movetopic_change_subject'] = 'Change the topic\'s subject';
+$txt['movetopic_new_subject'] = 'New subject';
+$txt['movetopic_change_all_subjects'] = 'Change every message\'s subject';
+$txt['move_topic_unapproved_js'] = 'Warning! This topic has not yet been approved.\\n\\nIt is not recommended that you create a redirection topic unless you intend to approve the post immediately following the move.';
+$txt['movetopic_auto_board'] = '[BOARD]';
+$txt['movetopic_auto_topic'] = '[TOPIC LINK]';
+
+// argument(s): $txt['movetopic_auto_board'], $txt['movetopic_auto_topic']
+$txt['movetopic_default'] = 'This topic has been moved to %1$s.
+
+%2$s';
+
+$txt['movetopic_redirect'] = 'Redirect to the moved topic';
+
+$txt['post_redirection'] = 'Post a redirection topic';
+$txt['redirect_topic_expires'] = 'Automatically remove the redirection topic';
+$txt['mergetopic_redirect'] = 'Redirect to the merged topic';
+$txt['merge_topic_unapproved_js'] = 'Warning! This topic has not yet been approved.\\n\\nIt is not recommended that you create a redirection topic unless you intend to approve the post immediately following the merge.';
+
+$txt['theme_template_error'] = 'Unable to load the \'%1$s\' template.';
+$txt['theme_language_error'] = 'Unable to load the \'%1$s\' language file.';
+
+$txt['sub_boards'] = 'Sub-Boards';
+$txt['restricted_board'] = 'Restricted Board';
+
+$txt['smtp_no_connect'] = 'Could not connect to SMTP host';
+$txt['smtp_port_ssl'] = 'SMTP port setting incorrect; it should be 465 for SSL servers. Hostname may need ssl:// prefix.';
+$txt['smtp_bad_response'] = 'Could not get mail server response codes';
+$txt['smtp_error'] = 'Ran into problems sending mail. Error: ';
+$txt['mail_send_unable'] = 'Unable to send mail to the email address \'%1$s\'';
+
+$txt['mlist_search'] = 'Search for Members';
+$txt['mlist_search_again'] = 'Search again';
+$txt['mlist_search_filter'] = 'Search options';
+$txt['mlist_search_email'] = 'Search by email address';
+$txt['mlist_search_messenger'] = 'Search by messenger nickname';
+$txt['mlist_search_group'] = 'Search by position';
+$txt['mlist_search_name'] = 'Search by name';
+$txt['mlist_search_website'] = 'Search by website';
+$txt['mlist_search_results'] = 'Search results for';
+$txt['mlist_search_by'] = 'Search by %1$s';
+$txt['mlist_menu_view'] = 'View the memberlist';
+
+$txt['attach_downloaded'] = 'downloaded %1$d times';
+$txt['attach_viewed'] = 'viewed %1$d times';
+
+$txt['settings'] = 'Settings';
+$txt['never'] = 'Never';
+$txt['more'] = 'more';
+$txt['etc'] = 'etc.';
+
+$txt['hostname'] = 'Hostname';
+$txt['you_are_post_banned'] = 'Sorry %1$s, you are banned from posting and sending personal messages on this forum.';
+$txt['ban_reason'] = 'Reason';
+$txt['select_item_check'] = 'Please select at least one item in the list';
+
+$txt['tables_optimized'] = 'Database tables optimized';
+
+$txt['add_poll'] = 'Add poll';
+$txt['poll_options_limit'] = 'You may only select up to %1$s options.';
+$txt['poll_remove'] = 'Remove Poll';
+$txt['poll_remove_warn'] = 'Are you sure you want to remove this poll from the topic?';
+$txt['poll_results_expire'] = 'Results will be shown when voting has closed';
+$txt['poll_expires_on'] = 'Voting closes';
+$txt['poll_expired_on'] = 'Voting closed';
+$txt['poll_change_vote'] = 'Remove Vote';
+$txt['poll_return_vote'] = 'Voting options';
+$txt['poll_cannot_see'] = 'You cannot see the results of this poll at the moment.';
+
+$txt['quick_mod_approve'] = 'Approve selected';
+$txt['quick_mod_remove'] = 'Remove selected';
+$txt['quick_mod_lock'] = 'Lock/Unlock selected';
+$txt['quick_mod_sticky'] = 'Sticky/Unsticky selected';
+$txt['quick_mod_move'] = 'Move selected to';
+$txt['quick_mod_merge'] = 'Merge selected';
+$txt['quick_mod_markread'] = 'Mark selected read';
+$txt['quick_mod_markunread'] = 'Mark selected unread';
+$txt['quick_mod_selected'] = 'With the selected options do';
+$txt['quick_mod_go'] = 'Go';
+$txt['quickmod_confirm'] = 'Are you sure you want to do this?';
+
+$txt['spell_check'] = 'Spell Check';
+
+$txt['quick_reply'] = 'Quick Reply';
+$txt['quick_reply_warning'] = 'Warning! This topic is currently locked, only admins and moderators can reply.';
+$txt['quick_reply_verification'] = 'After submitting your post you will be directed to the regular post page to verify your post %1$s.';
+$txt['quick_reply_verification_guests'] = '(required for all guests)';
+$txt['quick_reply_verification_posts'] = '(required for all users with less than %1$d posts)';
+$txt['wait_for_approval'] = 'Note: this post will not display until it has been approved by a moderator.';
+
+$txt['notification_enable_board'] = 'Are you sure you wish to enable notification of new topics for this board?';
+$txt['notification_disable_board'] = 'Are you sure you wish to disable notification of new topics for this board?';
+$txt['notification_enable_topic'] = 'Are you sure you wish to enable notification of new replies for this topic?';
+$txt['notification_disable_topic'] = 'Are you sure you wish to disable notification of new replies for this topic?';
+
+// Mentions
+$txt['mentions'] = 'Mentions';
+
+// Likes
+$txt['likes'] = 'Likes';
+$txt['like'] = 'Like';
+$txt['unlike'] = 'Unlike';
+$txt['like_success'] = 'Your content was successfully liked.';
+$txt['like_delete'] = 'Your content was successfully deleted.';
+$txt['like_insert'] = 'Your content was successfully inserted.';
+$txt['like_error'] = 'There was an error with your request.';
+$txt['like_disable'] = 'Likes feature is disabled.';
+$txt['not_valid_like_type'] = 'The liked type is not a valid type.';
+// Translators, if you need to make more strings to suit your language, e.g. $txt['likes_2'] = 'Two people like this', please do so.
+$txt['likes_1'] = '<a href="%1$s">%2$s person</a> likes this.';
+$txt['likes_n'] = '<a href="%1$s">%2$s people</a> like this.';
+$txt['you_likes_0'] = 'You like this.';
+$txt['you_likes_1'] = 'You and <a href="%1$s">%2$s other person</a> like this.';
+$txt['you_likes_n'] = 'You and <a href="%1$s">%2$s other people</a> like this.';
+
+$txt['report_to_mod'] = 'Report to moderator';
+$txt['report_profile'] = 'Report profile of %1$s';
+
+$txt['unread_topics_visit'] = 'Recent Unread Topics';
+// argument(s): scripturl
+$txt['unread_topics_visit_none'] = 'No unread topics found since your last visit. <a href="%1$s?action=unread;all">Click here to try all unread topics</a>.';
+$txt['updated_topics_visit_none'] = 'No updated topics found since your last visit.';
+$txt['unread_topics_all'] = 'All Unread Topics';
+$txt['unread_replies'] = 'Updated Topics';
+
+$txt['who_title'] = 'Who\'s Online';
+$txt['who_and'] = ' and ';
+$txt['who_viewing_topic'] = ' are viewing this topic.';
+$txt['who_viewing_board'] = ' are viewing this board.';
+$txt['who_member'] = 'Member';
+
+// No longer used by default theme, but for backwards compat
+$txt['powered_by_php'] = 'Powered by PHP';
+$txt['powered_by_mysql'] = 'Powered by MySQL';
+$txt['valid_css'] = 'Valid CSS';
+
+$txt['rss'] = 'RSS';
+$txt['atom'] = 'Atom';
+$txt['html'] = 'HTML';
+
+$txt['guest'] = 'Guest';
+$txt['guests'] = 'Guests';
+$txt['user'] = 'User';
+$txt['users'] = 'Users';
+$txt['hidden'] = 'Hidden';
+
+// Plural form of hidden for languages other than English
+$txt['hidden_s'] = 'Hidden';
+$txt['buddy'] = 'Buddy';
+$txt['buddies'] = 'Buddies';
+$txt['most_online_ever'] = 'Most Online Ever';
+$txt['most_online_today'] = 'Most Online Today';
+
+$txt['merge_select_target_board'] = 'Select the target board of the merged topic';
+$txt['merge_select_poll'] = 'Select which poll the merged topic should have';
+$txt['merge_topic_list'] = 'Select topics to be merged';
+$txt['merge_select_subject'] = 'Select subject of merged topic';
+$txt['merge_custom_subject'] = 'Custom subject';
+$txt['merge_include_notifications'] = 'Include notifications?';
+$txt['merge_check'] = 'Merge?';
+$txt['merge_no_poll'] = 'No poll';
+$txt['merge_why'] = 'Please enter a brief description as to why these topics are being merged.';
+$txt['merged_subject'] = '[MERGED] %1$s';
+// argument(s): $txt['movetopic_auto_topic']
+$txt['mergetopic_default'] = 'This topic has been merged into %2$s.';
+
+$txt['response_prefix'] = 'Re: ';
+$txt['current_icon'] = 'Current Icon';
+$txt['message_icon'] = 'Message Icon';
+
+$txt['smileys_current'] = 'Current Smiley Set';
+$txt['smileys_none'] = 'No Smileys';
+$txt['smileys_forum_board_default'] = 'Forum/Board Default';
+
+$txt['search_results'] = 'Search Results';
+$txt['search_no_results'] = 'Sorry, no matches were found';
+
+$txt['total_time_logged_days'] = ' days, ';
+$txt['total_time_logged_hours'] = ' hours and ';
+$txt['total_time_logged_minutes'] = ' minutes';
+$txt['total_time_logged_d'] = 'd ';
+$txt['total_time_logged_h'] = 'h ';
+$txt['total_time_logged_m'] = 'm';
+
+$txt['approve_members_waiting'] = 'Member Approvals';
+
+$txt['activate_code'] = 'Your activation code is';
+
+$txt['find_members'] = 'Find Members';
+$txt['find_username'] = 'Name, username, or email address';
+$txt['find_buddies'] = 'Show Buddies Only?';
+$txt['find_wildcards'] = 'Allowed Wildcards: *, ?';
+$txt['find_no_results'] = 'No results found';
+$txt['find_results'] = 'Results';
+$txt['find_close'] = 'Close';
+
+$txt['unread_since_visit'] = 'Show unread posts since last visit.';
+$txt['show_unread_replies'] = 'Show new replies to your posts.';
+
+$txt['change_color'] = 'Change color';
+
+$txt['quickmod_delete_selected'] = 'Remove selected';
+$txt['quickmod_split_selected'] = 'Split selected';
+
+$txt['show_personal_messages_heading'] = 'New messages';
+$txt['show_personal_messages'] = 'You have <strong>%1$s</strong> unread personal messages in your inbox.<br><br><a href="%2$s">Go to your inbox</a>';
+
+$txt['help_popup'] = 'A little lost? Let me explain:';
+
+$txt['previous_next_back'] = 'Previous topic';
+$txt['previous_next_forward'] = 'Next topic';
+
+$txt['mark_unread'] = 'Mark unread';
+
+$txt['ssi_not_direct'] = 'Please do not access SSI.php by URL directly; you may want to use the path (%1$s) or add ?ssi_function=something.';
+$txt['ssi_session_broken'] = 'SSI.php was unable to load a session! This may cause problems with logout and other functions - please make sure SSI.php is included before *anything* else in all your scripts!';
+
+// Escape any single quotes in here twice.. 'it\'s' -> 'it\\\'s'.
+$txt['preview_title'] = 'Preview post';
+$txt['preview_fetch'] = 'Fetching preview...';
+$txt['preview_new'] = 'New message';
+$txt['pm_error_while_submitting'] = 'The following error or errors occurred while sending this personal message:';
+$txt['error_while_submitting'] = 'The message has the following error or errors that must be corrected before continuing:';
+$txt['error_old_topic'] = 'Warning: this topic has not been posted in for at least %1$d days.<br>Unless you\'re sure you want to reply, please consider starting a new topic.';
+
+$txt['split_selected_posts'] = 'Selected posts';
+$txt['split_selected_posts_desc'] = 'The posts below will form a new topic after splitting.';
+$txt['split_reset_selection'] = 'reset selection';
+
+$txt['modify_cancel'] = 'Cancel';
+$txt['modify_cancel_all'] = 'Cancel All';
+$txt['mark_read_short'] = 'Mark Read';
+
+$txt['alerts'] = 'Alerts';
+
+$txt['pm_short'] = 'My Messages';
+$txt['pm_menu_read'] = 'Read your messages';
+$txt['pm_menu_send'] = 'Send a message';
+
+$txt['unapproved_posts'] = 'Unapproved Posts (Topics: %1$d, Posts: %2$d)';
+
+$txt['ajax_in_progress'] = 'Loading...';
+
+$txt['mod_reports_waiting'] = 'Reported Posts';
+
+$txt['view_unread_category'] = 'Unread Posts';
+$txt['new_posts_in_category'] = 'Click to see the new posts in %1$s';
+$txt['verification'] = 'Verification';
+$txt['visual_verification_hidden'] = 'Please leave this box empty';
+$txt['visual_verification_description'] = 'Type the letters shown in the picture';
+$txt['visual_verification_sound'] = 'Listen to the letters';
+$txt['visual_verification_request_new'] = 'Request another image';
+
+// Sub menu labels
+$txt['summary'] = 'Summary';
+$txt['account'] = 'Account Settings';
+$txt['theme'] = 'Look and Layout';
+$txt['forumprofile'] = 'Forum Profile';
+$txt['activate_changed_email_title'] = 'Email Address Changed';
+$txt['activate_changed_email_desc'] = 'You\'ve changed your email address. In order to validate this address you will receive an email. Click the link in that email to reactivate your account.';
+$txt['modSettings_title'] = 'Features and Options';
+$txt['package'] = 'Package Manager';
+$txt['errorlog'] = 'Error Log';
+$txt['edit_permissions'] = 'Permissions';
+$txt['mc_unapproved_attachments'] = 'Unapproved Attachments';
+$txt['mc_unapproved_poststopics'] = 'Unapproved Posts and Topics';
+$txt['mc_reported_posts'] = 'Reported Posts';
+$txt['mc_reported_members'] = 'Reported Members';
+$txt['modlog_view'] = 'Moderation Log';
+$txt['calendar_menu'] = 'View Calendar';
+
+// @todo Send email strings - should move?
+$txt['send_email'] = 'Send Email';
+
+$txt['ignoring_user'] = 'You are ignoring this user.';
+$txt['show_ignore_user_post'] = 'Show me the post.';
+
+$txt['spider'] = 'Spider';
+$txt['spiders'] = 'Spiders';
+
+$txt['downloads'] = 'Downloads';
+$txt['filesize'] = 'Filesize';
+
+// Restore topic
+$txt['restore_topic'] = 'Restore Topic';
+$txt['restore_message'] = 'Restore';
+$txt['quick_mod_restore'] = 'Restore Selected';
+
+// Editor prompt.
+$txt['prompt_text_email'] = 'Please enter the email address.';
+$txt['prompt_text_ftp'] = 'Please enter the FTP address.';
+$txt['prompt_text_url'] = 'Please enter the URL you wish to link to.';
+$txt['prompt_text_img'] = 'Enter image location';
+
+// Escape any single quotes in here twice.. 'it\'s' -> 'it\\\'s'.
+$txt['autosuggest_delete_item'] = 'Delete Item';
+
+// Debug related - when $db_show_debug is true.
+$txt['debug_templates'] = 'Templates: ';
+$txt['debug_subtemplates'] = 'Sub templates: ';
+$txt['debug_language_files'] = 'Language files: ';
+$txt['debug_stylesheets'] = 'Style sheets: ';
+$txt['debug_files_included'] = 'Files included: ';
+$txt['debug_memory_use'] = 'Memory used: ';
+$txt['debug_kb'] = 'KB.';
+$txt['debug_show'] = 'show';
+$txt['debug_cache_hits'] = 'Cache hits: ';
+$txt['debug_cache_misses'] = 'Cache misses: ';
+$txt['debug_cache_seconds_bytes'] = '%1$ss - %2$s bytes';
+$txt['debug_cache_seconds_bytes_total'] = '%1$ss for %2$s bytes';
+$txt['debug_queries_used'] = 'Queries used: %1$d.';
+$txt['debug_queries_used_and_warnings'] = 'Queries used: %1$d, %2$d warnings.';
+$txt['debug_query_in_line'] = 'in <em>%1$s</em> line <em>%2$s</em>, ';
+$txt['debug_query_which_took'] = 'which took %1$s seconds.';
+$txt['debug_query_which_took_at'] = 'which took %1$s seconds at %2$s into request.';
+$txt['debug_show_queries'] = '[Show Queries]';
+$txt['debug_hide_queries'] = '[Hide Queries]';
+$txt['debug_tokens'] = 'Tokens: ';
+$txt['debug_browser'] = 'Browser ID: ';
+$txt['debug_hooks'] = 'Hooks called: ';
+$txt['debug_instances'] = 'Instances created: ';
+$txt['are_sure_mark_read'] = 'Are you sure you want to mark messages as read?';
+
+// Inline attachments messages.
+$txt['attachments_not_enable'] = 'Attachments are disabled';
+$txt['attachments_no_data_loaded'] = 'Not a valid attachment ID.';
+$txt['attachments_not_allowed_to_see'] = 'You cannot view this attachment.';
+$txt['attachments_no_msg_associated'] = 'No message is associated with this attachment.';
+$txt['attachments_unapproved'] = 'Attachment is awaiting approval.';
+
+// Accessibility
+$txt['hide_category'] = 'Hide Category';
+$txt['show_category'] = 'Show Category';
+$txt['hide_infocenter'] = 'Hide Info Center';
+$txt['show_infocenter'] = 'Show Info Center';
+
+// Notification post control
+$txt['notify_topic_0'] = 'Not Following';
+$txt['notify_topic_1'] = 'No Alerts or Emails';
+$txt['notify_topic_2'] = 'Receive Alerts';
+$txt['notify_topic_3'] = 'Receive Emails and Alerts';
+$txt['notify_topic_0_desc'] = 'You will not receive any emails or alerts for this topic and it will also not show up in your unread replies and topics list. You will still receive @mentions for this topic.';
+$txt['notify_topic_1_desc'] = 'You will not receive any emails or alerts but only @mentions by other members.';
+$txt['notify_topic_2_desc'] = 'You will receive alerts for this topic.';
+$txt['notify_topic_3_desc'] = 'You will receive both alerts and e-mails for this topic.';
+$txt['notify_board_1'] = 'No Alerts or Emails';
+$txt['notify_board_2'] = 'Receive Alerts';
+$txt['notify_board_3'] = 'Receive Emails and Alerts';
+$txt['notify_board_1_desc'] = 'You will not receive any emails or alerts for new topics';
+$txt['notify_board_2_desc'] = 'You will receive alerts for this board.';
+$txt['notify_board_3_desc'] = 'You will receive both alerts and e-mails for this board.';
+
+$txt['notify_board_prompt'] = 'Do you want a notification email when someone posts a new topic in this board?';
+$txt['notify_board_subscribed'] = '%1$s has been subscribed to new topic notifications for this board.';
+$txt['notify_board_unsubscribed'] = '%1$s has been unsubscribed from new topic notifications for this board.';
+
+$txt['notify_topic_prompt'] = 'Do you want a notification email if someone replies to this topic?';
+$txt['notify_topic_subscribed'] = '%1$s has been subscribed to new reply notifications for this topic.';
+$txt['notify_topic_unsubscribed'] = '%1$s has been unsubscribed from new reply notifications for this topic.';
+
+$txt['notify_announcements_prompt'] = 'Do you want to receive forum newsletters, announcements and important notifications by email?';
+$txt['notify_announcements_subscribed'] = '%1$s has been subscribed to forum newsletters, announcements and important notifications.';
+$txt['notify_announcements_unsubscribed'] = '%1$s has been unsubscribed from forum newsletters, announcements and important notifications.';
+
+$txt['unsubscribe_announcements_plain'] = 'To unsubscribe from forum newsletters, announcements and important notifications, follow this link: %1$s';
+$txt['unsubscribe_announcements_html'] = '<span style="font-size:small"><a href="%1$s">Unsubscribe</a> from forum newsletters, announcements and important notifications.</span>';
+$txt['unsubscribe_announcements_manual'] = 'To unsubscribe from forum newsletters, announcements and important notifications, contact us at %1$s with your request.';
+
+// Mobile Actions
+$txt['mobile_action'] = 'User actions';
+$txt['mobile_moderation'] = 'Moderation';
+$txt['mobile_user_menu'] = 'Main Menu';
+$txt['mobile_generic_menu'] = '%1$s Menu';
+
+// Formats for lists in a sentence (e.g. "Alice, Bob, and Charlie")
+// Examples:
+// 	$txt['sentence_list_format'][2] specifies a format for a list with two items
+// 	$txt['sentence_list_format']['n'] specifies the default format
+// Notes on placeholders:
+// 	{1} = first item in the list, {2} = second item, etc.
+// 	{-1} = last item in the list, {-2} = second last item, etc.
+// 	{series} = concatenated string of the rest of the items in the list
+$txt['sentence_list_format'][1] = '{1}';
+$txt['sentence_list_format'][2] = '{1} and {-1}';
+$txt['sentence_list_format'][3] = '{series}, and {-1}';
+$txt['sentence_list_format'][4] = '{series}, and {-1}';
+$txt['sentence_list_format'][5] = '{series}, and {-1}';
+$txt['sentence_list_format']['n'] = '{series}, and {-1}';
+// Separators used to build lists in a sentence
+$txt['sentence_list_separator'] = ', ';
+$txt['sentence_list_separator_alt'] = '; ';
+
+?>
