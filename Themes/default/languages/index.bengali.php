@@ -954,3 +954,161 @@ $txt['sentence_list_separator'] = ', ';
 $txt['sentence_list_separator_alt'] = '; ';
 
 ?>
+<?php
+// Version: 2.1.3; index
+
+global $forum_copyright, $webmaster_email, $scripturl, $context, $boardurl;
+
+// Native name, please use full HTML entities to write your language's name.
+$txt['native_name'] = 'বাংলা';
+
+// Locale (strftime, basename). For more information see:
+//   - https://php.net/function.setlocale
+$txt['lang_locale'] = 'bn_BD';
+$txt['lang_dictionary'] = 'bn';
+// https://developers.google.com/recaptcha/docs/language
+$txt['lang_recaptcha'] = 'bn';
+
+// Ensure you remember to use uppercase for character set strings.
+$txt['lang_character_set'] = 'UTF-8';
+// Character set right to left?  0 = ltr; 1 = rtl
+$txt['lang_rtl'] = '0';
+// Number format.
+$txt['number_format'] = '১,২৩৪.০০'; // Bengali number format
+
+$txt['days_title'] = 'দিন';
+$txt['days'] = array('রবিবার', 'সোমবার', 'মঙ্গলবার', 'বুধবার', 'বৃহস্পতিবার', 'শুক্রবার', 'শনিবার');
+$txt['days_short'] = array('রবি', 'সোম', 'মঙ্গল', 'বুধ', 'বৃহস্পতি', 'শুক্র', 'শনি');
+// Months must start with 1 => 'January'. (or translated, of course.)
+$txt['months_title'] = 'মাস';
+$txt['months'] = array(1 => 'জানুয়ারী', 2 => 'ফেব্রুয়ারী', 3 => 'মার্চ', 4 => 'এপ্রিল', 5 => 'মে', 6 => 'জুন', 7 => 'জুলাই', 8 => 'আগস্ট', 9 => 'সেপ্টেম্বর', 10 => 'অক্টোবর', 11 => 'নভেম্বর', 12 => 'ডিসেম্বর');
+$txt['months_titles'] = array(1 => 'জানুয়ারী', 2 => 'ফেব্রুয়ারী', 3 => 'মার্চ', 4 => 'এপ্রিল', 5 => 'মে', 6 => 'জুন', 7 => 'জুলাই', 8 => 'আগস্ট', 9 => 'সেপ্টেম্বর', 10 => 'অক্টোবর', 11 => 'নভেম্বর', 12 => 'ডিসেম্বর');
+$txt['months_short'] = array(1 => 'জন', 2 => 'ফেব', 3 => 'মার্চ', 4 => 'এপ্রি', 5 => 'মে', 6 => 'জুন', 7 => 'জুলাই', 8 => 'আগ', 9 => 'সেপ্ট', 10 => 'অক্টো', 11 => 'নভে', 12 => 'ডিসে');
+$txt['prev_month'] = 'পূর্ববর্তী মাস';
+$txt['next_month'] = 'পরবর্তী মাস';
+$txt['start'] = 'শুরু';
+$txt['end'] = 'শেষ';
+$txt['starts'] = 'শুরু হয়';
+$txt['ends'] = 'শেষ হয়';
+$txt['none'] = 'কিছুই নেই';
+
+$txt['minutes_label'] = 'মিনিট';
+$txt['hours_label'] = 'ঘণ্টা';
+$txt['years_title'] = 'বছর';
+
+$txt['time_am'] = 'এএম'; // Bengali equivalent for am
+$txt['time_pm'] = 'পিএম'; // Bengali equivalent for pm
+
+// Short form of minutes
+$txt['minutes_short'] = 'মিন';
+// Short form of hour
+$txt['hour_short'] = 'ঘন্টা'; // Bengali equivalent for hour
+// Short form of hours
+$txt['hours_short'] = 'ঘণ্টা'; // Bengali equivalent for hours
+// Decimal sign
+$txt['decimal_sign'] = '.';
+
+$txt['admin'] = 'অ্যাডমিন'; // Bengali equivalent for Admin
+$txt['moderate'] = 'মডারেট'; // Bengali equivalent for Moderate
+
+$txt['save'] = 'সংরক্ষণ করুন';
+$txt['reset'] = 'পুনরায় সেট করুন';
+$txt['upload'] = 'আপলোড করুন';
+$txt['upload_all'] = 'সব আপলোড করুন';
+$txt['processing'] = 'প্রক্রিয়াকরণ হচ্ছে...';
+
+$txt['modify'] = 'সংশোধন করুন';
+$txt['forum_index'] = '%1$s - সূচি';
+$txt['members'] = 'সদস্য';
+$txt['board_name'] = 'বোর্ডের নাম';
+$txt['posts'] = 'পোস্ট';
+
+$txt['member_postcount'] = 'পোস্ট';
+$txt['no_subject'] = '(বিষয় নেই)';
+$txt['view_profile'] = 'প্রোফাইল দেখুন';
+$txt['guest_title'] = 'অতিথি';
+$txt['author'] = 'লেখক';
+$txt['on'] = 'এতে';
+$txt['remove'] = 'অপসারণ করুন';
+$txt['start_new_topic'] = 'নতুন বিষয় শুরু করুন';
+
+$txt['login'] = 'লগ ইন করুন';
+// Use numeric entities in the below string.
+$txt['username'] = 'ব্যবহারকারীর নাম';
+$txt['password'] = 'পাসওয়ার্ড';
+
+$txt['username_no_exist'] = 'এটি ব্যবহারকারীর নাম বিদ্যমান নেই।';
+$txt['no_user_with_email'] = 'এই ইমেইলের সাথে যুক্ত কোনো ব্যবহারকারীর নাম নেই।';
+
+$txt['board_moderator'] = 'বোর্ড মডারেটর';
+$txt['remove_topic'] = 'বিষয় অপসারণ করুন';
+$txt['topics'] = 'বিষয়সমূহ';
+$txt['modify_msg'] = 'বার্তা সংশোধন করুন';
+$txt['name'] = 'নাম';
+$txt['email'] = 'ইমেইল';
+$txt['user_email_address'] = 'ইমেইল ঠিকানা';
+$txt['subject'] = 'বিষয়';
+$txt['message'] = 'বার্তা';
+$txt['redirects'] = 'রিডাইরেক্টস';
+$txt['quick_modify'] = 'লাইন ইন সংশোধন করুন';
+$txt['quick_modify_message'] = 'আপনি সফলভাবে এই বার্তাটি সংশোধন করেছেন।';
+$txt['reason_for_edit'] = 'সংশোধনের কারণ';
+
+$txt['choose_pass'] = 'পাসওয়ার্ড নির্বাচন করুন';
+$txt['verify_pass'] = 'পাসওয়ার্ড নিশ্চিত করুন';
+$txt['notify_announcements'] = 'প্রশাসকদের আমাকে গুরুত্বপূর্ণ সংবাদ ইমেইল দ্বারা পাঠাতে অনুমতি দিন';
+
+$txt['position'] = 'পদ';
+
+// argument(s):username
+$txt['view_profile_of_username'] = '%1$s এর প্রোফাইল দেখুন';
+$txt['total'] = 'মোট';
+$txt['website'] = 'ওয়েবসাইট';
+$txt['register'] = 'সাইন আপ করুন';
+$txt['warning_status'] = 'সতর্কতা স্থিতি';
+$txt['user_warn_watch'] = 'ব্যবহারকারী মডারেটর নজরদারি তালিকায় রয়েছে';
+$txt['user_warn_moderate'] = 'ব্যবহারকারীর পোস্ট অনুমোদনের জন্য অপেক্ষমাণ তালিকায়';
+$txt['user_warn_mute'] = 'ব্যবহারকারী পোস্ট করার জন্য নিষিদ্ধ';
+$txt['warn_watch'] = 'নজরদারি';
+$txt['warn_moderate'] = 'মডারেটেড';
+$txt['warn_mute'] = 'নিষিদ্ধ';
+
+$txt['message_index'] = 'বার্তা সূচি';
+$txt['news'] = 'সংবাদ';
+$txt['home'] = 'হোম';
+$txt['page'] = 'পৃষ্ঠা';
+$txt['prev'] = 'পূর্ববর্তী পৃষ্ঠা';
+$txt['next'] = 'পরবর্তী পৃষ্ঠা';
+
+$txt['lock_unlock'] = 'বিষয় লক/আনলক করুন';
+$txt['post'] = 'পোস্ট';
+$txt['error_occured'] = 'একটি ত্রুটি ঘটেছে';
+$txt['at'] = 'এতে';
+$txt['by'] = 'দ্বারা';
+$txt['logout'] = 'লগ আউট';
+$txt['started_by'] = 'শুরু করেছেন';
+$txt['topic_started_by'] = '<strong>%1$s</strong> দ্বারা শুরু হয়েছে <em>%2$s</em>';
+$txt['replies'] = 'প্রতিক্রিয়া';
+$txt['last_post'] = 'শেষ পোস্ট';
+$txt['first_post'] = 'প্রথম পোস্ট';
+$txt['last_poster'] = 'শেষ পোস্ট করেছেন';
+$txt['last_post_message'] = '<strong>শেষ পোস্ট: </strong>%3$s <span class="postby">%2$s দ্বারা %1$s</span>';
+$txt['last_post_topic'] = '%1$s<br>%2$s দ্বারা';
+$txt['post_by_member'] = '<strong>%1$s</strong> দ্বারা <strong>%2$s</strong><br>';
+$txt['boardindex_total_posts'] = '%1$s পোস্ট %2$s বিষয়ের মধ্যে %3$s সদস্য দ্বারা';
+$txt['show'] = 'দেখান';
+$txt['hide'] = 'লুকান';
+
+$txt['admin_login'] = 'প্রশাসন লগইন';
+// Use numeric entities in the below string.
+$txt['topic'] = 'বিষয়';
+$txt['help'] = 'সাহায্য';
+$txt['terms_and_rules'] = 'শর্তাবলী এবং নিয়ম';
+$txt['watch_board'] = 'এই বোর্ডটি নজরদারি করুন';
+$txt['unwatch_board'] = 'বোর্ডটি নজরদারি বন্ধ করুন';
+$txt['watch_topic'] = 'এই বিষয়টি নজরদারি করুন';
+$txt['unwatch_topic'] = 'বিষয়টি নজরদারি বন্ধ করুন';
+$txt['watching_topic'] = 'আপনি যে বিষয়টি নজরদারি করছেন';
+$txt['watching_this_topic'] = 'আপনি এই বিষয়টি নজরদারি করছেন এবং এর সম্পর্কে বিজ্ঞপ্তি পাবেন।';
+$txt['notify'] = 'বিজ্ঞপ্তি দিন';
+$txt['unnotify'] = 'বিজ্ঞপ্তি বন্ধ করুন';
