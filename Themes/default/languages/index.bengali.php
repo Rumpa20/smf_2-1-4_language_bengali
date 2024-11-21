@@ -8,7 +8,7 @@ $txt['native_name'] = 'বাংলা';
 
 // Locale (strftime, basename). For more information see:
 //   - https://php.net/function.setlocale
-$txt['lang_locale'] = 'bn_BD';
+$txt['lang_locale'] = 'bn_IN';
 $txt['lang_dictionary'] = 'bn';
 // https://developers.google.com/recaptcha/docs/language
 $txt['lang_recaptcha'] = 'bn';
