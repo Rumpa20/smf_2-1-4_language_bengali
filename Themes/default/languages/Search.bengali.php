@@ -1,34 +1,34 @@
 <?php
 // Version: 2.1.0; Search
 
-$txt['set_parameters'] = 'Set Search Parameters';
-$txt['choose_board'] = 'Choose boards to search in, or search all';
-$txt['all_words'] = 'Match all words';
-$txt['any_words'] = 'Match any words';
-$txt['by_user'] = 'By user';
+$txt['set_parameters'] = 'অনুসন্ধান পরামিতি সেট করুন';
+$txt['choose_board'] = 'অনুসন্ধান করার জন্য বোর্ডগুলি বেছে নিন, বা সমস্ত অনুসন্ধান করুন';
+$txt['all_words'] = 'সব শব্দ মিলিয়ে নিন';
+$txt['any_words'] = 'যে কোন শব্দ মিলিয়ে নিন';
+$txt['by_user'] = 'সদস্যের দ্বারা';
 
-$txt['search_post_age'] = 'Message age';
-$txt['search_between'] = 'between';
-$txt['search_and'] = 'and';
-$txt['search_options'] = 'Options';
-$txt['search_show_complete_messages'] = 'Show results as messages';
-$txt['search_subject_only'] = 'Search in topic subjects only';
-$txt['search_relevance'] = 'Relevance';
-$txt['search_date_posted'] = 'Date Posted';
-$txt['search_order'] = 'Search order';
-$txt['search_orderby_relevant_first'] = 'Most relevant results first';
-$txt['search_orderby_large_first'] = 'Largest topics first';
-$txt['search_orderby_small_first'] = 'Smallest topics first';
-$txt['search_orderby_recent_first'] = 'Most recent topics first';
-$txt['search_orderby_old_first'] = 'Oldest topics first';
-$txt['search_visual_verification_label'] = 'Verification';
-$txt['search_visual_verification_desc'] = 'Please enter the code in the image above to use search.';
+$txt['search_post_age'] = 'বার্তার বয়স';
+$txt['search_between'] = 'মাজখানে';
+$txt['search_and'] = 'এবং';
+$txt['search_options'] = 'বিকল্প';
+$txt['search_show_complete_messages'] = 'বার্তা অনুযায়ী ফলাফল দেখান';
+$txt['search_subject_only'] = 'কেবলমাত্র বিষয়টির বিষয়বস্তু অনুসন্ধান করুন';
+$txt['search_relevance'] = 'প্রাসঙ্গিকতা';
+$txt['search_date_posted'] = 'পোস্ট করার দিন';
+$txt['search_order'] = 'অনুসন্ধান আদেশ';
+$txt['search_orderby_relevant_first'] = 'সবথেকে প্রাসঙ্গিক ফলাফল প্রথমে';
+$txt['search_orderby_large_first'] = 'বড়ো বিষয়টি প্রথমে';
+$txt['search_orderby_small_first'] = 'ছোট বিষয়টি প্রথমে';
+$txt['search_orderby_recent_first'] = 'সবচেয়ে সাম্প্রতিক বিষয় প্রথমে';
+$txt['search_orderby_old_first'] = 'পুরানো বিষয়টি প্রথমে';
+$txt['search_visual_verification_label'] = 'যাচাইকরণ';
+$txt['search_visual_verification_desc'] = 'অনুসন্ধান ব্যবহার করতে উপরের ছবিতে কোড লিখুন.';
 
-$txt['search_specific_topic'] = 'Searching only posts in the topic';
+$txt['search_specific_topic'] = 'বিষয়ের মধ্যে শুধুমাত্র পোস্ট অনুসন্ধান';
 
-$txt['mods_cat_search'] = 'Search';
-$txt['groups_search_posts'] = 'Membergroups with access to the search function';
-$txt['search_results_per_page'] = 'Number of search results per page';
+$txt['mods_cat_search'] = 'অনুসন্ধান';
+$txt['groups_search_posts'] = 'অনুসন্ধান ফাংশন অ্যাক্সেস সহ সদস্যগোষ্ঠী';
+$txt['search_results_per_page'] = 'প্রতি পাতায় অনুসন্ধান ফলাফলের সংখ্যা';
 $txt['search_weight_frequency'] = 'Relative search weight for number of matching messages within a topic';
 $txt['search_weight_age'] = 'Relative search weight for age of last matching message';
 $txt['search_weight_length'] = 'Relative search weight for topic length';

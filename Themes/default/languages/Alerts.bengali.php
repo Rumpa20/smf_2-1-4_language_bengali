@@ -41,7 +41,7 @@ $txt['alert_event_new'] = '{member_link} একটি নতুন ঘটনা 
 $txt['alert_paidsubs_expiring'] = 'আপনার {subscription_name} সাবস্ক্রিপশনের মেয়াদ শেষ হবে {end_time}';
 $txt['alert_paidsubs_expired'] = 'আপনার {subscription_name} সাবস্ক্রিপশন শেষ হয়ে গেছে {end_time}';
 $txt['alert_member_buddy_request'] = '{member_link} আপনাকে তাদের বন্ধু হিসাবে যোগ করেছে';
-$txt['alert_birthday_msg'] = '{শুভ_জন্মদিন}';
+$txt['alert_birthday_msg'] = '{happy_birthday}';
 $txt['alerts_none'] = 'আপনার কোন সতর্কতা নেই.';
 
 ?>
