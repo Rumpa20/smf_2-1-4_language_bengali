@@ -15,8 +15,8 @@ $txt['lang_recaptcha'] = 'bn';
 
 // Ensure you remember to use uppercase for character set strings.
 $txt['lang_character_set'] = 'UTF-8';
-// Character set right to left?  0 = ltr; 1 = rtl
-$txt['lang_rtl'] = '0';
+// Character set right to left?  1 = ltr; 1 = rtl
+$txt['lang_rtl'] = '1';
 // Number format.
 $txt['number_format'] = '১,২৩৪.০০'; // Bengali number format
 
