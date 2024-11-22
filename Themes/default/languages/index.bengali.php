@@ -806,7 +806,7 @@ $txt['ajax_in_progress'] = 'লোড হচ্ছে...';
 
 $txt['mod_reports_waiting'] = 'প্রতিবেদনকৃত পোস্টগুলি';
 
-$txt['view_unread_category'] = 'অ-পড়া পোস্টগুলি';
+$txt['view_unread_category'] = 'না-পড়া পোস্টগুলি';
 $txt['new_posts_in_category'] = '%1$s-এ নতুন পোস্টগুলি দেখতে ক্লিক করুন';
 $txt['verification'] = 'যাচাইকরণ';
 $txt['visual_verification_hidden'] = 'দয়া করে এই বাক্সটি খালি রাখুন';
