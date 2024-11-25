@@ -148,4 +148,25 @@ $tztxt['Pacific_Tahiti'] = 'তাহিতি %1$s সময়';
 $tztxt['Pacific_Tokelau'] = 'টোকেলাউ %1$s সময়';
 $tztxt['Pacific_Tonga'] = 'টঙ্গা %1$s সময়';
 $tztxt['Pacific_Tuvalu'] = 'তুভালু %1$s সময়';
+$tztxt['Pacific_Vanuatu'] = 'ভানুয়াতু %1$s সময়';
+$tztxt['Pacific_Wake'] = 'ওয়েক %1$s সময়';
+$tztxt['Pacific_Wallis'] = 'ওয়ালিস এবং ফুতুনা %1$s সময়';
+$tztxt['South_America_Acre'] = 'এক্রে %1$s সময়';
+$tztxt['South_America_Amazon'] = 'আমাজন %1$s সময়';
+$tztxt['South_America_Argentina'] = 'আর্জেন্টিনা %1$s সময়';
+$tztxt['South_America_Bolivia'] = 'বোলিভিয়া %1$s সময়';
+$tztxt['South_America_Brasilia'] = 'ব্রাসিলিয়া %1$s সময়';
+$tztxt['South_America_Chile'] = 'মহাদেশীয় চিলি %1$s সময়';
+$tztxt['South_America_Chile_Magallanes'] = 'ম্যাগাল্লানেস %1$s সময়';
+$tztxt['South_America_Colombia'] = 'কলম্বিয়া %1$s সময়';
+$tztxt['South_America_Ecuador'] = 'ইকুয়েডর %1$s সময়';
+$tztxt['South_America_French_Guiana'] = 'ফরাসি গায়ানা %1$s সময়';
+$tztxt['South_America_Guyana'] = 'গায়ানা %1$s সময়';
+$tztxt['South_America_Noronha'] = 'ফার্নান্দো দে নরোনহা %1$s সময়';
+$tztxt['South_America_Paraguay'] = 'প্যারাগুয়ে %1$s সময়';
+$tztxt['South_America_Peru'] = 'পেরু %1$s সময়';
+$tztxt['South_America_Suriname'] = 'সুরিনাম %1$s সময়';
+$tztxt['South_America_Uruguay'] = 'উরুগুয়ে %1$s সময়';
+$tztxt['South_America_Venezuela'] = 'ভেনেজুয়েলা %1$s সময়';
+
 
