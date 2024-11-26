@@ -101,7 +101,7 @@ $helptxt['time_format'] = '<strong>সময় ফরম্যাট</strong><b
 	&nbsp;&nbsp;%T<strong>*</strong> - বর্তমান সময়, %H:%M:%S এর সমান<br>
 	&nbsp;&nbsp;%y - 2 ডিজিটের বছর (00 থেকে 99)<br>
 	&nbsp;&nbsp;%Y - 4 ডিজিটের বছর<br>
-	&nbsp;&nbsp;%% - একটি অক্ষর '%' <br>
+	&nbsp;&nbsp;%% - একটি অক্ষর \'%\' <br>
 	<br>
 	<em>* উইন্ডোজ ভিত্তিক সার্ভারে কাজ করে না।</em></span>';
 	
